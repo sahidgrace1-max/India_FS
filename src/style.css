@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom Components */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-100 text-slate-700 hover:bg-slate-200 active:bg-slate-300;
+  }
+
+  .btn-success {
+    @apply bg-green-500 text-white hover:bg-green-600;
+  }
+
+  .btn-warning {
+    @apply bg-amber-500 text-white hover:bg-amber-600;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-200;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all;
+  }
+
+  .badge {
+    @apply px-2.5 py-1 text-xs font-medium rounded-full;
+  }
+
+  .badge-pending {
+    @apply bg-amber-100 text-amber-600;
+  }
+
+  .badge-in-progress {
+    @apply bg-blue-100 text-blue-600;
+  }
+
+  .badge-completed {
+    @apply bg-green-100 text-green-600;
+  }
+
+  .badge-urgent {
+    @apply bg-red-100 text-red-600;
+  }
+}
