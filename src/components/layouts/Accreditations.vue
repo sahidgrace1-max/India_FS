@@ -5,7 +5,7 @@
     </h2>
     <div class="flex justify-center">
       <img
-        src="@/assets/long.png"
+        src="@/assets/long1.png"
         alt="Accreditations"
         class="h-56 md:h-32 sm:h-36 w-full object-contain"
       />

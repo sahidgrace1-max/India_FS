@@ -4,13 +4,9 @@
     <div
       class="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 h-auto md:h-9 py-2 md:py-0 gap-2"
     >
-      <div
-        class="flex items-center gap-2 whitespace-nowrap text-center md:text-left"
-      >
-        <span
-          >enquiry.in@graceintlgroup.com | +91 8750040975, 011-41070020</span
-        >
-      </div>
+      <!-- <div class="flex items-center gap-4 whitespace-nowrap text-center md:text-left">
+        <span>{{ locations[selectedLocation].email }} | {{ locations[selectedLocation].phone }}</span>
+      </div> -->
       <div
         class="flex flex-wrap items-center gap-3 md:gap-5 justify-center md:justify-end mt-2 md:mt-0"
       >
@@ -47,7 +43,10 @@
     >
       <!-- Logo & Brand -->
       <div class="flex items-center gap-6 flex-shrink-0">
-        <img src="#" alt="Grace International Logo" class="h-12 w-auto" />
+        <img src="@/assets/gi-logo-gif.gif" alt="Grace International Logo" class="h-12 w-auto" />
+        <!-- <select v-model="selectedLocation" class="bg-blue-900 text-white px-2 py-1 rounded ml-4">
+          <option v-for="(info, loc) in locations" :key="loc" :value="loc">{{ loc }}</option>
+        </select> -->
       </div>
       <!-- Navigation Links (Right Side) -->
       <div class="flex items-center justify-end flex-1">
@@ -71,24 +70,85 @@
               class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"
             ></span>
           </router-link>
-          <router-link
-            to="/about"
-            class="transition-colors relative group hover:text-green-600"
-          >
-            About
-            <span
-              class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"
-            ></span>
-          </router-link>
-          <router-link
-            to="/services"
-            class="transition-colors relative group hover:text-green-600"
-          >
-            Services
-            <span
-              class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"
-            ></span>
-          </router-link>
+          <!-- Explore with Dropdown -->
+          <div class="relative" @mouseenter="handleDropdownEnter" @mouseleave="handleDropdownLeave">
+            <router-link
+              to="/about"
+              class="transition-colors relative group hover:text-green-600"
+            >
+              Explore
+              <span
+                class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"
+              ></span>
+            </router-link>
+            <!-- Dropdown -->
+            <div
+              v-if="showDropdown"
+              class="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[700px] bg-gray-50 shadow-lg rounded-b-lg border border-gray-200 z-40 animate-fade-in"
+              style="min-height: 220px;"
+            >
+              <!-- Green bar indicator -->
+              <div class="w-full flex justify-center">
+                <div class="h-1 w-32 bg-green-600 rounded-t-lg mb-0"></div>
+              </div>
+              <div class="flex w-full divide-x divide-gray-200">
+                <!-- Find Universities -->
+                <div class="flex-1 p-8 bg-gray-100">
+                  <h3 class="font-bold text-blue-800 mb-4 text-lg">Find Universities</h3>
+                  <ul class="space-y-2 text-gray-700">
+                    <li>Australia</li>
+                    <li>USA</li>
+                    <li>UK</li>
+                    <li>Canada</li>
+                  </ul>
+                </div>
+                <!-- More Information -->
+                <div class="flex-1 p-8 bg-gray-100">
+                  <h3 class="font-bold text-blue-800 mb-4 text-lg">More Information</h3>
+                  <ul class="space-y-2 text-gray-700">
+                    <li>Scholarships</li>
+                    <li>Latest News & Updates</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Services with Dropdown -->
+          <div class="relative" @mouseenter="handleServicesDropdownEnter" @mouseleave="handleServicesDropdownLeave">
+            <router-link
+              to="/services"
+              class="transition-colors relative group hover:text-green-600"
+            >
+              Services
+              <span
+                class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"
+              ></span>
+            </router-link>
+            <!-- Dropdown -->
+            <div
+              v-if="showServicesDropdown"
+              class="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[350px] bg-gray-50 shadow-lg rounded-b-lg border border-gray-200 z-40 animate-fade-in"
+              style="min-height: 180px;"
+            >
+              <!-- Green bar indicator -->
+              <div class="w-full flex justify-center">
+                <div class="h-1 w-24 bg-green-600 rounded-t-lg mb-0"></div>
+              </div>
+              <div class="flex flex-col w-full">
+                <!-- Our Services -->
+                <div class="p-8 bg-gray-100">
+                  <h3 class="font-bold text-blue-800 mb-4 text-lg">Our Services</h3>
+                  <ul class="space-y-2 text-gray-700">
+                    <li>Free Counselling</li>
+                    <li>Free Profile Assessment</li>
+                    <li>No Services Charge</li>
+                    <li>Free Visa Processing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <router-link
             to="/destinations"
             class="transition-colors relative group hover:text-green-600"
@@ -161,12 +221,25 @@
             @click="showMobileMenu = false"
             >About</router-link
           >
-          <router-link
-            to="/services"
-            class="hover:text-blue-400"
-            @click="showMobileMenu = false"
-            >Services</router-link
-          >
+          <div class="relative">
+            <button
+              class="hover:text-blue-400 flex items-center w-full justify-between"
+              @click="toggleMobileServicesDropdown"
+              style="background: none; border: none; outline: none; padding: 0;"
+            >
+              Services
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div v-if="showMobileServicesDropdown" class="bg-gray-800 rounded-lg mt-2 p-4">
+              <h3 class="font-bold text-blue-300 mb-2 text-base">Our Services</h3>
+              <ul class="space-y-2 text-gray-200">
+                <li>Free Counselling</li>
+                <li>Free Profile Assessment</li>
+                <li>No Services Charge</li>
+                <li>Free Visa Processing</li>
+              </ul>
+            </div>
+          </div>
           <router-link
             to="/destinations"
             class="hover:text-blue-400"
@@ -187,33 +260,60 @@
 
 <script setup>
 import { ref } from "vue";
+
+// // Location/contact info
+// const locations = {
+//   "India": {
+//     email: "enquiry.in@graceintlgroup.com",
+//     phone: "+91 8750040975, 011-41070020"
+//   },
+//   "Nepal": {
+//     email: "info@grace.edu.np",
+//     phone: "+977 1-4444444, 9800000000"
+//   },
+//   "Australia": {
+//     email: "info@graceintlgroup.com.au",
+//     phone: "+61 2 8000 0000"
+//   }
+// };
+// const selectedLocation = ref('India');
+
+// Services Dropdown logic (mobile)
+const showMobileServicesDropdown = ref(false);
+function toggleMobileServicesDropdown() {
+  showMobileServicesDropdown.value = !showMobileServicesDropdown.value;
+}
 const showMobileMenu = ref(false);
+
+// Explore Dropdown logic
+const showDropdown = ref(false);
+let dropdownTimer = null;
+function handleDropdownEnter() {
+  clearTimeout(dropdownTimer);
+  dropdownTimer = setTimeout(() => {
+    showDropdown.value = true;
+  }, 180); // Show after 180ms
+}
+function handleDropdownLeave() {
+  clearTimeout(dropdownTimer);
+  dropdownTimer = setTimeout(() => {
+    showDropdown.value = false;
+  }, 180); // Hide after 180ms
+}
+
+// Services Dropdown logic (desktop)
+const showServicesDropdown = ref(false);
+let servicesDropdownTimer = null;
+function handleServicesDropdownEnter() {
+  clearTimeout(servicesDropdownTimer);
+  servicesDropdownTimer = setTimeout(() => {
+    showServicesDropdown.value = true;
+  }, 180);
+}
+function handleServicesDropdownLeave() {
+  clearTimeout(servicesDropdownTimer);
+  servicesDropdownTimer = setTimeout(() => {
+    showServicesDropdown.value = false;
+  }, 180);
+}
 </script>
-
-<style scoped>
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-fade-in {
-  animation: fade-in 0.2s ease;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-.animate-slide-in {
-  animation: slide-in 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-</style>
