@@ -20,7 +20,8 @@
   </div>
 </template>
 
-<script setup>
+<script>
+import { defineComponent } from "vue";
 import Navbar from "@/components/layouts/NavbarGrace.vue";
 import Hero from "@/components/layouts/Hero.vue";
 import Section1 from "@/components/layouts/Section1.vue";
@@ -32,6 +33,26 @@ import TestPreparation from "../components/layouts/TestPreparation.vue";
 import AssociatedUniversities from "@/components/layouts/AssociatedUniversities.vue";
 import Accreditations from "@/components/layouts/Accreditations.vue";
 import Fotter from "@/components/layouts/fotter.vue";
+
+export default defineComponent({
+  name: "Dashboard",
+  components: {
+    Navbar,
+    Hero,
+    Section1,
+    TopStudyDestinations,
+    OurServices,
+    ContactForm,
+    // NewsandUpdate,
+    TestPreparation,
+    AssociatedUniversities,
+    Accreditations,
+    Fotter,
+  },
+  setup() {
+    return {};
+  },
+});
 </script>
 
 <style scoped></style>
