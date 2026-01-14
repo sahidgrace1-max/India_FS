@@ -45,7 +45,24 @@ const routes = [
     component: () => import("@/views/Scholarships.vue"),
   },
   {
-    
+    path: "/destinations/australia",
+    name: "AustraliaDestinations",
+    component: () => import("@/views/DestinationsAustralia.vue"),
+  },
+  {
+    path: "/destinations/uk",
+    name: "UkDestinations",
+    component: () => import("@/views/UkDestinations.vue"),
+  },
+  {
+    path: "/destinations/usa",
+    name: "UsaDestinations",
+    component: () => import("@/views/UsaDestination.vue"),
+  },
+  {
+    path: "/destinations/canada",
+    name: "CanadaDestinations",
+    component: () => import("@/views/CanadaDestinations.vue"),
   }
 ];
 
