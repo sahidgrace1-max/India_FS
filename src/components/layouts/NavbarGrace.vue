@@ -14,7 +14,20 @@
       >
         <a href="#" class="hover:underline">Our Team</a>
         <a href="#" class="hover:underline">LOG IN</a>
-        <a href="#" class="hover:underline">India Branches</a>
+        <div class="relative" @mouseenter="handleBranchesDropdownEnter" @mouseleave="handleBranchesDropdownLeave">
+          <button class="hover:underline focus:outline-none flex items-center gap-1">
+            <span>{{ selectedBranch }}</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div v-if="showBranchesDropdown" class="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white text-gray-800 shadow-xl rounded-lg flex flex-col z-40 py-2" style="top:100%">
+            <button @click="selectBranch('Delhi')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Delhi' }">Delhi</button>
+            <button @click="selectBranch('Mumbai')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Mumbai' }">Mumbai</button>
+            <button @click="selectBranch('Bangalore')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Bangalore' }">Bangalore</button>
+            <button @click="selectBranch('Kolkata')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Kolkata' }">Kolkata</button>
+          </div>
+        </div>
         <a href="#" aria-label="Facebook" class="hover:text-gray-200">
           <svg class="inline w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -225,15 +238,6 @@
               >Study in UK</router-link>
             </div>
           </div>
-          <router-link
-            to="/contact"
-            class="transition-colors relative group hover:text-green-600"
-          >
-            Contact
-            <span
-              class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"
-            ></span>
-          </router-link>
         </nav>
         <!-- Mobile Menu Button -->
         <button
@@ -396,6 +400,15 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
+import { useBranchStore } from "@/stores/branchStore";
+
+const { selectedBranch, setSelectedBranch } = useBranchStore();
+
+// Branch selection
+function selectBranch(branch) {
+  setSelectedBranch(branch);
+  showBranchesDropdown.value = false;
+}
 
 // // Location/contact info
 // const locations = {
@@ -492,4 +505,20 @@ const explorePaths = [
   "/news"
 ];
 const isExploreActive = computed(() => explorePaths.includes(route.path));
+
+// Branches Dropdown logic
+const showBranchesDropdown = ref(false);
+let branchesDropdownTimer = null;
+function handleBranchesDropdownEnter() {
+  clearTimeout(branchesDropdownTimer);
+  branchesDropdownTimer = setTimeout(() => {
+    showBranchesDropdown.value = true;
+  }, 180);
+}
+function handleBranchesDropdownLeave() {
+  clearTimeout(branchesDropdownTimer);
+  branchesDropdownTimer = setTimeout(() => {
+    showBranchesDropdown.value = false;
+  }, 180);
+}
 </script>

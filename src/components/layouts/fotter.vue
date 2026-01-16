@@ -23,7 +23,7 @@
             />
           </div>
         </div>
-        <div>
+        <!-- <div>
           <h3 class="text-lg font-semibold mb-2">
             Subscribe to our Newsletter
           </h3>
@@ -39,7 +39,7 @@
               Subscribe
             </button>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- Quick Links -->
       <div>

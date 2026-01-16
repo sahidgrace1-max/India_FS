@@ -5,7 +5,7 @@
     <DirectorMessageSection />
     <AboutStatsSection />
     <DelhiAdvantagesSection />
-    <DelhiTeamSection />
+    <BranchTeamSection />
     <fotter />
   </div>
   <div
@@ -24,7 +24,7 @@ import AboutIntroSection from "@/components/AboutUs_layout/AboutIntroSection.vue
 import DirectorMessageSection from "@/components/AboutUs_layout/DirectorMessageSection.vue";
 import AboutStatsSection from "@/components/AboutUs_layout/AboutStatsSection.vue";
 import DelhiAdvantagesSection from "@/components/AboutUs_layout/DelhiAdvantagesSection.vue";
-import DelhiTeamSection from "@/components/AboutUs_layout/DelhiTeamSection.vue";
+import BranchTeamSection from "@/components/AboutUs_layout/BranchTeamSection.vue";
 
 export default defineComponent({
   name: "About",
@@ -35,7 +35,7 @@ export default defineComponent({
     DirectorMessageSection,
     AboutStatsSection,
     DelhiAdvantagesSection,
-    DelhiTeamSection,
+    BranchTeamSection,
   },
   setup() {
     return {};
