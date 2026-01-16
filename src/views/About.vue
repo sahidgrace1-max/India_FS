@@ -2,9 +2,9 @@
   <div>
     <NavbarGrace />
     <AboutIntroSection />
-    <DirectorMessageSection />
+    <BranchDirectorMessageSection />
     <AboutStatsSection />
-    <DelhiAdvantagesSection />
+    <BranchAdvantagesSection />
     <BranchTeamSection />
     <fotter />
   </div>
@@ -21,9 +21,9 @@ import { defineComponent } from "vue";
 import NavbarGrace from "@/components/layouts/NavbarGrace.vue";
 import fotter from "@/components/layouts/fotter.vue";
 import AboutIntroSection from "@/components/AboutUs_layout/AboutIntroSection.vue";
-import DirectorMessageSection from "@/components/AboutUs_layout/DirectorMessageSection.vue";
+import BranchDirectorMessageSection from "@/components/AboutUs_layout/BranchDirectorMessageSection.vue";
 import AboutStatsSection from "@/components/AboutUs_layout/AboutStatsSection.vue";
-import DelhiAdvantagesSection from "@/components/AboutUs_layout/DelhiAdvantagesSection.vue";
+import BranchAdvantagesSection from "@/components/AboutUs_layout/BranchAdvantagesSection.vue";
 import BranchTeamSection from "@/components/AboutUs_layout/BranchTeamSection.vue";
 
 export default defineComponent({
@@ -32,9 +32,9 @@ export default defineComponent({
     NavbarGrace,
     fotter,
     AboutIntroSection,
-    DirectorMessageSection,
+    BranchDirectorMessageSection,
     AboutStatsSection,
-    DelhiAdvantagesSection,
+    BranchAdvantagesSection,
     BranchTeamSection,
   },
   setup() {
