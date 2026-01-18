@@ -1,29 +1,30 @@
 <template>
   <div
-    class="w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 py-16"
+    class="w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 py-16 font-sans"
   >
-    <div class="max-w-7xl mx-auto px-4 py-12">
-      <div class="text-center mx-auto pb-12" style="max-width: 800px">
-        <h4 class="text-blue-700 font-bold mb-2 tracking-widest uppercase">
+    <div class="max-w-7xl mx-auto px-4 py-12 font-sans">
+      <div class="text-center mx-auto pb-12 font-sans" style="max-width: 800px">
+        <h4 class="text-blue-700 font-bold mb-2 tracking-widest uppercase font-sans">
           Our {{ selectedBranch }} Team
         </h4>
         <h1
-          class="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-700 via-blue-400 to-blue-700 bg-clip-text text-transparent drop-shadow-lg"
+          class="w-full max-w-2xl mx-auto text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-blue-700 font-sans break-words leading-tight"
+          style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);"
         >
           Meet Our {{ selectedBranch }} Office Experts
         </h1>
-        <p class="text-gray-700 text-lg mb-0">
+        <p class="text-gray-700 text-lg mb-0 font-sans">
           {{ getTeamDescription(selectedBranch) }}
         </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 font-sans">
         <!-- Team Members -->
         <div
           v-for="member in teamMembers[selectedBranch]"
           :key="member.name"
-          class="bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col h-full border-t-8 border-blue-400"
+          class="bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col h-full border-t-8 border-blue-400 font-sans"
         >
-          <div class="relative overflow-hidden rounded-t-3xl">
+          <div class="relative overflow-hidden rounded-t-3xl font-sans">
             <img
               :src="member.image"
               class="w-full h-60 object-cover grayscale-0 hover:grayscale transition duration-300"
@@ -46,19 +47,19 @@
               ></a>
             </div>
           </div>
-          <div class="flex-1 flex flex-col items-center text-center p-8">
-            <h4 class="font-extrabold text-xl mb-1 text-blue-800">
+          <div class="flex-1 flex flex-col items-center text-center p-8 font-sans">
+            <h4 class="font-extrabold text-xl mb-1 text-blue-800 font-sans">
               {{ member.name }}
             </h4>
-            <span class="text-blue-600 text-sm font-semibold mb-1">{{
+            <span class="text-blue-600 text-sm font-semibold mb-1 font-sans">{{
               member.position
             }}</span>
             <div
-              class="bg-gradient-to-r from-blue-200 to-blue-400 text-blue-900 rounded-full px-4 py-1 text-xs font-bold mb-3 shadow"
+              class="bg-gradient-to-r from-blue-200 to-blue-400 text-blue-900 rounded-full px-4 py-1 text-xs font-bold mb-3 shadow font-sans"
             >
               {{ member.badge }}
             </div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base font-sans">
               {{ member.description }}
             </p>
           </div>
