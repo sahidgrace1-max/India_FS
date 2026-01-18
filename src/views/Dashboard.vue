@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 relative">
+  <div class="min-h-screen bg-gray-50 relative overflow-x-hidden">
     <Navbar />
     <Hero />
     <Section1 />
