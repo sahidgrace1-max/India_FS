@@ -4,12 +4,14 @@
   >
     <div class="max-w-7xl mx-auto px-4 py-12 font-sans">
       <div class="text-center mx-auto pb-12 font-sans" style="max-width: 800px">
-        <h4 class="text-blue-700 font-bold mb-2 tracking-widest uppercase font-sans">
+        <h4
+          class="text-blue-700 font-bold mb-2 tracking-widest uppercase font-sans"
+        >
           Our {{ selectedBranch }} Team
         </h4>
         <h1
           class="w-full max-w-2xl mx-auto text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-blue-700 font-sans break-words leading-tight"
-          style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);"
+          style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1)"
         >
           Meet Our {{ selectedBranch }} Office Experts
         </h1>
@@ -17,7 +19,9 @@
           {{ getTeamDescription(selectedBranch) }}
         </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 font-sans">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 font-sans"
+      >
         <!-- Team Members -->
         <div
           v-for="member in teamMembers[selectedBranch]"
@@ -47,7 +51,9 @@
               ></a>
             </div>
           </div>
-          <div class="flex-1 flex flex-col items-center text-center p-8 font-sans">
+          <div
+            class="flex-1 flex flex-col items-center text-center p-8 font-sans"
+          >
             <h4 class="font-extrabold text-xl mb-1 text-blue-800 font-sans">
               {{ member.name }}
             </h4>

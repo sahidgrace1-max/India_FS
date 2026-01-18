@@ -45,29 +45,9 @@
 <script setup>
 const universities = [
   {
-    name: "USQ – Sydney Center",
-    img: "/src/assets/aus/usq.jpg",
-    link: "https://www.usq.edu.au/",
-  },
-  {
-    name: "USC",
-    img: "/src/assets/aus/usc.jpg",
-    link: "https://www.usc.edu.au/",
-  },
-  {
-    name: "Torrens University",
-    img: "/src/assets/aus/torrens.jpg",
-    link: "https://www.torrens.edu.au/",
-  },
-  {
-    name: "Southern Cross University",
-    img: "/src/assets/aus/southerncross.jpg",
-    link: "https://www.scu.edu.au/",
-  },
-  {
-    name: "Melbourne Institute of Technology",
-    img: "/src/assets/aus/mit.jpg",
-    link: "https://www.mit.edu.au/",
+    name: "University Of Tasmania",
+    img: "/src/assets//Aus/Uni-Tamania.jpeg",
+    link: "https://www.utas.edu.au/",
   },
   {
     name: "La Trobe University",
@@ -75,24 +55,44 @@ const universities = [
     link: "https://www.latrobe.edu.au/",
   },
   {
-    name: "Kent",
-    img: "/src/assets/aus/kent.jpg",
-    link: "https://kent.edu.au/",
+    name: "Murdoch University",
+    img: "/src/assets/aus/murdoch.jpg",
+    link: "https://www.murdoch.edu.au/",
   },
   {
-    name: "Kaplan Business School",
-    img: "/src/assets/aus/kaplan.jpg",
-    link: "https://www.kbs.edu.au/",
+    name: "University of Wollongong",
+    img: "/src/assets/aus/wollongong.jpg",
+    link: "https://www.uow.edu.au/",
   },
   {
-    name: "JamesCook University",
+    name: "University of New Castle Australia",
+    img: "/src/assets/aus/newcastle.jpg",
+    link: "https://www.newcastle.edu.au/",
+  },
+  {
+    name: "James Cook University",
     img: "/src/assets/aus/jamescook.jpg",
     link: "https://www.jcu.edu.au/",
   },
   {
-    name: "ECU",
+    name: "Victoria University",
+    img: "/src/assets/aus/vu.jpg",
+    link: "https://www.vu.edu.au/",
+  },
+  {
+    name: "Edith Cowan University (Main Campus)",
     img: "/src/assets/aus/ecu.jpg",
     link: "https://www.ecu.edu.au/",
+  },
+  {
+    name: "Torrens University",
+    img: "/src/assets/aus/torrens.jpg",
+    link: "https://www.torrens.edu.au/",
+  },
+  {
+    name: "Southern Cross University (Main Campus)",
+    img: "/src/assets/aus/southerncross.jpg",
+    link: "https://www.scu.edu.au/",
   },
   {
     name: "Charles Sturt University",
@@ -100,19 +100,50 @@ const universities = [
     link: "https://www.csu.edu.au/",
   },
   {
+    name: "University of Southern Queensland",
+    img: "/src/assets/aus/usq.jpg",
+    link: "https://www.unisq.edu.au/",
+  },
+  {
+    name: "University of the Sunshine Coast (Main Campus)",
+    img: "/src/assets/aus/usc.jpg",
+    link: "https://www.usc.edu.au/",
+  },
+  {
+    name: "Central Queensland University (Main Campus)",
+    img: "/src/assets/aus/cqu.jpg",
+    link: "https://www.cqu.edu.au/",
+  },
+  {
     name: "Charles Darwin University",
-    img: "/src/assets/aus/charlesdarwin.jpg",
+    img: "/src/assets/Aus/Charles_darwin.webp",
     link: "https://www.cdu.edu.au/",
   },
   {
-    name: "Canterbury Institute",
+    name: "Navitas University",
+    img: "/src/assets/aus/navitas.jpg",
+    link: "https://www.navitas.com/",
+  },
+  {
+    name: "Canterbury Institute of Management",
     img: "/src/assets/aus/canterbury.jpg",
     link: "https://cihe.edu.au/",
   },
   {
-    name: "CQU University",
-    img: "/src/assets/aus/cqu.jpg",
-    link: "https://www.cqu.edu.au/",
+    name: "Swinburne University",
+    img: "/src/assets/aus/swinburne.jpg",
+    link: "https://www.swinburne.edu.au/",
   },
+  {
+    name: "Excelsia University College",
+    img: "/src/assets/aus/excelsia.jpg",
+    link: "https://excelsia.edu.au/",
+  },
+  {
+    name: "University of Canberra",
+    img: "/src/assets/aus/canberra.jpg",
+    link: "https://www.canberra.edu.au/",
+  },
+  // Add more universities here if needed
 ];
 </script>
