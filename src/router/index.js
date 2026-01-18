@@ -63,7 +63,7 @@ const routes = [
     path: "/destinations/canada",
     name: "CanadaDestinations",
     component: () => import("@/views/CanadaDestinations.vue"),
-  }
+  },
 ];
 
 const router = createRouter({

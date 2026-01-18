@@ -1,12 +1,12 @@
 <template>
-    <NavbarGrace />
-    <Hero />
-    <Intro />
-    <UniversitiesAndCourses />
-    <Cost_study />
-    <ApplicationStudent />
-    <faq />
-    <fotter />
+  <NavbarGrace />
+  <Hero />
+  <Intro />
+  <UniversitiesAndCourses />
+  <Cost_study />
+  <ApplicationStudent />
+  <faq />
+  <fotter />
 </template>
 
 <script setup>

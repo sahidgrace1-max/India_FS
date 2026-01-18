@@ -10,7 +10,8 @@
         <ul class="list-none p-0 m-0">
           <li class="flex items-start mb-3 text-gray-700">
             <span class="text-green-400 mr-2 mt-1">⏺️</span>
-            Explore scholarships that cater to the student’s financial level and educational interests
+            Explore scholarships that cater to the student’s financial level and
+            educational interests
           </li>
           <li class="flex items-start mb-3 text-gray-700">
             <span class="text-green-400 mr-2 mt-1">⏺️</span>
@@ -32,7 +33,14 @@
       <div class="w-11/12 h-1 bg-green-400 mb-6"></div>
       <div class="text-base text-gray-600">
         <p>
-          Attending college overseas may seem daunting owing to the cost of study, but that’s exactly why you need to find, apply for, and receive scholarships which are essential to ensure that you won’t be burdened up with huge student loan payments after graduation. Scholarships aren’t just an additional benefit any longer. They’re essential to bridge the gap between the increasing cost of education overseas and what you can afford. So we’re sure that you understand the bigger picture as to why scholarships have become so essential.
+          Attending college overseas may seem daunting owing to the cost of
+          study, but that’s exactly why you need to find, apply for, and receive
+          scholarships which are essential to ensure that you won’t be burdened
+          up with huge student loan payments after graduation. Scholarships
+          aren’t just an additional benefit any longer. They’re essential to
+          bridge the gap between the increasing cost of education overseas and
+          what you can afford. So we’re sure that you understand the bigger
+          picture as to why scholarships have become so essential.
         </p>
       </div>
     </div>

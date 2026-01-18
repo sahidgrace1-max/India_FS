@@ -19,7 +19,7 @@ export default defineComponent({
   components: {
     NavbarGrace,
     fotter,
-    OurServicesList
+    OurServicesList,
   },
 });
 </script>

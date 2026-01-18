@@ -1,10 +1,10 @@
 <template>
-    <NavbarGrace />
-    <ScholarshipsHero />
-    <ScholarshipsTypes />
-    <Guidance />
-    <FrequentlyAskedQuestions />
-    <fotter />
+  <NavbarGrace />
+  <ScholarshipsHero />
+  <ScholarshipsTypes />
+  <Guidance />
+  <FrequentlyAskedQuestions />
+  <fotter />
 </template>
 
 <script setup>

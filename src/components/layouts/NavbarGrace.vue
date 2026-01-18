@@ -14,18 +14,70 @@
       >
         <a href="#" class="hover:underline">Our Team</a>
         <a href="#" class="hover:underline">LOG IN</a>
-        <div class="relative" @mouseenter="handleBranchesDropdownEnter" @mouseleave="handleBranchesDropdownLeave">
-          <button class="hover:underline focus:outline-none flex items-center gap-1">
+        <div
+          class="relative"
+          @mouseenter="handleBranchesDropdownEnter"
+          @mouseleave="handleBranchesDropdownLeave"
+        >
+          <button
+            class="hover:underline focus:outline-none flex items-center gap-1"
+          >
             <span>{{ selectedBranch }}</span>
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            <svg
+              class="w-3 h-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
-          <div v-if="showBranchesDropdown" class="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white text-gray-800 shadow-xl rounded-lg flex flex-col z-40 py-2" style="top:100%">
-            <button @click="selectBranch('Delhi')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Delhi' }">Delhi</button>
-            <button @click="selectBranch('Mumbai')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Mumbai' }">Mumbai</button>
-            <button @click="selectBranch('Bangalore')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Bangalore' }">Bangalore</button>
-            <button @click="selectBranch('Kolkata')" class="hover:bg-gray-100 py-2 px-4 text-left" :class="{ 'bg-blue-100 font-semibold': selectedBranch === 'Kolkata' }">Kolkata</button>
+          <div
+            v-if="showBranchesDropdown"
+            class="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white text-gray-800 shadow-xl rounded-lg flex flex-col z-40 py-2"
+            style="top: 100%"
+          >
+            <button
+              @click="selectBranch('Delhi')"
+              class="hover:bg-gray-100 py-2 px-4 text-left"
+              :class="{
+                'bg-blue-100 font-semibold': selectedBranch === 'Delhi',
+              }"
+            >
+              Delhi
+            </button>
+            <button
+              @click="selectBranch('Mumbai')"
+              class="hover:bg-gray-100 py-2 px-4 text-left"
+              :class="{
+                'bg-blue-100 font-semibold': selectedBranch === 'Mumbai',
+              }"
+            >
+              Mumbai
+            </button>
+            <button
+              @click="selectBranch('Bangalore')"
+              class="hover:bg-gray-100 py-2 px-4 text-left"
+              :class="{
+                'bg-blue-100 font-semibold': selectedBranch === 'Bangalore',
+              }"
+            >
+              Bangalore
+            </button>
+            <button
+              @click="selectBranch('Kolkata')"
+              class="hover:bg-gray-100 py-2 px-4 text-left"
+              :class="{
+                'bg-blue-100 font-semibold': selectedBranch === 'Kolkata',
+              }"
+            >
+              Kolkata
+            </button>
           </div>
         </div>
         <a href="#" aria-label="Facebook" class="hover:text-gray-200">
@@ -58,11 +110,11 @@
     >
       <!-- Logo & Brand -->
       <div class="flex items-center gap-6 flex-shrink-0">
-          <img
-            src="@/assets/gi-logo-gif.gif"
-            alt="Grace International Logo"
-            class="h-20 w-auto"
-          />
+        <img
+          src="@/assets/gi-logo-gif.gif"
+          alt="Grace International Logo"
+          class="h-20 w-auto"
+        />
         <!-- <select v-model="selectedLocation" class="bg-blue-900 text-white px-2 py-1 rounded ml-4">
           <option v-for="(info, loc) in locations" :key="loc" :value="loc">{{ loc }}</option>
         </select> -->
@@ -99,13 +151,21 @@
             <span class="font-sans">Our Services</span>
             <span
               class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600"
-              :class="{ 'scale-x-100': $route.path === '/our-services', 'scale-x-0 group-hover:scale-x-100': $route.path !== '/our-services' }"
-              style="transition: transform 0.2s;"
+              :class="{
+                'scale-x-100': $route.path === '/our-services',
+                'scale-x-0 group-hover:scale-x-100':
+                  $route.path !== '/our-services',
+              }"
+              style="transition: transform 0.2s"
             ></span>
           </router-link>
 
           <!-- Explore Dropdown (remove Our Services link from here) -->
-          <div class="relative" @mouseenter="handleDropdownEnter" @mouseleave="handleDropdownLeave">
+          <div
+            class="relative"
+            @mouseenter="handleDropdownEnter"
+            @mouseleave="handleDropdownLeave"
+          >
             <button
               class="flex items-center gap-2 transition-colors relative group focus:outline-none"
               :class="{ 'text-green-600': isExploreActive }"
@@ -115,15 +175,21 @@
                 class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600"
                 :class="{
                   'scale-x-100': isExploreActive,
-                  'scale-x-0 group-hover:scale-x-100': !isExploreActive
+                  'scale-x-0 group-hover:scale-x-100': !isExploreActive,
                 }"
-                style="transition: transform 0.2s;"
+                style="transition: transform 0.2s"
               ></span>
             </button>
-            <div v-if="showDropdown" class="absolute left-1/2 -translate-x-1/2 mt-4 w-[700px] bg-gray-100 shadow-xl rounded-lg flex z-40 py-8 px-10 gap-12" style="top:100%">
+            <div
+              v-if="showDropdown"
+              class="absolute left-1/2 -translate-x-1/2 mt-4 w-[700px] bg-gray-100 shadow-xl rounded-lg flex z-40 py-8 px-10 gap-12"
+              style="top: 100%"
+            >
               <!-- Our Services (remove router-link, just show as text) -->
               <div class="flex-1 min-w-[180px]">
-                <span class="font-bold text-blue-900 mb-4 text-lg block">Our Services</span>
+                <span class="font-bold text-blue-900 mb-4 text-lg block"
+                  >Our Services</span
+                >
                 <ul class="space-y-2 text-gray-700 text-base">
                   <li>Free Counselling</li>
                   <li>Free Profile Assessment</li>
@@ -133,54 +199,74 @@
               </div>
               <!-- Find Universities -->
               <div class="flex-1 min-w-[180px]">
-                <h3 class="font-bold text-blue-900 mb-4 text-lg">Find Universities</h3>
+                <h3 class="font-bold text-blue-900 mb-4 text-lg">
+                  Find Universities
+                </h3>
                 <ul class="space-y-2 text-gray-700 text-base">
                   <li>
                     <router-link
                       to="/university/australia"
                       class="hover:underline"
-                      :class="{ 'text-green-600 underline': $route.path === '/university/australia' }"
-                    >Australia</router-link>
+                      :class="{
+                        'text-green-600 underline':
+                          $route.path === '/university/australia',
+                      }"
+                      >Australia</router-link
+                    >
                   </li>
                   <li>
                     <router-link
                       to="/university/usa"
                       class="hover:underline"
-                      :class="{ 'text-green-600 underline': $route.path === '/university/usa' }"
-                    >USA</router-link>
+                      :class="{
+                        'text-green-600 underline':
+                          $route.path === '/university/usa',
+                      }"
+                      >USA</router-link
+                    >
                   </li>
                   <li>
                     <router-link
                       to="/university/uk"
                       class="hover:underline"
-                      :class="{ 'text-green-600 underline': $route.path === '/university/uk' }"
-                    >UK</router-link>
+                      :class="{
+                        'text-green-600 underline':
+                          $route.path === '/university/uk',
+                      }"
+                      >UK</router-link
+                    >
                   </li>
                   <li>
                     <router-link
                       to="/university/canada"
                       class="hover:underline"
-                      :class="{ 'text-green-600 underline': $route.path === '/university/canada' }"
-                    >Canada</router-link>
+                      :class="{
+                        'text-green-600 underline':
+                          $route.path === '/university/canada',
+                      }"
+                      >Canada</router-link
+                    >
                   </li>
                 </ul>
               </div>
               <!-- More Information -->
               <div class="flex-1 min-w-[180px]">
-                <h3 class="font-bold text-blue-900 mb-4 text-lg">More Information</h3>
+                <h3 class="font-bold text-blue-900 mb-4 text-lg">
+                  More Information
+                </h3>
                 <ul class="space-y-2 text-gray-700 text-base">
                   <li>
                     <router-link
                       to="/scholarships"
                       class="hover:underline"
                       :class="{
-                        'text-green-600 underline': $route.path === '/scholarships'
+                        'text-green-600 underline':
+                          $route.path === '/scholarships',
                       }"
-                    >Scholarships</router-link>
+                      >Scholarships</router-link
+                    >
                   </li>
-                  <li>
-                    Latest News & Updates
-                  </li>
+                  <li>Latest News & Updates</li>
                 </ul>
               </div>
             </div>
@@ -194,13 +280,20 @@
             <span class="font-sans">About</span>
             <span
               class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600"
-              :class="{ 'scale-x-100': $route.path === '/about', 'scale-x-0 group-hover:scale-x-100': $route.path !== '/about' }"
-              style="transition: transform 0.2s;"
+              :class="{
+                'scale-x-100': $route.path === '/about',
+                'scale-x-0 group-hover:scale-x-100': $route.path !== '/about',
+              }"
+              style="transition: transform 0.2s"
             ></span>
           </router-link>
 
           <!-- Destinations Dropdown (desktop) -->
-          <div class="relative" @mouseenter="handleDestinationsDropdownEnter" @mouseleave="handleDestinationsDropdownLeave">
+          <div
+            class="relative"
+            @mouseenter="handleDestinationsDropdownEnter"
+            @mouseleave="handleDestinationsDropdownLeave"
+          >
             <button
               class="transition-colors relative group flex items-center gap-2 hover:text-green-600 focus:outline-none"
               :class="{ 'text-green-600': isDestinationsActive }"
@@ -210,32 +303,52 @@
                 class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600"
                 :class="{
                   'scale-x-100': isDestinationsActive,
-                  'scale-x-0 group-hover:scale-x-100': !isDestinationsActive
+                  'scale-x-0 group-hover:scale-x-100': !isDestinationsActive,
                 }"
-                style="transition: transform 0.2s;"
+                style="transition: transform 0.2s"
               ></span>
             </button>
-            <div v-if="showDestinationsDropdown" class="absolute left-1/2 -translate-x-1/2 mt-4 w-64 bg-gray-100 shadow-xl rounded-lg flex flex-col z-40 py-4 px-6 gap-2" style="top:100%">
+            <div
+              v-if="showDestinationsDropdown"
+              class="absolute left-1/2 -translate-x-1/2 mt-4 w-64 bg-gray-100 shadow-xl rounded-lg flex flex-col z-40 py-4 px-6 gap-2"
+              style="top: 100%"
+            >
               <router-link
                 to="/destinations/australia"
                 class="hover:underline py-2 px-2 rounded transition-colors"
-                :class="{ 'text-green-600 underline': $route.path === '/destinations/australia' }"
-              >Study in Australia</router-link>
+                :class="{
+                  'text-green-600 underline':
+                    $route.path === '/destinations/australia',
+                }"
+                >Study in Australia</router-link
+              >
               <router-link
                 to="/destinations/usa"
                 class="hover:underline py-2 px-2 rounded transition-colors"
-                :class="{ 'text-green-600 underline': $route.path === '/destinations/usa' }"
-              >Study in USA</router-link>
+                :class="{
+                  'text-green-600 underline':
+                    $route.path === '/destinations/usa',
+                }"
+                >Study in USA</router-link
+              >
               <router-link
                 to="/destinations/canada"
                 class="hover:underline py-2 px-2 rounded transition-colors"
-                :class="{ 'text-green-600 underline': $route.path === '/destinations/canada' }"
-              >Study in Canada</router-link>
+                :class="{
+                  'text-green-600 underline':
+                    $route.path === '/destinations/canada',
+                }"
+                >Study in Canada</router-link
+              >
               <router-link
                 to="/destinations/uk"
                 class="hover:underline py-2 px-2 rounded transition-colors"
-                :class="{ 'text-green-600 underline': $route.path === '/destinations/uk' }"
-              >Study in UK</router-link>
+                :class="{
+                  'text-green-600 underline':
+                    $route.path === '/destinations/uk',
+                }"
+                >Study in UK</router-link
+              >
             </div>
           </div>
         </nav>
@@ -359,28 +472,32 @@
                     to="/destinations/australia"
                     class="hover:underline"
                     @click="showMobileMenu = false"
-                  >Study in Australia</router-link>
+                    >Study in Australia</router-link
+                  >
                 </li>
                 <li>
                   <router-link
                     to="/destinations/usa"
                     class="hover:underline"
                     @click="showMobileMenu = false"
-                  >Study in USA</router-link>
+                    >Study in USA</router-link
+                  >
                 </li>
                 <li>
                   <router-link
                     to="/destinations/canada"
                     class="hover:underline"
                     @click="showMobileMenu = false"
-                  >Study in Canada</router-link>
+                    >Study in Canada</router-link
+                  >
                 </li>
                 <li>
                   <router-link
                     to="/destinations/uk"
                     class="hover:underline"
                     @click="showMobileMenu = false"
-                  >Study in UK</router-link>
+                    >Study in UK</router-link
+                  >
                 </li>
               </ul>
             </div>
@@ -485,9 +602,11 @@ const destinationsPaths = [
   "/destinations/australia",
   "/destinations/usa",
   "/destinations/canada",
-  "/destinations/uk"
+  "/destinations/uk",
 ];
-const isDestinationsActive = computed(() => destinationsPaths.includes(route.path));
+const isDestinationsActive = computed(() =>
+  destinationsPaths.includes(route.path),
+);
 
 // Destinations Dropdown logic (mobile)
 const showMobileDestinationsDropdown = ref(false);
@@ -502,7 +621,7 @@ const explorePaths = [
   "/university/uk",
   "/university/canada",
   "/scholarships",
-  "/news"
+  "/news",
 ];
 const isExploreActive = computed(() => explorePaths.includes(route.path));
 

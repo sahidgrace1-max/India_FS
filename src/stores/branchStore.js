@@ -1,7 +1,7 @@
-import { ref } from 'vue';
+import { ref } from "vue";
 
 // Selected branch store
-const selectedBranch = ref('Delhi');
+const selectedBranch = ref("Delhi");
 
 export function useBranchStore() {
   const setSelectedBranch = (branch) => {
