@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "@/views/Dashboard.vue";
 
-// import About from "@/views/About.vue";
+import About from "@/views/About.vue";
 
 const routes = [
   {
@@ -9,21 +9,21 @@ const routes = [
     name: "Dashboard",
     component: Dashboard,
   },
-  // {
-  //   path: "/about",
-  //   name: "About",
-  //   component: About,
-  // },
-  // {
-  //   path: "/our-services",
-  //   name: "Services",
-  //   component: () => import("@/views/OurServices.vue"),
-  // },
-  // {
-  //   path: "/university/australia",
-  //   name: "AustraliaUniversity",
-  //   component: () => import("@/views/AustraliaUniversity.vue"),
-  // },
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+  {
+    path: "/our-services",
+    name: "Services",
+    component: () => import("@/views/OurServices.vue"),
+  },
+  {
+    path: "/university/australia",
+    name: "AustraliaUniversity",
+    component: () => import("@/views/AustraliaUniversity.vue"),
+  },
   // {
   //   path: "/university/usa",
   //   name: "USAUniversity",
@@ -39,31 +39,31 @@ const routes = [
   //   name: "CanadaUniversity",
   //   component: () => import("@/views/CanadaUniversity.vue"),
   // },
-  // {
-  //   path: "/scholarships",
-  //   name: "Scholarships",
-  //   component: () => import("@/views/Scholarships.vue"),
-  // },
-  // {
-  //   path: "/destinations/australia",
-  //   name: "AustraliaDestinations",
-  //   component: () => import("@/views/DestinationsAustralia.vue"),
-  // },
-  // {
-  //   path: "/destinations/uk",
-  //   name: "UkDestinations",
-  //   component: () => import("@/views/UkDestinations.vue"),
-  // },
-  // {
-  //   path: "/destinations/usa",
-  //   name: "UsaDestinations",
-  //   component: () => import("@/views/UsaDestination.vue"),
-  // },
-  // {
-  //   path: "/destinations/canada",
-  //   name: "CanadaDestinations",
-  //   component: () => import("@/views/CanadaDestinations.vue"),
-  // },
+  {
+    path: "/scholarships",
+    name: "Scholarships",
+    component: () => import("@/views/Scholarships.vue"),
+  },
+  {
+    path: "/destinations/australia",
+    name: "AustraliaDestinations",
+    component: () => import("@/views/DestinationsAustralia.vue"),
+  },
+  {
+    path: "/destinations/uk",
+    name: "UkDestinations",
+    component: () => import("@/views/UkDestinations.vue"),
+  },
+  {
+    path: "/destinations/usa",
+    name: "UsaDestinations",
+    component: () => import("@/views/UsaDestination.vue"),
+  },
+  {
+    path: "/destinations/canada",
+    name: "CanadaDestinations",
+    component: () => import("@/views/CanadaDestinations.vue"),
+  },
 ];
 
 const router = createRouter({

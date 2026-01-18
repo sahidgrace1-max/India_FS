@@ -147,34 +147,19 @@ const onCaptchaExpired = () => {
   recaptchaResponse.value = "";
 };
 
-
-const handleSubmit = async () => {
-  try {
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbw_pNbpQ3iEsCI61B0l9UkmtBvDK48akz-plM6JWnAj/dev",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      }
-    );
-
-    const result = await response.json();
-
-    if (result.success) {
-      alert("Form saved successfully!");
-      Object.keys(formData).forEach(key => (formData[key] = ""));
-    }
-  } catch (error) {
-    console.error(error);
-    alert("Error saving form");
+const handleSubmit = () => {
+  if (!recaptchaResponse.value) {
+    alert("Please complete the reCAPTCHA.");
+    return;
   }
+  console.log(
+    "Form submitted:",
+    formData,
+    "reCAPTCHA:",
+    recaptchaResponse.value,
+  );
+  alert("Form submitted successfully!");
 };
-
-
-
 </script>
 
 <style scoped>
