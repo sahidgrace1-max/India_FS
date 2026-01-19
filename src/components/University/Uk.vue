@@ -144,51 +144,50 @@ const universities = [
     img: "/src/assets/uk/sunderland.png",
     link: "https://www.sunderland.ac.uk/",
   },
-   {
+  {
     name: "University of East London",
     img: "/src/assets/uk/northumbria_university_logo.png",
     link: "https://www.uel.ac.uk/",
   },
-   {
+  {
     name: "University of Law",
     img: "/src/assets/uk/university of law.png",
     link: "https://www.law.ac.uk/",
   },
-   {
+  {
     name: "University of Hertfordshire",
     img: "/src/assets/uk/University_of_Hertfordshire.png",
     link: "https://www.herts.ac.uk/",
   },
-   {
+  {
     name: "University of Greenwich",
     img: "/src/assets/uk/university-of-greenwich.png",
     link: "https://www.greenwich.ac.uk/",
   },
-   {
+  {
     name: "University of Huddersfield",
     img: "/src/assets/uk/university-of-huddersfield.png",
     link: "https://www.hud.ac.uk/",
   },
-   {
+  {
     name: "University of West London",
     img: "/src/assets/uk/UWL-Logo.png",
     link: "https://www.uwl.ac.uk/",
   },
-   {
+  {
     name: "University of the West of Scotland",
     img: "/src/assets/uk/UWS.png",
     link: "https://www.uws.ac.uk/",
   },
-   {
+  {
     name: "University of Wolverhampton",
     img: "/src/assets/uk/Wolverhampton.png",
     link: "https://www.wlv.ac.uk/",
   },
-   {
+  {
     name: "University of Worcester",
     img: "/src/assets/uk/Worcester.png",
     link: "https://www.worcester.ac.uk/",
   },
-  
 ];
 </script>
