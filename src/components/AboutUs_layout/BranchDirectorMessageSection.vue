@@ -87,13 +87,13 @@ Our Bangalore office specializes in guiding tech-savvy students who aspire to pu
 With deep connections to Bangalore's startup ecosystem and IT industry, we provide not just educational guidance but also career pathway insights. Our team of experienced counselors is dedicated to helping you achieve your international education goals.<br /><br />
 Innovation meets opportunity at our Bangalore office. Let's build your future together.`,
   },
-  Kolkata: {
+  Ahmedabad: {
     name: "Subrata Banerjee",
     image: new URL("@/assets/image1.png", import.meta.url).href,
-    message: `Welcome to Grace International Kolkata! As the Director of our Kolkata office, I am privileged to serve the intellectual capital of Eastern India. Kolkata's rich academic heritage, with institutions like Presidency University and Jadavpur University, has always produced scholars and thinkers of the highest caliber.<br /><br />
-Our Kolkata office is deeply connected to the educational landscape of Bengal and Eastern India. We understand the academic traditions, aspirations, and cultural nuances of students from this region. Our counselors provide guidance in Bengali, Hindi, and English, ensuring comfortable communication.<br /><br />
-With years of experience in international education consulting, we have helped thousands of students from Kolkata realize their dreams of studying abroad. Our personalized approach ensures that each student receives attention tailored to their unique circumstances.<br /><br />
-Your academic journey to excellence begins here. Let us guide you every step of the way.`,
+    message: `Welcome to Grace International Ahmedabad! As the Director of our Ahmedabad office, I am honored to serve the vibrant student community of Gujarat and Western India. Ahmedabad, known for its entrepreneurial spirit and top institutions like IIM Ahmedabad and Gujarat University, is a hub of innovation and academic excellence.<br /><br />
+Our Ahmedabad office is dedicated to understanding the unique aspirations and backgrounds of students from Gujarat and neighboring states. We offer personalized counseling in Gujarati, Hindi, and English, ensuring every student feels at home.<br /><br />
+With a strong track record in international education consulting, we have guided countless students from Ahmedabad to prestigious universities abroad. Our team is committed to providing honest, practical, and effective solutions tailored to your goals.<br /><br />
+Let us be your trusted partner on your journey to global success. Your dreams are our mission.`,
   },
 };
 </script>

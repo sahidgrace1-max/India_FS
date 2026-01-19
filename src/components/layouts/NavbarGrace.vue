@@ -52,31 +52,13 @@
               Delhi
             </button>
             <button
-              @click="selectBranch('Mumbai')"
+              @click="selectBranch('Ahmedabad')"
               class="hover:bg-gray-100 py-2 px-4 text-left"
               :class="{
-                'bg-blue-100 font-semibold': selectedBranch === 'Mumbai',
+                'bg-blue-100 font-semibold': selectedBranch === 'Ahmedabad',
               }"
             >
-              Mumbai
-            </button>
-            <button
-              @click="selectBranch('Bangalore')"
-              class="hover:bg-gray-100 py-2 px-4 text-left"
-              :class="{
-                'bg-blue-100 font-semibold': selectedBranch === 'Bangalore',
-              }"
-            >
-              Bangalore
-            </button>
-            <button
-              @click="selectBranch('Kolkata')"
-              class="hover:bg-gray-100 py-2 px-4 text-left"
-              :class="{
-                'bg-blue-100 font-semibold': selectedBranch === 'Kolkata',
-              }"
-            >
-              Kolkata
+              Ahmedabad
             </button>
           </div>
         </div>

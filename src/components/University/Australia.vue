@@ -51,12 +51,12 @@ const universities = [
   },
   {
     name: "La Trobe University",
-    img: "/src/assets/aus/latrobe.jpg",
+    img: "/src/assets/Aus/La Trobe University.jpg",
     link: "https://www.latrobe.edu.au/",
   },
   {
     name: "Murdoch University",
-    img: "/src/assets/aus/murdoch.jpg",
+    img: "/src/assets/Aus/MurdochUniversity.jpg",
     link: "https://www.murdoch.edu.au/",
   },
   {
@@ -144,6 +144,5 @@ const universities = [
     img: "/src/assets/aus/canberra.jpg",
     link: "https://www.canberra.edu.au/",
   },
-  // Add more universities here if needed
 ];
 </script>
