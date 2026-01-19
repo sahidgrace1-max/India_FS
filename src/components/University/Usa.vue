@@ -9,7 +9,7 @@
     <div class="flex justify-center mb-8">
       <div class="w-80 h-28 rounded-md overflow-hidden relative">
         <img
-          src="@/assets/Usa/usa.avif"
+          src="@/assets/usa.jpeg"
           alt="USA"
           class="w-full h-full object-cover opacity-80"
         />
@@ -46,102 +46,102 @@
 const universities = [
   {
     name: "Davis University",
-    img: "/src/assets/Usa/davis.jpg",
+    img: "/src/assets/davis.jpg",
     link: "https://www.davis.edu/",
   },
   {
     name: "Concordia University ",
-    img: "/src/assets/Usa/Concordia.webp",
+    img: "/src/assets/Concordia.webp",
     link: "https://www.concordia.edu/",
   },
   {
     name: "Webster University",
-    img: "/src/assets/Usa/Webster.jpg",
+    img: "/src/assets/Webster.jpg",
     link: "https://www.webster.edu/",
   },
   {
     name: "Avila University Kansas",
-    img: "/src/assets/Usa/avila-university.webp",
+    img: "/src/assets/avila-university.webp",
     link: "https://www.avila.edu/",
   },
   {
     name: "Bethany College",
-    img: "/src/assets/Usa/bethany-college-stacked-logo.avif",
+    img: "/src/assets/bethany-college-stacked-logo.avif",
     link: "https://www.bethanykc.edu/",
   },
   {
     name: "Elmhurst University ",
-    img: "/src/assets/Usa/elmhurst-university.jpg",
+    img: "/src/assets/elmhurst-university.jpg",
     link: "https://www.elmhurst.edu/",
   },
   {
     name: "Southeast Missouri State University",
-    img: "/src/assets/Usa/Southeast.webp",
+    img: "/src/assets/Southeast.webp",
     link: "https://www.semo.edu/",
   },
   {
     name: "Southwest Minnesota State University",
-    img: "/src/assets/Usa/SouthwestMinnesotaState.jpg",
+    img: "/src/assets/SouthwestMinnesotaState.jpg",
     link: "https://www.smsu.edu/",
   },
   {
     name: "Youngstown State University",
-    img: "/src/assets/Usa/Youngstown.jpeg",
+    img: "/src/assets/Youngstown.jpeg",
     link: "https://www.ysu.edu/",
   },
   {
     name: "Texas State University ",
-    img: "/src/assets/Usa/TexasState.jpg",
+    img: "/src/assets/TexasState.jpg",
     link: "https://www.txstate.edu/",
   },
   {
     name: "Arkansas state University ",
-    img: "/src/assets/Usa/Arkansas_State_Unversity-.jpg",
+    img: "/src/assets/Arkansas_State_Unversity-.jpg",
     link: "https://www.astate.edu/",
   },
   {
     name: "Wright State University",
-    img: "/src/assets/Usa/wright-state-university.png",
+    img: "/src/assets/wright-state-university.png",
     link: "https://www.wright.edu/",
   },
   {
     name: "Felican University ",
-    img: "/src/assets/Usa/Felician-University.webp",
+    img: "/src/assets/Felician-University.webp",
     link: "https://www.felician.edu/",
   },
   {
     name: "Westclift University ",
-    img: "/src/assets/Usa/westcliff-campus.jpg",
+    img: "/src/assets/westcliff-campus.jpg",
     link: "https://www.westclift.edu/",
   },
   {
     name: "William Patterson University ",
-    img: "/src/assets/Usa/WP_Campus.webp",
+    img: "/src/assets/WP_Campus.webp",
     link: "https://www.wpunj.edu/",
   },
   {
     name: "Bridgeport University ",
-    img: "/src/assets/Usa/BridgeportUniversity.jpg",
+    img: "/src/assets/BridgeportUniversity.jpg",
     link: "https://www.bridgeport.edu/",
   },
   {
     name: "Middle Tennessee State University ",
-    img: "/src/assets/Usa/MiddleTennessee.jpg",
+    img: "/src/assets/MiddleTennessee.jpg",
     link: "https://www.mtsu.edu/",
   },
   {
     name: "Huston-Tillotson University",
-    img: "/src/assets/Usa/Huston-Tillotson University.avif",
+    img: "/src/assets/Huston-Tillotson University.avif",
     link: "https://www.huston-tillotson.edu/",
   },
   {
     name: "Colorado Mesa University",
-    img: "/src/assets/Usa/colorado-mesa-university.jpg",
+    img: "/src/assets/colorado-mesa-university.jpg",
     link: "https://www.coloradomesa.edu/",
   },
   {
     name: "Albertus Magnus College",
-    img: "/src/assets/Usa/Albertus Magnus College.jpg",
+    img: "/src/assets/Albertus Magnus College.jpg",
     link: "https://www.albertus.edu/",
   },
 ];
