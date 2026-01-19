@@ -43,27 +43,27 @@
 </template>
 
 <script setup>
-import canada from '@/assets/canada.webp'
-import fleming from '@/assets/Fleming College.png'
-import georgebrown from '@/assets/George Brown College (Public).jpg'
-import niagara from '@/assets/Niagara College (Public).jpg'
-import ucw from '@/assets/University Canada West (Private).jpg'
-import durham from '@/assets/Durham College (Public).jpg'
-import lambton from '@/assets/Lambton college (Public).jpg'
-import lakeland from '@/assets/Lakeland College (Private).jpg'
-import northern from '@/assets/Northern College (Private).jpg'
-import capilano from '@/assets/Capilano University (Public).png'
-import stclair from '@/assets/St Clair College.png'
-import cambrian from '@/assets/Cambrian College.jpg'
-import alexander from '@/assets/Alexander College.jpg'
-import loyalist from '@/assets/Loyalist College.jpg'
-import ibu from '@/assets/International Business University.png'
-import niagarafalls from '@/assets/University-of-Niagra-Falls-Canada-featured-image.jpg'
-import northisland from '@/assets/North-Island_College.jpg'
-import olds from '@/assets/Olds-College4.png'
-import bowvalley from '@/assets/Bow Valley College.jpg'
-import stlawrence from '@/assets/St Lawrence College.jpg'
-import kingsu from '@/assets/The King\'s University.jpg'
+import canada from "@/assets/canada.webp";
+import fleming from "@/assets/Fleming College.png";
+import georgebrown from "@/assets/George Brown College (Public).jpg";
+import niagara from "@/assets/Niagara College (Public).jpg";
+import ucw from "@/assets/University Canada West (Private).jpg";
+import durham from "@/assets/Durham College (Public).jpg";
+import lambton from "@/assets/Lambton college (Public).jpg";
+import lakeland from "@/assets/Lakeland College (Private).jpg";
+import northern from "@/assets/Northern College (Private).jpg";
+import capilano from "@/assets/Capilano University (Public).png";
+import stclair from "@/assets/St Clair College.png";
+import cambrian from "@/assets/Cambrian College.jpg";
+import alexander from "@/assets/Alexander College.jpg";
+import loyalist from "@/assets/Loyalist College.jpg";
+import ibu from "@/assets/International Business University.png";
+import niagarafalls from "@/assets/University-of-Niagra-Falls-Canada-featured-image.jpg";
+import northisland from "@/assets/North-Island_College.jpg";
+import olds from "@/assets/Olds-College4.png";
+import bowvalley from "@/assets/Bow Valley College.jpg";
+import stlawrence from "@/assets/St Lawrence College.jpg";
+import kingsu from "@/assets/The King's University.jpg";
 
 const universities = [
   {

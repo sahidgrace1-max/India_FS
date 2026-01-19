@@ -43,27 +43,27 @@
 </template>
 
 <script setup>
-import usa from '@/assets/usa.jpeg'
-import davis from '@/assets/davis.jpg'
-import concordia from '@/assets/Concordia.webp'
-import webster from '@/assets/Webster.jpg'
-import avila from '@/assets/avila-university.webp'
-import bethany from '@/assets/bethany-college-stacked-logo.avif'
-import elmhurst from '@/assets/elmhurst-university.jpg'
-import southeast from '@/assets/Southeast.webp'
-import southwest from '@/assets/SouthwestMinnesotaState.jpg'
-import youngstown from '@/assets/Youngstown.jpeg'
-import texasstate from '@/assets/TexasState.jpg'
-import arkansas from '@/assets/Arkansas_State_Unversity-.jpg'
-import wright from '@/assets/wright-state-university.png'
-import felician from '@/assets/Felician-University.webp'
-import westcliff from '@/assets/westcliff-campus.jpg'
-import williampatterson from '@/assets/WP_Campus.webp'
-import bridgeport from '@/assets/BridgeportUniversity.jpg'
-import middletennessee from '@/assets/MiddleTennessee.jpg'
-import hustontillotson from '@/assets/Huston-Tillotson University.avif'
-import coloradomesa from '@/assets/colorado-mesa-university.jpg'
-import albertus from '@/assets/Albertus Magnus College.jpg'
+import usa from "@/assets/usa.jpeg";
+import davis from "@/assets/davis.jpg";
+import concordia from "@/assets/Concordia.webp";
+import webster from "@/assets/Webster.jpg";
+import avila from "@/assets/avila-university.webp";
+import bethany from "@/assets/bethany-college-stacked-logo.avif";
+import elmhurst from "@/assets/elmhurst-university.jpg";
+import southeast from "@/assets/Southeast.webp";
+import southwest from "@/assets/SouthwestMinnesotaState.jpg";
+import youngstown from "@/assets/Youngstown.jpeg";
+import texasstate from "@/assets/TexasState.jpg";
+import arkansas from "@/assets/Arkansas_State_Unversity-.jpg";
+import wright from "@/assets/wright-state-university.png";
+import felician from "@/assets/Felician-University.webp";
+import westcliff from "@/assets/westcliff-campus.jpg";
+import williampatterson from "@/assets/WP_Campus.webp";
+import bridgeport from "@/assets/BridgeportUniversity.jpg";
+import middletennessee from "@/assets/MiddleTennessee.jpg";
+import hustontillotson from "@/assets/Huston-Tillotson University.avif";
+import coloradomesa from "@/assets/colorado-mesa-university.jpg";
+import albertus from "@/assets/Albertus Magnus College.jpg";
 
 const universities = [
   {

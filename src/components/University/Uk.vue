@@ -43,36 +43,36 @@
 </template>
 
 <script setup>
-import uk from '@/assets/uk.jpeg'
-import birminghamcity from '@/assets/Birmingham CIty.webp'
-import bpp from '@/assets/BPP University.webp'
-import bradford from '@/assets/bradford.png'
-import bristol from '@/assets/bristol.png'
-import buckinghamshire from '@/assets/buckinghamshire.png'
-import cardiffmet from '@/assets/cardiff-metropolitan-university.png'
-import coventry from '@/assets/Coventry University.png'
-import creativearts from '@/assets/creative arts.png'
-import demontfort from '@/assets/de-montfort-university.png'
-import edinburghnapier from '@/assets/EdinburghNapierUniversity.png'
-import leedsbeckett from '@/assets/leeds-beckett-university.png'
-import londonmet from '@/assets/londonmetropolitanuniversity.webp'
-import lsbu from '@/assets/LSBU.png'
-import northumbria from '@/assets/Northumbria_University_logo.png'
-import ravensbourne from '@/assets/ravensbourneuniversity.png'
-import regentcollege from '@/assets/RegentCollege.png'
-import roehampton from '@/assets/roehampton.png'
-import salford from '@/assets/salford.png'
-import stirling from '@/assets/Stirling.png'
-import sunderland from '@/assets/Sunderland.png'
-import uel from '@/assets/Northumbria_University_logo.png'
-import lawuni from '@/assets/university of law.png'
-import hertfordshire from '@/assets/University_of_Hertfordshire.png'
-import greenwich from '@/assets/university-of-greenwich.png'
-import huddersfield from '@/assets/university-of-huddersfield.png'
-import westlondon from '@/assets/UWL-Logo.png'
-import westscotland from '@/assets/UWS.png'
-import wolverhampton from '@/assets/Wolverhampton.png'
-import worcester from '@/assets/worcester.png'
+import uk from "@/assets/uk.jpeg";
+import birminghamcity from "@/assets/Birmingham CIty.webp";
+import bpp from "@/assets/BPP University.webp";
+import bradford from "@/assets/bradford.png";
+import bristol from "@/assets/bristol.png";
+import buckinghamshire from "@/assets/buckinghamshire.png";
+import cardiffmet from "@/assets/cardiff-metropolitan-university.png";
+import coventry from "@/assets/Coventry University.png";
+import creativearts from "@/assets/creative arts.png";
+import demontfort from "@/assets/de-montfort-university.png";
+import edinburghnapier from "@/assets/EdinburghNapierUniversity.png";
+import leedsbeckett from "@/assets/leeds-beckett-university.png";
+import londonmet from "@/assets/londonmetropolitanuniversity.webp";
+import lsbu from "@/assets/LSBU.png";
+import northumbria from "@/assets/Northumbria_University_logo.png";
+import ravensbourne from "@/assets/ravensbourneuniversity.png";
+import regentcollege from "@/assets/RegentCollege.png";
+import roehampton from "@/assets/roehampton.png";
+import salford from "@/assets/salford.png";
+import stirling from "@/assets/Stirling.png";
+import sunderland from "@/assets/Sunderland.png";
+import uel from "@/assets/Northumbria_University_logo.png";
+import lawuni from "@/assets/university of law.png";
+import hertfordshire from "@/assets/University_of_Hertfordshire.png";
+import greenwich from "@/assets/university-of-greenwich.png";
+import huddersfield from "@/assets/university-of-huddersfield.png";
+import westlondon from "@/assets/UWL-Logo.png";
+import westscotland from "@/assets/UWS.png";
+import wolverhampton from "@/assets/Wolverhampton.png";
+import worcester from "@/assets/worcester.png";
 
 const universities = [
   {

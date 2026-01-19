@@ -1,11 +1,11 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import albertus from '@/assets/Albertus Magnus College.jpg'
-import capilano from '@/assets/Capilano University (Public).png'
-import stclair from '@/assets/St Clair College.png'
-import uniTasmania from '@/assets/Uni-Tamania.jpeg'
-import latrobe from '@/assets/La Trobe University.jpg'
-import murdoch from '@/assets/MurdochUniversity.jpg'
+import albertus from "@/assets/Albertus Magnus College.jpg";
+import capilano from "@/assets/Capilano University (Public).png";
+import stclair from "@/assets/St Clair College.png";
+import uniTasmania from "@/assets/Uni-Tamania.jpeg";
+import latrobe from "@/assets/La Trobe University.jpg";
+import murdoch from "@/assets/MurdochUniversity.jpg";
 
 const universities = [
   {

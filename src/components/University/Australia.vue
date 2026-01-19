@@ -43,26 +43,26 @@
 </template>
 
 <script setup>
-import uniTasmania from '@/assets/Uni-Tamania.jpeg'
-import latrobe from '@/assets/La Trobe University.jpg'
-import murdoch from '@/assets/MurdochUniversity.jpg'
-import uow from '@/assets/University of Wollongong.jpg'
-import newcastle from '@/assets/University of New Castle Australia.png'
-import jamescook from '@/assets/jamesook-university.jpg'
-import victoria from '@/assets/Victoria University.webp'
-import edith from '@/assets/Edith Cowan University.avif'
-import torrens from '@/assets/Torrens.png'
-import southernCross from '@/assets/Southern Cross University.jpg'
-import charlesTourt from '@/assets/Charles Sturt University.jpg'
-import sunshineCoast from '@/assets/University of the Sunshine Coast .jpg'
-import centralQld from '@/assets/Central Queensland University.jpg'
-import charlesDarwin from '@/assets/Charles_darwin.webp'
-import navitas from '@/assets/Navitas University.png'
-import canterbury from '@/assets/Canterbury Institute of Management.jpg'
-import swinburne from '@/assets/Swinburne University.jpg'
-import excelsia from '@/assets/Excelsia University College.jpg'
-import canberra from '@/assets/University of Canberra.jpg'
-import unisq from '@/assets/University of Southern Queensland.jpg'
+import uniTasmania from "@/assets/Uni-Tamania.jpeg";
+import latrobe from "@/assets/La Trobe University.jpg";
+import murdoch from "@/assets/MurdochUniversity.jpg";
+import uow from "@/assets/University of Wollongong.jpg";
+import newcastle from "@/assets/University of New Castle Australia.png";
+import jamescook from "@/assets/jamesook-university.jpg";
+import victoria from "@/assets/Victoria University.webp";
+import edith from "@/assets/Edith Cowan University.avif";
+import torrens from "@/assets/Torrens.png";
+import southernCross from "@/assets/Southern Cross University.jpg";
+import charlesTourt from "@/assets/Charles Sturt University.jpg";
+import sunshineCoast from "@/assets/University of the Sunshine Coast .jpg";
+import centralQld from "@/assets/Central Queensland University.jpg";
+import charlesDarwin from "@/assets/Charles_darwin.webp";
+import navitas from "@/assets/Navitas University.png";
+import canterbury from "@/assets/Canterbury Institute of Management.jpg";
+import swinburne from "@/assets/Swinburne University.jpg";
+import excelsia from "@/assets/Excelsia University College.jpg";
+import canberra from "@/assets/University of Canberra.jpg";
+import unisq from "@/assets/University of Southern Queensland.jpg";
 
 const universities = [
   {
