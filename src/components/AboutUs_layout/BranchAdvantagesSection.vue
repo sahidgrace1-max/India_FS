@@ -60,74 +60,23 @@ const advantages = {
         "Strong connections with Australian Embassy and High Commission",
     },
   ],
-  Mumbai: [
-    {
-      icon: "fas fa-city",
-      title: "Business Hub",
-      description:
-        "Located in Mumbai's financial district with easy access for students across the city",
-    },
-    {
-      icon: "fas fa-globe",
-      title: "International Exposure",
-      description:
-        "Gateway to international education with strong ties to global universities",
-    },
-    {
-      icon: "fas fa-users",
-      title: "Diverse Community",
-      description:
-        "Supporting students from Maharashtra and Western India with multilingual assistance",
-    },
-    {
-      icon: "fas fa-building",
-      title: "Corporate Partnerships",
-      description:
-        "Strong connections with Mumbai's corporate sector for placement opportunities",
-    },
-  ],
-  Bangalore: [
-    {
-      icon: "fas fa-laptop-code",
-      title: "Tech Hub Advantage",
-      description:
-        "Prime location in India's Silicon Valley with focus on STEM programs",
-    },
-    {
-      icon: "fas fa-rocket",
-      title: "Innovation Focus",
-      description:
-        "Specialized guidance for students pursuing technology and engineering courses",
-    },
-    {
-      icon: "fas fa-network-wired",
-      title: "Industry Network",
-      description:
-        "Strong connections with Bangalore's IT and startup ecosystem",
-    },
-    {
-      icon: "fas fa-graduation-cap",
-      title: "Academic Excellence",
-      description:
-        "Partnerships with IISc, IIMs, and top Karnataka institutions",
-    },
-  ],
-  Kolkata: [
+ 
+  Ahmedabad: [
     {
       icon: "fas fa-book",
       title: "Academic Heritage",
       description:
-        "Serving the educational legacy of Kolkata with deep understanding of local students",
+        "Serving the educational legacy of Ahmedabad with deep understanding of local students",
     },
     {
       icon: "fas fa-train",
       title: "Central Location",
       description:
-        "Easy accessibility from all parts of Kolkata and Eastern India",
+        "Easy accessibility from all parts of Ahmedabad and Eastern India",
     },
     {
       icon: "fas fa-comments",
-      title: "Bengali Support",
+      title: "Marathi Support",
       description:
         "Counseling available in Bengali, Hindi, and English languages",
     },

@@ -125,97 +125,13 @@ const teamMembers = {
       facebook: "#",
     },
   ],
-  Mumbai: [
-    {
-      name: "Vikram Patel",
-      position: "Director - Mumbai Office",
-      badge: "12+ Years Experience",
-      description:
-        "Leading Mumbai office operations with extensive experience in international education consulting.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Kavita Desai",
-      position: "Senior Education Counselor",
-      badge: "QEAC Certified",
-      description:
-        "Expert in guiding students through the application process for top universities worldwide.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Ravi Mehta",
-      position: "Student Visa Specialist",
-      badge: "Visa Expert",
-      description:
-        "Specialized in visa documentation and interview preparation for international students.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Anita Shah",
-      position: "Career Counselor",
-      badge: "10+ Years Experience",
-      description:
-        "Helping students make informed career decisions and choose the right study path abroad.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-  ],
-  Bangalore: [
-    {
-      name: "Suresh Reddy",
-      position: "Director - Bangalore Office",
-      badge: "14+ Years Experience",
-      description:
-        "Leading Bangalore operations with expertise in IT and Engineering programs abroad.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Lakshmi Iyer",
-      position: "Education Consultant",
-      badge: "QEAC Certified",
-      description:
-        "Specializing in STEM programs and technology-focused international education pathways.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Karthik Kumar",
-      position: "Admission Specialist",
-      badge: "Admission Expert",
-      description:
-        "Expert in application strategies for top-ranked universities in Australia and USA.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Deepa Rao",
-      position: "Test Preparation Coach",
-      badge: "Certified Trainer",
-      description:
-        "Dedicated to helping students excel in IELTS, TOEFL, GRE, and GMAT examinations.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-  ],
-  Kolkata: [
+  Ahmedabad: [
     {
       name: "Subrata Banerjee",
-      position: "Director - Kolkata Office",
+      position: "Director - Ahmedabad Office",
       badge: "13+ Years Experience",
       description:
-        "Leading the Kolkata office with deep understanding of Eastern Indian students' needs.",
+        "Leading the Ahmedabad office with deep understanding of Eastern Indian students' needs.",
       image: new URL("@/assets/image1.png", import.meta.url).href,
       linkedin: "#",
       facebook: "#",
@@ -261,8 +177,8 @@ function getTeamDescription(branch) {
       "Our Mumbai team brings extensive experience serving students from Western India",
     Bangalore:
       "Our Bangalore experts specialize in guiding tech-savvy students from South India",
-    Kolkata:
-      "Our Kolkata team is dedicated to supporting students from Eastern India",
+    Ahmedabad:
+      "Our Ahmedabad team is dedicated to supporting students from Eastern India",
   };
   return descriptions[branch] || "";
 }

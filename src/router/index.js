@@ -24,16 +24,16 @@ const routes = [
     name: "AustraliaUniversity",
     component: () => import("@/views/AustraliaUniversity.vue"),
   },
-  // {
-  //   path: "/university/usa",
-  //   name: "USAUniversity",
-  //   component: () => import("@/views/USAUniversity.vue"),
-  // },
-  // {
-  //   path: "/university/uk",
-  //   name: "UKUniversity",
-  //   component: () => import("@/views/UKUniversity.vue"),
-  // },
+  {
+    path: "/university/usa",
+    name: "USAUniversity",
+    component: () => import("@/views/USAUniversity.vue"),
+  },
+  {
+    path: "/university/uk",
+    name: "UKUniversity",
+    component: () => import("@/views/UkUniversity.vue"),
+  },
   // {
   //   path: "/university/canada",
   //   name: "CanadaUniversity",
