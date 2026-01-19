@@ -43,105 +43,126 @@
 </template>
 
 <script setup>
+import uniTasmania from '@/assets/Uni-Tamania.jpeg'
+import latrobe from '@/assets/La Trobe University.jpg'
+import murdoch from '@/assets/MurdochUniversity.jpg'
+import uow from '@/assets/University of Wollongong.jpg'
+import newcastle from '@/assets/University of New Castle Australia.png'
+import jamescook from '@/assets/jamesook-university.jpg'
+import victoria from '@/assets/Victoria University.webp'
+import edith from '@/assets/Edith Cowan University.avif'
+import torrens from '@/assets/Torrens.png'
+import southernCross from '@/assets/Southern Cross University.jpg'
+import charlesTourt from '@/assets/Charles Sturt University.jpg'
+import sunshineCoast from '@/assets/University of the Sunshine Coast .jpg'
+import centralQld from '@/assets/Central Queensland University.jpg'
+import charlesDarwin from '@/assets/Charles_darwin.webp'
+import navitas from '@/assets/Navitas University.png'
+import canterbury from '@/assets/Canterbury Institute of Management.jpg'
+import swinburne from '@/assets/Swinburne University.jpg'
+import excelsia from '@/assets/Excelsia University College.jpg'
+import canberra from '@/assets/University of Canberra.jpg'
+import unisq from '@/assets/University of Southern Queensland.jpg'
+
 const universities = [
   {
     name: "University Of Tasmania",
-    img: "/src/assets/Uni-Tamania.jpeg",
+    img: uniTasmania,
     link: "https://www.utas.edu.au/",
   },
   {
     name: "La Trobe University",
-    img: "/src/assets/La Trobe University.jpg",
+    img: latrobe,
     link: "https://www.latrobe.edu.au/",
   },
   {
     name: "Murdoch University",
-    img: "/src/assets/MurdochUniversity.jpg",
+    img: murdoch,
     link: "https://www.murdoch.edu.au/",
   },
   {
     name: "University of Wollongong",
-    img: "/src/assets/University of Wollongong.jpg",
+    img: uow,
     link: "https://www.uow.edu.au/",
   },
   {
     name: "University of New Castle Australia",
-    img: "/src/assets/University of New Castle Australia.png",
+    img: newcastle,
     link: "https://www.newcastle.edu.au/",
   },
   {
     name: "James Cook University",
-    img: "/src/assets/jamesook-university.jpg",
+    img: jamescook,
     link: "https://www.jcu.edu.au/",
   },
   {
     name: "Victoria University",
-    img: "/src/assets/Victoria University.webp",
+    img: victoria,
     link: "https://www.vu.edu.au/",
   },
   {
     name: "Edith Cowan University (Main Campus)",
-    img: "/src/assets/Edith Cowan University.avif",
+    img: edith,
     link: "https://www.ecu.edu.au/",
   },
   {
     name: "Torrens University",
-    img: "/src/assets/Torrens.png",
+    img: torrens,
     link: "https://www.torrens.edu.au/",
   },
   {
     name: "Southern Cross University (Main Campus)",
-    img: "/src/assets/Southern Cross University.jpg",
+    img: southernCross,
     link: "https://www.scu.edu.au/",
   },
   {
     name: "Charles Sturt University",
-    img: "/src/assets/Charles Sturt University.jpg",
+    img: charlesTourt,
     link: "https://www.csu.edu.au/",
   },
   {
     name: "University of Southern Queensland",
-    img: "/src/assets/University of Southern Queensland.jpg",
+    img: unisq,
     link: "https://www.unisq.edu.au/",
   },
   {
     name: "University of the Sunshine Coast (Main Campus)",
-    img: "/src/assets/University of the Sunshine Coast .jpg",
+    img: sunshineCoast,
     link: "https://www.usc.edu.au/",
   },
   {
     name: "Central Queensland University (Main Campus)",
-    img: "/src/assets/Central Queensland University.jpg",
+    img: centralQld,
     link: "https://www.cqu.edu.au/",
   },
   {
     name: "Charles Darwin University",
-    img: "/src/assets/Charles_darwin.webp",
+    img: charlesDarwin,
     link: "https://www.cdu.edu.au/",
   },
   {
     name: "Navitas University",
-    img: "/src/assets/Navitas University.png",
+    img: navitas,
     link: "https://www.navitas.com/",
   },
   {
     name: "Canterbury Institute of Management",
-    img: "/src/assets/Canterbury Institute of Management.jpg",
+    img: canterbury,
     link: "https://cihe.edu.au/",
   },
   {
     name: "Swinburne University",
-    img: "/src/assets/Swinburne University.jpg",
+    img: swinburne,
     link: "https://www.swinburne.edu.au/",
   },
   {
     name: "Excelsia University College",
-    img: "/src/assets/Excelsia University College.jpg",
+    img: excelsia,
     link: "https://excelsia.edu.au/",
   },
   {
     name: "University of Canberra",
-    img: "/src/assets/University of Canberra.jpg",
+    img: canberra,
     link: "https://www.canberra.edu.au/",
   },
 ];

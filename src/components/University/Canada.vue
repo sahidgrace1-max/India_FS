@@ -43,105 +43,127 @@
 </template>
 
 <script setup>
+import canada from '@/assets/canada.webp'
+import fleming from '@/assets/Fleming College.png'
+import georgebrown from '@/assets/George Brown College (Public).jpg'
+import niagara from '@/assets/Niagara College (Public).jpg'
+import ucw from '@/assets/University Canada West (Private).jpg'
+import durham from '@/assets/Durham College (Public).jpg'
+import lambton from '@/assets/Lambton college (Public).jpg'
+import lakeland from '@/assets/Lakeland College (Private).jpg'
+import northern from '@/assets/Northern College (Private).jpg'
+import capilano from '@/assets/Capilano University (Public).png'
+import stclair from '@/assets/St Clair College.png'
+import cambrian from '@/assets/Cambrian College.jpg'
+import alexander from '@/assets/Alexander College.jpg'
+import loyalist from '@/assets/Loyalist College.jpg'
+import ibu from '@/assets/International Business University.png'
+import niagarafalls from '@/assets/University-of-Niagra-Falls-Canada-featured-image.jpg'
+import northisland from '@/assets/North-Island_College.jpg'
+import olds from '@/assets/Olds-College4.png'
+import bowvalley from '@/assets/Bow Valley College.jpg'
+import stlawrence from '@/assets/St Lawrence College.jpg'
+import kingsu from '@/assets/The King\'s University.jpg'
+
 const universities = [
   {
     name: "Flamming",
-    img: "/src/assets/Fleming College.png",
+    img: fleming,
     link: "https://flemingcollege.ca/",
   },
   {
     name: "George Brown College(public)",
-    img: "/src/assets/George Brown College (Public).jpg",
+    img: georgebrown,
     link: "https://www.georgebrown.ca/",
   },
   {
     name: "Niagara College(Public)",
-    img: "/src/assets/Niagara College (Public).jpg",
+    img: niagara,
     link: "https://www.niagaracollege.ca/",
   },
   {
     name: "University Canada West(Private)",
-    img: "/src/assets/University Canada West (Private).jpg",
+    img: ucw,
     link: "https://www.ucanwest.ca/",
   },
   {
     name: "Durham College (Public)",
-    img: "/src/assets/Durham College (Public).jpg",
+    img: durham,
     link: "https://durhamcollege.ca/",
   },
   {
     name: "Lambton College(Public)",
-    img: "/src/assets/Lambton college (Public).jpg",
+    img: lambton,
     link: "https://www.lambtoncollege.ca/",
   },
   {
     name: "Lakeland College(Private)",
-    img: "/src/assets/Lakeland College (Private).jpg",
+    img: lakeland,
     link: "https://www.lakelandcollege.ca/",
   },
   {
     name: "Northern College (Private)",
-    img: "/src/assets/Northern College (Private).jpg",
+    img: northern,
     link: "https://www.northerncollege.ca/",
   },
   {
     name: "Capilano University(Public)",
-    img: "/src/assets/Capilano University (Public).png",
+    img: capilano,
     link: "https://www.capilanou.ca/",
   },
   {
     name: " St Clair College",
-    img: "/src/assets/St Clair College.png",
+    img: stclair,
     link: "https://www.stclaircollege.ca/",
   },
   {
     name: "Cambrian College",
-    img: "/src/assets/Cambrian College.jpg",
+    img: cambrian,
     link: "https://cambriancollege.ca/",
   },
   {
     name: "Alexander College",
-    img: "/src/assets/Alexander College.jpg",
+    img: alexander,
     link: "https://alexandercollege.ca/",
   },
   {
     name: "Loyalist College",
-    img: "/src/assets/Loyalist College.jpg",
+    img: loyalist,
     link: "https://www.loyalistcollege.com/",
   },
   {
     name: "International Business University",
-    img: "/src/assets/International Business University.png",
+    img: ibu,
     link: "https://www.ibu.ca/",
   },
   {
     name: "University of Niagra Falls Canada",
-    img: "/src/assets/University-of-Niagra-Falls-Canada-featured-image.jpg",
+    img: niagarafalls,
     link: "https://www.niagaraparks.com/",
   },
   {
     name: "North Island College",
-    img: "/src/assets/North-Island_College.jpg",
+    img: northisland,
     link: "https://www.nic.bc.ca/",
   },
   {
     name: "Olds College",
-    img: "/src/assets/Olds-College4.png",
+    img: olds,
     link: "https://www.oldscollege.ca/",
   },
   {
     name: "Bow Valley College",
-    img: "/src/assets/Bow Valley College.jpg",
+    img: bowvalley,
     link: "https://bowvalleycollege.ca/",
   },
   {
     name: "St Lawrence College",
-    img: "/src/assets/St Lawrence College.jpg",
+    img: stlawrence,
     link: "https://www.stlawrencecollege.ca/",
   },
   {
     name: "The King's University",
-    img: "/src/assets/The King's University.jpg",
+    img: kingsu,
     link: "https://www.kingsu.ca/",
   },
 ];

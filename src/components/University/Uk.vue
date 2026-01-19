@@ -43,150 +43,181 @@
 </template>
 
 <script setup>
+import uk from '@/assets/uk.jpeg'
+import birminghamcity from '@/assets/Birmingham CIty.webp'
+import bpp from '@/assets/BPP University.webp'
+import bradford from '@/assets/bradford.png'
+import bristol from '@/assets/bristol.png'
+import buckinghamshire from '@/assets/buckinghamshire.png'
+import cardiffmet from '@/assets/cardiff-metropolitan-university.png'
+import coventry from '@/assets/Coventry University.png'
+import creativearts from '@/assets/creative arts.png'
+import demontfort from '@/assets/de-montfort-university.png'
+import edinburghnapier from '@/assets/EdinburghNapierUniversity.png'
+import leedsbeckett from '@/assets/leeds-beckett-university.png'
+import londonmet from '@/assets/londonmetropolitanuniversity.webp'
+import lsbu from '@/assets/LSBU.png'
+import northumbria from '@/assets/Northumbria_University_logo.png'
+import ravensbourne from '@/assets/ravensbourneuniversity.png'
+import regentcollege from '@/assets/RegentCollege.png'
+import roehampton from '@/assets/roehampton.png'
+import salford from '@/assets/salford.png'
+import stirling from '@/assets/Stirling.png'
+import sunderland from '@/assets/Sunderland.png'
+import uel from '@/assets/Northumbria_University_logo.png'
+import lawuni from '@/assets/university of law.png'
+import hertfordshire from '@/assets/University_of_Hertfordshire.png'
+import greenwich from '@/assets/university-of-greenwich.png'
+import huddersfield from '@/assets/university-of-huddersfield.png'
+import westlondon from '@/assets/UWL-Logo.png'
+import westscotland from '@/assets/UWS.png'
+import wolverhampton from '@/assets/Wolverhampton.png'
+import worcester from '@/assets/worcester.png'
+
 const universities = [
   {
     name: "Birmingham City University",
-    img: "/src/assets/Birmingham CIty.webp",
+    img: birminghamcity,
     link: "https://www.bcu.ac.uk/",
   },
   {
     name: "La Trobe University",
-    img: "/src/assets/BPP University.webp",
+    img: bpp,
     link: "https://www.bpp.com/",
   },
   {
     name: "University of Bradford",
-    img: "/src/assets/bradford.png",
+    img: bradford,
     link: "https://www.bradford.ac.uk/",
   },
   {
     name: "University of Bristol",
-    img: "/src/assets/bristol.png",
+    img: bristol,
     link: "https://www.bristol.ac.uk/",
   },
   {
     name: "Buckinghamshire New University",
-    img: "/src/assets/buckinghamshire.png",
+    img: buckinghamshire,
     link: "https://www.bucks.ac.uk/",
   },
   {
     name: "Cardiff Metropolitan University",
-    img: "/src/assets/cardiff-metropolitan-university.png",
+    img: cardiffmet,
     link: "https://www.cardiffmet.ac.uk/",
   },
   {
     name: "Coventry University",
-    img: "/src/assets/Coventry University.png",
+    img: coventry,
     link: "https://www.coventry.ac.uk/",
   },
   {
     name: "University for the Creative Arts",
-    img: "/src/assets/creative arts.png",
+    img: creativearts,
     link: "https://www.uca.ac.uk/",
   },
   {
     name: "De Montfort University",
-    img: "/src/assets/de-montfort-university.png",
+    img: demontfort,
     link: "https://www.dmu.ac.uk/",
   },
   {
     name: "Edinburgh Napier University",
-    img: "/src/assets/EdinburghNapierUniversity.png",
+    img: edinburghnapier,
     link: "https://www.napier.ac.uk/",
   },
   {
     name: "Leeds Beckett University",
-    img: "/src/assets/leeds-beckett-university.png",
+    img: leedsbeckett,
     link: "https://www.leedsbeckett.ac.uk/",
   },
   {
     name: "London Metropolitan University",
-    img: "/src/assets/londonmetropolitanuniversity.webp",
+    img: londonmet,
     link: "https://www.londonmet.ac.uk/",
   },
   {
     name: "LSBU - London South Bank University",
-    img: "/src/assets/LSBU.png",
+    img: lsbu,
     link: "https://www.lsbu.ac.uk/",
   },
   {
     name: "Northumbria University",
-    img: "/src/assets/Northumbria_University_logo.png",
+    img: northumbria,
     link: "https://www.northumbria.ac.uk/",
   },
   {
     name: "Ravensbourne University",
-    img: "/src/assets/ravensbourneuniversity.png",
+    img: ravensbourne,
     link: "https://www.ravensbourne.ac.uk/",
   },
   {
     name: "Regent College London",
-    img: "/src/assets/RegentCollege.png",
+    img: regentcollege,
     link: "https://www.rcl.ac.uk/",
   },
   {
     name: "University of Roehampton London",
-    img: "/src/assets/roehampton.png",
+    img: roehampton,
     link: "https://www.roehampton.ac.uk/",
   },
   {
     name: "University of Salford London",
-    img: "/src/assets/salford.png",
+    img: salford,
     link: "https://www.salford.ac.uk/",
   },
   {
     name: "University of Stirling",
-    img: "/src/assets/Stirling.png",
+    img: stirling,
     link: "https://www.stir.ac.uk/",
   },
   {
     name: "University of Sunderland",
-    img: "/src/assets/Sunderland.png",
+    img: sunderland,
     link: "https://www.sunderland.ac.uk/",
   },
   {
     name: "University of East London",
-    img: "/src/assets/Northumbria_University_logo.png",
+    img: uel,
     link: "https://www.uel.ac.uk/",
   },
   {
     name: "University of Law",
-    img: "/src/assets/university of law.png",
+    img: lawuni,
     link: "https://www.law.ac.uk/",
   },
   {
     name: "University of Hertfordshire",
-    img: "/src/assets/University_of_Hertfordshire.png",
+    img: hertfordshire,
     link: "https://www.herts.ac.uk/",
   },
   {
     name: "University of Greenwich",
-    img: "/src/assets/university-of-greenwich.png",
+    img: greenwich,
     link: "https://www.greenwich.ac.uk/",
   },
   {
     name: "University of Huddersfield",
-    img: "/src/assets/university-of-huddersfield.png",
+    img: huddersfield,
     link: "https://www.hud.ac.uk/",
   },
   {
     name: "University of West London",
-    img: "/src/assets/UWL-Logo.png",
+    img: westlondon,
     link: "https://www.uwl.ac.uk/",
   },
   {
     name: "University of the West of Scotland",
-    img: "/src/assets/UWS.png",
+    img: westscotland,
     link: "https://www.uws.ac.uk/",
   },
   {
     name: "University of Wolverhampton",
-    img: "/src/assets/Wolverhampton.png",
+    img: wolverhampton,
     link: "https://www.wlv.ac.uk/",
   },
   {
     name: "University of Worcester",
-    img: "/src/assets/worcester.png",
+    img: worcester,
     link: "https://www.worcester.ac.uk/",
   },
 ];

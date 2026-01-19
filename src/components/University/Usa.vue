@@ -43,105 +43,127 @@
 </template>
 
 <script setup>
+import usa from '@/assets/usa.jpeg'
+import davis from '@/assets/davis.jpg'
+import concordia from '@/assets/Concordia.webp'
+import webster from '@/assets/Webster.jpg'
+import avila from '@/assets/avila-university.webp'
+import bethany from '@/assets/bethany-college-stacked-logo.avif'
+import elmhurst from '@/assets/elmhurst-university.jpg'
+import southeast from '@/assets/Southeast.webp'
+import southwest from '@/assets/SouthwestMinnesotaState.jpg'
+import youngstown from '@/assets/Youngstown.jpeg'
+import texasstate from '@/assets/TexasState.jpg'
+import arkansas from '@/assets/Arkansas_State_Unversity-.jpg'
+import wright from '@/assets/wright-state-university.png'
+import felician from '@/assets/Felician-University.webp'
+import westcliff from '@/assets/westcliff-campus.jpg'
+import williampatterson from '@/assets/WP_Campus.webp'
+import bridgeport from '@/assets/BridgeportUniversity.jpg'
+import middletennessee from '@/assets/MiddleTennessee.jpg'
+import hustontillotson from '@/assets/Huston-Tillotson University.avif'
+import coloradomesa from '@/assets/colorado-mesa-university.jpg'
+import albertus from '@/assets/Albertus Magnus College.jpg'
+
 const universities = [
   {
     name: "Davis University",
-    img: "/src/assets/davis.jpg",
+    img: davis,
     link: "https://www.davis.edu/",
   },
   {
     name: "Concordia University ",
-    img: "/src/assets/Concordia.webp",
+    img: concordia,
     link: "https://www.concordia.edu/",
   },
   {
     name: "Webster University",
-    img: "/src/assets/Webster.jpg",
+    img: webster,
     link: "https://www.webster.edu/",
   },
   {
     name: "Avila University Kansas",
-    img: "/src/assets/avila-university.webp",
+    img: avila,
     link: "https://www.avila.edu/",
   },
   {
     name: "Bethany College",
-    img: "/src/assets/bethany-college-stacked-logo.avif",
+    img: bethany,
     link: "https://www.bethanykc.edu/",
   },
   {
     name: "Elmhurst University ",
-    img: "/src/assets/elmhurst-university.jpg",
+    img: elmhurst,
     link: "https://www.elmhurst.edu/",
   },
   {
     name: "Southeast Missouri State University",
-    img: "/src/assets/Southeast.webp",
+    img: southeast,
     link: "https://www.semo.edu/",
   },
   {
     name: "Southwest Minnesota State University",
-    img: "/src/assets/SouthwestMinnesotaState.jpg",
+    img: southwest,
     link: "https://www.smsu.edu/",
   },
   {
     name: "Youngstown State University",
-    img: "/src/assets/Youngstown.jpeg",
+    img: youngstown,
     link: "https://www.ysu.edu/",
   },
   {
     name: "Texas State University ",
-    img: "/src/assets/TexasState.jpg",
+    img: texasstate,
     link: "https://www.txstate.edu/",
   },
   {
     name: "Arkansas state University ",
-    img: "/src/assets/Arkansas_State_Unversity-.jpg",
+    img: arkansas,
     link: "https://www.astate.edu/",
   },
   {
     name: "Wright State University",
-    img: "/src/assets/wright-state-university.png",
+    img: wright,
     link: "https://www.wright.edu/",
   },
   {
     name: "Felican University ",
-    img: "/src/assets/Felician-University.webp",
+    img: felician,
     link: "https://www.felician.edu/",
   },
   {
     name: "Westclift University ",
-    img: "/src/assets/westcliff-campus.jpg",
+    img: westcliff,
     link: "https://www.westclift.edu/",
   },
   {
     name: "William Patterson University ",
-    img: "/src/assets/WP_Campus.webp",
+    img: williampatterson,
     link: "https://www.wpunj.edu/",
   },
   {
     name: "Bridgeport University ",
-    img: "/src/assets/BridgeportUniversity.jpg",
+    img: bridgeport,
     link: "https://www.bridgeport.edu/",
   },
   {
     name: "Middle Tennessee State University ",
-    img: "/src/assets/MiddleTennessee.jpg",
+    img: middletennessee,
     link: "https://www.mtsu.edu/",
   },
   {
     name: "Huston-Tillotson University",
-    img: "/src/assets/Huston-Tillotson University.avif",
+    img: hustontillotson,
     link: "https://www.huston-tillotson.edu/",
   },
   {
     name: "Colorado Mesa University",
-    img: "/src/assets/colorado-mesa-university.jpg",
+    img: coloradomesa,
     link: "https://www.coloradomesa.edu/",
   },
   {
     name: "Albertus Magnus College",
-    img: "/src/assets/Albertus Magnus College.jpg",
+    img: albertus,
     link: "https://www.albertus.edu/",
   },
 ];

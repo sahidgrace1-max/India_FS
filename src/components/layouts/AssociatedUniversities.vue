@@ -1,3 +1,75 @@
+<script setup>
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import albertus from '@/assets/Albertus Magnus College.jpg'
+import capilano from '@/assets/Capilano University (Public).png'
+import stclair from '@/assets/St Clair College.png'
+import uniTasmania from '@/assets/Uni-Tamania.jpeg'
+import latrobe from '@/assets/La Trobe University.jpg'
+import murdoch from '@/assets/MurdochUniversity.jpg'
+
+const universities = [
+  {
+    name: "Albertus Magnus College",
+    photo: albertus,
+    website: "https://www.albertus.edu/",
+  },
+  {
+    name: "Capilano University",
+    photo: capilano,
+    website: "https://www.capilanou.ca/",
+  },
+  {
+    name: "St Clair College",
+    photo: stclair,
+    website: "https://www.stclaircollege.ca/",
+  },
+  {
+    name: "La Trobe University",
+    photo: latrobe,
+    website: "https://www.latrobe.edu.au/",
+  },
+  {
+    name: "Murdoch University",
+    photo: murdoch,
+    website: "https://www.murdoch.edu.au/",
+  },
+  {
+    name: "University Of Tasmania",
+    photo: uniTasmania,
+    website: "https://www.utas.edu.au/",
+  },
+];
+
+const visibleCount = 6;
+const currentIndex = ref(0);
+let intervalId = null;
+
+const visibleUniversities = computed(() => {
+  const result = [];
+  for (let i = 0; i < visibleCount; i++) {
+    result.push(universities[(currentIndex.value + i) % universities.length]);
+  }
+  return result;
+});
+
+function nextSlide() {
+  currentIndex.value = (currentIndex.value + 1) % universities.length;
+}
+
+function prevSlide() {
+  currentIndex.value =
+    (currentIndex.value - 1 + universities.length) % universities.length;
+}
+
+onMounted(() => {
+  intervalId = setInterval(nextSlide, 3000);
+});
+
+onUnmounted(() => {
+  clearInterval(intervalId);
+});
+</script>
+
 <template>
   <div
     class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-slate-50 py-8 text-center my-10"
@@ -62,78 +134,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
-
-const universities = [
-  {
-    name: "James Cook University",
-    photo:
-      "https://www.jcu.edu.au/__data/assets/image/0004/114527/jcu-campus-hero.jpg",
-    website: "https://www.jcu.edu.au/",
-  },
-  {
-    name: "Kaplan",
-    photo:
-      "https://www.kaplan.com/-/media/project/kaplan/kaplan-com/images/about/kaplan-international-pathways/kiclondon.jpg",
-    website: "https://www.kaplan.com/",
-  },
-  {
-    name: "Kent Institute",
-    photo:
-      "https://kent.edu.au/wp-content/uploads/2022/03/Kent-Sydney-Campus-1.jpg",
-    website: "https://kent.edu.au/",
-  },
-  {
-    name: "La Trobe University",
-    photo:
-      "https://www.latrobe.edu.au/__data/assets/image/0003/1182387/latrobe-campus.jpg",
-    website: "https://www.latrobe.edu.au/",
-  },
-  {
-    name: "Lakeland College",
-    photo:
-      "https://www.lakelandcollege.ca/media/Images/About/Contact/lloydminster-campus.jpg",
-    website: "https://www.lakelandcollege.ca/",
-  },
-  {
-    name: "Lambton College",
-    photo:
-      "https://www.lambtoncollege.ca/uploadedImages/LambtonCollege/Content/About_Us/Our_Campuses/Sarnia_Campus/2019-Exterior-Front-Entrance.jpg",
-    website: "https://www.lambtoncollege.ca/",
-  },
-];
-
-const visibleCount = 6;
-const currentIndex = ref(0);
-let intervalId = null;
-
-const visibleUniversities = computed(() => {
-  const result = [];
-  for (let i = 0; i < visibleCount; i++) {
-    result.push(universities[(currentIndex.value + i) % universities.length]);
-  }
-  return result;
-});
-
-function nextSlide() {
-  currentIndex.value = (currentIndex.value + 1) % universities.length;
-}
-
-function prevSlide() {
-  currentIndex.value =
-    (currentIndex.value - 1 + universities.length) % universities.length;
-}
-
-onMounted(() => {
-  intervalId = setInterval(nextSlide, 3000);
-});
-
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
-</script>
 
 <style scoped>
 .arrow {
