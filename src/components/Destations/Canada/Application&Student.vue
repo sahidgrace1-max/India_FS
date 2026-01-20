@@ -13,17 +13,17 @@
               <span class="font-semibold text-gray-900">Major Intakes:</span>
               September is the main intake, with January and May start dates for select programs.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Requirements:</span>
               Academic transcripts, proof of English proficiency (IELTS, PTE, TOEFL), statement of purpose (SOP), letters of recommendation (LORs), and financial proof.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Study Permit (Student Visa):</span>
               Required for studies longer than 6 months. Must show proof of acceptance, sufficient funds for tuition + living, and a valid passport.
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+          <p class="text-gray-700 text-base leading-relaxed mb-6">
             Grace International India helps students with every step of the Canada student visa process, from document preparation to online application guidance and visa submission support.
           </p>
 
@@ -35,16 +35,16 @@
             <li class="text-gray-700 text-lg">
               Direct tie-ups with top Canadian universities and colleges.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               End-to-end support: counselling, test prep, applications, visas, scholarships.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Guidance on post-study work permits and PR pathways in Canada.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Pre-departure guidance + assistance with accommodation and settling in Canada.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Recognized as one of the leading Canada education consultants in India with 20+ years of experience.
             </li>
           </ul>

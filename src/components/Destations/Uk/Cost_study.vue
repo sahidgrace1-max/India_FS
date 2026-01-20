@@ -16,14 +16,14 @@
               <span class="font-semibold">£12,000–£15,000/year</span> for
               postgraduate programs.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Living Costs (London – UKVI Requirement):</span
               >
               <span class="font-semibold">£1,265 per month</span> (up to a
               maximum of 9 months).
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Average Total (Study + Living):</span
               >
@@ -68,7 +68,7 @@
             work experience after completing their studies.
           </p>
 
-          <p class="text-gray-700 text-sm leading-relaxed">
+          <p class="text-gray-700 text-base leading-relaxed">
             <span class="font-semibold text-gray-900">Career Pathways:</span>
             UK work experience significantly improves global employability,
             especially in sectors like IT, healthcare, finance, engineering, and

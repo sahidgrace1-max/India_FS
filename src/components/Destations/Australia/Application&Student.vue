@@ -40,18 +40,18 @@
             <li class="text-gray-700 text-lg">
               Direct tie-ups with leading Australian universities.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-base">
               End-to-end support: counselling, test prep, applications, visas,
               scholarships.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-base">
               Latest guidance on post-study work and PR pathways.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-base">
               Pre-departure sessions + on-ground support from Grace offices in
               Australia.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-base">
               Recognized as one of the best Australia education consultants in
               Delhi with 20+ years of expertise.
             </li>
@@ -63,7 +63,7 @@
           <img
             :src="bgImage"
             alt="Application Process"
-             class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[800px]"
+             class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[550px]"
           />
         </div>
       </div>

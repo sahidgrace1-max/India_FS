@@ -32,7 +32,7 @@
             </h2>
 
             <ul class="space-y-4">
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900"
                   >World-Class Education</span
                 >
@@ -40,7 +40,7 @@
                 recognized for academic excellence and research quality.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900"
                   >Affordable Study Options</span
                 >
@@ -48,7 +48,7 @@
                 other major study destinations like the USA and UK.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900"
                   >Post-Graduation Work Permit (PGWP)</span
                 >
@@ -57,7 +57,7 @@
                 eligible programs.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900"
                   >Work While Studying</span
                 >
@@ -66,7 +66,7 @@
                 academic sessions and full-time during breaks.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900"
                   >PR & Immigration Opportunities</span
                 >
@@ -76,7 +76,7 @@
               </li>
             </ul>
 
-            <p class="text-gray-700 text-base leading-relaxed mt-6">
+            <p class="text-gray-700 text-lg leading-relaxed mt-6">
               Graduates in Canada benefit from strong employment prospects in
               fields such as IT, healthcare, engineering, business, and skilled
               trades, supported by a stable economy and inclusive work

@@ -31,31 +31,31 @@
             </h2>
 
             <ul class="space-y-4">
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900">Top-Ranked Universities</span> 
                 – The USA hosts elite institutions such as MIT, Harvard, Stanford, and Yale,
                 along with prestigious public universities like UCLA and University of Michigan.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900">Wide Range of Programs</span> 
                 – From engineering and IT to liberal arts and business, students can
                 choose from undergraduate, graduate, and research-focused degrees.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900">Cutting-Edge Research & Innovation</span> 
                 – Opportunities to work on advanced projects, gain lab experience,
                 and collaborate with leading experts.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900">Flexible Career Opportunities</span> 
                 – Access to internships, on-campus work, and Optional Practical Training (OPT)
                 after graduation.
               </li>
 
-              <li class="text-gray-700">
+              <li class="text-gray-700 text-lg">
                 <span class="font-semibold text-gray-900">Diverse Student Community</span> 
                 – Interact with students from around the world and experience a multicultural campus environment.
               </li>

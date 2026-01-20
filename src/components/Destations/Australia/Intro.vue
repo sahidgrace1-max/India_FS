@@ -19,14 +19,14 @@
           </h2>
 
           <ul class="space-y-4">
-            <li class="text-gray-700">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Government Schools</span>
               – Operated by State or Territory governments. International students
               are required to pay tuition fees and benefit from diverse social and
               cultural learning environments.
             </li>
 
-            <li class="text-gray-700">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Non-Government Schools</span
               >
@@ -35,13 +35,13 @@
               tuition fees.
             </li>
 
-            <li class="text-gray-700">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">ELICOS Programs</span>
               – English language courses ranging from 4 to 48 weeks, with at least
               20 hours of study per week and flexible intake dates throughout the year.
             </li>
 
-            <li class="text-gray-700">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Universities</span> –
               Australia has 43 universities offering over 22,000 courses across
               1,100 institutions, with strong global rankings and research focus.

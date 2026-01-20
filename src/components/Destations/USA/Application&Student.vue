@@ -13,11 +13,11 @@
               <span class="font-semibold text-gray-900">Major Intakes:</span>
               Fall (August/September) and Spring (January), some universities also offer Summer (May/June).
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Requirements:</span>
               English proficiency (TOEFL, IELTS), GRE/GMAT (for some programs), academic transcripts, SOP, LORs, financial proof.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Student Visa (F-1):</span>
               Requires Form I-20 from the university, proof of funds, SEVIS fee, and a US visa interview.
             </li>
@@ -35,16 +35,16 @@
             <li class="text-gray-700 text-lg">
               Direct tie-ups with leading US universities.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               End-to-end support: counselling, test prep, applications, visas, scholarships.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Latest guidance on post-study work options, OPT, and H-1B pathways.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Pre-departure sessions + on-ground support from Grace offices in the USA.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Recognized as one of the top US education consultants in Delhi with 20+ years of expertise.
             </li>
           </ul>
