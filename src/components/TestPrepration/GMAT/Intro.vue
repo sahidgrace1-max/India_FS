@@ -6,28 +6,37 @@
         <div class="flex justify-center">
           <img 
             src="@/assets/image.png" 
-            alt="IELTS Study" 
-           class="rounded-lg shadow-lg w-full h-full object-cover"
-          style="min-height: 400px; max-height: 500px;"
+            alt="GMAT Study" 
+            class="rounded-lg shadow-lg w-full h-full object-cover"
+            style="min-height: 400px; max-height: 500px;"
           />
         </div>
 
         <!-- Right Side - Content -->
-<div class="flex flex-col justify-start space-y-4">
-          <h2 class="text-4xl font-bold text-gray-900 mb-2">What is it?</h2>
+        <div class="flex flex-col justify-start space-y-4">
+          <h2 class="text-4xl font-bold text-gray-900 mb-2">What is GMAT?</h2>
           
           <p class="text-gray-800 leading-relaxed text-lg">
-            IELTS is the International English Language Testing System, the world's proven English language test. IELTS was one of the pioneers of four skills English language testing over 25 years ago, and continues to set the standard for English language testing today. IELTS is accepted as evidence of English language proficiency by over 9,000 organisations worldwide. Last year, more than 22 million tests were taken globally. IELTS is recognised as a secure, valid and reliable indicator of true-to-life ability to communicate in English for education, immigration and professional accreditation.
+            The GMAT (Graduate Management Admission Test) is a standardized test required by most business schools to measure an applicant’s academic ability. It evaluates aptitude in mathematics and English language, providing a reliable benchmark for MBA admissions worldwide.
           </p>
           
           <p class="text-gray-800 leading-relaxed text-lg">
-            IELTS is jointly owned by British Council, IDP: IELTS Australia and Cambridge English Language Assessment through more than 1,000 test centres and locations in over 140 countries.
+            The GMAT consists of three main sections: Analytical Writing Assessment, Verbal Ability, and Quantitative Reasoning. The maximum score achievable is 800, and scores are valid for five years.
+          </p>
+          
+          <p class="text-gray-800 leading-relaxed text-lg">
+            The exam is primarily computer-based, although in regions with limited computer access, a paper-based version may be offered.
+          </p>
+          
+          <p class="text-gray-800 leading-relaxed text-lg">
+            Business schools widely use GMAT scores to assess readiness for MBA programs. It helps institutions evaluate applicants fairly and provides a global standard for comparing candidates.
           </p>
         </div>  
       </div>
     </div>
   </section>
 </template>
+
 
 <script>
 export default {

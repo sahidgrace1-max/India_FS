@@ -6,28 +6,43 @@
         <div class="flex justify-center">
           <img 
             src="@/assets/image.png" 
-            alt="IELTS Study" 
-           class="rounded-lg shadow-lg w-full h-full object-cover"
-          style="min-height: 400px; max-height: 500px;"
+            alt="PTE Study" 
+            class="rounded-lg shadow-lg w-full h-full object-cover"
+            style="min-height: 400px; max-height: 500px;"
           />
         </div>
 
         <!-- Right Side - Content -->
-<div class="flex flex-col justify-start space-y-4">
+        <div class="flex flex-col justify-start space-y-4">
           <h2 class="text-4xl font-bold text-gray-900 mb-2">What is it?</h2>
           
           <p class="text-gray-800 leading-relaxed text-lg">
-            IELTS is the International English Language Testing System, the world's proven English language test. IELTS was one of the pioneers of four skills English language testing over 25 years ago, and continues to set the standard for English language testing today. IELTS is accepted as evidence of English language proficiency by over 9,000 organisations worldwide. Last year, more than 22 million tests were taken globally. IELTS is recognised as a secure, valid and reliable indicator of true-to-life ability to communicate in English for education, immigration and professional accreditation.
+            The Pearson Test of English Academic (PTE Academic) is an English language test designed to assess the readiness of non-native English speakers to participate in a university-level English language instruction program. Pearson created PTE Academic in response to demand from institutions, government, and other organizations for a more accurate way of testing non-native English speakers entering the English-speaking academic world.
           </p>
           
+          <h2 class="text-4xl font-bold text-gray-900 mb-2 mt-6">Who is it for?</h2>
+          
           <p class="text-gray-800 leading-relaxed text-lg">
-            IELTS is jointly owned by British Council, IDP: IELTS Australia and Cambridge English Language Assessment through more than 1,000 test centres and locations in over 140 countries.
+            PTE Academic is a computer-based academic English language test aimed at non-native English speakers wanting to study abroad. It tests Reading, Writing, Listening, and Speaking. Questions often test two skills together, such as listening and reading or reading and speaking.
+          </p>
+
+          <h2 class="text-4xl font-bold text-gray-900 mb-2 mt-6">What countries accept PTE?</h2>
+          
+          <p class="text-gray-800 leading-relaxed text-lg">
+            PTE Academic is recognized by thousands of universities worldwide, with the most popular being the UK, Australia, the US, and Canada.
+          </p>
+
+          <h2 class="text-4xl font-bold text-gray-900 mb-2 mt-6">When can we take the test?</h2>
+          
+          <p class="text-gray-800 leading-relaxed text-lg">
+            PTE tests are usually conducted in three shifts from Monday to Friday – Morning, Day, and Evening. There are 2 test centres in Kathmandu: British Professional College & AlphaBeta Institute. Outside the valley, it is conducted at Chitwan Medical College (CMC).
           </p>
         </div>  
       </div>
     </div>
   </section>
 </template>
+
 
 <script>
 export default {

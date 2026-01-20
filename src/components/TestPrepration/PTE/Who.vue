@@ -15,7 +15,8 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      <EnrollmentFormIELTS @close="closeModal" />
+      <!-- Update the form component for PTE -->
+      <EnrollmentFormPTE @close="closeModal" />
     </div>
   </div>
 
@@ -27,23 +28,23 @@
           <h2 class="text-4xl font-bold text-gray-900 mb-6">Who is it for?</h2>
           
           <p class="text-gray-700 leading-relaxed text-base mb-4">
-            IELTS is recognised by universities and employers in many countries, including Australia, Canada, Ireland, New Zealand, the UK and the USA. It is also recognised by professional bodies, immigration authorities and other government agencies. More than 1.4 million people a year take the test.
+            PTE Academic is a computer-based academic English language test aimed at non-native English speakers wanting to study abroad. It tests Reading, Writing, Listening, and Speaking. Questions often test two skills together, such as listening and reading or reading and speaking.
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base font-semibold mb-2">
-            What is IELTS test like?
+            What countries accept PTE?
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base mb-4">
-            You can choose between the Academic or General Training versions of the test. All candidates do the same Listening and Speaking sections
+            PTE Academic is recognized by thousands of universities worldwide, with the most popular being the UK, Australia, the US, and Canada.
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base font-semibold mb-2">
-            Level and scores:
+            When can we take the test?
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base">
-            Multi-level. You get a score between 1 and 9. Half scores such as 6.5 are possible. Universities often demand an IELTS score of 6 or 7. They may also demand a minimum score in each of the 4 sections.
+            PTE tests are usually conducted in three shifts from Monday to Friday – Morning, Day, and Evening. There are 2 test centres in Kathmandu: British Professional College & AlphaBeta Institute. Outside the valley, it is conducted at Chitwan Medical College (CMC).
           </p>
         </div>
 
@@ -51,7 +52,7 @@
         <div class="flex justify-center">
           <img 
             src="@/assets/image.png" 
-            alt="IELTS Study Desk" 
+            alt="PTE Study Desk" 
             class="rounded-lg shadow-lg w-full h-full object-cover"
             style="min-height: 400px; max-height: 500px;"
           />

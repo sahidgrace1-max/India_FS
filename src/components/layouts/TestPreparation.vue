@@ -16,7 +16,8 @@
       </div>
       <!-- Card 2 -->
       <div
-        class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white"
+      @click="goToPTE"
+        class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         <div class="flex flex-col items-center">
           <span class="text-3xl font-bold text-indigo-900">PTE</span>
@@ -24,7 +25,8 @@
       </div>
       <!-- Card 3 -->
       <div
-        class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white"
+      @click="goToTOEFL"
+        class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         <div class="flex flex-col items-center">
           <span class="text-3xl font-bold text-black">TOFEL</span>
@@ -32,7 +34,8 @@
       </div>
       <!-- Card 8 -->
       <div
-        class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white"
+      @click="goToGMAT"
+        class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         <div class="flex flex-col items-center">
           <span class="text-3xl font-bold text-purple-700">GMAT</span>
@@ -49,5 +52,14 @@ const router = useRouter();
 
 const goToIELTS = () => {
   router.push({ name: 'IELTSPreparation' });
+};
+const goToPTE = () => {
+  router.push({ name: 'PTEPreparation' });
+};
+const goToTOEFL = () => {
+  router.push({ name: 'TOEFLPreparation' });
+};
+const goToGMAT = () => {
+  router.push({ name: 'GMATPreparation' });
 };
 </script>
