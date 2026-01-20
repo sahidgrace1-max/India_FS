@@ -77,30 +77,17 @@ import worcester from "@/assets/worcester.png";
 const universities = [
   {
     name: "Birmingham City University",
-<<<<<<< HEAD
-    img: "/src/assets/UK/BirminghamCity.png",
-    link: "https://www.bcu.ac.uk/",
-  },
-  {
-    name: "BPP University",
-    img: "/src/assets/UK/BPPUniversity.png",
-=======
     img: birminghamcity,
     link: "https://www.bcu.ac.uk/",
   },
   {
     name: "La Trobe University",
     img: bpp,
->>>>>>> cda18675122520ea8b3d62a30919a0d9cd0fac3d
     link: "https://www.bpp.com/",
   },
   {
     name: "University of Bradford",
-<<<<<<< HEAD
-    img: "/src/assets/UK/bradford.png",
-=======
     img: bradford,
->>>>>>> cda18675122520ea8b3d62a30919a0d9cd0fac3d
     link: "https://www.bradford.ac.uk/",
   },
   {
@@ -110,29 +97,17 @@ const universities = [
   },
   {
     name: "Buckinghamshire New University",
-<<<<<<< HEAD
-    img: "/src/assets/UK/buckinghamshire.png",
-=======
     img: buckinghamshire,
->>>>>>> cda18675122520ea8b3d62a30919a0d9cd0fac3d
     link: "https://www.bucks.ac.uk/",
   },
   {
     name: "Cardiff Metropolitan University",
-<<<<<<< HEAD
-    img: "/src/assets/UK/cardiff-metropolitan-university.png",
-=======
     img: cardiffmet,
->>>>>>> cda18675122520ea8b3d62a30919a0d9cd0fac3d
     link: "https://www.cardiffmet.ac.uk/",
   },
   {
     name: "Coventry University",
-<<<<<<< HEAD
-    img: "/src/assets/UK/Coventry University.png",
-=======
     img: coventry,
->>>>>>> cda18675122520ea8b3d62a30919a0d9cd0fac3d
     link: "https://www.coventry.ac.uk/",
   },
   {
