@@ -167,18 +167,6 @@
               class="absolute left-1/2 -translate-x-1/2 mt-4 w-[700px] bg-gray-100 shadow-xl rounded-lg flex z-40 py-8 px-10 gap-12"
               style="top: 100%"
             >
-              <!-- Our Services (remove router-link, just show as text) -->
-              <div class="flex-1 min-w-[180px]">
-                <span class="font-bold text-blue-900 mb-4 text-lg block"
-                  >Our Services</span
-                >
-                <ul class="space-y-2 text-gray-700 text-base">
-                  <li>Free Counselling</li>
-                  <li>Free Profile Assessment</li>
-                  <li>No Services Charge</li>
-                  <li>Free Visa Processing</li>
-                </ul>
-              </div>
               <!-- Find Universities -->
               <div class="flex-1 min-w-[180px]">
                 <h3 class="font-bold text-blue-900 mb-4 text-lg">

@@ -14,14 +14,14 @@
               CAD <span class="font-semibold">15,000–30,000/year</span>
               depending on the program and institution.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Living Costs:</span
               >
               CAD <span class="font-semibold">10,000–15,000/year</span>
               depending on city and lifestyle.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Average Total (Study + Living):</span
               >
@@ -30,7 +30,7 @@
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+          <p class="text-gray-700 text-base leading-relaxed mb-6">
             <span class="text-orange-600 font-medium"
               >Grace International India</span
             >
@@ -38,18 +38,18 @@
             manage living expenses effectively in Canada.
           </p>
 
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Work & PR Opportunities
           </h2>
 
-          <ul class="space-y-2.5 mb-4">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Part-Time Work:</span>
               Up to
               <span class="font-semibold">20 hours per week</span> during study
               sessions and full-time during scheduled breaks.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Post-Graduation Work Permit (PGWP):</span
               >
@@ -59,12 +59,12 @@
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">
+          <p class="text-gray-700 text-base leading-relaxed mb-6">
             Canadian work experience gained through PGWP significantly improves
             employability and future immigration prospects.
           </p>
 
-          <p class="text-gray-700 text-sm leading-relaxed">
+          <p class="text-gray-700 text-base leading-relaxed">
             <span class="font-semibold text-gray-900">PR Pathways:</span>
             International students can apply for permanent residency through
             programs such as

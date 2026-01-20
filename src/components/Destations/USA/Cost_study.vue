@@ -13,19 +13,19 @@
               <span class="font-semibold text-gray-900">Tuition Fees (Public Universities):</span> USD 
               <span class="font-semibold">9,000–23,000/year</span> depending on residency and program.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Tuition Fees (Private Universities):</span> USD 
               <span class="font-semibold">31,000–60,000/year</span> depending on the institution.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Community/Two-Year Colleges:</span> USD 
               <span class="font-semibold">3,000–6,000/year</span> for tuition.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Living Costs:</span> USD 
               <span class="font-semibold">10,000–15,000/year</span> depending on city and lifestyle.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Average Total (Study + Living):</span> USD 
               <span class="font-semibold">20,000–75,000/year</span> depending on type of university and location.
             </li>
@@ -45,16 +45,16 @@
               <span class="font-semibold text-gray-900">On-Campus Work:</span> Indian students on F-1 visas can work part-time 
               <span class="font-semibold">up to 20 hours per week</span> during semesters; full-time during breaks.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Optional Practical Training (OPT):</span>
               <ul class="ml-6 mt-2 space-y-1">
-                <li class="text-gray-600 text-sm">Bachelor's or Master's – up to 12 months</li>
-                <li class="text-gray-600 text-sm">STEM Degrees – can extend for an additional 24 months</li>
+                <li class="text-gray-600 text-base">Bachelor's or Master's – up to 12 months</li>
+                <li class="text-gray-600 text-base">STEM Degrees – can extend for an additional 24 months</li>
               </ul>
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">
+          <p class="text-gray-700 text-base leading-relaxed mb-6">
             OPT allows Indian students to gain practical work experience in the USA after graduation.
           </p>
 

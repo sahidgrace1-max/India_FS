@@ -7,7 +7,7 @@
           <img
             :src="bgImage"
             alt="Graduate Student in Australia"
-            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[600px]" 
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[750px]" 
           />
         </div>
 
@@ -17,23 +17,23 @@
             Australian Universities Overview
           </h2>
           <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               Australia has <span class="font-semibold">43 universities</span>,
               including 2 private universities (Bond and Notre Dame).
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-lg">
               International universities such as
               <span class="font-semibold"
                 >Carnegie Mellon University and University College London</span
               >
               operate campuses in Adelaide.
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-lg">
               Australian universities maintain over
               <span class="font-semibold">7,000 global agreements</span> with
               institutions worldwide.
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-lg">
               Many universities offer overseas branch campuses, exchange
               programs, and twinning arrangements.
             </li>
@@ -47,11 +47,11 @@
               <span class="font-semibold">8 universities</span> ranked among the
               <span class="font-semibold">Top 100</span> globally.
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">
               Ranked <span class="font-semibold">9th</span> in the world
               university ranking system.
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">
               <span class="font-semibold">5</span> Australian cities listed among
               the <span class="font-semibold">top 30 best student cities</span>
               globally.
@@ -67,8 +67,8 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-base">Storing knowledge</li>
-            <li class="text-gray-700 text-xs">Transferring knowledge to others</li>
-            <li class="text-gray-700 text-xs">Creating knowledge through research</li>
+            <li class="text-gray-700 text-base">Transferring knowledge to others</li>
+            <li class="text-gray-700 text-base">Creating knowledge through research</li>
           </ul>
 
           <p class="text-gray-600 text-base italic">

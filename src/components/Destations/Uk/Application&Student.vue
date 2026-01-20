@@ -50,10 +50,10 @@
             <li class="text-gray-700 text-lg">
               Expert guidance on Graduate Route (post-study work visa).
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Pre-departure briefings and ongoing student support in the UK.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Trusted UK education consultants in India with decades of
               experience and high visa success rates.
             </li>

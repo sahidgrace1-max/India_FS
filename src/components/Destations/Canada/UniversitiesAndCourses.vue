@@ -17,30 +17,30 @@
             Top Universities in Canada
           </h2>
           <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-base">University of Toronto</li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">University of Toronto</li>
+            <li class="text-gray-700 text-lg">
               University of British Columbia (UBC)
             </li>
-            <li class="text-gray-700 text-base">McGill University</li>
-            <li class="text-gray-700 text-base">University of Alberta</li>
-            <li class="text-gray-700 text-base">University of Waterloo</li>
+            <li class="text-gray-700 text-lg">McGill University</li>
+            <li class="text-gray-700 text-lg">University of Alberta</li>
+            <li class="text-gray-700 text-lg">University of Waterloo</li>
           </ul>
 
           <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Popular Courses for Indian Students
           </h2>
           <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               Business & Management (MBA, Finance, Analytics)
             </li>
-            <li class="text-gray-700 text-base">IT & Computer Science</li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">IT & Computer Science</li>
+            <li class="text-gray-700 text-lg">
               Engineering (Computer, Mechanical, Civil, Electrical)
             </li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               Health Sciences (Nursing, Public Health, Biotechnology)
             </li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               Data Science & Artificial Intelligence
             </li>
           </ul>
@@ -49,25 +49,25 @@
             Scholarships for Indian Students
           </h2>
           <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Vanier Canada Graduate Scholarships</span
               >
               – Prestigious awards for doctoral students.
             </li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Ontario Graduate Scholarship (OGS)</span
               >
               – For students studying in Ontario.
             </li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >University Entrance & Merit Scholarships</span
               >
               – Offered by institutions like UofT, UBC, and McGill.
             </li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Partial Tuition Waivers</span
               >
