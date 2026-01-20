@@ -1,3 +1,4 @@
+<!-- Updated Contact Form Component with Backend Integration -->
 <template>
   <div class="flex flex-col lg:flex-row w-full min-h-screen">
     <!-- Left Side: Image and Text -->
@@ -19,6 +20,16 @@
         <div class="space-y-5">
           <h2 class="text-green-600 text-3xl font-bold mb-6">Contact Form</h2>
 
+          <!-- Error Message Display -->
+          <div v-if="errorMessage" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+            {{ errorMessage }}
+          </div>
+
+          <!-- Success Message Display -->
+          <div v-if="successMessage" class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+            {{ successMessage }}
+          </div>
+
           <div>
             <label class="block text-gray-700 font-semibold mb-2">
               Your Name<span class="text-red-500">*</span>
@@ -26,6 +37,7 @@
             <input
               type="text"
               v-model="formData.name"
+              required
               class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
@@ -37,6 +49,7 @@
             <input
               type="email"
               v-model="formData.email"
+              required
               class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
@@ -48,6 +61,7 @@
             <input
               type="tel"
               v-model="formData.contact"
+              required
               class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
@@ -59,6 +73,7 @@
             <input
               type="text"
               v-model="formData.course"
+              required
               class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
@@ -98,24 +113,17 @@
             <input
               type="text"
               v-model="formData.city"
+              required
               class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
-          <!-- Replace fake captcha with real reCAPTCHA -->
-          <!-- <div>
-            <VueRecaptchaV2
-              sitekey="YOUR_RECAPTCHA_SITE_KEY"
-              @verify="onCaptchaVerified"
-              @expire="onCaptchaExpired"
-            />
-          </div> -->
-
           <button
             @click="handleSubmit"
-            class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md transition-colors duration-200"
+            :disabled="isSubmitting"
+            class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md transition-colors duration-200 disabled:opacity-50"
           >
-            Submit
+            {{ isSubmitting ? 'Submitting...' : 'Submit' }}
           </button>
         </div>
       </div>
@@ -125,7 +133,6 @@
 
 <script setup>
 import { reactive, ref } from "vue";
-// import VueRecaptchaV2 from 'vue3-recaptcha-v2';
 
 const formData = reactive({
   name: "",
@@ -137,28 +144,53 @@ const formData = reactive({
   city: "",
 });
 
-const recaptchaResponse = ref("");
+const isSubmitting = ref(false);
+const successMessage = ref("");
+const errorMessage = ref("");
 
-const onCaptchaVerified = (response) => {
-  recaptchaResponse.value = response;
-};
+const handleSubmit = async () => {
+  // Clear previous messages
+  successMessage.value = "";
+  errorMessage.value = "";
 
-const onCaptchaExpired = () => {
-  recaptchaResponse.value = "";
-};
-
-const handleSubmit = () => {
-  if (!recaptchaResponse.value) {
-    alert("Please complete the reCAPTCHA.");
+  // Basic validation
+  if (!formData.name || !formData.email || !formData.contact || !formData.course || !formData.city) {
+    errorMessage.value = "Please fill in all required fields.";
     return;
   }
-  console.log(
-    "Form submitted:",
-    formData,
-    "reCAPTCHA:",
-    recaptchaResponse.value,
-  );
-  alert("Form submitted successfully!");
+
+  isSubmitting.value = true;
+
+  try {
+    const response = await fetch("http://localhost:8000/api/contact/submit/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      successMessage.value = "Form submitted successfully! We'll contact you soon.";
+      
+      // Reset form
+      formData.name = "";
+      formData.email = "";
+      formData.contact = "";
+      formData.course = "";
+      formData.intake = "Jan 2026";
+      formData.budget = "Less than 20 Lakhs";
+      formData.city = "";
+    } else {
+      const error = await response.json();
+      errorMessage.value = error.message || "Failed to submit form. Please try again.";
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    errorMessage.value = "An error occurred. Please try again later.";
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 

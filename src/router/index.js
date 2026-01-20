@@ -64,6 +64,11 @@ const routes = [
     name: "CanadaDestinations",
     component: () => import("@/views/CanadaDestinations.vue"),
   },
+  {
+    path: "/test-preparation/ielts",
+    name: "IELTSPreparation",
+    component: () => import("@/views/IELTSPreparation.vue"),
+  },
 ];
 
 const router = createRouter({
