@@ -4,12 +4,12 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left Content -->
         <div class="order-2 lg:order-1">
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Application & Student Visa Process for the USA
           </h2>
 
-          <ul class="space-y-2.5 mb-5">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Major Intakes:</span>
               Fall (August/September) and Spring (January), some universities also offer Summer (May/June).
             </li>
@@ -23,16 +23,16 @@
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+          <p class="text-gray-700 text-base leading-relaxed mb-6">
             Our team guides students through every step of the US student visa process in Delhi, ensuring smooth application and high success rates.
           </p>
 
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Why Choose Grace International India for the USA?
           </h2>
 
-          <ul class="space-y-2 mb-4">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               Direct tie-ups with leading US universities.
             </li>
             <li class="text-gray-700 text-sm">
@@ -55,7 +55,7 @@
           <img
             :src="bgImage"
             alt="US Application Process"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[650px]"
           />
         </div>
       </div>

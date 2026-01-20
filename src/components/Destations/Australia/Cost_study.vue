@@ -7,18 +7,18 @@
           <img
             :src="bgImage"
             alt="Students studying in Australia"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[800px]"
           />
         </div>
 
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Cost of Studying in Australia
           </h2>
 
-          <ul class="space-y-2.5 mb-5">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Foundation Studies:</span>
               AUD <span class="font-semibold">9,000–14,000/year</span> (approx.)
             </li>
@@ -46,12 +46,12 @@
             course fees) before the visa stage, as per the ESOS Act.
           </p>
 
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Accommodation & Living Costs
           </h2>
 
-          <ul class="space-y-2.5 mb-5">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Homestay / Farmstay:</span
               >
@@ -77,12 +77,12 @@
             </li>
           </ul>
 
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Work & Visa Regulations
           </h2>
 
-          <ul class="space-y-2.5 mb-4">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Part-Time Work:</span>
               Up to <span class="font-semibold">40 hours per fortnight</span>
               during semesters and full-time during scheduled breaks.
@@ -102,7 +102,7 @@
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed">
+          <p class="text-gray-700 text-lg leading-relaxed">
             After gaining Australian work experience, international graduates
             may be eligible to apply for
             <span class="font-semibold text-gray-900"
