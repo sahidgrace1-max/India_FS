@@ -323,13 +323,22 @@
                 >Study in Canada</router-link
               >
               <router-link
-                to="/destinations/uk"
+                to="/destinations/UK"
                 class="hover:underline py-2 px-2 rounded transition-colors"
                 :class="{
                   'text-green-600 underline':
-                    $route.path === '/destinations/uk',
+                    $route.path === '/destinations/UK',
                 }"
                 >Study in UK</router-link
+                >
+                <router-link
+                to="/destinations/New Zealand"
+                class="hover:underline py-2 px-2 rounded transition-colors"
+                :class="{
+                  'text-green-600 underline':
+                    $route.path === '/destinations/New Zealand',
+                }"
+                >Study in New Zealand</router-link
               >
             </div>
           </div>
@@ -479,6 +488,14 @@
                     class="hover:underline"
                     @click="showMobileMenu = false"
                     >Study in UK</router-link
+                  >
+                </li>
+                <li>
+                  <router-link
+                    to="/destinations/New Zealand"
+                    class="hover:underline"
+                    @click="showMobileMenu = false"
+                    >Study in New Zealand</router-link
                   >
                 </li>
               </ul>
