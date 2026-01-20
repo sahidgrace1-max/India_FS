@@ -4,12 +4,12 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left Content -->
         <div class="order-1 lg:order-1">
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Cost of Studying & Living in the UK
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Cost of Studying in the UK
           </h2>
 
-          <ul class="space-y-2.5 mb-5">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Tuition Fees:</span>
               <span class="font-semibold">£9,500–£13,000/year</span> for
               undergraduate courses and
@@ -81,7 +81,7 @@
           <img
             :src="bgImage"
             alt="Students studying in the UK"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[600px]"
           />
         </div>
       </div>

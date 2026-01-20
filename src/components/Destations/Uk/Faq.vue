@@ -7,13 +7,13 @@
           <img
             :src="bgImage"
             alt="Students Graduation in the UK"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[500px]"
           />
         </div>
 
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
-          <h2 class="text-xl font-bold text-gray-900 mb-6">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">
             FAQs – Study in the UK for Indian Students
           </h2>
 

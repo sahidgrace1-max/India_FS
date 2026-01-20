@@ -1,28 +1,32 @@
 <template>
   <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
+      <!-- Intro Paragraph - Full Width -->
+      <div class="w-full mb-12">
+        <p class="text-gray-700 text-lg leading-relaxed">
+          The United Kingdom is a highly preferred study and work destination
+          for international students. Its education system is globally
+          respected and structured into primary, secondary, further, and
+          higher education. International students generally enter directly
+          into higher education after completing their equivalent
+          qualifications in their home country.
+        </p>
+      </div>
+
+      <!-- Image and Content Section -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Image Section -->
-        <div class="order-1 lg:order-1">
+        <div>
           <img
             :src="bgImage"
             alt="UK Education System"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[500px]"
           />
         </div>
 
         <!-- Content Section -->
-        <div class="order-2 lg:order-2">
+        <div>
           <div class="prose max-w-none">
-            <p class="text-gray-700 text-base leading-relaxed mb-6">
-              The United Kingdom is a highly preferred study and work destination
-              for international students. Its education system is globally
-              respected and structured into primary, secondary, further, and
-              higher education. International students generally enter directly
-              into higher education after completing their equivalent
-              qualifications in their home country.
-            </p>
-
             <h2 class="text-2xl font-bold text-gray-900 mb-6">
               Why Study in the UK?
             </h2>

@@ -7,17 +7,17 @@
           <img
             :src="bgImage"
             alt="Graduate Student in Australia"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[600px]" 
           />
         </div>
 
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
-          <h2 class="text-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Australian Universities Overview
           </h2>
-          <ul class="space-y-1.5 mb-5">
-            <li class="text-gray-700 text-xs">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-base">
               Australia has <span class="font-semibold">43 universities</span>,
               including 2 private universities (Bond and Notre Dame).
             </li>
@@ -39,11 +39,11 @@
             </li>
           </ul>
 
-          <h2 class="text-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Global Recognition & Rankings
           </h2>
-          <ul class="space-y-1.5 mb-5">
-            <li class="text-gray-700 text-xs">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-base">
               <span class="font-semibold">8 universities</span> ranked among the
               <span class="font-semibold">Top 100</span> globally.
             </li>
@@ -62,16 +62,16 @@
             </li>
           </ul>
 
-          <h2 class="text-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Role of Australian Universities
           </h2>
-          <ul class="space-y-1.5 mb-4">
-            <li class="text-gray-700 text-xs">Storing knowledge</li>
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-base">Storing knowledge</li>
             <li class="text-gray-700 text-xs">Transferring knowledge to others</li>
             <li class="text-gray-700 text-xs">Creating knowledge through research</li>
           </ul>
 
-          <p class="text-gray-500 text-[10px] italic">
+          <p class="text-gray-600 text-base italic">
             Australia has produced
             <span class="font-semibold">15 Nobel Prize Laureates</span> across
             various academic and research disciplines, supported by strong

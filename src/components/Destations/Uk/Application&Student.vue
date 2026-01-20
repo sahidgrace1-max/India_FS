@@ -4,22 +4,22 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left Content -->
         <div class="order-2 lg:order-1">
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Application & Student Visa Process
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Application & Student Visa Process for the UK
           </h2>
 
-          <ul class="space-y-2.5 mb-5">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Major Intakes:</span>
               January, September (main intake), and May (select universities).
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Requirements:</span>
               English proficiency (IELTS, TOEFL, PTE), academic transcripts,
               Statement of Purpose (SOP), Letters of Recommendation (LORs),
               and financial proof.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >UK Student Visa (Student Route):</span
               >
@@ -29,25 +29,25 @@
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed mb-6">
+          <p class="text-gray-700 text-base leading-relaxed mb-6">
             Our experts guide Indian students through the complete UK
             application and student visa process, ensuring accuracy,
             compliance, and faster approvals.
           </p>
 
-          <h2 class="text-xl font-bold text-gray-900 mb-5">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Why Choose Grace International India for the UK?
           </h2>
 
-          <ul class="space-y-2 mb-4">
-            <li class="text-gray-700 text-sm">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-lg">
               Strong partnerships with top UK universities and colleges.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Complete support: counselling, test preparation, applications,
               visas, and scholarships.
             </li>
-            <li class="text-gray-700 text-sm">
+            <li class="text-gray-700 text-lg">
               Expert guidance on Graduate Route (post-study work visa).
             </li>
             <li class="text-gray-700 text-sm">
@@ -65,7 +65,7 @@
           <img
             :src="bgImage"
             alt="UK Student Visa Process"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[750px]"
           />
         </div>
       </div>

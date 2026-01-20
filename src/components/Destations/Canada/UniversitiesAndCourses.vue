@@ -7,67 +7,67 @@
           <img
             :src="bgImage"
             alt="Graduate Student in Canada"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[800px]"
           />
         </div>
 
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
-          <h2 class="text-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Top Universities in Canada
           </h2>
-          <ul class="space-y-1.5 mb-5">
-            <li class="text-gray-700 text-xs">University of Toronto</li>
-            <li class="text-gray-700 text-xs">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-base">University of Toronto</li>
+            <li class="text-gray-700 text-base">
               University of British Columbia (UBC)
             </li>
-            <li class="text-gray-700 text-xs">McGill University</li>
-            <li class="text-gray-700 text-xs">University of Alberta</li>
-            <li class="text-gray-700 text-xs">University of Waterloo</li>
+            <li class="text-gray-700 text-base">McGill University</li>
+            <li class="text-gray-700 text-base">University of Alberta</li>
+            <li class="text-gray-700 text-base">University of Waterloo</li>
           </ul>
 
-          <h2 class="text-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Popular Courses for Indian Students
           </h2>
-          <ul class="space-y-1.5 mb-5">
-            <li class="text-gray-700 text-xs">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-base">
               Business & Management (MBA, Finance, Analytics)
             </li>
-            <li class="text-gray-700 text-xs">IT & Computer Science</li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">IT & Computer Science</li>
+            <li class="text-gray-700 text-base">
               Engineering (Computer, Mechanical, Civil, Electrical)
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">
               Health Sciences (Nursing, Public Health, Biotechnology)
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">
               Data Science & Artificial Intelligence
             </li>
           </ul>
 
-          <h2 class="text-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Scholarships for Indian Students
           </h2>
-          <ul class="space-y-2 mb-4">
-            <li class="text-gray-700 text-xs">
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700 text-base">
               <span class="font-semibold text-gray-900"
                 >Vanier Canada Graduate Scholarships</span
               >
               – Prestigious awards for doctoral students.
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">
               <span class="font-semibold text-gray-900"
                 >Ontario Graduate Scholarship (OGS)</span
               >
               – For students studying in Ontario.
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">
               <span class="font-semibold text-gray-900"
                 >University Entrance & Merit Scholarships</span
               >
               – Offered by institutions like UofT, UBC, and McGill.
             </li>
-            <li class="text-gray-700 text-xs">
+            <li class="text-gray-700 text-base">
               <span class="font-semibold text-gray-900"
                 >Partial Tuition Waivers</span
               >
@@ -75,7 +75,7 @@
             </li>
           </ul>
 
-          <p class="text-gray-500 text-[10px] italic">
+          <p class="text-gray-600 text-base italic">
             Tip: Strong IELTS, PTE, or TOEFL scores improve chances of receiving
             scholarships at top Canadian universities.
           </p>
