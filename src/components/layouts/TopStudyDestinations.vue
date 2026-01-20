@@ -14,7 +14,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="/src/assets/aus.jpeg"
+          src="@/assets/aus.jpeg"
           alt="Australia"
           class="w-full h-64 object-cover rounded-md"
         />
@@ -33,7 +33,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="/src/assets/usa.jpeg"
+          src="@/assets/usa.jpeg"
           alt="USA"
           class="w-full h-64 object-cover rounded-md"
         />
@@ -52,7 +52,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="/src/assets/uk.jpeg"
+          src="@/assets/uk.jpeg"
           alt="UK"
           class="w-full h-64 object-cover rounded-md"
         />
@@ -71,7 +71,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="/src/assets/Canada.webp"
+          src="@/assets/canada.webp"
           alt="Canada"
           class="w-full h-64 object-cover rounded-md"
         />
