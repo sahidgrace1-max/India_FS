@@ -9,7 +9,7 @@
     <div class="flex justify-center mb-8">
       <div class="w-80 h-28 rounded-md overflow-hidden relative">
         <img
-          src="@/assets/canada.webp"
+          :src="canada"
           alt="Canada"
           class="w-full h-full object-cover opacity-80"
         />
