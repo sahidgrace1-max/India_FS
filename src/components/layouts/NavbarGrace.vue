@@ -318,8 +318,8 @@
                     $route.path === '/destinations/UK',
                 }"
                 >Study in UK</router-link
-                >
-                <router-link
+              >
+              <router-link
                 to="/destinations/newzealand"
                 class="hover:underline py-2 px-2 rounded transition-colors"
                 :class="{

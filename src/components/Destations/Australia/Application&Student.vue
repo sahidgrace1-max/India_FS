@@ -63,7 +63,7 @@
           <img
             :src="bgImage"
             alt="Application Process"
-             class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[550px]"
+            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[550px]"
           />
         </div>
       </div>

@@ -20,7 +20,9 @@
             <li class="text-gray-700 text-lg">The University of Auckland</li>
             <li class="text-gray-700 text-lg">AUT University</li>
             <li class="text-gray-700 text-lg">Lincoln University</li>
-            <li class="text-gray-700 text-lg">Victoria University of Wellington</li>
+            <li class="text-gray-700 text-lg">
+              Victoria University of Wellington
+            </li>
             <li class="text-gray-700 text-lg">Massey University</li>
             <li class="text-gray-700 text-lg">The University of Waikato</li>
             <li class="text-gray-700 text-lg">The University of Canterbury</li>
@@ -45,9 +47,7 @@
             <li class="text-gray-700 text-lg">
               Hospitality & Tourism Management
             </li>
-            <li class="text-gray-700 text-lg">
-              Creative Arts & Design
-            </li>
+            <li class="text-gray-700 text-lg">Creative Arts & Design</li>
           </ul>
 
           <h2 class="text-2xl font-bold text-gray-900 mb-6">
@@ -55,25 +55,35 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">New Zealand Excellence Awards</span>
-              – Fully funded scholarships for high-achieving international students.
+              <span class="font-semibold text-gray-900"
+                >New Zealand Excellence Awards</span
+              >
+              – Fully funded scholarships for high-achieving international
+              students.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Commonwealth Scholarships</span>
+              <span class="font-semibold text-gray-900"
+                >Commonwealth Scholarships</span
+              >
               – For outstanding students from Commonwealth countries.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">University Merit Scholarships</span>
+              <span class="font-semibold text-gray-900"
+                >University Merit Scholarships</span
+              >
               – Offered by universities like Auckland, Waikato, and Canterbury.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Partial Tuition Waivers</span>
+              <span class="font-semibold text-gray-900"
+                >Partial Tuition Waivers</span
+              >
               – Available for top-performing Indian students.
             </li>
           </ul>
 
           <p class="text-gray-600 text-base italic">
-            Tip: Strong IELTS or PTE scores improve eligibility for top scholarships in New Zealand.
+            Tip: Strong IELTS or PTE scores improve eligibility for top
+            scholarships in New Zealand.
           </p>
         </div>
       </div>

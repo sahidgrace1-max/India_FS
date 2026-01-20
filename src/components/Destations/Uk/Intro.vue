@@ -5,11 +5,11 @@
       <div class="w-full mb-12">
         <p class="text-gray-700 text-lg leading-relaxed">
           The United Kingdom is a highly preferred study and work destination
-          for international students. Its education system is globally
-          respected and structured into primary, secondary, further, and
-          higher education. International students generally enter directly
-          into higher education after completing their equivalent
-          qualifications in their home country.
+          for international students. Its education system is globally respected
+          and structured into primary, secondary, further, and higher education.
+          International students generally enter directly into higher education
+          after completing their equivalent qualifications in their home
+          country.
         </p>
       </div>
 

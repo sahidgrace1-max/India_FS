@@ -47,17 +47,20 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              Strong partnerships with top New Zealand universities and polytechnics.
+              Strong partnerships with top New Zealand universities and
+              polytechnics.
             </li>
             <li class="text-gray-700 text-lg">
               End-to-end support: counselling, test preparation, applications,
               visas, scholarships, and accommodation guidance.
             </li>
             <li class="text-gray-700 text-lg">
-              Expert guidance on part-time work rights and post-study work visas.
+              Expert guidance on part-time work rights and post-study work
+              visas.
             </li>
             <li class="text-gray-700 text-lg">
-              Pre-departure briefings and ongoing student support in New Zealand.
+              Pre-departure briefings and ongoing student support in New
+              Zealand.
             </li>
             <li class="text-gray-700 text-lg">
               Trusted New Zealand education consultants in India with years of

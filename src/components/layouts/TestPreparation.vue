@@ -11,12 +11,11 @@
       >
         <div class="flex flex-col items-center">
           <span class="text-4xl font-bold text-red-600">IELTS</span>
-          
         </div>
       </div>
       <!-- Card 2 -->
       <div
-      @click="goToPTE"
+        @click="goToPTE"
         class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         <div class="flex flex-col items-center">
@@ -25,7 +24,7 @@
       </div>
       <!-- Card 3 -->
       <div
-      @click="goToTOEFL"
+        @click="goToTOEFL"
         class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         <div class="flex flex-col items-center">
@@ -34,7 +33,7 @@
       </div>
       <!-- Card 8 -->
       <div
-      @click="goToGMAT"
+        @click="goToGMAT"
         class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         <div class="flex flex-col items-center">
@@ -46,20 +45,20 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 
 const goToIELTS = () => {
-  router.push({ name: 'IELTSPreparation' });
+  router.push({ name: "IELTSPreparation" });
 };
 const goToPTE = () => {
-  router.push({ name: 'PTEPreparation' });
+  router.push({ name: "PTEPreparation" });
 };
 const goToTOEFL = () => {
-  router.push({ name: 'TOEFLPreparation' });
+  router.push({ name: "TOEFLPreparation" });
 };
 const goToGMAT = () => {
-  router.push({ name: 'GMATPreparation' });
+  router.push({ name: "GMATPreparation" });
 };
 </script>

@@ -24,7 +24,10 @@
                 Q1. What is the cost of studying in Canada for Indian students?
               </h3>
               <p class="text-gray-700 text-base leading-relaxed">
-                Tuition fees range from CAD 30,000–60,000/year for K-12 private schools and vary for universities/colleges depending on the program. Living costs average CAD 1,000–1,500/month depending on city and accommodation type.
+                Tuition fees range from CAD 30,000–60,000/year for K-12 private
+                schools and vary for universities/colleges depending on the
+                program. Living costs average CAD 1,000–1,500/month depending on
+                city and accommodation type.
               </p>
             </div>
 
@@ -34,7 +37,10 @@
                 Q2. Can Indian students work while studying in Canada?
               </h3>
               <p class="text-gray-700 text-base leading-relaxed">
-                Yes, full-time students with a valid Study Permit can work on-campus without a separate work permit. Off-campus work is allowed up to 20 hours/week during terms and full-time during holidays.
+                Yes, full-time students with a valid Study Permit can work
+                on-campus without a separate work permit. Off-campus work is
+                allowed up to 20 hours/week during terms and full-time during
+                holidays.
               </p>
             </div>
 
@@ -44,7 +50,8 @@
                 Q3. Is English proficiency mandatory for Canada?
               </h3>
               <p class="text-gray-700 text-base leading-relaxed">
-                Yes, proof of English proficiency (IELTS, PTE, or TOEFL) is required for admission to most Canadian institutions.
+                Yes, proof of English proficiency (IELTS, PTE, or TOEFL) is
+                required for admission to most Canadian institutions.
               </p>
             </div>
 
@@ -54,7 +61,8 @@
                 Q4. Can my spouse/partner work while I study in Canada?
               </h3>
               <p class="text-gray-700 text-base leading-relaxed">
-                Yes, your spouse or partner can apply for an open work permit and work full-time while you study.
+                Yes, your spouse or partner can apply for an open work permit
+                and work full-time while you study.
               </p>
             </div>
 
@@ -64,7 +72,9 @@
                 Q5. Which intake is best for Indian students to study in Canada?
               </h3>
               <p class="text-gray-700 text-base leading-relaxed">
-                September is the main intake, followed by January and May for select programs. Deadlines and start dates vary by institution, so check with the university or college.
+                September is the main intake, followed by January and May for
+                select programs. Deadlines and start dates vary by institution,
+                so check with the university or college.
               </p>
             </div>
           </div>
@@ -73,7 +83,6 @@
     </div>
   </div>
 </template>
-
 
 <script setup>
 import bgImage from "@/assets/image.png";

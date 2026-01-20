@@ -15,19 +15,21 @@
           :src="service.img"
           :alt="service.title"
           class="rounded-lg shadow-lg w-full h-full object-cover"
-          style="min-height: 400px; max-height: 500px;"
+          style="min-height: 400px; max-height: 500px"
         />
       </div>
-      <div class="flex-1 bg-blue-50 px-8 pt-4 pb-8 rounded-lg flex flex-col justify-start h-full">
-      <div class="text-3xl font-bold mb-4">{{ service.title }}</div>
-      <p
-        class="text-gray-700 leading-relaxed text-justify overflow-y-auto"
-        style="text-align: justify"
+      <div
+        class="flex-1 bg-blue-50 px-8 pt-4 pb-8 rounded-lg flex flex-col justify-start h-full"
       >
-        {{ service.desc }}
-      </p>
-  </div>
-  </div>
+        <div class="text-3xl font-bold mb-4">{{ service.title }}</div>
+        <p
+          class="text-gray-700 leading-relaxed text-justify overflow-y-auto"
+          style="text-align: justify"
+        >
+          {{ service.desc }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 

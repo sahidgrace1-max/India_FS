@@ -19,31 +19,38 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Foundation Studies:</span>
+              <span class="font-semibold text-gray-900"
+                >Foundation Studies:</span
+              >
               AUD <span class="font-semibold">9,000–14,000/year</span> (approx.)
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Bachelor's Degree:</span>
-              AUD <span class="font-semibold">15,000–33,000/year</span> (approx.)
+              <span class="font-semibold text-gray-900"
+                >Bachelor's Degree:</span
+              >
+              AUD
+              <span class="font-semibold">15,000–33,000/year</span> (approx.)
             </li>
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Laboratory-based Degrees:</span
               >
-              AUD <span class="font-semibold">14,000–35,000/year</span> (approx.)
+              AUD
+              <span class="font-semibold">14,000–35,000/year</span> (approx.)
             </li>
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >Postgraduate & Master’s:</span
               >
-              AUD <span class="font-semibold">20,000–37,000/year</span> (approx.)
+              AUD
+              <span class="font-semibold">20,000–37,000/year</span> (approx.)
             </li>
           </ul>
 
           <p class="text-gray-700 text-base leading-relaxed mb-6">
-            International students are required to pay a tuition deposit
-            (not more than <span class="font-semibold">50%</span> of the total
-            course fees) before the visa stage, as per the ESOS Act.
+            International students are required to pay a tuition deposit (not
+            more than <span class="font-semibold">50%</span> of the total course
+            fees) before the visa stage, as per the ESOS Act.
           </p>
 
           <h2 class="text-3xl font-bold text-gray-900 mb-6">

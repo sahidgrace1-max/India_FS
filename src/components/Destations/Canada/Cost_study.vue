@@ -15,9 +15,7 @@
               depending on the program and institution.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
-                >Living Costs:</span
-              >
+              <span class="font-semibold text-gray-900">Living Costs:</span>
               CAD <span class="font-semibold">10,000–15,000/year</span>
               depending on city and lifestyle.
             </li>

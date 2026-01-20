@@ -21,8 +21,8 @@
           <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
             Free Counseling
           </h3>
-          <div class=" text-base mb-1 w-full w-full">
-            Dreaming to Study Abroad? Start Here — 
+          <div class="text-base mb-1 w-full w-full">
+            Dreaming to Study Abroad? Start Here —
           </div>
           <div class="text-base mb-1 w-full">
             Get expert guidance for
@@ -51,8 +51,8 @@
             Get a
             <span class="font-small">FREE Study Abroad Profile Assessment</span>
             from experts at
-            <span class="font-small">Grace International</span> and discover your
-            best options based on
+            <span class="font-small">Grace International</span> and discover
+            your best options based on
             <span class="font-small">your education, budget & goals.</span>
           </div>
         </div>
@@ -88,12 +88,11 @@
           <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
             No Services Charge
           </h3>
-         
-          <div class="text-base leading-relaxed text-justify mb-3">
 
-           At Grace International,we proudly operate on a No Service Charge policy for our core
-            services. We provide end-to-end support for your international
-            education journey.
+          <div class="text-base leading-relaxed text-justify mb-3">
+            At Grace International,we proudly operate on a No Service Charge
+            policy for our core services. We provide end-to-end support for your
+            international education journey.
           </div>
         </div>
       </div>
@@ -120,5 +119,4 @@
   box-shadow: none !important;
   background: inherit !important;
 }
-
 </style>
