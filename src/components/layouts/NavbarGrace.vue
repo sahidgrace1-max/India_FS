@@ -332,11 +332,11 @@
                 >Study in UK</router-link
                 >
                 <router-link
-                to="/destinations/New Zealand"
+                to="/destinations/newzealand"
                 class="hover:underline py-2 px-2 rounded transition-colors"
                 :class="{
                   'text-green-600 underline':
-                    $route.path === '/destinations/New Zealand',
+                    $route.path === '/destinations/newzealand',
                 }"
                 >Study in New Zealand</router-link
               >
