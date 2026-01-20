@@ -7,26 +7,27 @@
     <div
       v-for="(service, idx) in services"
       :key="service.title"
-      class="flex flex-col md:flex-row items-center gap-8 mb-16"
+      class="flex flex-col md:flex-row items-stretch gap-8 mb-16"
       :class="{ 'md:flex-row-reverse': idx % 2 === 1 }"
     >
-      <div class="flex-1 flex justify-center">
+      <div class="flex-1 flex justify-center items-center">
         <img
           :src="service.img"
           :alt="service.title"
-          class="rounded-lg shadow-lg w-full max-w-md object-cover"
+          class="rounded-lg shadow-lg w-full h-full object-cover"
+          style="min-height: 400px; max-height: 500px;"
         />
       </div>
-      <div class="flex-1 bg-blue-50 p-8 rounded-lg">
-        <h3 class="text-2xl font-semibold mb-4">{{ service.title }}</h3>
-        <p
-          class="text-gray-700 leading-relaxed text-justify"
-          style="text-align: justify"
-        >
-          {{ service.desc }}
-        </p>
-      </div>
-    </div>
+      <div class="flex-1 bg-blue-50 px-8 pt-4 pb-8 rounded-lg flex flex-col justify-start h-full">
+      <div class="text-3xl font-bold mb-4">{{ service.title }}</div>
+      <p
+        class="text-gray-700 leading-relaxed text-justify overflow-y-auto"
+        style="text-align: justify"
+      >
+        {{ service.desc }}
+      </p>
+  </div>
+  </div>
   </div>
 </template>
 
@@ -37,7 +38,10 @@ const serviceData = [
   {
     title: "Abroad Studies",
     img: image,
-    desc: `Since our establishment back in 2006, we have been working as a bridge to connect the students of Nepal with education providers across the globe to deliver quality educational services to these graduates who wish to study abroad. We stand for conviction, reliability, and unwavering commitment to students who aim to study abroad, and over the years, we have been successful in finding them their appropriate educational destinations. Our top-notch services, honest counseling, and student-friendly environment have helped us garner much respect and trust in this industry.`,
+    desc: `Since our establishment in 2006, we have been serving as a reliable bridge connecting students of Nepal with reputable education providers across the globe. Our mission has always been to deliver quality educational services to aspiring graduates who wish to pursue their studies abroad. Built on strong values of conviction, reliability, and unwavering commitment, we continuously strive to support students at every step of their academic journey.
+
+Over the years, we have successfully guided countless students toward suitable and rewarding educational destinations that align with their academic goals, career aspirations, and personal interests. Our top-notch services, transparent and honest counseling, and warm, student-friendly environment have played a vital role in building long-term relationships with students and their families. As a result, we have earned significant respect, credibility, and trust within the education consultancy industry, and we remain dedicated to upholding these standards in everything we do.
+`,
   },
   {
     title: "Test Preparation",

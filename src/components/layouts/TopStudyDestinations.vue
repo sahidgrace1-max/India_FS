@@ -14,7 +14,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+          src="/src/assets/aus.jpeg"
           alt="Australia"
           class="w-full h-64 object-cover rounded-md"
         />
@@ -33,7 +33,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+          src="/src/assets/usa.jpeg"
           alt="USA"
           class="w-full h-64 object-cover rounded-md"
         />
@@ -52,7 +52,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80"
+          src="/src/assets/uk.jpeg"
           alt="UK"
           class="w-full h-64 object-cover rounded-md"
         />
@@ -71,7 +71,7 @@
         class="relative group cursor-pointer block"
       >
         <img
-          src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+          src="/src/assets/Canada.webp"
           alt="Canada"
           class="w-full h-64 object-cover rounded-md"
         />
@@ -85,11 +85,6 @@
         </div>
       </router-link>
     </div>
-    <button
-      class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md text-lg"
-    >
-      More Destinations
-    </button>
   </div>
 </template>
 
