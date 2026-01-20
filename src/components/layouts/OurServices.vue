@@ -16,17 +16,17 @@
           <img
             src="@/assets/image.png"
             alt="Free Counseling"
-            class="w-full max-w-[320px] h-[180px] md:h-[220px] object-cover mb-4 md:mb-6 rounded"
+            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />
           <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
             Free Counseling
           </h3>
-          <div class="text-base font-semibold mb-1 w-full">
-            Dreaming to Study Abroad? Start Here — FREE Counseling!
+          <div class=" text-base mb-1 w-full w-full">
+            Dreaming to Study Abroad? Start Here — 
           </div>
           <div class="text-base mb-1 w-full">
             Get expert guidance for
-            <span class="font-bold"
+            <span class="font-small"
               >Australia | UK | Canada | USA | New Zealand | Europe</span
             >
           </div>
@@ -38,22 +38,22 @@
           <img
             src="@/assets/image.png"
             alt="Free Profile Assessment"
-            class="w-full max-w-[320px] h-[180px] md:h-[220px] object-cover mb-4 md:mb-6 rounded"
+            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />
           <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
             Free Profile Assessment
           </h3>
           <div class="text-base mb-1 w-full">
             Your career deserves the
-            <span class="font-bold">right direction.</span>
+            <span class="font-small">right direction.</span>
           </div>
           <div class="text-base mb-1 w-full">
             Get a
-            <span class="font-bold">FREE Study Abroad Profile Assessment</span>
+            <span class="font-small">FREE Study Abroad Profile Assessment</span>
             from experts at
-            <span class="font-bold">Grace International</span> and discover your
+            <span class="font-small">Grace International</span> and discover your
             best options based on
-            <span class="font-bold">your education, budget & goals.</span>
+            <span class="font-small">your education, budget & goals.</span>
           </div>
         </div>
         <!-- Card 3 -->
@@ -63,7 +63,7 @@
           <img
             src="@/assets/image.png"
             alt="Free Visa Processing"
-            class="w-full max-w-[320px] h-[180px] md:h-[220px] object-cover mb-4 md:mb-6 rounded"
+            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />
           <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
             Free Visa Processing
@@ -83,16 +83,15 @@
           <img
             src="@/assets/image.png"
             alt="No Services Charge"
-            class="w-full max-w-[320px] h-[180px] md:h-[220px] object-cover mb-4 md:mb-6 rounded"
+            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />
           <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
             No Services Charge
           </h3>
-          <div class="text-base font-bold mb-1 w-full">
-            At Grace International,
-          </div>
-          <div class="text-base mb-1 w-full">
-            we proudly operate on a No Service Charge policy for our core
+         
+          <div class="text-base leading-relaxed text-justify mb-3">
+
+           At Grace International,we proudly operate on a No Service Charge policy for our core
             services. We provide end-to-end support for your international
             education journey.
           </div>
@@ -105,8 +104,8 @@
 <style scoped>
 .service-card {
   transition:
-    box-shadow 0.2s,
-    background 0.2s;
+    box-shadow 0.4s,
+    background 0.4s;
 }
 @media (min-width: 768px) {
   .service-card:hover {
@@ -116,4 +115,10 @@
     background: #eff6ff;
   }
 }
+/* 🔴 HOVER DISABLE OVERRIDE */
+.service-card:hover {
+  box-shadow: none !important;
+  background: inherit !important;
+}
+
 </style>
