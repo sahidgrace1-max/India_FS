@@ -11,49 +11,51 @@
           <ul class="space-y-2.5 mb-5">
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900">Major Intakes:</span>
-              February and July (some universities also offer October).
+              January, September (main intake), and May (select universities).
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900">Requirements:</span>
-              English proficiency (IELTS, PTE, TOEFL), academic transcripts,
-              SOP, LORs, financial proof.
+              English proficiency (IELTS, TOEFL, PTE), academic transcripts,
+              Statement of Purpose (SOP), Letters of Recommendation (LORs),
+              and financial proof.
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900"
-                >Student Visa (Subclass 500):</span
+                >UK Student Visa (Student Route):</span
               >
-              Requires Confirmation of Enrolment (CoE), Overseas Student Health
-              Cover (OSHC), and proof of funds for tuition + living expenses.
+              Requires an unconditional offer letter, Confirmation of
+              Acceptance for Studies (CAS), proof of funds, and English
+              language evidence.
             </li>
           </ul>
 
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
-            Our team guides students through every step of the Australia student
-            visa process in Delhi, ensuring high success rates.
+            Our experts guide Indian students through the complete UK
+            application and student visa process, ensuring accuracy,
+            compliance, and faster approvals.
           </p>
 
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Why Choose Grace International India for Australia?
+            Why Choose Grace International India for the UK?
           </h2>
 
           <ul class="space-y-2 mb-4">
             <li class="text-gray-700 text-sm">
-              Direct tie-ups with leading Australian universities.
+              Strong partnerships with top UK universities and colleges.
             </li>
             <li class="text-gray-700 text-sm">
-              End-to-end support: counselling, test prep, applications, visas,
-              scholarships.
+              Complete support: counselling, test preparation, applications,
+              visas, and scholarships.
             </li>
             <li class="text-gray-700 text-sm">
-              Latest guidance on post-study work and PR pathways.
+              Expert guidance on Graduate Route (post-study work visa).
             </li>
             <li class="text-gray-700 text-sm">
-              Pre-departure sessions + on-ground support from Grace offices in
-              Australia.
+              Pre-departure briefings and ongoing student support in the UK.
             </li>
             <li class="text-gray-700 text-sm">
-              Recognized as one of the best Australia education consultants in
-              Delhi with 20+ years of expertise.
+              Trusted UK education consultants in India with decades of
+              experience and high visa success rates.
             </li>
           </ul>
         </div>
@@ -62,7 +64,7 @@
         <div class="order-1 lg:order-2 flex items-center justify-center">
           <img
             :src="bgImage"
-            alt="Application Process"
+            alt="UK Student Visa Process"
             class="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
