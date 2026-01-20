@@ -19,6 +19,7 @@
     </div>
   </div>
 
+  <!-- GMAT Info Section -->
   <section class="py-16 px-4 md:px-8 lg:px-16">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -27,23 +28,23 @@
           <h2 class="text-4xl font-bold text-gray-900 mb-6">Who is it for?</h2>
           
           <p class="text-gray-700 leading-relaxed text-base mb-4">
-            IELTS is recognised by universities and employers in many countries, including Australia, Canada, Ireland, New Zealand, the UK and the USA. It is also recognised by professional bodies, immigration authorities and other government agencies. More than 1.4 million people a year take the test.
+            The GMAT is intended for students applying to MBA programs and other graduate management degrees. Business schools worldwide use GMAT scores to evaluate applicants' readiness for advanced study in mathematics, analytical writing, and verbal reasoning.
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base font-semibold mb-2">
-            What is IELTS test like?
+            What is the GMAT test like?
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base mb-4">
-            You can choose between the Academic or General Training versions of the test. All candidates do the same Listening and Speaking sections
+            The GMAT consists of three main sections: Analytical Writing Assessment, Verbal Ability, and Quantitative Reasoning. It is primarily computer-based, though paper-based versions may be offered in areas with limited computer access.
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base font-semibold mb-2">
-            Level and scores:
+            Level and Scores:
           </p>
 
           <p class="text-gray-700 leading-relaxed text-base">
-            Multi-level. You get a score between 1 and 9. Half scores such as 6.5 are possible. Universities often demand an IELTS score of 6 or 7. They may also demand a minimum score in each of the 4 sections.
+            Scores range from 200 to 800. Exam scores are valid for five years. Business schools typically use these scores to compare candidates and determine admission eligibility.
           </p>
         </div>
 
@@ -51,7 +52,7 @@
         <div class="flex justify-center">
           <img 
             src="@/assets/image.png" 
-            alt="IELTS Study Desk" 
+            alt="GMAT Study Desk" 
             class="rounded-lg shadow-lg w-full h-full object-cover"
             style="min-height: 400px; max-height: 500px;"
           />
@@ -64,7 +65,7 @@
   <section class="py-16 px-4 md:px-8 lg:px-16">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold text-white mb-4">TAKE YOUR FIRST STEP TOWARDS SUCCESS</h2>
-      <p class="text-xl text-blue-100 mb-8">Enroll your Preparation Class with Grace International</p>
+      <p class="text-xl text-blue-100 mb-8">Enroll your GMAT Preparation Class with Grace International</p>
       <button 
         @click="showModal = true"
         class="px-8 py-3 bg-green-500 text-blue-600 font-bold rounded-lg hover:bg-green-600 transition-colors"
@@ -74,6 +75,7 @@
     </div>
   </section>
 </template>
+
 
 <script>
 import { ref } from 'vue';

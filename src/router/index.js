@@ -69,6 +69,21 @@ const routes = [
     name: "IELTSPreparation",
     component: () => import("@/views/IELTSPreparation.vue"),
   },
+  {
+    path: "/test-preparation/toefl",
+    name: "TOEFLPreparation",
+    component: () => import("@/views/TOEFLPreparation.vue"),
+  },
+  {
+    path: "/test-preparation/gmat",
+    name: "GMATPreparation",
+    component: () => import("@/views/GMATPreparation.vue"),
+  },
+  {
+    path: "/test-preparation/pte",
+    name: "PTEPreparation",
+    component: () => import("@/views/PTEPreparation.vue"),
+  },
 ];
 
 const router = createRouter({
