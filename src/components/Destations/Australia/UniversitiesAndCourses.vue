@@ -14,71 +14,68 @@
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
           <h2 class="text-lg font-bold text-gray-900 mb-4">
-            Top Universities in Australia
-          </h2>
-          <ul class="space-y-1.5 mb-5">
-            <li class="text-gray-700 text-xs">University of Melbourne</li>
-            <li class="text-gray-700 text-xs">
-              Australian National University (ANU)
-            </li>
-            <li class="text-gray-700 text-xs">University of Sydney</li>
-            <li class="text-gray-700 text-xs">Monash University</li>
-            <li class="text-gray-700 text-xs">University of Queensland</li>
-          </ul>
-
-          <h2 class="text-lg font-bold text-gray-900 mb-4">
-            Popular Courses for Indian Students
+            Australian Universities Overview
           </h2>
           <ul class="space-y-1.5 mb-5">
             <li class="text-gray-700 text-xs">
-              Business & Management (including MBA)
-            </li>
-            <li class="text-gray-700 text-xs">IT & Computer Science</li>
-            <li class="text-gray-700 text-xs">
-              Engineering (Civil, Mechanical, Software)
+              Australia has <span class="font-semibold">43 universities</span>,
+              including 2 private universities (Bond and Notre Dame).
             </li>
             <li class="text-gray-700 text-xs">
-              Health Sciences (Nursing, Public Health, Pharmacy)
+              International universities such as
+              <span class="font-semibold"
+                >Carnegie Mellon University and University College London</span
+              >
+              operate campuses in Adelaide.
             </li>
             <li class="text-gray-700 text-xs">
-              Hospitality & Tourism Management
+              Australian universities maintain over
+              <span class="font-semibold">7,000 global agreements</span> with
+              institutions worldwide.
+            </li>
+            <li class="text-gray-700 text-xs">
+              Many universities offer overseas branch campuses, exchange
+              programs, and twinning arrangements.
             </li>
           </ul>
 
           <h2 class="text-lg font-bold text-gray-900 mb-4">
-            Scholarships for Indian Students
+            Global Recognition & Rankings
           </h2>
-          <ul class="space-y-2 mb-4">
+          <ul class="space-y-1.5 mb-5">
             <li class="text-gray-700 text-xs">
-              <span class="font-semibold text-gray-900"
-                >Australia Awards Scholarships</span
-              >
-              – Fully funded, highly competitive.
+              <span class="font-semibold">8 universities</span> ranked among the
+              <span class="font-semibold">Top 100</span> globally.
             </li>
             <li class="text-gray-700 text-xs">
-              <span class="font-semibold text-gray-900"
-                >Destination Australia Scholarships</span
-              >
-              – For regional universities.
+              Ranked <span class="font-semibold">9th</span> in the world
+              university ranking system.
             </li>
             <li class="text-gray-700 text-xs">
-              <span class="font-semibold text-gray-900"
-                >University Merit Scholarships</span
-              >
-              – Offered by institutions like Monash, University of Melbourne,
-              and Sydney.
+              <span class="font-semibold">5</span> Australian cities listed among
+              the <span class="font-semibold">top 30 best student cities</span>
+              globally.
             </li>
             <li class="text-gray-700 text-xs">
-              <span class="font-semibold text-gray-900"
-                >Partial Tuition Waivers</span
-              >
-              – Available for high-achieving Indian students.
+              Over <span class="font-semibold">22,000 courses</span> available
+              across <span class="font-semibold">1,100 institutions</span>.
             </li>
+          </ul>
+
+          <h2 class="text-lg font-bold text-gray-900 mb-4">
+            Role of Australian Universities
+          </h2>
+          <ul class="space-y-1.5 mb-4">
+            <li class="text-gray-700 text-xs">Storing knowledge</li>
+            <li class="text-gray-700 text-xs">Transferring knowledge to others</li>
+            <li class="text-gray-700 text-xs">Creating knowledge through research</li>
           </ul>
 
           <p class="text-gray-500 text-[10px] italic">
-            Tip: Strong IELTS, PTE, or TOEFL scores increase eligibility for top
-            Australia scholarships for Indian students.
+            Australia has produced
+            <span class="font-semibold">15 Nobel Prize Laureates</span> across
+            various academic and research disciplines, supported by strong
+            government investment in higher education.
           </p>
         </div>
       </div>

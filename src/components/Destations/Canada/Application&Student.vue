@@ -5,55 +5,47 @@
         <!-- Left Content -->
         <div class="order-2 lg:order-1">
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Application & Student Visa Process
+            Application & Student Visa Process – Canada
           </h2>
 
           <ul class="space-y-2.5 mb-5">
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900">Major Intakes:</span>
-              February and July (some universities also offer October).
+              September is the main intake, with January and May start dates for select programs.
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900">Requirements:</span>
-              English proficiency (IELTS, PTE, TOEFL), academic transcripts,
-              SOP, LORs, financial proof.
+              Academic transcripts, proof of English proficiency (IELTS, PTE, TOEFL), statement of purpose (SOP), letters of recommendation (LORs), and financial proof.
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
-                >Student Visa (Subclass 500):</span
-              >
-              Requires Confirmation of Enrolment (CoE), Overseas Student Health
-              Cover (OSHC), and proof of funds for tuition + living expenses.
+              <span class="font-semibold text-gray-900">Study Permit (Student Visa):</span>
+              Required for studies longer than 6 months. Must show proof of acceptance, sufficient funds for tuition + living, and a valid passport.
             </li>
           </ul>
 
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
-            Our team guides students through every step of the Australia student
-            visa process in Delhi, ensuring high success rates.
+            Grace International India helps students with every step of the Canada student visa process, from document preparation to online application guidance and visa submission support.
           </p>
 
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Why Choose Grace International India for Australia?
+            Why Choose Grace International India for Canada?
           </h2>
 
           <ul class="space-y-2 mb-4">
             <li class="text-gray-700 text-sm">
-              Direct tie-ups with leading Australian universities.
+              Direct tie-ups with top Canadian universities and colleges.
             </li>
             <li class="text-gray-700 text-sm">
-              End-to-end support: counselling, test prep, applications, visas,
-              scholarships.
+              End-to-end support: counselling, test prep, applications, visas, scholarships.
             </li>
             <li class="text-gray-700 text-sm">
-              Latest guidance on post-study work and PR pathways.
+              Guidance on post-study work permits and PR pathways in Canada.
             </li>
             <li class="text-gray-700 text-sm">
-              Pre-departure sessions + on-ground support from Grace offices in
-              Australia.
+              Pre-departure guidance + assistance with accommodation and settling in Canada.
             </li>
             <li class="text-gray-700 text-sm">
-              Recognized as one of the best Australia education consultants in
-              Delhi with 20+ years of expertise.
+              Recognized as one of the leading Canada education consultants in India with 20+ years of experience.
             </li>
           </ul>
         </div>
@@ -62,7 +54,7 @@
         <div class="order-1 lg:order-2 flex items-center justify-center">
           <img
             :src="bgImage"
-            alt="Application Process"
+            alt="Canada Application Process"
             class="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
@@ -70,6 +62,7 @@
     </div>
   </div>
 </template>
+
 
 <script setup>
 import bgImage from "@/assets/image.png";
