@@ -38,7 +38,7 @@ const branchContent = {
     Our Delhi office, strategically located in the heart of India's capital, serves as the gateway for North Indian students aspiring to study abroad. With over 25,000 students recruited worldwide, Grace International Delhi is synonymous with reliability, promptness, and unwavering commitment towards students who aspire to pursue education and gain invaluable experience while studying abroad.
     <br /><br />
     Our qualified and driven team in Delhi emphasizes providing genuine and realistic solutions to our students, understanding the unique cultural and educational background of North Indian students.`,
-    
+
   Ahmedabad: `Established in 2006, Grace International has been a leading and trusted educational service provider, formed for the sole purpose of providing comprehensive solutions to students planning to pursue higher education from reputed universities and colleges in Australia, New Zealand, the USA, UK, Canada and many more countries.
     <br /><br />
     Our Ahmedabad office, nestled in the intellectual capital of Eastern India, serves as the trusted partner for Bengali students aspiring to study abroad. With over 25,000 students recruited worldwide, Grace International Ahmedabad is synonymous with academic excellence, cultural understanding, and unwavering commitment towards students who aspire to pursue education and gain invaluable experience while studying abroad.

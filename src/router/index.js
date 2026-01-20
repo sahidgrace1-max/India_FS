@@ -34,11 +34,11 @@ const routes = [
     name: "UKUniversity",
     component: () => import("@/views/UkUniversity.vue"),
   },
-  // {
-  //   path: "/university/canada",
-  //   name: "CanadaUniversity",
-  //   component: () => import("@/views/CanadaUniversity.vue"),
-  // },
+  {
+    path: "/university/canada",
+    name: "CanadaUniversity",
+    component: () => import("@/views/CanadaUniversity.vue"),
+  },
   {
     path: "/scholarships",
     name: "Scholarships",

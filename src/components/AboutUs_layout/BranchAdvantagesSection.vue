@@ -60,7 +60,7 @@ const advantages = {
         "Strong connections with Australian Embassy and High Commission",
     },
   ],
- 
+
   Ahmedabad: [
     {
       icon: "fas fa-book",
