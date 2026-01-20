@@ -5,29 +5,28 @@
         <!-- Left Content -->
         <div class="order-1 lg:order-1">
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Cost of Studying & Living in Australia
+            Cost of Studying & Living in Canada
           </h2>
 
           <ul class="space-y-2.5 mb-5">
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900">Tuition Fees:</span> AUD
-              <span class="font-semibold">22,000–45,000/year</span> depending on
-              the course.
+              <span class="font-semibold text-gray-900">Tuition Fees:</span>
+              CAD <span class="font-semibold">15,000–30,000/year</span>
+              depending on the program and institution.
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900"
-                >Living Costs (Visa Requirement 2025):</span
+                >Living Costs:</span
               >
-              AUD <span class="font-semibold">29,710/year</span> (official
-              minimum).
+              CAD <span class="font-semibold">10,000–15,000/year</span>
+              depending on city and lifestyle.
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900"
                 >Average Total (Study + Living):</span
               >
-              AUD
-              <span class="font-semibold">40,000–60,000/year</span> depending on
-              location and lifestyle.
+              CAD
+              <span class="font-semibold">25,000–45,000/year</span>.
             </li>
           </ul>
 
@@ -35,8 +34,8 @@
             <span class="text-orange-600 font-medium"
               >Grace International India</span
             >
-            provides detailed guidance on budgeting and managing living expenses
-            in Australia for Indian students.
+            helps students plan budgets, choose affordable institutions, and
+            manage living expenses effectively in Canada.
           </p>
 
           <h2 class="text-xl font-bold text-gray-900 mb-5">
@@ -47,31 +46,32 @@
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900">Part-Time Work:</span>
               Up to
-              <span class="font-semibold">48 hours per fortnight</span> during
-              study sessions; full-time during holidays.
+              <span class="font-semibold">20 hours per week</span> during study
+              sessions and full-time during scheduled breaks.
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900"
-                >Post-Graduation Work Visa (Subclass 485):</span
+                >Post-Graduation Work Permit (PGWP):</span
               >
-              <ul class="ml-6 mt-2 space-y-1">
-                <li class="text-gray-600 text-sm">Bachelor's – 2 years</li>
-                <li class="text-gray-600 text-sm">Master's – 3 years</li>
-                <li class="text-gray-600 text-sm">PhD – 4 years</li>
-              </ul>
+              Allows students to work in Canada for up to
+              <span class="font-semibold">3 years</span> after completing an
+              eligible program.
             </li>
           </ul>
 
           <p class="text-gray-700 text-sm leading-relaxed mb-5">
-            Graduate Work Stream and Temporary Graduate Visa options make it
-            easier for Indian students to gain Australian work experience.
+            Canadian work experience gained through PGWP significantly improves
+            employability and future immigration prospects.
           </p>
 
           <p class="text-gray-700 text-sm leading-relaxed">
-            <span class="font-semibold text-gray-900">PR Pathways:</span> Indian
-            students can apply for
-            <span class="font-semibold">skilled migration visas</span> after
-            gaining work experience in Australia.
+            <span class="font-semibold text-gray-900">PR Pathways:</span>
+            International students can apply for permanent residency through
+            programs such as
+            <span class="font-semibold"
+              >Express Entry and Provincial Nominee Programs (PNP)</span
+            >
+            after gaining skilled work experience.
           </p>
         </div>
 
@@ -79,7 +79,7 @@
         <div class="order-2 lg:order-2 flex items-center justify-center">
           <img
             :src="bgImage"
-            alt="Students studying in Australia"
+            alt="Students studying in Canada"
             class="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>

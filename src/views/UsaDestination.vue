@@ -17,5 +17,5 @@ import UniversitiesAndCourses from "../components/Destations/USA/UniversitiesAnd
 import ApplicationStudent from "../components/Destations/USA/Application&Student.vue";
 import Faq from "../components/Destations/USA/Faq.vue";
 import fotter from "@/components/layouts/fotter.vue";
-import Cost_study from "../components/Destations/Uk/Cost_study.vue";
+import Cost_study from "../components/Destations/USA/Cost_study.vue";
 </script>

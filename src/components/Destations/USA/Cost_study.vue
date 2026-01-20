@@ -5,73 +5,62 @@
         <!-- Left Content -->
         <div class="order-1 lg:order-1">
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Cost of Studying & Living in Australia
+            Cost of Studying & Living in the USA
           </h2>
 
           <ul class="space-y-2.5 mb-5">
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900">Tuition Fees:</span> AUD
-              <span class="font-semibold">22,000–45,000/year</span> depending on
-              the course.
+              <span class="font-semibold text-gray-900">Tuition Fees (Public Universities):</span> USD 
+              <span class="font-semibold">9,000–23,000/year</span> depending on residency and program.
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
-                >Living Costs (Visa Requirement 2025):</span
-              >
-              AUD <span class="font-semibold">29,710/year</span> (official
-              minimum).
+              <span class="font-semibold text-gray-900">Tuition Fees (Private Universities):</span> USD 
+              <span class="font-semibold">31,000–60,000/year</span> depending on the institution.
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
-                >Average Total (Study + Living):</span
-              >
-              AUD
-              <span class="font-semibold">40,000–60,000/year</span> depending on
-              location and lifestyle.
+              <span class="font-semibold text-gray-900">Community/Two-Year Colleges:</span> USD 
+              <span class="font-semibold">3,000–6,000/year</span> for tuition.
+            </li>
+            <li class="text-gray-700 text-sm">
+              <span class="font-semibold text-gray-900">Living Costs:</span> USD 
+              <span class="font-semibold">10,000–15,000/year</span> depending on city and lifestyle.
+            </li>
+            <li class="text-gray-700 text-sm">
+              <span class="font-semibold text-gray-900">Average Total (Study + Living):</span> USD 
+              <span class="font-semibold">20,000–75,000/year</span> depending on type of university and location.
             </li>
           </ul>
 
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
-            <span class="text-orange-600 font-medium"
-              >Grace International India</span
-            >
-            provides detailed guidance on budgeting and managing living expenses
-            in Australia for Indian students.
+            <span class="text-orange-600 font-medium">Grace International India</span> 
+            provides guidance on budgeting, financial aid, and managing expenses for Indian students in the USA.
           </p>
 
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Work & PR Opportunities
+            Work Opportunities & Post-Study Options
           </h2>
 
           <ul class="space-y-2.5 mb-4">
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900">Part-Time Work:</span>
-              Up to
-              <span class="font-semibold">48 hours per fortnight</span> during
-              study sessions; full-time during holidays.
+              <span class="font-semibold text-gray-900">On-Campus Work:</span> Indian students on F-1 visas can work part-time 
+              <span class="font-semibold">up to 20 hours per week</span> during semesters; full-time during breaks.
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
-                >Post-Graduation Work Visa (Subclass 485):</span
-              >
+              <span class="font-semibold text-gray-900">Optional Practical Training (OPT):</span>
               <ul class="ml-6 mt-2 space-y-1">
-                <li class="text-gray-600 text-sm">Bachelor's – 2 years</li>
-                <li class="text-gray-600 text-sm">Master's – 3 years</li>
-                <li class="text-gray-600 text-sm">PhD – 4 years</li>
+                <li class="text-gray-600 text-sm">Bachelor's or Master's – up to 12 months</li>
+                <li class="text-gray-600 text-sm">STEM Degrees – can extend for an additional 24 months</li>
               </ul>
             </li>
           </ul>
 
           <p class="text-gray-700 text-sm leading-relaxed mb-5">
-            Graduate Work Stream and Temporary Graduate Visa options make it
-            easier for Indian students to gain Australian work experience.
+            OPT allows Indian students to gain practical work experience in the USA after graduation.
           </p>
 
           <p class="text-gray-700 text-sm leading-relaxed">
-            <span class="font-semibold text-gray-900">PR Pathways:</span> Indian
-            students can apply for
-            <span class="font-semibold">skilled migration visas</span> after
-            gaining work experience in Australia.
+            <span class="font-semibold text-gray-900">Career & Visa Pathways:</span> Indian students can explore H-1B work visas and 
+            other employment-based immigration options after completing their studies.
           </p>
         </div>
 
@@ -79,7 +68,7 @@
         <div class="order-2 lg:order-2 flex items-center justify-center">
           <img
             :src="bgImage"
-            alt="Students studying in Australia"
+            alt="Students studying in the USA"
             class="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
@@ -87,6 +76,7 @@
     </div>
   </div>
 </template>
+
 
 <script setup>
 import bgImage from "@/assets/aus.jpeg";

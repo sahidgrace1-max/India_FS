@@ -6,7 +6,7 @@
         <div class="order-2 lg:order-1 flex items-center justify-center">
           <img
             :src="bgImage"
-            alt="Graduate Student in Australia"
+            alt="Graduate Student in Canada"
             class="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
@@ -14,16 +14,16 @@
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
           <h2 class="text-lg font-bold text-gray-900 mb-4">
-            Top Universities in Australia
+            Top Universities in Canada
           </h2>
           <ul class="space-y-1.5 mb-5">
-            <li class="text-gray-700 text-xs">University of Melbourne</li>
+            <li class="text-gray-700 text-xs">University of Toronto</li>
             <li class="text-gray-700 text-xs">
-              Australian National University (ANU)
+              University of British Columbia (UBC)
             </li>
-            <li class="text-gray-700 text-xs">University of Sydney</li>
-            <li class="text-gray-700 text-xs">Monash University</li>
-            <li class="text-gray-700 text-xs">University of Queensland</li>
+            <li class="text-gray-700 text-xs">McGill University</li>
+            <li class="text-gray-700 text-xs">University of Alberta</li>
+            <li class="text-gray-700 text-xs">University of Waterloo</li>
           </ul>
 
           <h2 class="text-lg font-bold text-gray-900 mb-4">
@@ -31,17 +31,17 @@
           </h2>
           <ul class="space-y-1.5 mb-5">
             <li class="text-gray-700 text-xs">
-              Business & Management (including MBA)
+              Business & Management (MBA, Finance, Analytics)
             </li>
             <li class="text-gray-700 text-xs">IT & Computer Science</li>
             <li class="text-gray-700 text-xs">
-              Engineering (Civil, Mechanical, Software)
+              Engineering (Computer, Mechanical, Civil, Electrical)
             </li>
             <li class="text-gray-700 text-xs">
-              Health Sciences (Nursing, Public Health, Pharmacy)
+              Health Sciences (Nursing, Public Health, Biotechnology)
             </li>
             <li class="text-gray-700 text-xs">
-              Hospitality & Tourism Management
+              Data Science & Artificial Intelligence
             </li>
           </ul>
 
@@ -51,40 +51,40 @@
           <ul class="space-y-2 mb-4">
             <li class="text-gray-700 text-xs">
               <span class="font-semibold text-gray-900"
-                >Australia Awards Scholarships</span
+                >Vanier Canada Graduate Scholarships</span
               >
-              – Fully funded, highly competitive.
+              – Prestigious awards for doctoral students.
             </li>
             <li class="text-gray-700 text-xs">
               <span class="font-semibold text-gray-900"
-                >Destination Australia Scholarships</span
+                >Ontario Graduate Scholarship (OGS)</span
               >
-              – For regional universities.
+              – For students studying in Ontario.
             </li>
             <li class="text-gray-700 text-xs">
               <span class="font-semibold text-gray-900"
-                >University Merit Scholarships</span
+                >University Entrance & Merit Scholarships</span
               >
-              – Offered by institutions like Monash, University of Melbourne,
-              and Sydney.
+              – Offered by institutions like UofT, UBC, and McGill.
             </li>
             <li class="text-gray-700 text-xs">
               <span class="font-semibold text-gray-900"
                 >Partial Tuition Waivers</span
               >
-              – Available for high-achieving Indian students.
+              – Available for academically strong international students.
             </li>
           </ul>
 
           <p class="text-gray-500 text-[10px] italic">
-            Tip: Strong IELTS, PTE, or TOEFL scores increase eligibility for top
-            Australia scholarships for Indian students.
+            Tip: Strong IELTS, PTE, or TOEFL scores improve chances of receiving
+            scholarships at top Canadian universities.
           </p>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 
 <script setup>
 import bgImage from "@/assets/image.png";
