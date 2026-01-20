@@ -46,17 +46,17 @@
 const universities = [
   {
     name: "Birmingham City University",
-    img: "\src\assets\UK\Birmingham CIty.webp",
+    img: "/src/assets/UK/BirminghamCity.png",
     link: "https://www.bcu.ac.uk/",
   },
   {
-    name: "La Trobe University",
-    img: "\src\assets\UK\BPP University.webp",
+    name: "BPP University",
+    img: "/src/assets/UK/BPPUniversity.png",
     link: "https://www.bpp.com/",
   },
   {
     name: "University of Bradford",
-    img: "src/assets/UK/bradford.png",
+    img: "/src/assets/UK/bradford.png",
     link: "https://www.bradford.ac.uk/",
   },
   {
@@ -66,17 +66,17 @@ const universities = [
   },
   {
     name: "Buckinghamshire New University",
-    img: "src/assets/UK/buckinghamshire.png",
+    img: "/src/assets/UK/buckinghamshire.png",
     link: "https://www.bucks.ac.uk/",
   },
   {
     name: "Cardiff Metropolitan University",
-    img: "src/assets/UK/cardiff-metropolitan-university.png",
+    img: "/src/assets/UK/cardiff-metropolitan-university.png",
     link: "https://www.cardiffmet.ac.uk/",
   },
   {
     name: "Coventry University",
-    img: "src/assets/UK/Coventry University.png",
+    img: "/src/assets/UK/Coventry University.png",
     link: "https://www.coventry.ac.uk/",
   },
   {

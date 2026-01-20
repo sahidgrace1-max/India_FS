@@ -6,7 +6,7 @@
         <div class="order-1 lg:order-1">
           <img
             :src="bgImage"
-            alt="UK University Campus"
+            alt="UK Education System"
             class="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
@@ -15,12 +15,12 @@
         <div class="order-2 lg:order-2">
           <div class="prose max-w-none">
             <p class="text-gray-700 text-base leading-relaxed mb-6">
-              The United Kingdom (UK) is one of the top study abroad
-              destinations for Indian students in 2025. With globally ranked
-              universities, 1-year master's programs, and excellent post-study
-              work visa opportunities, the UK offers Indian students a
-              fast-track route to international education, career growth, and PR
-              pathways.
+              The United Kingdom is a highly preferred study and work destination
+              for international students. Its education system is globally
+              respected and structured into primary, secondary, further, and
+              higher education. International students generally enter directly
+              into higher education after completing their equivalent
+              qualifications in their home country.
             </p>
 
             <h2 class="text-2xl font-bold text-gray-900 mb-6">
@@ -30,51 +30,51 @@
             <ul class="space-y-4">
               <li class="text-gray-700">
                 <span class="font-semibold text-gray-900"
-                  >Top Universities</span
+                  >World-Ranked Institutions</span
                 >
-                – Oxford, Cambridge, and 24
-                <span class="font-semibold">Russell Group universities</span>
-                are globally ranked.
+                – UK institutions consistently rank among the best in the world,
+                and UK qualifications are internationally valued and recognized.
               </li>
 
               <li class="text-gray-700">
                 <span class="font-semibold text-gray-900"
-                  >1-Year Master's Degrees</span
+                  >Excellence in Research</span
                 >
-                – Save time and money with shorter postgraduate programs.
+                – The UK undertakes 5% of the world’s scientific research and
+                produces 14% of the most frequently cited research papers
+                globally.
               </li>
 
               <li class="text-gray-700">
                 <span class="font-semibold text-gray-900"
-                  >Post-Study Work Visa (Graduate Route)</span
+                  >Flexible Education System</span
                 >
-                – Stay back for <span class="font-semibold">2 years</span> after
-                graduation or <span class="font-semibold">3 years</span> after
-                PhD.
+                – Students can choose from academic and vocational pathways,
+                allowing flexibility to tailor degrees based on career goals.
               </li>
 
               <li class="text-gray-700">
                 <span class="font-semibold text-gray-900"
-                  >Scholarships for Indians</span
+                  >Innovative Teaching Methods</span
                 >
-                – Chevening, Commonwealth, GREAT Scholarships, and many
-                university-specific awards.
+                – The UK education system encourages creativity, independent
+                thinking, skill development, and confidence building.
               </li>
 
               <li class="text-gray-700">
                 <span class="font-semibold text-gray-900"
-                  >Diverse Student Community</span
+                  >Learn from Global Experts</span
                 >
-                – Over
-                <span class="font-semibold">600,000 international students</span
-                >, including 140,000+ Indians.
+                – Students are taught by world-leading academics and industry
+                professionals with continuous academic support.
               </li>
             </ul>
 
             <p class="text-gray-700 text-base leading-relaxed mt-6">
-              Indian students in the UK also benefit from career opportunities
-              in finance, healthcare, IT, engineering, and creative industries –
-              sectors with high employability rates.
+              As the home of the English language, the UK offers an ideal
+              environment to improve communication skills while enhancing global
+              employability through specialized modules and practical learning
+              opportunities.
             </p>
           </div>
         </div>

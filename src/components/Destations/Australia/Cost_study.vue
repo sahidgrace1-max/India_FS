@@ -14,80 +14,107 @@
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Cost of Studying & Living in Australia
+            Cost of Studying in Australia
           </h2>
 
           <ul class="space-y-2.5 mb-5">
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900">Tuition Fees:</span> AUD
-              <span class="font-semibold">22,000–45,000/year</span> depending on
-              the course.
+              <span class="font-semibold text-gray-900">Foundation Studies:</span>
+              AUD <span class="font-semibold">9,000–14,000/year</span> (approx.)
+            </li>
+            <li class="text-gray-700 text-sm">
+              <span class="font-semibold text-gray-900">Bachelor’s Degree:</span>
+              AUD <span class="font-semibold">15,000–33,000/year</span> (approx.)
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900"
-                >Living Costs (Visa Requirement 2025):</span
+                >Laboratory-based Degrees:</span
               >
-              AUD <span class="font-semibold">29,710/year</span> (official
-              minimum).
+              AUD <span class="font-semibold">14,000–35,000/year</span> (approx.)
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900"
-                >Average Total (Study + Living):</span
+                >Postgraduate & Master’s:</span
               >
-              AUD
-              <span class="font-semibold">40,000–60,000/year</span> depending on
-              location and lifestyle.
+              AUD <span class="font-semibold">20,000–37,000/year</span> (approx.)
             </li>
           </ul>
 
           <p class="text-gray-700 text-sm leading-relaxed mb-6">
-            <span class="text-orange-600 font-medium"
-              >Grace International India</span
-            >
-            provides detailed guidance on budgeting and managing living expenses
-            in Australia for Indian students.
+            International students are required to pay a tuition deposit
+            (not more than <span class="font-semibold">50%</span> of the total
+            course fees) before the visa stage, as per the ESOS Act.
           </p>
 
           <h2 class="text-xl font-bold text-gray-900 mb-5">
-            Work & PR Opportunities
+            Accommodation & Living Costs
+          </h2>
+
+          <ul class="space-y-2.5 mb-5">
+            <li class="text-gray-700 text-sm">
+              <span class="font-semibold text-gray-900"
+                >Homestay / Farmstay:</span
+              >
+              AUD <span class="font-semibold">110–270/week</span>
+            </li>
+            <li class="text-gray-700 text-sm">
+              <span class="font-semibold text-gray-900"
+                >University Residential Colleges:</span
+              >
+              AUD <span class="font-semibold">190–280/week</span>
+            </li>
+            <li class="text-gray-700 text-sm">
+              <span class="font-semibold text-gray-900"
+                >Private or Church-owned Hostels:</span
+              >
+              AUD <span class="font-semibold">80–135/week</span>
+            </li>
+            <li class="text-gray-700 text-sm">
+              <span class="font-semibold text-gray-900"
+                >Shared Accommodation:</span
+              >
+              AUD <span class="font-semibold">50–160/week</span>
+            </li>
+          </ul>
+
+          <h2 class="text-xl font-bold text-gray-900 mb-5">
+            Work & Visa Regulations
           </h2>
 
           <ul class="space-y-2.5 mb-4">
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900">Part-Time Work:</span>
-              Up to
-              <span class="font-semibold">48 hours per fortnight</span> during
-              study sessions; full-time during holidays.
+              Up to <span class="font-semibold">40 hours per fortnight</span>
+              during semesters and full-time during scheduled breaks.
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900"
-                >Post-Graduation Work Visa (Subclass 485):</span
+                >Post-Study Work Visa (Subclass 485):</span
               >
               <ul class="ml-6 mt-2 space-y-1">
-                <li class="text-gray-600 text-sm">Bachelor's – 2 years</li>
-                <li class="text-gray-600 text-sm">Master's – 3 years</li>
-                <li class="text-gray-600 text-sm">PhD – 4 years</li>
+                <li class="text-gray-600 text-sm">
+                  Graduate Work Stream – 18 months
+                </li>
+                <li class="text-gray-600 text-sm">
+                  Post-Study Work Stream – 2 to 4 years (based on qualification)
+                </li>
               </ul>
             </li>
           </ul>
 
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">
-            Graduate Work Stream and Temporary Graduate Visa options make it
-            easier for Indian students to gain Australian work experience.
-          </p>
-
           <p class="text-gray-700 text-sm leading-relaxed">
-            <span class="font-semibold text-gray-900">PR Pathways:</span> Indian
-            students can apply for
-            <span class="font-semibold">skilled migration visas</span> after
-            gaining work experience in Australia.
+            After gaining Australian work experience, international graduates
+            may be eligible to apply for
+            <span class="font-semibold text-gray-900"
+              >skilled migration and PR pathways</span
+            >
+            under Australia’s migration framework.
           </p>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <script setup>
 import bgImage from "@/assets/aus.jpeg";
 </script>
