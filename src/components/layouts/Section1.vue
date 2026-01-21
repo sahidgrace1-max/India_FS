@@ -7,11 +7,12 @@
       <img
         src="@/assets/Section1.png"
         alt="Grace International Process"
-        class="max-w-[450px] w-full h-auto"
+        class="max-w-[450px] w-full h-auto animate-slide-left"
       />
     </div>
+
     <!-- Right: Text Content -->
-    <div class="flex-1 max-w-xl text-justify">
+    <div class="flex-1 max-w-xl text-justify animate-slide-right">
       <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-2">
         Study Abroad with
       </h2>
@@ -169,6 +170,38 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Slide in from left for image */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 1.5s ease-out forwards; /* longer duration like hero */
+}
+
+/* Slide in from right for text */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slideRight 1.5s ease-out forwards 0.3s; /* longer + delay */
+}
+
 .flip-card {
   perspective: 1000px;
   width: 100%;

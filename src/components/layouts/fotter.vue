@@ -14,19 +14,13 @@
         <h3 class="text-lg font-semibold mb-4">QUICK LINKS</h3>
         <ul class="space-y-2">
           <li>
-            <router-link
-              to="/"
-              class="hover:text-green-400 transition"
-            >
+            <router-link to="/" class="hover:text-green-400 transition">
               Events
             </router-link>
           </li>
 
           <li>
-            <router-link
-              to="/about"
-              class="hover:text-green-400 transition"
-            >
+            <router-link to="/about" class="hover:text-green-400 transition">
               Latest News
             </router-link>
           </li>

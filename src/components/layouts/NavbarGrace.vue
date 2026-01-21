@@ -12,7 +12,9 @@
       <div
         class="flex flex-wrap items-center gap-3 md:gap-5 justify-center md:justify-end mt-2 md:mt-0"
       >
-        <a href="#" class="hover:underline">Our Team</a>
+        <router-link to="/about" class="hover:text-green-400 transition">
+          Our Team
+        </router-link>
         <a href="mailto:admin@gmail.com" class="hover:underline">Contact Us</a>
         <div
           class="relative"
@@ -193,7 +195,7 @@
                           $route.path === '/university/uk',
                       }"
                       >UK</router-link
-                    > 
+                    >
                   </li>
                   <li>
                     <router-link
@@ -500,6 +502,8 @@ const { selectedBranch, setSelectedBranch } = useBranchStore();
 function selectBranch(branch) {
   setSelectedBranch(branch);
   showBranchesDropdown.value = false;
+
+  window.location.reload();
 }
 
 // // Location/contact info

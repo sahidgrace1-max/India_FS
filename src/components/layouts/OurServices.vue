@@ -9,9 +9,10 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 justify-items-center"
       >
-        <!-- Card 1 -->
+        <!-- Card 1: from left -->
         <div
-          class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
+          ref="card1"
+          :class="['service-card', 'from-left', { animate: inView.card1 }]"
         >
           <img
             src="@/assets/freecounselling.png"
@@ -21,7 +22,7 @@
           <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
             Free Counseling
           </h3>
-          <div class="text-base mb-1 w-full w-full">
+          <div class="text-base mb-1 w-full">
             Dreaming to Study Abroad? Start Here —
           </div>
           <div class="text-base mb-1 w-full">
@@ -31,9 +32,11 @@
             >
           </div>
         </div>
-        <!-- Card 2 -->
+
+        <!-- Card 2: from right -->
         <div
-          class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
+          ref="card2"
+          :class="['service-card', 'from-right', { animate: inView.card2 }]"
         >
           <img
             src="@/assets/profileassessment.png"
@@ -56,9 +59,11 @@
             <span class="font-small">your education, budget & goals.</span>
           </div>
         </div>
-        <!-- Card 3 -->
+
+        <!-- Card 3: from top -->
         <div
-          class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
+          ref="card3"
+          :class="['service-card', 'from-top', { animate: inView.card3 }]"
         >
           <img
             src="@/assets/freevisaprocessing.png"
@@ -76,9 +81,11 @@
             Trusted by thousands of students globally.
           </div>
         </div>
-        <!-- Card 4 -->
+
+        <!-- Card 4: from bottom -->
         <div
-          class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
+          ref="card4"
+          :class="['service-card', 'from-bottom', { animate: inView.card4 }]"
         >
           <img
             src="@/assets/noservicecharge.png"
@@ -90,7 +97,7 @@
           </h3>
 
           <div class="text-base leading-relaxed text-justify mb-3">
-            At Grace International,we proudly operate on a No Service Charge
+            At Grace International, we proudly operate on a No Service Charge
             policy for our core services. We provide end-to-end support for your
             international education journey.
           </div>
@@ -100,23 +107,87 @@
   </section>
 </template>
 
+<script>
+import { ref, reactive, onMounted } from "vue";
+
+export default {
+  name: "OurServices",
+  setup() {
+    const card1 = ref(null);
+    const card2 = ref(null);
+    const card3 = ref(null);
+    const card4 = ref(null);
+
+    const inView = reactive({
+      card1: false,
+      card2: false,
+      card3: false,
+      card4: false,
+    });
+
+    onMounted(() => {
+      const options = { threshold: 0.3 }; // 30% visible
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === card1.value) inView.card1 = true;
+            if (entry.target === card2.value) inView.card2 = true;
+            if (entry.target === card3.value) inView.card3 = true;
+            if (entry.target === card4.value) inView.card4 = true;
+          }
+        });
+      }, options);
+
+      [card1.value, card2.value, card3.value, card4.value].forEach((el) => {
+        if (el) observer.observe(el);
+      });
+    });
+
+    return { card1, card2, card3, card4, inView };
+  },
+};
+</script>
+
 <style scoped>
+/* Base card */
 .service-card {
+  opacity: 0;
   transition:
-    box-shadow 0.4s,
-    background 0.4s;
+    transform 0.3s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease,
+    opacity 0.6s ease;
 }
+
+/* Hover effect */
 @media (min-width: 768px) {
   .service-card:hover {
+    transform: translateY(-5px);
     box-shadow:
       0 8px 32px rgba(34, 97, 184, 0.15),
       0 1.5px 8px rgba(34, 97, 184, 0.12);
     background: #eff6ff;
   }
 }
-/* 🔴 HOVER DISABLE OVERRIDE */
-.service-card:hover {
-  box-shadow: none !important;
-  background: inherit !important;
+
+/* Directions */
+.from-left {
+  transform: translateX(-50px);
+}
+.from-right {
+  transform: translateX(50px);
+}
+.from-top {
+  transform: translateY(-50px);
+}
+.from-bottom {
+  transform: translateY(50px);
+}
+
+/* Active animation */
+.animate {
+  transform: translateX(0) translateY(0) !important;
+  opacity: 1;
 }
 </style>

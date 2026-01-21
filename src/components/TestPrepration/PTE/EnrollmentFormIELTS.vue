@@ -57,7 +57,9 @@
               v-model="formData.country"
               class="w-4 h-4 text-blue-600"
             />
-            <label for="australia" class="ml-3 text-gray-700 cursor-pointer">Australia</label>
+            <label for="australia" class="ml-3 text-gray-700 cursor-pointer"
+              >Australia</label
+            >
           </div>
           <div class="flex items-center">
             <input
@@ -67,7 +69,9 @@
               v-model="formData.country"
               class="w-4 h-4 text-blue-600"
             />
-            <label for="usa" class="ml-3 text-gray-700 cursor-pointer">USA</label>
+            <label for="usa" class="ml-3 text-gray-700 cursor-pointer"
+              >USA</label
+            >
           </div>
           <div class="flex items-center">
             <input
@@ -87,7 +91,9 @@
               v-model="formData.country"
               class="w-4 h-4 text-blue-600"
             />
-            <label for="canada" class="ml-3 text-gray-700 cursor-pointer">Canada</label>
+            <label for="canada" class="ml-3 text-gray-700 cursor-pointer"
+              >Canada</label
+            >
           </div>
         </div>
       </div>
@@ -139,7 +145,10 @@
               v-model="formData.allow_contact"
               class="w-4 h-4 text-blue-600 rounded"
             />
-            <label for="contact" class="ml-2 text-gray-700 text-sm cursor-pointer">
+            <label
+              for="contact"
+              class="ml-2 text-gray-700 text-sm cursor-pointer"
+            >
               Help me build my career by contacting me.
             </label>
           </div>
@@ -151,7 +160,10 @@
               required
               class="w-4 h-4 text-blue-600 rounded"
             />
-            <label for="terms" class="ml-2 text-gray-700 text-sm cursor-pointer">
+            <label
+              for="terms"
+              class="ml-2 text-gray-700 text-sm cursor-pointer"
+            >
               I agree to Grace Terms & privacy policy.
             </label>
           </div>
@@ -164,16 +176,22 @@
         :disabled="isSubmitting"
         class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition-colors duration-200 disabled:opacity-50"
       >
-        {{ isSubmitting ? 'Submitting...' : 'SUBMIT' }}
+        {{ isSubmitting ? "Submitting..." : "SUBMIT" }}
       </button>
 
       <!-- Success Message -->
-      <div v-if="successMessage" class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+      <div
+        v-if="successMessage"
+        class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded"
+      >
         {{ successMessage }}
       </div>
 
       <!-- Error Message -->
-      <div v-if="errorMessage" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+      <div
+        v-if="errorMessage"
+        class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded"
+      >
         {{ errorMessage }}
       </div>
     </form>
@@ -181,72 +199,78 @@
 </template>
 
 <script>
-import { ref, reactive } from 'vue';
+import { ref, reactive } from "vue";
 
 export default {
-  name: 'EnrollmentFormIELTS',
-  emits: ['close'],
+  name: "EnrollmentFormIELTS",
+  emits: ["close"],
   setup(props, { emit }) {
     const formData = reactive({
-      full_name: '',
-      email: '',
-      contact_number: '',
-      country: 'Australia',
-      timing: '',
-      branch: 'KATHMANDU OFFICE',
+      full_name: "",
+      email: "",
+      contact_number: "",
+      country: "Australia",
+      timing: "",
+      branch: "KATHMANDU OFFICE",
       allow_contact: false,
-      agree_terms: false
+      agree_terms: false,
     });
 
     const isSubmitting = ref(false);
-    const successMessage = ref('');
-    const errorMessage = ref('');
+    const successMessage = ref("");
+    const errorMessage = ref("");
 
     const handleSubmit = async () => {
       if (!formData.agree_terms) {
-        errorMessage.value = 'Please agree to the terms & privacy policy';
+        errorMessage.value = "Please agree to the terms & privacy policy";
         return;
       }
 
       isSubmitting.value = true;
-      errorMessage.value = '';
-      successMessage.value = '';
+      errorMessage.value = "";
+      successMessage.value = "";
 
       try {
-        const response = await fetch('"http://localhost:8000/api/contact/pte/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
+        const response = await fetch(
+          '"http://localhost:8000/api/contact/pte/',
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
           },
-          body: JSON.stringify(formData)
-        });
+        );
 
         if (response.ok) {
           const data = await response.json();
-          successMessage.value = 'Thank you! Your IELTS enrollment form has been submitted successfully. We will contact you soon.';
-          
+          successMessage.value =
+            "Thank you! Your IELTS enrollment form has been submitted successfully. We will contact you soon.";
+
           // Reset form after success
           setTimeout(() => {
             Object.assign(formData, {
-              full_name: '',
-              email: '',
-              contact_number: '',
-              country: 'Australia',
-              timing: '',
-              branch: 'KATHMANDU OFFICE',
+              full_name: "",
+              email: "",
+              contact_number: "",
+              country: "Australia",
+              timing: "",
+              branch: "KATHMANDU OFFICE",
               allow_contact: false,
-              agree_terms: false
+              agree_terms: false,
             });
-            successMessage.value = '';
-            emit('close');
+            successMessage.value = "";
+            emit("close");
           }, 2000);
         } else {
           const errorData = await response.json();
-          errorMessage.value = errorData.message || 'An error occurred. Please try again.';
+          errorMessage.value =
+            errorData.message || "An error occurred. Please try again.";
         }
       } catch (error) {
-        errorMessage.value = 'Network error. Please check your connection and try again.';
-        console.error('Form submission error:', error);
+        errorMessage.value =
+          "Network error. Please check your connection and try again.";
+        console.error("Form submission error:", error);
       } finally {
         isSubmitting.value = false;
       }
@@ -257,9 +281,9 @@ export default {
       isSubmitting,
       successMessage,
       errorMessage,
-      handleSubmit
+      handleSubmit,
     };
-  }
+  },
 };
 </script>
 
