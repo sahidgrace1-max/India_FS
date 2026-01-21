@@ -14,7 +14,7 @@
           class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
         >
           <img
-            src="@/assets/image.png"
+            src="@/assets/freecounselling.png"
             alt="Free Counseling"
             class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />
@@ -36,7 +36,7 @@
           class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
         >
           <img
-            src="@/assets/image.png"
+            src="@/assets/profileassessment.png"
             alt="Free Profile Assessment"
             class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />
@@ -61,7 +61,7 @@
           class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
         >
           <img
-            src="@/assets/image.png"
+            src="@/assets/freevisaprocessing.png"
             alt="Free Visa Processing"
             class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />
@@ -81,7 +81,7 @@
           class="service-card bg-gray-100 flex flex-col items-center rounded-lg text-justify w-full max-w-xs"
         >
           <img
-            src="@/assets/image.png"
+            src="@/assets/noservicecharge.png"
             alt="No Services Charge"
             class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
           />

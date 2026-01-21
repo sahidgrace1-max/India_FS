@@ -58,7 +58,7 @@
         <!-- Right Image -->
         <div class="flex items-center justify-center">
           <img
-            :src="bgImage"
+            :src="australia"
             alt="Australian Education System"
              class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[400px]"
           />
@@ -70,6 +70,7 @@
 
 <script setup>
 import bgImage from "@/assets/image.png";
+import australia from "@/assets/australia.png";
 </script>
 
 <style scoped></style>

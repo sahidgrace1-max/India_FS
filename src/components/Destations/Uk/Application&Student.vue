@@ -74,7 +74,7 @@
 </template>
 
 <script setup>
-import bgImage from "@/assets/image.png";
+import bgImage from "@/assets/freevisaprocessing.png";
 </script>
 
 <style scoped></style>

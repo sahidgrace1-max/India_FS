@@ -71,7 +71,7 @@
 </template>
 
 <script setup>
-import bgImage from "@/assets/aus.jpeg";
+import bgImage from "@/assets/newzealand3.png";
 </script>
 
 <style scoped></style>
