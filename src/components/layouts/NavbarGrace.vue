@@ -107,16 +107,6 @@
             to="/"
             class="flex items-center gap-2 transition-colors relative group hover:text-green-600"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-6 h-6 transition-colors group-hover:text-green-600 text-green-700"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7A1 1 0 003 11h1v6a1 1 0 001 1h3a1 1 0 001-1v-3h2v3a1 1 0 001 1h3a1 1 0 001-1v-6h1a1 1 0 00.707-1.707l-7-7z"
-              />
-            </svg>
             <span class="font-sans">Home</span>
             <span
               class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"
