@@ -8,51 +8,63 @@
           alt="Grace International Logo"
           class="w-44 mb-2"
         />
-        
-
-        <!-- <div>
-          <h3 class="text-lg font-semibold mb-2">
-            Subscribe to our Newsletter
-          </h3>
-          <div class="flex">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              class="rounded-l px-3 py-2 w-full text-black focus:outline-none"
-            />
-            <button
-              class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r font-semibold"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div> -->
       </div>
       <!-- Quick Links -->
       <div>
         <h3 class="text-lg font-semibold mb-4">QUICK LINKS</h3>
         <ul class="space-y-2">
           <li>
-            <a href="#" class="hover:text-green-400 transition">Events</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-green-400 transition">Latest News</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-green-400 transition"
-              >Explore Countries</a
+            <router-link
+              to="/"
+              class="hover:text-green-400 transition"
             >
+              Events
+            </router-link>
           </li>
+
           <li>
-            <a href="#" class="hover:text-green-400 transition"
-              >Australian Universities</a
+            <router-link
+              to="/about"
+              class="hover:text-green-400 transition"
             >
+              Latest News
+            </router-link>
           </li>
+
           <li>
-            <a href="#" class="hover:text-green-400 transition">Scholarships</a>
+            <router-link
+              to="/destinations/australia"
+              class="hover:text-green-400 transition"
+            >
+              Explore Countries
+            </router-link>
           </li>
+
           <li>
-            <a href="#" class="hover:text-green-400 transition">Vacancy</a>
+            <router-link
+              to="/university/australia"
+              class="hover:text-green-400 transition"
+            >
+              Australian Universities
+            </router-link>
+          </li>
+
+          <li>
+            <router-link
+              to="/scholarships"
+              class="hover:text-green-400 transition"
+            >
+              Scholarships
+            </router-link>
+          </li>
+
+          <li>
+            <router-link
+              to="/our-services"
+              class="hover:text-green-400 transition"
+            >
+              Vacancy
+            </router-link>
           </li>
         </ul>
       </div>
