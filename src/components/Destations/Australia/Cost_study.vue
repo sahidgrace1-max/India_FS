@@ -5,7 +5,7 @@
         <!-- Left Image -->
         <div class="order-2 lg:order-1 flex items-center justify-center">
           <img
-            :src="bgImage"
+            :src="australia2"
             alt="Students studying in Australia"
             class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[800px]"
           />
@@ -123,7 +123,7 @@
   </div>
 </template>
 <script setup>
-import bgImage from "@/assets/aus.jpeg";
+import australia2 from "@/assets/australia2.png";
 </script>
 
 <style scoped></style>

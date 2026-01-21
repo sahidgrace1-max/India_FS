@@ -108,7 +108,7 @@
 </template>
 
 <script setup>
-import bgImage from "@/assets/aus.jpeg";
+import bgImage from "@/assets/usa2.png";
 </script>
 
 <style scoped></style>

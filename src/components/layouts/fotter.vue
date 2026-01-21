@@ -4,25 +4,12 @@
       <!-- Logo & App Download -->
       <div class="flex flex-col space-y-6">
         <img
-          src="@/assets/image.png"
+          src="@/assets/logo.png"
           alt="Grace International Logo"
           class="w-44 mb-2"
         />
-        <div>
-          <h3 class="text-lg font-semibold mb-2">Download Our App</h3>
-          <div class="flex space-x-2">
-            <img
-              src="#"
-              alt="Google Play"
-              class="w-28 h-8 object-contain bg-gray-800 rounded"
-            />
-            <img
-              src="#"
-              alt="App Store"
-              class="w-28 h-8 object-contain bg-gray-800 rounded"
-            />
-          </div>
-        </div>
+        
+
         <!-- <div>
           <h3 class="text-lg font-semibold mb-2">
             Subscribe to our Newsletter

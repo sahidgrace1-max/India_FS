@@ -5,9 +5,10 @@
         <!-- Left Image -->
         <div class="order-2 lg:order-1 flex items-center justify-center">
           <img
-            :src="bgImage"
+            :src="australia1"
             alt="Graduate Student in Australia"
-            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[750px]"
+              class="rounded-lg shadow-lg w-full h-auto object-contain"
+
           />
         </div>
 
@@ -90,6 +91,7 @@
 
 <script setup>
 import bgImage from "@/assets/image.png";
+import australia1 from "@/assets/australia1.png";
 </script>
 
 <style scoped></style>

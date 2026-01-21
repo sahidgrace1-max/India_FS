@@ -90,7 +90,7 @@
 </template>
 
 <script setup>
-import bgImage from "@/assets/image.png";
+import bgImage from "@/assets/uk.png";
 </script>
 
 <style scoped></style>

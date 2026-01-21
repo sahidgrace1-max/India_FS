@@ -61,7 +61,7 @@
         <!-- Right Image -->
         <div class="order-1 lg:order-2 flex items-center justify-center">
           <img
-            :src="bgImage"
+            :src="australia3"
             alt="Application Process"
             class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[550px]"
           />
@@ -72,7 +72,7 @@
 </template>
 
 <script setup>
-import bgImage from "@/assets/image.png";
+import australia3 from "@/assets/australia3.png";
 </script>
 
 <style scoped></style>

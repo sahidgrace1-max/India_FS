@@ -28,7 +28,7 @@
         class="border-2 border-blue-500 rounded-lg flex items-center justify-center h-32 bg-white cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         <div class="flex flex-col items-center">
-          <span class="text-3xl font-bold text-black">TOFEL</span>
+          <span class="text-3xl font-bold text-black">TOEFL</span>
         </div>
       </div>
       <!-- Card 8 -->
