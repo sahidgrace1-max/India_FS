@@ -13,7 +13,7 @@
         class="flex flex-wrap items-center gap-3 md:gap-5 justify-center md:justify-end mt-2 md:mt-0"
       >
         <a href="#" class="hover:underline">Our Team</a>
-        <a href="#" class="hover:underline">LOG IN</a>
+        <a href="mailto:admin@gmail.com" class="hover:underline">Contact Us</a>
         <div
           class="relative"
           @mouseenter="handleBranchesDropdownEnter"
@@ -193,7 +193,7 @@
                           $route.path === '/university/uk',
                       }"
                       >UK</router-link
-                    >
+                    > 
                   </li>
                   <li>
                     <router-link
@@ -225,7 +225,6 @@
                       >Scholarships</router-link
                     >
                   </li>
-                  <li>Latest News & Updates</li>
                 </ul>
               </div>
             </div>

@@ -7,7 +7,7 @@
       <img
         src="@/assets/Section1.png"
         alt="Grace International Process"
-        class="max-w-[900px] w-full h-auto"
+        class="max-w-[450px] w-full h-auto"
       />
     </div>
     <!-- Right: Text Content -->
