@@ -126,10 +126,8 @@
             class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           >
             <option value="">Select Branch</option>
-            <option value="KATHMANDU OFFICE">KATHMANDU OFFICE</option>
-            <option value="POKHARA OFFICE">POKHARA OFFICE</option>
-            <option value="BIRATNAGAR OFFICE">BIRATNAGAR OFFICE</option>
-            <option value="DHARAN OFFICE">DHARAN OFFICE</option>
+            <option value="DELHI OFFICE">DELHI OFFICE</option>
+            <option value="AHMEDABAD OFFICE">AHMEDABAD OFFICE</option>
           </select>
         </div>
       </div>

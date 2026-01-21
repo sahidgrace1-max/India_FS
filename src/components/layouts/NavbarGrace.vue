@@ -92,14 +92,13 @@
     >
       <!-- Logo & Brand -->
       <div class="flex items-center gap-6 flex-shrink-0">
-        <img
-          src="@/assets/gi-logo-gif.gif"
-          alt="Grace International Logo"
-          class="h-20 w-auto"
-        />
-        <!-- <select v-model="selectedLocation" class="bg-blue-900 text-white px-2 py-1 rounded ml-4">
-          <option v-for="(info, loc) in locations" :key="loc" :value="loc">{{ loc }}</option>
-        </select> -->
+        <router-link to="/" class="flex items-center">
+          <img
+            src="@/assets/gi-logo-gif.gif"
+            alt="Grace International Logo"
+            class="h-20 w-auto"
+          />
+        </router-link>
       </div>
       <!-- Navigation Links (Right Side) -->
       <div class="flex items-center justify-end flex-1">
