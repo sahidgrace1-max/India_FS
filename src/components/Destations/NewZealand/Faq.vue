@@ -89,7 +89,7 @@
 </template>
 
 <script setup>
-import bgImage from "@/assets/faq.png";
+import bgImage from "@/assets/FAQ.png";
 </script>
 
 <style scoped></style>

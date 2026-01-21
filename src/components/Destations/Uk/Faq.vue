@@ -5,7 +5,7 @@
         <!-- Left Image -->
         <div class="order-2 lg:order-1 flex items-center justify-center">
           <img
-            :src="FAQImage"
+            :src=faqImage
             alt="Students Graduation in the UK"
             class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[500px]"
           />
@@ -85,7 +85,7 @@
 </template>
 
 <script setup>
-import FAQImage from "@/assets/faq.png";
+import faqImage from "@/assets/FAQ.png";
 </script>
 
 <style scoped></style>
