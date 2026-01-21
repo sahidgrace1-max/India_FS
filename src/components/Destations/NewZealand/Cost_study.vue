@@ -20,14 +20,19 @@
               (shared flat, private flat, student residence).
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Estimated Total (Study + Living):</span>
+              <span class="font-semibold text-gray-900"
+                >Estimated Total (Study + Living):</span
+              >
               Approximately NZ$25,000–NZ$30,000 per year.
             </li>
           </ul>
 
           <p class="text-gray-700 text-base leading-relaxed mb-6">
-            <span class="text-orange-600 font-medium">Grace International India</span>
-            assists Indian students with budgeting, financial planning, and documentation for studying in New Zealand.
+            <span class="text-orange-600 font-medium"
+              >Grace International India</span
+            >
+            assists Indian students with budgeting, financial planning, and
+            documentation for studying in New Zealand.
           </p>
 
           <h2 class="text-2xl font-bold text-gray-900 mb-6">
@@ -37,10 +42,13 @@
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Part-Time Work:</span>
-              Up to 20 hours per week during study and full-time during holidays.
+              Up to 20 hours per week during study and full-time during
+              holidays.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Post-Study Work Rights:</span>
+              <span class="font-semibold text-gray-900"
+                >Post-Study Work Rights:</span
+              >
               Students can apply for a work visa to gain professional experience
               after graduation, typically 1–3 years depending on qualification.
             </li>
@@ -48,12 +56,15 @@
 
           <p class="text-gray-700 text-base leading-relaxed mb-6">
             Work experience in New Zealand improves employability, especially in
-            sectors such as IT, healthcare, engineering, business management, hospitality, and tourism.
+            sectors such as IT, healthcare, engineering, business management,
+            hospitality, and tourism.
           </p>
 
           <p class="text-gray-700 text-base leading-relaxed">
             <span class="font-semibold text-gray-900">Career Pathways:</span>
-            International students can gain valuable skills, networking opportunities, and professional exposure through part-time work and post-study employment, helping build global careers.
+            International students can gain valuable skills, networking
+            opportunities, and professional exposure through part-time work and
+            post-study employment, helping build global careers.
           </p>
         </div>
 

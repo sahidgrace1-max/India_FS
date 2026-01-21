@@ -21,12 +21,18 @@
           <h2 class="text-green-600 text-3xl font-bold mb-6">Contact Form</h2>
 
           <!-- Error Message Display -->
-          <div v-if="errorMessage" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+          <div
+            v-if="errorMessage"
+            class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded"
+          >
             {{ errorMessage }}
           </div>
 
           <!-- Success Message Display -->
-          <div v-if="successMessage" class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+          <div
+            v-if="successMessage"
+            class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded"
+          >
             {{ successMessage }}
           </div>
 
@@ -123,7 +129,7 @@
             :disabled="isSubmitting"
             class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md transition-colors duration-200 disabled:opacity-50"
           >
-            {{ isSubmitting ? 'Submitting...' : 'Submit' }}
+            {{ isSubmitting ? "Submitting..." : "Submit" }}
           </button>
         </div>
       </div>
@@ -154,7 +160,13 @@ const handleSubmit = async () => {
   errorMessage.value = "";
 
   // Basic validation
-  if (!formData.name || !formData.email || !formData.contact || !formData.course || !formData.city) {
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.contact ||
+    !formData.course ||
+    !formData.city
+  ) {
     errorMessage.value = "Please fill in all required fields.";
     return;
   }
@@ -162,7 +174,7 @@ const handleSubmit = async () => {
   isSubmitting.value = true;
 
   try {
-    const response = await fetch("http://localhost:8000/api/contact/submit/", {
+    const response = await fetch("http://192.168.110.37:8000/api/contact/submit/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -171,8 +183,9 @@ const handleSubmit = async () => {
     });
 
     if (response.ok) {
-      successMessage.value = "Form submitted successfully! We'll contact you soon.";
-      
+      successMessage.value =
+        "Form submitted successfully! We'll contact you soon.";
+
       // Reset form
       formData.name = "";
       formData.email = "";
@@ -183,7 +196,8 @@ const handleSubmit = async () => {
       formData.city = "";
     } else {
       const error = await response.json();
-      errorMessage.value = error.message || "Failed to submit form. Please try again.";
+      errorMessage.value =
+        error.message || "Failed to submit form. Please try again.";
     }
   } catch (error) {
     console.error("Error:", error);

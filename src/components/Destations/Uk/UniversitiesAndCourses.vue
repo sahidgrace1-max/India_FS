@@ -20,8 +20,12 @@
             <li class="text-gray-700 text-lg">University of Oxford</li>
             <li class="text-gray-700 text-lg">University of Cambridge</li>
             <li class="text-gray-700 text-lg">Imperial College London</li>
-            <li class="text-gray-700 text-lg">London School of Economics (LSE)</li>
-            <li class="text-gray-700 text-lg">University College London (UCL)</li>
+            <li class="text-gray-700 text-lg">
+              London School of Economics (LSE)
+            </li>
+            <li class="text-gray-700 text-lg">
+              University College London (UCL)
+            </li>
           </ul>
 
           <h2 class="text-2xl font-bold text-gray-900 mb-6">
@@ -50,19 +54,27 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Chevening Scholarships</span>
+              <span class="font-semibold text-gray-900"
+                >Chevening Scholarships</span
+              >
               – Fully funded UK government scholarships.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Commonwealth Scholarships</span>
+              <span class="font-semibold text-gray-900"
+                >Commonwealth Scholarships</span
+              >
               – For high-achieving students from Commonwealth countries.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">GREAT Scholarships</span>
+              <span class="font-semibold text-gray-900"
+                >GREAT Scholarships</span
+              >
               – £10,000 tuition fee support for selected UK universities.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">University Merit Scholarships</span>
+              <span class="font-semibold text-gray-900"
+                >University Merit Scholarships</span
+              >
               – Offered by UK institutions based on academic excellence.
             </li>
           </ul>

@@ -16,23 +16,22 @@
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900">Requirements:</span>
               English proficiency (IELTS, TOEFL, PTE), academic transcripts,
-              Statement of Purpose (SOP), Letters of Recommendation (LORs),
-              and financial proof.
+              Statement of Purpose (SOP), Letters of Recommendation (LORs), and
+              financial proof.
             </li>
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900"
                 >UK Student Visa (Student Route):</span
               >
-              Requires an unconditional offer letter, Confirmation of
-              Acceptance for Studies (CAS), proof of funds, and English
-              language evidence.
+              Requires an unconditional offer letter, Confirmation of Acceptance
+              for Studies (CAS), proof of funds, and English language evidence.
             </li>
           </ul>
 
           <p class="text-gray-700 text-base leading-relaxed mb-6">
             Our experts guide Indian students through the complete UK
-            application and student visa process, ensuring accuracy,
-            compliance, and faster approvals.
+            application and student visa process, ensuring accuracy, compliance,
+            and faster approvals.
           </p>
 
           <h2 class="text-3xl font-bold text-gray-900 mb-6">

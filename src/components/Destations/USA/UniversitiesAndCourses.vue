@@ -18,9 +18,13 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">Harvard University</li>
-            <li class="text-gray-700 text-lg">Massachusetts Institute of Technology (MIT)</li>
+            <li class="text-gray-700 text-lg">
+              Massachusetts Institute of Technology (MIT)
+            </li>
             <li class="text-gray-700 text-lg">Stanford University</li>
-            <li class="text-gray-700 text-lg">University of California, Los Angeles (UCLA)</li>
+            <li class="text-gray-700 text-lg">
+              University of California, Los Angeles (UCLA)
+            </li>
             <li class="text-gray-700 text-lg">University of Michigan</li>
           </ul>
 
@@ -31,10 +35,16 @@
             <li class="text-gray-700 text-lg">
               Engineering (Mechanical, Electrical, Software)
             </li>
-            <li class="text-gray-700 text-lg">Business & Management (including MBA)</li>
+            <li class="text-gray-700 text-lg">
+              Business & Management (including MBA)
+            </li>
             <li class="text-gray-700 text-lg">Computer Science & IT</li>
-            <li class="text-gray-700 text-lg">Health Sciences (Nursing, Public Health, Pharmacy)</li>
-            <li class="text-gray-700 text-lg">Liberal Arts & Social Sciences</li>
+            <li class="text-gray-700 text-lg">
+              Health Sciences (Nursing, Public Health, Pharmacy)
+            </li>
+            <li class="text-gray-700 text-lg">
+              Liberal Arts & Social Sciences
+            </li>
           </ul>
 
           <h2 class="text-2xl font-bold text-gray-900 mb-6">
@@ -42,21 +52,34 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Fulbright Foreign Student Program</span> – Fully funded for graduate studies.
+              <span class="font-semibold text-gray-900"
+                >Fulbright Foreign Student Program</span
+              >
+              – Fully funded for graduate studies.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">AAUW International Fellowships</span> – For women pursuing graduate degrees.
+              <span class="font-semibold text-gray-900"
+                >AAUW International Fellowships</span
+              >
+              – For women pursuing graduate degrees.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">University Merit Scholarships</span> – Offered by institutions like MIT, UCLA, and Michigan.
+              <span class="font-semibold text-gray-900"
+                >University Merit Scholarships</span
+              >
+              – Offered by institutions like MIT, UCLA, and Michigan.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Partial Tuition Waivers</span> – For high-achieving Indian students.
+              <span class="font-semibold text-gray-900"
+                >Partial Tuition Waivers</span
+              >
+              – For high-achieving Indian students.
             </li>
           </ul>
 
           <p class="text-gray-600 text-base italic">
-            Tip: Strong GRE, TOEFL, or IELTS scores increase eligibility for top USA scholarships for Indian students.
+            Tip: Strong GRE, TOEFL, or IELTS scores increase eligibility for top
+            USA scholarships for Indian students.
           </p>
         </div>
       </div>

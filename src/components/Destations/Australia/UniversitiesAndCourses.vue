@@ -53,8 +53,9 @@
               university ranking system.
             </li>
             <li class="text-gray-700 text-base">
-              <span class="font-semibold">5</span> Australian cities listed among
-              the <span class="font-semibold">top 30 best student cities</span>
+              <span class="font-semibold">5</span> Australian cities listed
+              among the
+              <span class="font-semibold">top 30 best student cities</span>
               globally.
             </li>
             <li class="text-gray-700 text-xs">
@@ -68,8 +69,12 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-base">Storing knowledge</li>
-            <li class="text-gray-700 text-base">Transferring knowledge to others</li>
-            <li class="text-gray-700 text-base">Creating knowledge through research</li>
+            <li class="text-gray-700 text-base">
+              Transferring knowledge to others
+            </li>
+            <li class="text-gray-700 text-base">
+              Creating knowledge through research
+            </li>
           </ul>
 
           <p class="text-gray-600 text-base italic">

@@ -85,7 +85,6 @@
   </div>
 </template>
 
-
 <script setup>
 import bgImage from "@/assets/canada5.png";
 </script>

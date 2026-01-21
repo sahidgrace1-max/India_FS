@@ -6,10 +6,10 @@
         <p class="text-gray-700 text-lg leading-relaxed">
           Canada is one of the most preferred study destinations for
           international students due to its high-quality education system,
-          multicultural society, and excellent post-study work
-          opportunities. With globally recognized degrees and strong
-          pathways to permanent residency, Canada offers students a perfect
-          balance of education and career growth.
+          multicultural society, and excellent post-study work opportunities.
+          With globally recognized degrees and strong pathways to permanent
+          residency, Canada offers students a perfect balance of education and
+          career growth.
         </p>
       </div>
 

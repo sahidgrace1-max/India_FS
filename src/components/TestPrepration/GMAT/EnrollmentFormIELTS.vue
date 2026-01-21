@@ -8,7 +8,7 @@
         </label>
         <input
           type="text"
-          v-model="formData.fullName"
+          v-model="formData.full_name"
           required
           placeholder="Your Full Name"
           class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -35,7 +35,7 @@
           </label>
           <input
             type="tel"
-            v-model="formData.contactNumber"
+            v-model="formData.contact_number"
             required
             placeholder="Contact Number"
             class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -120,10 +120,8 @@
             class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           >
             <option value="">Select Branch</option>
-            <option value="KATHMANDU OFFICE">KATHMANDU OFFICE</option>
-            <option value="POKHARA OFFICE">POKHARA OFFICE</option>
-            <option value="BIRATNAGAR OFFICE">BIRATNAGAR OFFICE</option>
-            <option value="DHARAN OFFICE">DHARAN OFFICE</option>
+            <option value="KATHMANDU OFFICE">DELHI OFFICE</option>
+            <option value="POKHARA OFFICE">AHMEDABAD OFFICE</option>
           </select>
         </div>
       </div>
@@ -138,7 +136,7 @@
             <input
               type="checkbox"
               id="contact"
-              v-model="formData.allowContact"
+              v-model="formData.allow_contact"
               class="w-4 h-4 text-blue-600 rounded"
             />
             <label for="contact" class="ml-2 text-gray-700 text-sm cursor-pointer">
@@ -149,7 +147,7 @@
             <input
               type="checkbox"
               id="terms"
-              v-model="formData.agreeTerms"
+              v-model="formData.agree_terms"
               required
               class="w-4 h-4 text-blue-600 rounded"
             />
@@ -190,14 +188,14 @@ export default {
   emits: ['close'],
   setup(props, { emit }) {
     const formData = reactive({
-      fullName: '',
+      full_name: '',
       email: '',
-      contactNumber: '',
+      contact_number: '',
       country: 'Australia',
       timing: '',
       branch: 'KATHMANDU OFFICE',
-      allowContact: false,
-      agreeTerms: false
+      allow_contact: false,
+      agree_terms: false
     });
 
     const isSubmitting = ref(false);
@@ -205,7 +203,7 @@ export default {
     const errorMessage = ref('');
 
     const handleSubmit = async () => {
-      if (!formData.agreeTerms) {
+      if (!formData.agree_terms) {
         errorMessage.value = 'Please agree to the terms & privacy policy';
         return;
       }
@@ -215,27 +213,40 @@ export default {
       successMessage.value = '';
 
       try {
-        // Here you can add API call to submit the form
-        // For now, just show success message
-        successMessage.value = 'Thank you! Your enrollment form has been submitted successfully. We will contact you soon.';
-        
-        // Reset form
-        setTimeout(() => {
-          Object.assign(formData, {
-            fullName: '',
-            email: '',
-            contactNumber: '',
-            country: 'Australia',
-            timing: '',
-            branch: 'KATHMANDU OFFICE',
-            allowContact: false,
-            agreeTerms: false
-          });
-          successMessage.value = '';
-          emit('close');
-        }, 2000);
+        const response = await fetch('"http://localhost:8000/api/contact/gmat/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          successMessage.value = 'Thank you! Your IELTS enrollment form has been submitted successfully. We will contact you soon.';
+          
+          // Reset form after success
+          setTimeout(() => {
+            Object.assign(formData, {
+              full_name: '',
+              email: '',
+              contact_number: '',
+              country: 'Australia',
+              timing: '',
+              branch: 'KATHMANDU OFFICE',
+              allow_contact: false,
+              agree_terms: false
+            });
+            successMessage.value = '';
+            emit('close');
+          }, 2000);
+        } else {
+          const errorData = await response.json();
+          errorMessage.value = errorData.message || 'An error occurred. Please try again.';
+        }
       } catch (error) {
-        errorMessage.value = 'An error occurred. Please try again.';
+        errorMessage.value = 'Network error. Please check your connection and try again.';
+        console.error('Form submission error:', error);
       } finally {
         isSubmitting.value = false;
       }
