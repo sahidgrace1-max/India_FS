@@ -47,8 +47,8 @@
 
 <script>
 import image from "@/assets/image.png";
-import lib from "@/assets/library.png";
-import guide from "@/assets/guidance.png";
+import lib from "@/assets/Library.png";
+import guide from "@/assets/Guidance.png";
 import advise from "@/assets/advising.png";
 import uni from "@/assets/usa5.png";
 import test from "@/assets/testprep.png";
