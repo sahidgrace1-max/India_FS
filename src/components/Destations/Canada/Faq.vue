@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+  <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 font-poppins">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left Image -->

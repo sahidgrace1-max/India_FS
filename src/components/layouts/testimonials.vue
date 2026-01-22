@@ -3,24 +3,18 @@
     <div class="max-w-6xl mx-auto px-6">
       <!-- Header -->
       <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold text-gray-900">
-          What Our Clients Say
-        </h2>
+        <h2 class="text-3xl font-bold text-gray-900">What Our Clients Say</h2>
       </div>
 
       <!-- Scroll Container -->
       <div
         ref="scrollContainer"
-        class="flex gap-6 overflow-x-auto scroll-smooth pb-4
-               snap-x snap-mandatory hide-scrollbar"
+        class="flex gap-6 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory hide-scrollbar"
       >
         <div
           v-for="(testimonial, index) in testimonials"
           :key="index"
-          class="min-w-[300px] md:min-w-[360px]
-                 bg-white rounded-xl shadow-lg p-6
-                 snap-center flex flex-col justify-between
-                 min-h-[280px]"
+          class="min-w-[300px] md:min-w-[360px] bg-white rounded-xl shadow-lg p-6 snap-center flex flex-col justify-between min-h-[280px]"
         >
           <!-- Quote -->
           <p class="text-gray-700 italic leading-relaxed">
@@ -74,8 +68,7 @@ onMounted(() => {
     if (!container) return;
 
     const scrollAmount = 360;
-    const maxScroll =
-      container.scrollWidth - container.clientWidth;
+    const maxScroll = container.scrollWidth - container.clientWidth;
 
     if (container.scrollLeft >= maxScroll) {
       container.scrollTo({ left: 0, behavior: "smooth" });

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="bg-white py-16 px-4 sm:px-6 lg:px-8 font-poppins">
     <div class="max-w-7xl mx-auto">
       <!-- Intro Paragraph - Full Width -->
       <div
@@ -7,7 +7,7 @@
         class="animate-section"
         data-animation="fade-up"
       >
-        <p class="text-gray-700 text-lg leading-relaxed">
+        <p class="text-gray-700 text-lg leading-relaxed font-">
           Canada is one of the most preferred study destinations for
           international students due to its high-quality education system,
           multicultural society, and excellent post-study work opportunities.
@@ -39,13 +39,13 @@
           data-animation="slide-right"
         >
           <div class="prose max-w-none">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 font-">
               Why Study in Canada?
             </h2>
 
             <ul class="space-y-4">
-              <li class="text-gray-700 text-lg">
-                <span class="font-semibold text-gray-900"
+              <li class="text-gray-700 text-lg font-">
+                <span class="font-semibold text-gray-900 font-"
                   >World-Class Education</span
                 >
                 – Canadian universities and colleges are internationally
