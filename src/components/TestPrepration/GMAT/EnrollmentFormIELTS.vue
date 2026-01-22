@@ -214,7 +214,7 @@ export default {
       branch: "",
       allow_contact: false,
       agree_terms: false,
-      test: "GMAT"
+      test: "GMAT",
     });
 
     const isSubmitting = ref(false);
@@ -235,7 +235,8 @@ export default {
         !formData.agree_terms ||
         !formData.test
       ) {
-        errorMessage.value = "Please fill all required fields and accept terms.";
+        errorMessage.value =
+          "Please fill all required fields and accept terms.";
         return;
       }
 
@@ -251,14 +252,14 @@ export default {
           timing: formData.timing,
           branch: formData.branch,
           allow_contact: formData.allow_contact ? "Yes" : "No",
-          test: formData.test
+          test: formData.test,
         };
 
         await emailjs.send(
-          "service_vjgpkda",   // Service ID
-          "template_empjinn",  // Template ID
+          "service_vjgpkda", // Service ID
+          "template_empjinn", // Template ID
           templateParams,
-          "qgG1kPHho3fMoWiW9"  // Public Key
+          "qgG1kPHho3fMoWiW9", // Public Key
         );
 
         successMessage.value =
@@ -274,7 +275,6 @@ export default {
         formData.allow_contact = false;
         formData.agree_terms = false;
         formData.test = "GMAT";
-
       } catch (error) {
         console.error("EmailJS Error:", error);
         errorMessage.value = "Failed to submit form. Please try again.";

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="bg-white py-16 px-4 sm:px-6 lg:px-8 font-poppins">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left Image -->
@@ -75,7 +75,7 @@
             </li>
           </ul>
 
-          <p class="text-gray-600 text-base italic">
+          <p class="text-gray-600 text-base italic leading-relaxed">
             Tip: Strong IELTS, PTE, or TOEFL scores improve chances of receiving
             scholarships at top Canadian universities.
           </p>

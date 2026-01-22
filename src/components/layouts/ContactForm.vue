@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col lg:flex-row w-full min-h-screen relative overflow-x-hidden">
+  <div
+    class="flex flex-col lg:flex-row w-full min-h-screen relative overflow-x-hidden"
+  >
     <!-- Left Side: Image and Text -->
     <div
       class="w-full lg:w-1/2 relative overflow-hidden flex items-center justify-end pr-12 bg-gradient-to-br from-green-50 to-white"
@@ -98,7 +100,11 @@
                 class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
               >
                 <option value="" disabled>Select {{ field.label }}</option>
-                <option v-for="option in field.options" :key="option" :value="option">
+                <option
+                  v-for="option in field.options"
+                  :key="option"
+                  :value="option"
+                >
                   {{ option }}
                 </option>
               </select>
@@ -158,13 +164,57 @@ const errorMessage = ref("");
 
 // Form fields
 const formFields = [
-  { label: "Your Name", model: "name", type: "input", attrs: { type: "text", required: true }, required: true },
-  { label: "Your Email", model: "email", type: "input", attrs: { type: "email", required: true }, required: true },
-  { label: "Contact Number", model: "contact", type: "input", attrs: { type: "tel", required: true }, required: true },
-  { label: "Interested Course", model: "course", type: "input", attrs: { type: "text", required: true }, required: true },
-  { label: "Preferred Intake", model: "intake", type: "select", attrs: { required: true }, required: true, options: ["Jan 2026", "May 2026", "Sep 2026"] },
-  { label: "Budget per year", model: "budget", type: "select", attrs: { required: true }, required: true, options: ["Less than 20 Lakhs", "20-40 Lakhs", "More than 40 Lakhs"] },
-  { label: "Your City", model: "city", type: "input", attrs: { type: "text", required: true }, required: true },
+  {
+    label: "Your Name",
+    model: "name",
+    type: "input",
+    attrs: { type: "text", required: true },
+    required: true,
+  },
+  {
+    label: "Your Email",
+    model: "email",
+    type: "input",
+    attrs: { type: "email", required: true },
+    required: true,
+  },
+  {
+    label: "Contact Number",
+    model: "contact",
+    type: "input",
+    attrs: { type: "tel", required: true },
+    required: true,
+  },
+  {
+    label: "Interested Course",
+    model: "course",
+    type: "input",
+    attrs: { type: "text", required: true },
+    required: true,
+  },
+  {
+    label: "Preferred Intake",
+    model: "intake",
+    type: "select",
+    attrs: { required: true },
+    required: true,
+    options: ["Jan 2026", "May 2026", "Sep 2026"],
+  },
+  {
+    label: "Budget per year",
+    model: "budget",
+    type: "select",
+    attrs: { required: true },
+    required: true,
+    options: ["Less than 20 Lakhs", "20-40 Lakhs", "More than 40 Lakhs"],
+  },
+  {
+    label: "Your City",
+    model: "city",
+    type: "input",
+    attrs: { type: "text", required: true },
+    required: true,
+  },
 ];
 
 // Form submission
@@ -192,21 +242,26 @@ const handleSubmit = async () => {
     console.log("Template Params:", templateParams);
 
     const response = await emailjs.send(
-      "service_vjgpkda",  // your EmailJS service ID
+      "service_vjgpkda", // your EmailJS service ID
       "template_k6505oi", // your EmailJS template ID
       templateParams,
-      "qgG1kPHho3fMoWiW9" // your EmailJS user/public key
+      "qgG1kPHho3fMoWiW9", // your EmailJS user/public key
     );
 
     console.log("EmailJS response:", response);
 
-    successMessage.value = "Form submitted successfully! Admissions department will contact you soon.";
+    successMessage.value =
+      "Form submitted successfully! Admissions department will contact you soon.";
 
     // Reset form
     Object.keys(formData).forEach((k) => {
-      formData[k] = k === "intake" ? "Jan 2026" : k === "budget" ? "Less than 20 Lakhs" : "";
+      formData[k] =
+        k === "intake"
+          ? "Jan 2026"
+          : k === "budget"
+            ? "Less than 20 Lakhs"
+            : "";
     });
-
   } catch (err) {
     console.error("EmailJS error:", err);
     errorMessage.value = "Failed to send the form. Please try again.";
@@ -215,7 +270,6 @@ const handleSubmit = async () => {
     console.log("Submission process finished");
   }
 };
-
 
 // Intersection Observer for scroll animation
 const formSection = ref(null);
@@ -230,7 +284,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.15 },
   );
   if (formSection.value) observer.observe(formSection.value);
 });
@@ -243,21 +297,61 @@ onUnmounted(() => {
 <style scoped>
 /* Animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
-.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
 
-.animate-section { transition: all 0.6s ease-out; }
-.animate-section.is-visible { opacity: 1; transform: translateY(0); }
-.opacity-0 { opacity: 0; transform: translateY(20px); }
+.animate-section {
+  transition: all 0.6s ease-out;
+}
+.animate-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.opacity-0 {
+  opacity: 0;
+  transform: translateY(20px);
+}
 
-.animate-slide-down { transform: translateY(-20px); opacity: 0; animation: slideDown 0.6s forwards; }
-@keyframes slideDown { to { transform: translateY(0); opacity: 1; } }
+.animate-slide-down {
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideDown 0.6s forwards;
+}
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-.animate-fade-in { opacity: 0; transform: translateY(10px); animation: fadeIn 0.5s forwards; }
-@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-.message-enter-active, .message-leave-active { transition: all 0.3s ease; }
-.message-enter-from, .message-leave-to { opacity: 0; transform: translateY(-5px); }
+.message-enter-active,
+.message-leave-active {
+  transition: all 0.3s ease;
+}
+.message-enter-from,
+.message-leave-to {
+  opacity: 0;
+  transform: translateY(-5px);
+}
 </style>
