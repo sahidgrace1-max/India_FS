@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+  <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 font-poppins">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left Image -->
@@ -24,7 +24,7 @@
                 Q1. What is the cost of living in New Zealand for Indian
                 students?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 International students should budget around NZ$120–$200 per week
                 for accommodation, depending on the city and type of housing.
                 Living costs, including food, transport, and personal expenses,
@@ -37,9 +37,9 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-2">
                 Q2. Can Indian students work while studying in New Zealand?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes, students can work up to
-                <span class="font-semibold">20 hours per week</span> during term
+                <span class="font-semibold text-lg">20 hours per week</span> during term
                 time and full-time during holidays. Part-time work helps cover
                 living costs and gain practical experience.
               </p>
@@ -47,10 +47,10 @@
 
             <!-- FAQ 3 -->
             <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2 text-lg">
                 Q3. Is English language proficiency required?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes. Most New Zealand institutions require IELTS, TOEFL, or PTE
                 scores. Some institutions may accept prior English-medium
                 education in place of a test.
@@ -62,10 +62,10 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-2">
                 Q4. What are the main intakes in New Zealand?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 The main intakes are
-                <span class="font-semibold">February</span> and
-                <span class="font-semibold">July</span>. Some universities also
+                <span class="font-semibold text-lg">February</span> and
+                <span class="font-semibold text-lg">July</span>. Some universities also
                 offer an October intake for selected programs.
               </p>
             </div>
@@ -75,7 +75,7 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-2">
                 Q5. Can Indian students apply for post-study work visas?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes. Graduates can apply for post-study work visas valid for 1–3
                 years depending on their qualification level, providing
                 opportunities to gain work experience in New Zealand.

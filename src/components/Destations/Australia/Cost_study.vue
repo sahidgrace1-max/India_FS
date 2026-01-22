@@ -19,7 +19,7 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Foundation Studies:</span
               >
               AUD <span class="font-semibold">9,000–14,000/year</span> (approx.)
@@ -32,14 +32,14 @@
               <span class="font-semibold">15,000–33,000/year</span> (approx.)
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Laboratory-based Degrees:</span
               >
               AUD
               <span class="font-semibold">14,000–35,000/year</span> (approx.)
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Postgraduate & Master’s:</span
               >
               AUD
@@ -47,7 +47,7 @@
             </li>
           </ul>
 
-          <p class="text-gray-700 text-base leading-relaxed mb-6">
+          <p class="text-gray-700 text-base leading-relaxed mb-6 text-lg">
             International students are required to pay a tuition deposit (not
             more than <span class="font-semibold">50%</span> of the total course
             fees) before the visa stage, as per the ESOS Act.
@@ -59,60 +59,60 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Homestay / Farmstay:</span
               >
               AUD <span class="font-semibold">110–270/week</span>
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >University Residential Colleges:</span
               >
-              AUD <span class="font-semibold">190–280/week</span>
+              AUD <span class="font-semibold text-lg ">190–280/week</span>
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Private or Church-owned Hostels:</span
               >
-              AUD <span class="font-semibold">80–135/week</span>
+              AUD <span class="font-semibold text-lg">80–135/week</span>
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Shared Accommodation:</span
               >
-              AUD <span class="font-semibold">50–160/week</span>
+              AUD <span class="font-semibold text-lg">50–160/week</span>
             </li>
           </ul>
 
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-lg">
             Work & Visa Regulations
           </h2>
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Part-Time Work:</span>
-              Up to <span class="font-semibold">40 hours per fortnight</span>
+              <span class="font-semibold text-gray-900 text-lg">Part-Time Work:</span>
+              Up to <span class="font-semibold text-lg">40 hours per fortnight</span>
               during semesters and full-time during scheduled breaks.
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Post-Study Work Visa (Subclass 485):</span
               >
               <ul class="ml-6 mt-2 space-y-1">
-                <li class="text-gray-600 text-sm">
+                <li class="text-gray-600 text-lg">
                   Graduate Work Stream – 18 months
                 </li>
-                <li class="text-gray-600 text-sm">
+                <li class="text-gray-600 text-lg">
                   Post-Study Work Stream – 2 to 4 years (based on qualification)
                 </li>
               </ul>
             </li>
           </ul>
 
-          <p class="text-gray-700 text-lg leading-relaxed">
+          <p class="text-gray-700 text-lg leading-relaxed text-lg">
             After gaining Australian work experience, international graduates
             may be eligible to apply for
-            <span class="font-semibold text-gray-900"
+            <span class="font-semibold text-gray-900 text-lg"
               >skilled migration and PR pathways</span
             >
             under Australia’s migration framework.

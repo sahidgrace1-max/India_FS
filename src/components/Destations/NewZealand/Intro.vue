@@ -33,49 +33,49 @@
 
             <ul class="space-y-4">
               <li class="text-gray-700">
-                <span class="font-semibold text-gray-900"
+                <span class="font-semibold text-gray-900 text-lg"
                   >World-Class Universities</span
                 >
-                – New Zealand’s universities rank in the top 3% globally,
-                offering degrees recognized internationally.
+               <span class="text-lg"> – New Zealand’s universities rank in the top 3% globally,
+                offering degrees recognized internationally.</span>
               </li>
 
               <li class="text-gray-700">
-                <span class="font-semibold text-gray-900"
+                <span class="font-semibold text-gray-900 text-lg"
                   >Practical Learning</span
                 >
-                – Hands-on, student-centered education helps develop
-                problem-solving, teamwork, and critical-thinking skills.
+                 <span class="text-lg">  – Hands-on, student-centered education helps develop
+                problem-solving, teamwork, and critical-thinking skills.</span>
               </li>
 
               <li class="text-gray-700">
-                <span class="font-semibold text-gray-900"
+                <span class="font-semibold text-gray-900 text-lg"
                   >Safe and Welcoming Environment</span
                 >
-                – New Zealand is culturally diverse, safe, and known for its
-                natural beauty and outdoor lifestyle.
+               <span class="text-lg"> – New Zealand is culturally diverse, safe, and known for its
+                natural beauty and outdoor lifestyle.</span>
               </li>
 
               <li class="text-gray-700">
-                <span class="font-semibold text-gray-900"
+                <span class="font-semibold text-gray-900 text-lg"
                   >Work Opportunities</span
                 >
-                – Students can work part-time during study periods and full-time
+                <span class="text-lg">– Students can work part-time during study periods and full-time
                 during holidays, gaining practical experience and developing
-                employability skills.
+                employability skills.</span>
               </li>
 
               <li class="text-gray-700">
-                <span class="font-semibold text-gray-900"
+                <span class="font-semibold text-gray-900 text-lg"
                   >Global Recognition</span
                 >
-                – Qualifications from New Zealand are respected worldwide,
+               <span class="text-lg"> – Qualifications from New Zealand are respected worldwide,
                 opening doors to higher studies and career opportunities across
-                the globe.
+                the globe.</span>
               </li>
             </ul>
 
-            <p class="text-gray-700 text-base leading-relaxed mt-6">
+            <p class="text-gray-700 text-base leading-relaxed text-lg mt-6">
               Studying in New Zealand offers a unique combination of academic
               excellence, personal growth, and unforgettable life experiences in
               one of the world’s most beautiful and inspiring countries.

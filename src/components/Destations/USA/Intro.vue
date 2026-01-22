@@ -7,7 +7,7 @@
         class="animate-section mb-12"
         data-animation="fade-up"
       >
-        <p class="text-gray-700 text-lg leading-relaxed">
+        <p class="text-gray-700 text-lg leading-relaxed text-lg">
           The United States (USA) is one of the most sought-after study abroad
           destinations for Indian students. With world-renowned universities,
           cutting-edge research opportunities, diverse programs, and flexible
@@ -44,7 +44,7 @@
 
             <ul class="space-y-4">
               <li class="text-gray-700 text-lg">
-                <span class="font-semibold text-gray-900"
+                <span class="font-semibold text-gray-900 text-lg"
                   >Top-Ranked Universities</span
                 >
                 – The USA hosts elite institutions such as MIT, Harvard,
@@ -86,7 +86,7 @@
               </li>
             </ul>
 
-            <p class="text-gray-700 text-base leading-relaxed mt-6">
+            <p class="text-gray-700 text-base leading-relaxed mt-6 text-lg">
               Indian students in the USA also benefit from strong industry
               links, networking opportunities, and pathways to work experience
               that help build successful international careers.

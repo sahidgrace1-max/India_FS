@@ -44,11 +44,11 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-base">
-              <span class="font-semibold">8 universities</span> ranked among the
-              <span class="font-semibold">Top 100</span> globally.
+              <span class="font-semibold text-lg">8 universities</span> ranked among the
+              <span class="font-semibold text-lg">Top 100</span> globally.
             </li>
             <li class="text-gray-700 text-base">
-              Ranked <span class="font-semibold">9th</span> in the world
+              Ranked <span class="font-semibold text-lg">9th</span> in the world
               university ranking system.
             </li>
             <li class="text-gray-700 text-base">
@@ -67,18 +67,18 @@
             Role of Australian Universities
           </h2>
           <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-base">Storing knowledge</li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-base text-lg">Storing knowledge</li>
+            <li class="text-gray-700 text-base  text-lg">
               Transferring knowledge to others
             </li>
-            <li class="text-gray-700 text-base">
+            <li class="text-gray-700 text-lg ">
               Creating knowledge through research
             </li>
           </ul>
 
           <p class="text-gray-600 text-base italic">
             Australia has produced
-            <span class="font-semibold">15 Nobel Prize Laureates</span> across
+            <span class="font-semibold text-lg">15 Nobel Prize Laureates</span> across
             various academic and research disciplines, supported by strong
             government investment in higher education.
           </p>

@@ -13,7 +13,7 @@
 
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+          <h2 class="text-2xl font-bold text-gray-900 text-lg mb-6">
             Top Universities in New Zealand
           </h2>
           <ul class="space-y-3 mb-6">
@@ -68,20 +68,20 @@
               – For outstanding students from Commonwealth countries.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold  text-lg text-gray-900"
                 >University Merit Scholarships</span
               >
               – Offered by universities like Auckland, Waikato, and Canterbury.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Partial Tuition Waivers</span
               >
               – Available for top-performing Indian students.
             </li>
           </ul>
 
-          <p class="text-gray-600 text-base italic">
+          <p class="text-gray-600 text-base italic text-lg">
             Tip: Strong IELTS or PTE scores improve eligibility for top
             scholarships in New Zealand.
           </p>

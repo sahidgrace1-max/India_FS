@@ -16,8 +16,8 @@
             <li
               class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-300"
             >
-              <span class="font-semibold text-gray-900">Tuition Fees:</span>
-              <span class="font-semibold">£9,500–£13,000/year</span> for
+              <span class="font-semibold  text-lg text-gray-900">Tuition Fees:</span>
+              <span class="font-semibold text-lg">£9,500–£13,000/year</span> for
               undergraduate courses and
               <span class="font-semibold">£12,000–£15,000/year</span> for
               postgraduate programs.
@@ -25,19 +25,19 @@
             <li
               class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-400"
             >
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold  text-lg text-gray-900"
                 >Living Costs (London – UKVI Requirement):</span
               >
-              <span class="font-semibold">£1,265 per month</span> (up to a
+              <span class="font-semibold text-lg">£1,265 per month</span> (up to a
               maximum of 9 months).
             </li>
             <li
               class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-500"
             >
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold  text-lg text-gray-900"
                 >Average Total (Study + Living):</span
               >
-              <span class="font-semibold">£20,000–£30,000 per year</span>
+              <span class="font-semibold text-lg">£20,000–£30,000 per year</span>
               depending on location and lifestyle.
             </li>
           </ul>
@@ -45,11 +45,11 @@
           <p
             class="text-gray-700 text-sm leading-relaxed mb-6 opacity-0 animate-fadeUp delay-600"
           >
-            <span class="text-orange-600 font-medium"
+            <span class="text-orange-600  text-lg font-medium"
               >Grace International India</span
             >
-            assists Indian students with accurate financial planning, budgeting,
-            and UKVI-compliant documentation for studying in the UK.
+           <span class="text-lg"> assists Indian students with accurate financial planning, budgeting,
+            and UKVI-compliant documentation for studying in the UK.</span>
           </p>
 
           <h2
@@ -62,30 +62,30 @@
             <li
               class="text-gray-700 text-sm opacity-0 animate-fadeUp delay-800"
             >
-              <span class="font-semibold text-gray-900">Part-Time Work:</span>
+              <span class="font-semibold  text-lg text-gray-900">Part-Time Work:</span>
               Up to
-              <span class="font-semibold">20 hours per week</span> during term
+              <span class="font-semibold text-lg">20 hours per week</span> during term
               time and full-time during holidays.
             </li>
             <li
               class="text-gray-700 text-sm opacity-0 animate-fadeUp delay-900"
             >
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-lg text-gray-900"
                 >Post-Study Work Visa (Graduate Route):</span
               >
               <ul class="ml-6 mt-2 space-y-1">
                 <li
-                  class="text-gray-600 text-sm opacity-0 animate-fadeUp delay-1000"
+                  class="text-gray-600 text-lg opacity-0 animate-fadeUp delay-1000"
                 >
                   Bachelor’s – 2 years
                 </li>
                 <li
-                  class="text-gray-600 text-sm opacity-0 animate-fadeUp delay-1100"
+                  class="text-gray-600 text-lg opacity-0 animate-fadeUp delay-1100"
                 >
                   Master’s – 2 years
                 </li>
                 <li
-                  class="text-gray-600 text-sm opacity-0 animate-fadeUp delay-1200"
+                  class="text-gray-600 text-lg opacity-0 animate-fadeUp delay-1200"
                 >
                   PhD – 3 years
                 </li>
@@ -94,7 +94,7 @@
           </ul>
 
           <p
-            class="text-gray-700 text-sm leading-relaxed mb-5 opacity-0 animate-fadeUp delay-1300"
+            class="text-gray-700 text-lg leading-relaxed mb-5 opacity-0 animate-fadeUp delay-1300"
           >
             The UK Graduate Route allows international students to gain valuable
             work experience after completing their studies.
@@ -103,10 +103,10 @@
           <p
             class="text-gray-700 text-base leading-relaxed opacity-0 animate-fadeUp delay-1400"
           >
-            <span class="font-semibold text-gray-900">Career Pathways:</span>
-            UK work experience significantly improves global employability,
+            <span class="font-semibold text-lg text-gray-900">Career Pathways:</span>
+            <span class="text-lg">UK work experience significantly improves global employability,
             especially in sectors like IT, healthcare, finance, engineering, and
-            business management.
+            business management.</span>
           </p>
         </div>
 

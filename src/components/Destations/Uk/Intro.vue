@@ -32,49 +32,54 @@
 
           <ul class="space-y-4">
             <li class="text-gray-700 opacity-0 animate-fadeUp delay-400">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >World-Ranked Institutions</span
               >
-              – UK institutions consistently rank among the best in the world,
-              and UK qualifications are internationally valued and recognized.
+              <span class="text-lg">   – UK institutions consistently rank among the best in the world,
+              and UK qualifications are internationally valued and recognized.</span>
+           
             </li>
 
             <li class="text-gray-700 opacity-0 animate-fadeUp delay-500">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Excellence in Research</span
               >
-              – The UK undertakes 5% of the world’s scientific research and
+              <span class="text-lg">  – The UK undertakes 5% of the world’s scientific research and
               produces 14% of the most frequently cited research papers
-              globally.
+              globally.</span>
+            
             </li>
 
             <li class="text-gray-700 opacity-0 animate-fadeUp delay-600">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Flexible Education System</span
               >
-              – Students can choose from academic and vocational pathways,
-              allowing flexibility to tailor degrees based on career goals.
+              <span class="text-lg">  – Students can choose from academic and vocational pathways,
+              allowing flexibility to tailor degrees based on career goals.</span>
+        
             </li>
 
             <li class="text-gray-700 opacity-0 animate-fadeUp delay-700">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Innovative Teaching Methods</span
               >
-              – The UK education system encourages creativity, independent
-              thinking, skill development, and confidence building.
+              <span class="text-lg"> – The UK education system encourages creativity, independent
+              thinking, skill development, and confidence building.</span>
+            
             </li>
 
             <li class="text-gray-700 opacity-0 animate-fadeUp delay-800">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Learn from Global Experts</span
               >
-              – Students are taught by world-leading academics and industry
-              professionals with continuous academic support.
+              <span class="text-lg"> – Students are taught by world-leading academics and industry
+              professionals with continuous academic support.</span>
+             
             </li>
           </ul>
 
           <p
-            class="text-gray-700 text-base leading-relaxed mt-6 opacity-0 animate-fadeUp delay-900"
+            class="text-gray-700  text-lg text-base leading-relaxed mt-6 opacity-0 animate-fadeUp delay-900"
           >
             As the home of the English language, the UK offers an ideal
             environment to improve communication skills while enhancing global
