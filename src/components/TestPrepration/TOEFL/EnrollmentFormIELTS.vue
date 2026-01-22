@@ -8,7 +8,7 @@
         </label>
         <input
           type="text"
-          v-model="formData.fullName"
+          v-model="formData.full_name"
           required
           placeholder="Your Full Name"
           class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -35,7 +35,7 @@
           </label>
           <input
             type="tel"
-            v-model="formData.contactNumber"
+            v-model="formData.contact_number"
             required
             placeholder="Contact Number"
             class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -142,7 +142,7 @@
             <input
               type="checkbox"
               id="contact"
-              v-model="formData.allowContact"
+              v-model="formData.allow_contact"
               class="w-4 h-4 text-blue-600 rounded"
             />
             <label
@@ -156,7 +156,7 @@
             <input
               type="checkbox"
               id="terms"
-              v-model="formData.agreeTerms"
+              v-model="formData.agree_terms"
               required
               class="w-4 h-4 text-blue-600 rounded"
             />
@@ -199,21 +199,22 @@
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { reactive, ref } from "vue";
+import emailjs from "@emailjs/browser";
 
 export default {
-  name: "EnrollmentFormIELTS",
-  emits: ["close"],
-  setup(props, { emit }) {
+  setup() {
+    // ✅ Template सँग मिल्ने reactive data
     const formData = reactive({
-      fullName: "",
+      full_name: "",
       email: "",
-      contactNumber: "",
-      country: "Australia",
+      contact_number: "",
+      country: "",
       timing: "",
-      branch: "KATHMANDU OFFICE",
-      allowContact: false,
-      agreeTerms: false,
+      branch: "",
+      allow_contact: false,
+      agree_terms: false,
+      test: "TOEFL"
     });
 
     const isSubmitting = ref(false);
@@ -221,38 +222,62 @@ export default {
     const errorMessage = ref("");
 
     const handleSubmit = async () => {
-      if (!formData.agreeTerms) {
-        errorMessage.value = "Please agree to the terms & privacy policy";
+      successMessage.value = "";
+      errorMessage.value = "";
+
+      // ✅ Required validation (template अनुसार)
+      if (
+        !formData.full_name.trim() ||
+        !formData.email.trim() ||
+        !formData.contact_number.trim() ||
+        !formData.timing ||
+        !formData.branch ||
+        !formData.agree_terms ||
+        !formData.test
+      ) {
+        errorMessage.value = "Please fill all required fields and accept terms.";
         return;
       }
 
       isSubmitting.value = true;
-      errorMessage.value = "";
-      successMessage.value = "";
 
       try {
-        // Here you can add API call to submit the form
-        // For now, just show success message
-        successMessage.value =
-          "Thank you! Your enrollment form has been submitted successfully. We will contact you soon.";
+        // ✅ EmailJS template params
+        const templateParams = {
+          full_name: formData.full_name,
+          email: formData.email,
+          contact_number: formData.contact_number,
+          country: formData.country,
+          timing: formData.timing,
+          branch: formData.branch,
+          allow_contact: formData.allow_contact ? "Yes" : "No",
+          test: formData.test
+        };
 
-        // Reset form
-        setTimeout(() => {
-          Object.assign(formData, {
-            fullName: "",
-            email: "",
-            contactNumber: "",
-            country: "Australia",
-            timing: "",
-            branch: "KATHMANDU OFFICE",
-            allowContact: false,
-            agreeTerms: false,
-          });
-          successMessage.value = "";
-          emit("close");
-        }, 2000);
+        await emailjs.send(
+          "service_vjgpkda",   // Service ID
+          "template_empjinn",  // Template ID
+          templateParams,
+          "qgG1kPHho3fMoWiW9"  // Public Key
+        );
+
+        successMessage.value =
+          "Form submitted successfully! Our team will contact you soon.";
+
+        // ✅ Reset form
+        formData.full_name = "";
+        formData.email = "";
+        formData.contact_number = "";
+        formData.country = "";
+        formData.timing = "";
+        formData.branch = "";
+        formData.allow_contact = false;
+        formData.agree_terms = false;
+        formData.test = "TOEFL";
+
       } catch (error) {
-        errorMessage.value = "An error occurred. Please try again.";
+        console.error("EmailJS Error:", error);
+        errorMessage.value = "Failed to submit form. Please try again.";
       } finally {
         isSubmitting.value = false;
       }
