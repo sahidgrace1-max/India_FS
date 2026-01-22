@@ -126,8 +126,8 @@
             class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           >
             <option value="">Select Branch</option>
-            <option value="KATHMANDU OFFICE">DELHI OFFICE</option>
-            <option value="POKHARA OFFICE">AHMEDABAD OFFICE</option>
+            <option value="DELHI OFFICE">DELHI OFFICE</option>
+            <option value="AHMEDABAD OFFICE">AHMEDABAD OFFICE</option>
           </select>
         </div>
       </div>
@@ -199,21 +199,22 @@
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { reactive, ref } from "vue";
+import emailjs from "@emailjs/browser";
 
 export default {
-  name: "EnrollmentFormIELTS",
-  emits: ["close"],
-  setup(props, { emit }) {
+  setup() {
+    // ✅ Template सँग मिल्ने reactive data
     const formData = reactive({
       full_name: "",
       email: "",
       contact_number: "",
-      country: "Australia",
+      country: "",
       timing: "",
-      branch: "KATHMANDU OFFICE",
+      branch: "",
       allow_contact: false,
       agree_terms: false,
+      test: "GMAT"
     });
 
     const isSubmitting = ref(false);
@@ -221,56 +222,62 @@ export default {
     const errorMessage = ref("");
 
     const handleSubmit = async () => {
-      if (!formData.agree_terms) {
-        errorMessage.value = "Please agree to the terms & privacy policy";
+      successMessage.value = "";
+      errorMessage.value = "";
+
+      // ✅ Required validation (template अनुसार)
+      if (
+        !formData.full_name.trim() ||
+        !formData.email.trim() ||
+        !formData.contact_number.trim() ||
+        !formData.timing ||
+        !formData.branch ||
+        !formData.agree_terms ||
+        !formData.test
+      ) {
+        errorMessage.value = "Please fill all required fields and accept terms.";
         return;
       }
 
       isSubmitting.value = true;
-      errorMessage.value = "";
-      successMessage.value = "";
 
       try {
-        const response = await fetch(
-          '"http://localhost:8000/api/contact/gmat/',
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          },
+        // ✅ EmailJS template params
+        const templateParams = {
+          full_name: formData.full_name,
+          email: formData.email,
+          contact_number: formData.contact_number,
+          country: formData.country,
+          timing: formData.timing,
+          branch: formData.branch,
+          allow_contact: formData.allow_contact ? "Yes" : "No",
+          test: formData.test
+        };
+
+        await emailjs.send(
+          "service_vjgpkda",   // Service ID
+          "template_empjinn",  // Template ID
+          templateParams,
+          "qgG1kPHho3fMoWiW9"  // Public Key
         );
 
-        if (response.ok) {
-          const data = await response.json();
-          successMessage.value =
-            "Thank you! Your IELTS enrollment form has been submitted successfully. We will contact you soon.";
+        successMessage.value =
+          "Form submitted successfully! Our team will contact you soon.";
 
-          // Reset form after success
-          setTimeout(() => {
-            Object.assign(formData, {
-              full_name: "",
-              email: "",
-              contact_number: "",
-              country: "Australia",
-              timing: "",
-              branch: "KATHMANDU OFFICE",
-              allow_contact: false,
-              agree_terms: false,
-            });
-            successMessage.value = "";
-            emit("close");
-          }, 2000);
-        } else {
-          const errorData = await response.json();
-          errorMessage.value =
-            errorData.message || "An error occurred. Please try again.";
-        }
+        // ✅ Reset form
+        formData.full_name = "";
+        formData.email = "";
+        formData.contact_number = "";
+        formData.country = "";
+        formData.timing = "";
+        formData.branch = "";
+        formData.allow_contact = false;
+        formData.agree_terms = false;
+        formData.test = "GMAT";
+
       } catch (error) {
-        errorMessage.value =
-          "Network error. Please check your connection and try again.";
-        console.error("Form submission error:", error);
+        console.error("EmailJS Error:", error);
+        errorMessage.value = "Failed to submit form. Please try again.";
       } finally {
         isSubmitting.value = false;
       }

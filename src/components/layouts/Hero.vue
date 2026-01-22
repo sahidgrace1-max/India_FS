@@ -26,93 +26,21 @@
 
     <!-- Content -->
     <div class="relative z-10 px-6 sm:px-10 md:px-20 max-w-3xl text-white">
-      <h1
-        class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight"
-      >
-        <span class="inline-block animate-word-1">Study</span>
-        <span class="inline-block animate-word-2 ml-3 sm:ml-4">Abroad</span>
-      </h1>
+        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight whitespace-nowrap">
+      Welcome TO Grace International
+    </h1>
+
 
       <p
         class="text-xl sm:text-2xl md:text-4xl mb-8 font-semibold animate-subtitle"
       >
-        In
-        <span class="relative text-green-400 inline-block animate-highlight">
+        <span class="relative text-green-400 font-bold text-7xl inline-block animate-highlight">
           {{ selectedBranch }}
           <span
             class="absolute bottom-0 left-0 h-1 bg-green-400 animate-underline"
           ></span>
         </span>
       </p>
-
-      <!-- Stats -->
-      <div class="flex flex-wrap gap-6 mt-10 animate-stats">
-        <div class="stat animate-stat-1">
-          <div class="icon">
-            <svg
-              class="icon-svg"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 4.354a4 4 0 110 5.292"
-              />
-            </svg>
-          </div>
-          <div>
-            <div class="stat-value">500+</div>
-            <div class="stat-label">Students</div>
-          </div>
-        </div>
-
-        <div class="stat animate-stat-2">
-          <div class="icon">
-            <svg
-              class="icon-svg"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 21V5a2 2 0 012-2h14l-3 6 3 6H5a2 2 0 00-2 2z"
-              />
-            </svg>
-          </div>
-          <div>
-            <div class="stat-value">50+</div>
-            <div class="stat-label">Countries</div>
-          </div>
-        </div>
-
-        <div class="stat animate-stat-3">
-          <div class="icon">
-            <svg
-              class="icon-svg"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4"
-              />
-            </svg>
-          </div>
-          <div>
-            <div class="stat-value">98%</div>
-            <div class="stat-label">Success</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Scroll Indicator -->

@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col lg:flex-row w-full min-h-screen relative overflow-x-hidden"
-  >
+  <div class="flex flex-col lg:flex-row w-full min-h-screen relative overflow-x-hidden">
     <!-- Left Side: Image and Text -->
     <div
       class="w-full lg:w-1/2 relative overflow-hidden flex items-center justify-end pr-12 bg-gradient-to-br from-green-50 to-white"
@@ -18,7 +16,7 @@
     <!-- Right Side: Contact Form -->
     <div
       ref="formSection"
-      class="w-full lg:w-1/2 flex items-start justify-start p-6 lg:pl-8 lg:pr-0 lg:py-12 animate-section"
+      class="w-full lg:w-1/2 flex items-start justify-start p-6 lg:pl-8 lg:pr-0 lg:py-12 animate-section opacity-0"
       data-animation="fade-up"
     >
       <div class="w-full max-w-lg">
@@ -82,18 +80,30 @@
             :style="{ 'animation-delay': `${0.1 + index * 0.05}s` }"
           >
             <label class="block text-gray-700 font-semibold mb-2">
-              {{ field.label
-              }}<span v-if="field.required" class="text-red-500">*</span>
+              {{ field.label }}
+              <span v-if="field.required" class="text-red-500">*</span>
             </label>
 
-            <component
-              :is="field.type"
-              v-model="formData[field.model]"
-              v-bind="field.attrs"
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
-            ></component>
-          </div>
+            <div v-if="field.type === 'input'">
+              <input
+                v-model="formData[field.model]"
+                :type="field.attrs.type || 'text'"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
+              />
+            </div>
 
+            <div v-else-if="field.type === 'select'">
+              <select
+                v-model="formData[field.model]"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
+              >
+                <option value="" disabled>Select {{ field.label }}</option>
+                <option v-for="option in field.options" :key="option" :value="option">
+                  {{ option }}
+                </option>
+              </select>
+            </div>
+          </div>
           <!-- Submit Button -->
           <button
             @click="handleSubmit"
@@ -129,7 +139,9 @@
 
 <script setup>
 import { reactive, ref, onMounted, onUnmounted } from "vue";
+import emailjs from "@emailjs/browser";
 
+// Reactive form data
 const formData = reactive({
   name: "",
   email: "",
@@ -144,113 +156,68 @@ const isSubmitting = ref(false);
 const successMessage = ref("");
 const errorMessage = ref("");
 
-// Dynamic form fields
+// Form fields
 const formFields = [
-  {
-    label: "Your Name",
-    model: "name",
-    type: "input",
-    attrs: { type: "text", required: true },
-    required: true,
-  },
-  {
-    label: "Your Email",
-    model: "email",
-    type: "input",
-    attrs: { type: "email", required: true },
-    required: true,
-  },
-  {
-    label: "Contact Number",
-    model: "contact",
-    type: "input",
-    attrs: { type: "tel", required: true },
-    required: true,
-  },
-  {
-    label: "Interested Course",
-    model: "course",
-    type: "input",
-    attrs: { type: "text", required: true },
-    required: true,
-  },
-  {
-    label: "Preferred Intake",
-    model: "intake",
-    type: "select",
-    attrs: { required: true },
-    required: true,
-    options: ["Jan 2026", "May 2026", "Sep 2026"],
-  },
-  {
-    label: "What is your budget per year?",
-    model: "budget",
-    type: "select",
-    attrs: { required: true },
-    required: true,
-    options: ["Less than 20 Lakhs", "20-40 Lakhs", "More than 40 Lakhs"],
-  },
-  {
-    label: "Your City",
-    model: "city",
-    type: "input",
-    attrs: { type: "text", required: true },
-    required: true,
-  },
+  { label: "Your Name", model: "name", type: "input", attrs: { type: "text", required: true }, required: true },
+  { label: "Your Email", model: "email", type: "input", attrs: { type: "email", required: true }, required: true },
+  { label: "Contact Number", model: "contact", type: "input", attrs: { type: "tel", required: true }, required: true },
+  { label: "Interested Course", model: "course", type: "input", attrs: { type: "text", required: true }, required: true },
+  { label: "Preferred Intake", model: "intake", type: "select", attrs: { required: true }, required: true, options: ["Jan 2026", "May 2026", "Sep 2026"] },
+  { label: "Budget per year", model: "budget", type: "select", attrs: { required: true }, required: true, options: ["Less than 20 Lakhs", "20-40 Lakhs", "More than 40 Lakhs"] },
+  { label: "Your City", model: "city", type: "input", attrs: { type: "text", required: true }, required: true },
 ];
 
+// Form submission
 const handleSubmit = async () => {
+  console.log("Submit button clicked"); // debug
+
   successMessage.value = "";
   errorMessage.value = "";
 
-  if (
-    !formData.name ||
-    !formData.email ||
-    !formData.contact ||
-    !formData.course ||
-    !formData.city
-  ) {
-    errorMessage.value = "Please fill in all required fields.";
-    return;
+  // Simple validation
+  const requiredFields = ["name", "email", "contact", "course", "city"];
+  for (const key of requiredFields) {
+    if (!formData[key].trim()) {
+      errorMessage.value = "Please fill in all required fields.";
+      console.log("Validation failed:", key, "is empty"); // debug
+      return;
+    }
   }
 
   isSubmitting.value = true;
+  console.log("Validation passed, sending email...", formData);
 
   try {
-    const response = await fetch(
-      "http://192.168.110.37:8000/api/contact/submit/",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      },
+    const templateParams = { ...formData };
+    console.log("Template Params:", templateParams);
+
+    const response = await emailjs.send(
+      "service_vjgpkda",  // your EmailJS service ID
+      "template_k6505oi", // your EmailJS template ID
+      templateParams,
+      "qgG1kPHho3fMoWiW9" // your EmailJS user/public key
     );
 
-    if (response.ok) {
-      successMessage.value =
-        "Form submitted successfully! We'll contact you soon.";
-      Object.keys(formData).forEach((k) => {
-        formData[k] =
-          k === "intake"
-            ? "Jan 2026"
-            : k === "budget"
-              ? "Less than 20 Lakhs"
-              : "";
-      });
-    } else {
-      const error = await response.json();
-      errorMessage.value =
-        error.message || "Failed to submit form. Please try again.";
-    }
+    console.log("EmailJS response:", response);
+
+    successMessage.value = "Form submitted successfully! Admissions department will contact you soon.";
+
+    // Reset form
+    Object.keys(formData).forEach((k) => {
+      formData[k] = k === "intake" ? "Jan 2026" : k === "budget" ? "Less than 20 Lakhs" : "";
+    });
+
   } catch (err) {
-    console.error(err);
-    errorMessage.value = "An error occurred. Please try again later.";
+    console.error("EmailJS error:", err);
+    errorMessage.value = "Failed to send the form. Please try again.";
   } finally {
     isSubmitting.value = false;
+    console.log("Submission process finished");
   }
 };
 
-// Scroll animation
+
+// Intersection Observer for scroll animation
 const formSection = ref(null);
 let observer = null;
 
@@ -263,9 +230,8 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.15 },
+    { threshold: 0.15 }
   );
-
   if (formSection.value) observer.observe(formSection.value);
 });
 
@@ -275,115 +241,23 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Floating animation for image */
+/* Animations */
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
+.animate-float { animation: float 3s ease-in-out infinite; }
 
-/* Slide down animation for title */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-slide-down {
-  animation: slideDown 0.6s ease-out;
-}
+.animate-section { transition: all 0.6s ease-out; }
+.animate-section.is-visible { opacity: 1; transform: translateY(0); }
+.opacity-0 { opacity: 0; transform: translateY(20px); }
 
-/* Fade in for fields */
-.animate-fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards ease-out;
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+.animate-slide-down { transform: translateY(-20px); opacity: 0; animation: slideDown 0.6s forwards; }
+@keyframes slideDown { to { transform: translateY(0); opacity: 1; } }
 
-/* Scroll-triggered animation */
-.animate-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease-out;
-}
-.animate-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.animate-fade-in { opacity: 0; transform: translateY(10px); animation: fadeIn 0.5s forwards; }
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
-/* Messages */
-.message-enter-active {
-  animation: slideInDown 0.4s ease-out;
-}
-.message-leave-active {
-  animation: slideOutUp 0.4s ease-in;
-}
-@keyframes slideInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slideOutUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-}
-
-/* Spinning loader */
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
-
-/* Input focus glow effect */
-input:focus,
-select:focus {
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
-}
-
-/* Image container scaling */
-.image-container {
-  transition: transform 0.3s ease;
-}
-.image-container:hover {
-  transform: scale(1.02);
-}
+.message-enter-active, .message-leave-active { transition: all 0.3s ease; }
+.message-enter-from, .message-leave-to { opacity: 0; transform: translateY(-5px); }
 </style>

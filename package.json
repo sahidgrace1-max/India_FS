@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@unhead/vue": "^2.0.19",
     "@vueuse/core": "^10.9.0",
     "chart.js": "^4.4.2",
