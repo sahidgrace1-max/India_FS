@@ -506,23 +506,6 @@ function selectBranch(branch) {
   window.location.reload();
 }
 
-// // Location/contact info
-// const locations = {
-//   "India": {
-//     email: "enquiry.in@graceintlgroup.com",
-//     phone: "+91 8750040975, 011-41070020"
-//   },
-//   "Nepal": {
-//     email: "info@grace.edu.np",
-//     phone: "+977 1-4444444, 9800000000"
-//   },
-//   "Australia": {
-//     email: "info@graceintlgroup.com.au",
-//     phone: "+61 2 8000 0000"
-//   }
-// };
-// const selectedLocation = ref('India');
-
 // Services Dropdown logic (mobile)
 const showMobileServicesDropdown = ref(false);
 function toggleMobileServicesDropdown() {
