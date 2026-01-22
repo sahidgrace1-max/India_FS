@@ -32,6 +32,10 @@
       <ContactForm />
     </div>
 
+    <div ref="contactForm" class="animate-section" data-animation="fade-up">
+      <testimonials />
+    </div>
+
     <div ref="universities" class="animate-section" data-animation="slide-left">
       <AssociatedUniversities />
     </div>
@@ -60,6 +64,7 @@ import TestPreparation from "../components/layouts/TestPreparation.vue";
 import AssociatedUniversities from "@/components/layouts/AssociatedUniversities.vue";
 import Accreditations from "@/components/layouts/Accreditations.vue";
 import Fotter from "@/components/layouts/fotter.vue";
+import testimonials from "../components/layouts/testimonials.vue";
 
 export default defineComponent({
   name: "Dashboard",
@@ -71,6 +76,7 @@ export default defineComponent({
     OurServices,
     ContactForm,
     TestPreparation,
+    testimonials,
     AssociatedUniversities,
     Accreditations,
     Fotter,

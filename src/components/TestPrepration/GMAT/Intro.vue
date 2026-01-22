@@ -5,7 +5,7 @@
         <!-- Left Side - Image -->
         <div class="flex justify-center">
           <img
-            src="@/assets/image.png"
+            src="@/assets/gmat.png"
             alt="GMAT Study"
             class="rounded-lg shadow-lg w-full h-full object-cover"
             style="min-height: 400px; max-height: 500px"
