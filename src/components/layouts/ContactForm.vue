@@ -1,30 +1,34 @@
-<!-- Enhanced Contact Form Component with Animations -->
 <template>
-  <div class="flex flex-col lg:flex-row w-full min-h-screen">
+  <div
+    class="flex flex-col lg:flex-row w-full min-h-screen relative overflow-x-hidden"
+  >
     <!-- Left Side: Image and Text -->
     <div
       class="w-full lg:w-1/2 relative overflow-hidden flex items-center justify-end pr-12 bg-gradient-to-br from-green-50 to-white"
     >
-      <div class="image-container">
+      <div class="image-container animate-float">
         <img
           src="@/assets/image1.png"
           alt="Contact Us"
-          class="max-h-[1400px] w-auto object-contain my-8 ml-0 mr-0 animate-float"
+          class="max-h-[1400px] w-auto object-contain my-8 ml-0 mr-0"
         />
       </div>
     </div>
 
     <!-- Right Side: Contact Form -->
     <div
-      class="w-full lg:w-1/2 flex items-start justify-start p-6 lg:pl-8 lg:pr-0 lg:py-12 bg-gradient-to-bl from-gray-50 to-white"
+      ref="formSection"
+      class="w-full lg:w-1/2 flex items-start justify-start p-6 lg:pl-8 lg:pr-0 lg:py-12 animate-section"
+      data-animation="fade-up"
     >
       <div class="w-full max-w-lg">
         <div class="space-y-5">
+          <!-- Form Title -->
           <h2 class="text-green-600 text-3xl font-bold mb-6 animate-slide-down">
             Contact Form
           </h2>
 
-          <!-- Error Message Display -->
+          <!-- Error Message -->
           <transition name="message">
             <div
               v-if="errorMessage"
@@ -47,7 +51,7 @@
             </div>
           </transition>
 
-          <!-- Success Message Display -->
+          <!-- Success Message -->
           <transition name="message">
             <div
               v-if="successMessage"
@@ -70,94 +74,27 @@
             </div>
           </transition>
 
-          <div class="form-field">
+          <!-- Form Fields -->
+          <div
+            v-for="(field, index) in formFields"
+            :key="index"
+            class="form-field animate-fade-in"
+            :style="{ 'animation-delay': `${0.1 + index * 0.05}s` }"
+          >
             <label class="block text-gray-700 font-semibold mb-2">
-              Your Name<span class="text-red-500">*</span>
+              {{ field.label
+              }}<span v-if="field.required" class="text-red-500">*</span>
             </label>
-            <input
-              type="text"
-              v-model="formData.name"
-              required
+
+            <component
+              :is="field.type"
+              v-model="formData[field.model]"
+              v-bind="field.attrs"
               class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
-            />
+            ></component>
           </div>
 
-          <div class="form-field">
-            <label class="block text-gray-700 font-semibold mb-2">
-              Your Email<span class="text-red-500">*</span>
-            </label>
-            <input
-              type="email"
-              v-model="formData.email"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
-            />
-          </div>
-
-          <div class="form-field">
-            <label class="block text-gray-700 font-semibold mb-2">
-              Contact Number<span class="text-red-500">*</span>
-            </label>
-            <input
-              type="tel"
-              v-model="formData.contact"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
-            />
-          </div>
-
-          <div class="form-field">
-            <label class="block text-gray-700 font-semibold mb-2">
-              Interested Course<span class="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              v-model="formData.course"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
-            />
-          </div>
-
-          <div class="form-field">
-            <label class="block text-gray-700 font-semibold mb-2">
-              Preferred Intake<span class="text-red-500">*</span>
-            </label>
-            <select
-              v-model="formData.intake"
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white transition-all duration-300 hover:border-green-300 cursor-pointer"
-            >
-              <option>Jan 2026</option>
-              <option>May 2026</option>
-              <option>Sep 2026</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label class="block text-gray-700 font-semibold mb-2">
-              What is your budget per year?<span class="text-red-500">*</span>
-            </label>
-            <select
-              v-model="formData.budget"
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white transition-all duration-300 hover:border-green-300 cursor-pointer"
-            >
-              <option>Less than 20 Lakhs</option>
-              <option>20-40 Lakhs</option>
-              <option>More than 40 Lakhs</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label class="block text-gray-700 font-semibold mb-2">
-              Your City<span class="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              v-model="formData.city"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 hover:border-green-300"
-            />
-          </div>
-
+          <!-- Submit Button -->
           <button
             @click="handleSubmit"
             :disabled="isSubmitting"
@@ -191,7 +128,7 @@
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref, onMounted, onUnmounted } from "vue";
 
 const formData = reactive({
   name: "",
@@ -207,12 +144,65 @@ const isSubmitting = ref(false);
 const successMessage = ref("");
 const errorMessage = ref("");
 
+// Dynamic form fields
+const formFields = [
+  {
+    label: "Your Name",
+    model: "name",
+    type: "input",
+    attrs: { type: "text", required: true },
+    required: true,
+  },
+  {
+    label: "Your Email",
+    model: "email",
+    type: "input",
+    attrs: { type: "email", required: true },
+    required: true,
+  },
+  {
+    label: "Contact Number",
+    model: "contact",
+    type: "input",
+    attrs: { type: "tel", required: true },
+    required: true,
+  },
+  {
+    label: "Interested Course",
+    model: "course",
+    type: "input",
+    attrs: { type: "text", required: true },
+    required: true,
+  },
+  {
+    label: "Preferred Intake",
+    model: "intake",
+    type: "select",
+    attrs: { required: true },
+    required: true,
+    options: ["Jan 2026", "May 2026", "Sep 2026"],
+  },
+  {
+    label: "What is your budget per year?",
+    model: "budget",
+    type: "select",
+    attrs: { required: true },
+    required: true,
+    options: ["Less than 20 Lakhs", "20-40 Lakhs", "More than 40 Lakhs"],
+  },
+  {
+    label: "Your City",
+    model: "city",
+    type: "input",
+    attrs: { type: "text", required: true },
+    required: true,
+  },
+];
+
 const handleSubmit = async () => {
-  // Clear previous messages
   successMessage.value = "";
   errorMessage.value = "";
 
-  // Basic validation
   if (
     !formData.name ||
     !formData.email ||
@@ -231,9 +221,7 @@ const handleSubmit = async () => {
       "http://192.168.110.37:8000/api/contact/submit/",
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       },
     );
@@ -241,27 +229,49 @@ const handleSubmit = async () => {
     if (response.ok) {
       successMessage.value =
         "Form submitted successfully! We'll contact you soon.";
-
-      // Reset form
-      formData.name = "";
-      formData.email = "";
-      formData.contact = "";
-      formData.course = "";
-      formData.intake = "Jan 2026";
-      formData.budget = "Less than 20 Lakhs";
-      formData.city = "";
+      Object.keys(formData).forEach((k) => {
+        formData[k] =
+          k === "intake"
+            ? "Jan 2026"
+            : k === "budget"
+              ? "Less than 20 Lakhs"
+              : "";
+      });
     } else {
       const error = await response.json();
       errorMessage.value =
         error.message || "Failed to submit form. Please try again.";
     }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (err) {
+    console.error(err);
     errorMessage.value = "An error occurred. Please try again later.";
   } finally {
     isSubmitting.value = false;
   }
 };
+
+// Scroll animation
+const formSection = ref(null);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
+
+  if (formSection.value) observer.observe(formSection.value);
+});
+
+onUnmounted(() => {
+  if (observer) observer.disconnect();
+});
 </script>
 
 <style scoped>
@@ -269,13 +279,12 @@ const handleSubmit = async () => {
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   50% {
     transform: translateY(-20px);
   }
 }
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -291,38 +300,16 @@ const handleSubmit = async () => {
     transform: translateY(0);
   }
 }
-
 .animate-slide-down {
   animation: slideDown 0.6s ease-out;
 }
 
-/* Form field animation */
-.form-field {
-  animation: fadeInUp 0.6s ease-out backwards;
+/* Fade in for fields */
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards ease-out;
 }
-
-.form-field:nth-child(3) {
-  animation-delay: 0.1s;
-}
-.form-field:nth-child(4) {
-  animation-delay: 0.15s;
-}
-.form-field:nth-child(5) {
-  animation-delay: 0.2s;
-}
-.form-field:nth-child(6) {
-  animation-delay: 0.25s;
-}
-.form-field:nth-child(7) {
-  animation-delay: 0.3s;
-}
-.form-field:nth-child(8) {
-  animation-delay: 0.35s;
-}
-.form-field:nth-child(9) {
-  animation-delay: 0.4s;
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -334,15 +321,24 @@ const handleSubmit = async () => {
   }
 }
 
-/* Message transitions */
+/* Scroll-triggered animation */
+.animate-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+.animate-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Messages */
 .message-enter-active {
   animation: slideInDown 0.4s ease-out;
 }
-
 .message-leave-active {
   animation: slideOutUp 0.4s ease-in;
 }
-
 @keyframes slideInDown {
   from {
     opacity: 0;
@@ -353,7 +349,6 @@ const handleSubmit = async () => {
     transform: translateY(0);
   }
 }
-
 @keyframes slideOutUp {
   from {
     opacity: 1;
@@ -365,7 +360,7 @@ const handleSubmit = async () => {
   }
 }
 
-/* Spinning loader animation */
+/* Spinning loader */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -374,7 +369,6 @@ const handleSubmit = async () => {
     transform: rotate(360deg);
   }
 }
-
 .animate-spin {
   animation: spin 1s linear infinite;
 }
@@ -385,11 +379,10 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
 }
 
-/* Image container with subtle scaling on hover */
+/* Image container scaling */
 .image-container {
   transition: transform 0.3s ease;
 }
-
 .image-container:hover {
   transform: scale(1.02);
 }
