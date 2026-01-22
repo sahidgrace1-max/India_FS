@@ -26,15 +26,18 @@
 
     <!-- Content -->
     <div class="relative z-10 px-6 sm:px-10 md:px-20 max-w-3xl text-white">
-        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight whitespace-nowrap">
-      Welcome TO Grace International
-    </h1>
-
+      <h1
+        class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight whitespace-nowrap"
+      >
+        Welcome TO Grace International
+      </h1>
 
       <p
         class="text-xl sm:text-2xl md:text-4xl mb-8 font-semibold animate-subtitle"
       >
-        <span class="relative text-green-400 font-bold text-7xl inline-block animate-highlight">
+        <span
+          class="relative text-green-400 font-bold text-7xl inline-block animate-highlight"
+        >
           {{ selectedBranch }}
           <span
             class="absolute bottom-0 left-0 h-1 bg-green-400 animate-underline"

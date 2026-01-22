@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full h-[220px] md:h-[300px] flex items-center justify-center overflow-hidden"
+    class="relative w-full h-[220px] md:h-[300px] flex items-center justify-center overflow-hidden font-poppins"
   >
     <!-- Background Image -->
     <div
