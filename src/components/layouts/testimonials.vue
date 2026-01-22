@@ -3,37 +3,35 @@
     <div class="max-w-6xl mx-auto px-6">
       <!-- Header -->
       <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold text-gray-900">What Our Clients Say</h2>
-        <p class="mt-2 text-gray-600"></p>
+        <h2 class="text-3xl font-bold text-gray-900">
+          What Our Clients Say
+        </h2>
       </div>
 
       <!-- Scroll Container -->
       <div
         ref="scrollContainer"
-        class="flex gap-6 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory hide-scrollbar"
+        class="flex gap-6 overflow-x-auto scroll-smooth pb-4
+               snap-x snap-mandatory hide-scrollbar"
       >
         <div
           v-for="(testimonial, index) in testimonials"
           :key="index"
-          class="min-w-[300px] md:min-w-[360px] bg-white rounded-xl shadow-lg p-6 snap-center"
+          class="min-w-[300px] md:min-w-[360px]
+                 bg-white rounded-xl shadow-lg p-6
+                 snap-center flex flex-col justify-between
+                 min-h-[280px]"
         >
           <!-- Quote -->
-          <p class="text-gray-700 italic">“{{ testimonial.message }}”</p>
+          <p class="text-gray-700 italic leading-relaxed">
+            “{{ testimonial.message }}”
+          </p>
 
-          <!-- User -->
-          <div class="flex items-center mt-6">
-            <img
-              :src="testimonial.avatar"
-              class="w-12 h-12 rounded-full object-cover"
-            />
-            <div class="ml-4">
-              <h4 class="font-semibold text-gray-900">
-                {{ testimonial.name }}
-              </h4>
-              <p class="text-sm text-gray-500">
-                {{ testimonial.role }}
-              </p>
-            </div>
+          <!-- Name (fixed position) -->
+          <div class="mt-6 pt-4 border-t">
+            <h4 class="font-semibold text-gray-900 text-sm">
+              {{ testimonial.name }}
+            </h4>
           </div>
         </div>
       </div>
@@ -49,28 +47,24 @@ let interval = null;
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Product Manager",
-    message: "This service completely exceeded my expectations.",
-    avatar: "https://i.pravatar.cc/150?img=32",
+    name: "Anu J",
+    message:
+      "I had a great experience with Grace International, where everyone supported me in achieving my goals. The IELTS coaching, university admission process, and overall services were excellent.",
   },
   {
-    name: "David Kim",
-    role: "Startup Founder",
-    message: "Clean design, smooth performance, and amazing support.",
-    avatar: "https://i.pravatar.cc/150?img=12",
+    name: "Arti",
+    message:
+      "I’m Arti, and with Grace International’s expert IELTS coaching, I achieved a 7.5 band on my first attempt. They also helped secure admission to my desired course and university in Australia—highly recommended.",
   },
   {
-    name: "Emily Brown",
-    role: "UX Designer",
-    message: "The experience was intuitive and enjoyable.",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    name: "Aditya",
+    message:
+      "Grace International has highly experienced trainers who helped me achieve my dream and secure admission to my desired course and university in Australia. The team, especially Mayank Sir, made the entire process smooth and stress-free—highly recommended to all aspiring students.",
   },
   {
-    name: "James Wilson",
-    role: "CTO",
-    message: "Scales perfectly and looks great on every device.",
-    avatar: "https://i.pravatar.cc/150?img=22",
+    name: "Shaan",
+    message:
+      "Grace International has a friendly, professional team that guided me smoothly through admissions, SOP writing, course selection, and IELTS support. They set clear expectations and made the entire study-abroad process stress-free and efficient.",
   },
 ];
 
@@ -80,7 +74,8 @@ onMounted(() => {
     if (!container) return;
 
     const scrollAmount = 360;
-    const maxScroll = container.scrollWidth - container.clientWidth;
+    const maxScroll =
+      container.scrollWidth - container.clientWidth;
 
     if (container.scrollLeft >= maxScroll) {
       container.scrollTo({ left: 0, behavior: "smooth" });
