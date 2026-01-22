@@ -7,6 +7,7 @@
     <TopStudyDestinations />
     <TestPreparation />
     <ContactForm />
+    <testimonials />
     <!-- <NewsandUpdate /> -->
     <AssociatedUniversities />
     <Accreditations />
@@ -33,6 +34,7 @@ import TestPreparation from "../components/layouts/TestPreparation.vue";
 import AssociatedUniversities from "@/components/layouts/AssociatedUniversities.vue";
 import Accreditations from "@/components/layouts/Accreditations.vue";
 import Fotter from "@/components/layouts/fotter.vue";
+import testimonials from "../components/layouts/testimonials.vue";
 
 export default defineComponent({
   name: "Dashboard",
@@ -45,6 +47,7 @@ export default defineComponent({
     ContactForm,
     // NewsandUpdate,
     TestPreparation,
+    testimonials,
     AssociatedUniversities,
     Accreditations,
     Fotter,

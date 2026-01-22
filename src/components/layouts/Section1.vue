@@ -5,9 +5,9 @@
     <!-- Left: Image -->
     <div class="flex-1 flex justify-center items-center">
       <img
-        src="@/assets/Section1.png"
+        src="@/assets/section1.png"
         alt="Grace International Process"
-        class="max-w-[900px] w-full h-auto"
+        class="max-w-[600px] w-full h-auto"
       />
     </div>
     <!-- Right: Text Content -->
