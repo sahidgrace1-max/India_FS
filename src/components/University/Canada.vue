@@ -1,34 +1,40 @@
 <template>
-  <div class="py-8">
+  <div class="py-8 animate-sectionFadeIn">
+    <!-- Section Title -->
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">
       OUR EDUCATION PARTNERS
     </h2>
     <div class="flex justify-center mb-6">
       <div class="w-24 h-1 bg-green-600 rounded-full"></div>
     </div>
+    <!-- Canada Banner -->
     <div class="flex justify-center mb-8">
-      <div class="w-80 h-28 rounded-md overflow-hidden relative">
+      <div class="w-80 h-28 rounded-md overflow-hidden relative group">
         <img
           :src="canada"
           alt="Canada"
           class="w-full h-full object-cover opacity-80"
         />
-        <div class="absolute inset-0 flex items-center justify-center">
+        <div
+          class="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:-translate-y-3"
+        >
           <h1 class="text-black text-3xl font-bold">Canada</h1>
         </div>
       </div>
     </div>
+    <!-- University Cards -->
     <div class="flex flex-wrap justify-center gap-x-12 gap-y-10">
       <div
         v-for="(uni, idx) in universities"
         :key="idx"
-        class="flex flex-col items-center w-48"
+        class="flex flex-col items-center w-48 opacity-0 animate-cardFadeIn"
+        :style="{ animationDelay: `${idx * 0.1}s` }"
       >
         <a
           :href="uni.link"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-full border-4 border-blue-400 p-2 w-40 h-40 flex items-center justify-center overflow-hidden mb-2 shadow-md transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="rounded-full border-4 border-blue-400 p-2 w-40 h-40 flex items-center justify-center overflow-hidden mb-2 shadow-md transition-transform duration-500 ease-out hover:scale-110 hover:rotate-3 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <img
             :src="uni.img"
@@ -66,11 +72,7 @@ import stlawrence from "@/assets/St Lawrence College.jpg";
 import kingsu from "@/assets/The King's University.jpg";
 
 const universities = [
-  {
-    name: "Flamming",
-    img: fleming,
-    link: "https://flemingcollege.ca/",
-  },
+  { name: "Flamming", img: fleming, link: "https://flemingcollege.ca/" },
   {
     name: "George Brown College(public)",
     img: georgebrown,
@@ -112,7 +114,7 @@ const universities = [
     link: "https://www.capilanou.ca/",
   },
   {
-    name: " St Clair College",
+    name: "St Clair College",
     img: stclair,
     link: "https://www.stclaircollege.ca/",
   },
@@ -146,11 +148,7 @@ const universities = [
     img: northisland,
     link: "https://www.nic.bc.ca/",
   },
-  {
-    name: "Olds College",
-    img: olds,
-    link: "https://www.oldscollege.ca/",
-  },
+  { name: "Olds College", img: olds, link: "https://www.oldscollege.ca/" },
   {
     name: "Bow Valley College",
     img: bowvalley,
@@ -168,3 +166,35 @@ const universities = [
   },
 ];
 </script>
+
+<style scoped>
+/* Section fade-in */
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-sectionFadeIn {
+  animation: sectionFadeIn 1s ease-out forwards;
+}
+
+/* Staggered card fade-in */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-cardFadeIn {
+  animation: cardFadeIn 0.6s ease-out forwards;
+}
+</style>

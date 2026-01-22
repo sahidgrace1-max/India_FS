@@ -12,8 +12,10 @@
       <div
         class="flex flex-wrap items-center gap-3 md:gap-5 justify-center md:justify-end mt-2 md:mt-0"
       >
-        <a href="#" class="hover:underline">Our Team</a>
-        <a href="#" class="hover:underline">LOG IN</a>
+        <router-link to="/about" class="hover:text-green-400 transition">
+          Our Team
+        </router-link>
+        <a href="mailto:admin@gmail.com" class="hover:underline">Contact Us</a>
         <div
           class="relative"
           @mouseenter="handleBranchesDropdownEnter"
@@ -225,7 +227,6 @@
                       >Scholarships</router-link
                     >
                   </li>
-                  <li>Latest News & Updates</li>
                 </ul>
               </div>
             </div>
@@ -501,24 +502,9 @@ const { selectedBranch, setSelectedBranch } = useBranchStore();
 function selectBranch(branch) {
   setSelectedBranch(branch);
   showBranchesDropdown.value = false;
-}
 
-// // Location/contact info
-// const locations = {
-//   "India": {
-//     email: "enquiry.in@graceintlgroup.com",
-//     phone: "+91 8750040975, 011-41070020"
-//   },
-//   "Nepal": {
-//     email: "info@grace.edu.np",
-//     phone: "+977 1-4444444, 9800000000"
-//   },
-//   "Australia": {
-//     email: "info@graceintlgroup.com.au",
-//     phone: "+61 2 8000 0000"
-//   }
-// };
-// const selectedLocation = ref('India');
+  window.location.reload();
+}
 
 // Services Dropdown logic (mobile)
 const showMobileServicesDropdown = ref(false);

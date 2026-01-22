@@ -7,11 +7,12 @@
       <img
         src="@/assets/section1.png"
         alt="Grace International Process"
-        class="max-w-[600px] w-full h-auto"
+        class="max-w-[450px] w-full h-auto animate-slide-left"
       />
     </div>
+
     <!-- Right: Text Content -->
-    <div class="flex-1 max-w-xl text-justify">
+    <div class="flex-1 max-w-xl text-justify animate-slide-right">
       <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-2">
         Study Abroad with
       </h2>
@@ -169,32 +170,157 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Slide in from left for image */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 1.5s ease-out forwards;
+}
+
+/* Add floating animation to image */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-slide-left img {
+  animation:
+    slideLeft 1.5s ease-out forwards,
+    float 3s ease-in-out infinite 1.5s;
+}
+
+/* Slide in from right for text */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slideRight 1.5s ease-out forwards 0.3s;
+}
+
+/* Gradient text animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-slide-right h2,
+.animate-slide-right h3 {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb, #1e3a8a);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Fade in up animation for paragraphs */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-right p:nth-of-type(1) {
+  animation: fadeInUp 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+.animate-slide-right p:nth-of-type(2) {
+  animation: fadeInUp 1s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.animate-slide-right p:nth-of-type(3) {
+  animation: fadeInUp 1s ease-out 1.2s forwards;
+  opacity: 0;
+}
+
+/* Pulse animation for section title */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+section h2 {
+  animation:
+    fadeInUp 1s ease-out,
+    pulse 2s ease-in-out infinite 1s;
+}
+
+/* Flip card styles */
 .flip-card {
   perspective: 1000px;
   width: 100%;
   max-width: 320px;
+  transition: transform 0.3s ease;
 }
+
+.flip-card:hover {
+  transform: translateY(-10px);
+}
+
 @media (min-width: 768px) {
   .flip-card {
-    width: 16rem; /* 64 */
+    width: 16rem;
     max-width: 16rem;
   }
 }
+
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
+
 .flip-card:hover .flip-card-inner {
-  /* Only flip on hover for desktop */
   transform: rotateY(180deg);
 }
+
 .flip-card-inner.flipped {
-  /* Flip on click for mobile */
   transform: rotateY(180deg);
 }
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -206,8 +332,90 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
+
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+/* Shimmer effect on cards */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.flip-card-front::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+  border-radius: 0.75rem;
+  pointer-events: none;
+}
+
+/* Stagger animation for cards */
+.flip-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.flip-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.flip-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.flip-card:nth-child(4) {
+  animation: fadeInUp 0.6s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+/* Glow effect on hover */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+  }
+}
+
+.flip-card-front:hover {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+/* Rotate text slightly on hover */
+.flip-card-front span {
+  transition: transform 0.3s ease;
+}
+
+.flip-card:hover .flip-card-front span {
+  transform: scale(1.1);
 }
 </style>

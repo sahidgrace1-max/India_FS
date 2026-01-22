@@ -7,8 +7,7 @@
           <img
             :src="australia1"
             alt="Graduate Student in Australia"
-              class="rounded-lg shadow-lg w-full h-auto object-contain"
-
+            class="rounded-lg shadow-lg w-full h-auto object-contain"
           />
         </div>
 
