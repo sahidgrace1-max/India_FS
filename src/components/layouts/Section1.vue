@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex flex-col md:flex-row items-center justify-center py-16 px-4 md:px-0 max-w-screen-2xl mx-auto gap-12"
+    class="flex flex-col md:flex-row items-center justify-center py-16 px-4 md:px-0 max-w-screen-2xl mx-auto gap-12 font-poppins"
   >
     <!-- Left: Image -->
     <div class="flex-1 flex justify-center items-center">
@@ -29,7 +29,7 @@
         Canada. We also provide preparation classes of IELTS, PTE, GMAT, TOEFL
         and SAT.
       </p>
-      <p class="text-gray-700">
+      <p class="text-gray-700 mb-4">
         Helping Indian students achieve global education dreams with expert
         counselling, top university tie-ups, and complete support—from test prep
         to visas since 2006.

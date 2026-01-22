@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-white min-h-screen relative">
+  <div class="flex bg-white min-h-screen relative font">
     <div class="flex-2 px-6 pt-8 pb-0 flex-grow">
       <h2 class="text-2xl font-semibold mb-2">News & Updates</h2>
       <a class="text-green-500 text-base mb-4 inline-block" href="#"

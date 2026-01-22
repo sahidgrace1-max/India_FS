@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 py-10 md:py-16">
+  <section class="bg-gray-100 py-10 md:py-16 font-poppins">
     <div class="max-w-screen-2xl mx-auto px-2 md:px-4">
       <h2
         class="text-xl md:text-3xl font-semibold text-center text-blue-700 mb-8 md:mb-12"

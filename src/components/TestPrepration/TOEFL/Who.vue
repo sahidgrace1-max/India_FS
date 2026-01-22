@@ -104,12 +104,12 @@
 
 <script>
 import { ref } from "vue";
-import EnrollmentFormIELTS from "./EnrollmentFormIELTS.vue";
+import EnrollmentFormTOEFL from "./EnrollmentFormIELTS.vue";
 
 export default {
-  name: "IELTSWho",
+  name: "TOEFLWho",
   components: {
-    EnrollmentFormIELTS,
+    EnrollmentFormTOEFL,
   },
   setup() {
     const showModal = ref(false);
