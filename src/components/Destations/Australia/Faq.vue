@@ -23,11 +23,11 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q1. What are the types of schools in Australia?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Australia has
-                <span class="font-semibold">Government Schools</span>
+                <span class="font-semibold text-lg">Government Schools</span>
                 (operated by state/territory governments) and
-                <span class="font-semibold">Non-Government Schools</span>
+                <span class="font-semibold text-lg">Non-Government Schools</span>
                 (private institutions, often with religious or cultural
                 philosophies). International students pay tuition fees in both
                 types.
@@ -36,12 +36,12 @@
 
             <!-- FAQ 2 -->
             <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              <h3 class="text-lg font-semibold text-gray-900  mb-3">
                 Q2. What is ELICOS and why is it important?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 ELICOS courses are English language programs ranging from
-                <span class="font-semibold">4 to 48 weeks</span>. They are
+                <span class="font-semibold text-lg">4 to 48 weeks</span>. They are
                 designed for students needing English proficiency before
                 starting formal studies. Courses include at least 20 hours/week
                 and flexible start dates.
@@ -53,13 +53,13 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q3. How much does it cost to study and live in Australia?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Tuition fees range from
-                <span class="font-semibold">AUD 9,000 to 37,000/year</span>
+                <span class="font-semibold text-lg">AUD 9,000 to 37,000/year</span>
                 depending on the course. Living costs start from
-                <span class="font-semibold">AUD 29,710/year</span>.
+                <span class="font-semibold text-lg">AUD 29,710/year</span>.
                 Accommodation varies from
-                <span class="font-semibold">AUD 50–280/week</span> depending on
+                <span class="font-semibold text-lg">AUD 50–280/week</span> depending on
                 the type.
               </p>
             </div>
@@ -69,9 +69,9 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q4. Can Indian students work while studying in Australia?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes, up to
-                <span class="font-semibold">40 hours per fortnight</span> during
+                <span class="font-semibold text-lg">40 hours per fortnight</span> during
                 semesters and full-time during scheduled breaks. This helps
                 cover living costs.
               </p>
@@ -82,7 +82,7 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q5. How does admission and visa process work?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Applications can be submitted directly to universities or via
                 education agents. After acceptance, students receive a Letter of
                 Offer, pay a deposit, and get an
@@ -98,9 +98,9 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q6. What are post-study work and PR opportunities?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Graduates can apply for the
-                <span class="font-semibold"
+                <span class="font-semibold text-lg"
                   >Temporary Graduate Visa (Subclass 485)</span
                 >. Duration depends on qualification: 18 months (Graduate Work
                 Stream) or 2–4 years (Post-Study Work Stream). After gaining
@@ -113,9 +113,9 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q7. Is English proficiency mandatory?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed">
+              <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes, tests like
-                <span class="font-semibold">IELTS, PTE, or TOEFL</span> are
+                <span class="font-semiboldtext-lg ">IELTS, PTE, or TOEFL</span> are
                 required for most courses and visa eligibility. Strong scores
                 improve chances for admission and scholarships.
               </p>

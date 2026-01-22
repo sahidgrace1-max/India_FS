@@ -13,7 +13,7 @@
 
         <!-- Right Content -->
         <div class="order-1 lg:order-2">
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 text-lg">
             Top Universities in the USA
           </h2>
           <ul class="space-y-3 mb-6">
@@ -28,7 +28,7 @@
             <li class="text-gray-700 text-lg">University of Michigan</li>
           </ul>
 
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 text-lg">
             Popular Courses for Indian Students
           </h2>
           <ul class="space-y-3 mb-6">
@@ -47,37 +47,37 @@
             </li>
           </ul>
 
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 text-lg">
             Scholarships for Indian Students
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Fulbright Foreign Student Program</span
               >
               – Fully funded for graduate studies.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >AAUW International Fellowships</span
               >
               – For women pursuing graduate degrees.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >University Merit Scholarships</span
               >
               – Offered by institutions like MIT, UCLA, and Michigan.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Partial Tuition Waivers</span
               >
               – For high-achieving Indian students.
             </li>
           </ul>
 
-          <p class="text-gray-600 text-base italic">
+          <p class="text-gray-600 text-base italic text-lg">
             Tip: Strong GRE, TOEFL, or IELTS scores increase eligibility for top
             USA scholarships for Indian students.
           </p>

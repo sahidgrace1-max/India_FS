@@ -16,16 +16,16 @@
             <li
               class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-300"
             >
-              <span class="font-semibold text-gray-900">Major Intakes:</span>
-              January, September (main intake), and May (select universities).
+              <span class="font-semibold text-lg text-gray-900">Major Intakes:</span>
+              <span class="text-lg">January, September (main intake), and May (select universities).</span>
             </li>
             <li
               class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-400"
             >
-              <span class="font-semibold text-gray-900">Requirements:</span>
-              English proficiency (IELTS, TOEFL, PTE), academic transcripts,
+              <span class="font-semibold text-lg text-gray-900">Requirements:</span>
+              <span class="text-lg">English proficiency (IELTS, TOEFL, PTE), academic transcripts,
               Statement of Purpose (SOP), Letters of Recommendation (LORs), and
-              financial proof.
+              financial proof.</span>
             </li>
             <li
               class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-500"
@@ -33,17 +33,17 @@
               <span class="font-semibold text-gray-900"
                 >UK Student Visa (Student Route):</span
               >
-              Requires an unconditional offer letter, Confirmation of Acceptance
-              for Studies (CAS), proof of funds, and English language evidence.
+              <span class="text-lg">Requires an unconditional offer letter, Confirmation of Acceptance
+              for Studies (CAS), proof of funds, and English language evidence.</span>
             </li>
           </ul>
 
           <p
             class="text-gray-700 text-base leading-relaxed mb-6 opacity-0 animate-fadeUp delay-600"
           >
-            Our experts guide Indian students through the complete UK
+            <span class="text-lg">Our experts guide Indian students through the complete UK
             application and student visa process, ensuring accuracy, compliance,
-            and faster approvals.
+            and faster approvals.</span>
           </p>
 
           <h2

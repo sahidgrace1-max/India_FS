@@ -14,87 +14,87 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Tuition Fees (Public Universities):</span
               >
-              USD <span class="font-semibold">9,000–23,000/year</span> depending
+              USD <span class="font-semibold text-lg">9,000–23,000/year</span> depending
               on residency and program.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Tuition Fees (Private Universities):</span
               >
               USD
-              <span class="font-semibold">31,000–60,000/year</span> depending on
+              <span class="font-semibold text-lg">31,000–60,000/year</span> depending on
               the institution.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Community/Two-Year Colleges:</span
               >
-              USD <span class="font-semibold">3,000–6,000/year</span> for
+              USD <span class="font-semibold text-lg">3,000–6,000/year</span> for
               tuition.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Living Costs:</span> USD
-              <span class="font-semibold">10,000–15,000/year</span> depending on
+              <span class="font-semibold text-gray-900 text-lg">Living Costs:</span> USD
+              <span class="font-semibold text-lg">10,000–15,000/year</span> depending on
               city and lifestyle.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Average Total (Study + Living):</span
               >
               USD
-              <span class="font-semibold">20,000–75,000/year</span> depending on
+              <span class="font-semibold text-lg">20,000–75,000/year</span> depending on
               type of university and location.
             </li>
           </ul>
 
           <p class="text-gray-700 text-base leading-relaxed mb-6">
-            <span class="text-orange-600 font-medium"
+            <span class="text-orange-600 font-medium text-lg"
               >Grace International India</span
             >
-            provides guidance on budgeting, financial aid, and managing expenses
-            for Indian students in the USA.
+            <span class="text-lg"> provides guidance on budgeting, financial aid, and managing expenses
+            for Indian students in the USA.</span>
           </p>
 
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-lg">
             Work Opportunities & Post-Study Options
           </h2>
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">On-Campus Work:</span>
+              <span class="font-semibold text-gray-900  text-lg">On-Campus Work:</span>
               Indian students on F-1 visas can work part-time
-              <span class="font-semibold">up to 20 hours per week</span> during
+              <span class="font-semibold text-lg">up to 20 hours per week</span> during
               semesters; full-time during breaks.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Optional Practical Training (OPT):</span
               >
               <ul class="ml-6 mt-2 space-y-1">
-                <li class="text-gray-600 text-base">
+                <li class="text-gray-600 text-base text-lg">
                   Bachelor's or Master's – up to 12 months
                 </li>
-                <li class="text-gray-600 text-base">
+                <li class="text-gray-600 text-base text-lg">
                   STEM Degrees – can extend for an additional 24 months
                 </li>
               </ul>
             </li>
           </ul>
 
-          <p class="text-gray-700 text-base leading-relaxed mb-6">
+          <p class="text-gray-700 text-base leading-relaxed mb-6 text-lg">
             OPT allows Indian students to gain practical work experience in the
             USA after graduation.
           </p>
 
           <p class="text-gray-700 text-sm leading-relaxed">
-            <span class="font-semibold text-gray-900"
+            <span class="font-semibold text-gray-900 text-lg"
               >Career & Visa Pathways:</span
             >
-            Indian students can explore H-1B work visas and other
-            employment-based immigration options after completing their studies.
+           <span class="text-lg"> Indian students can explore H-1B work visas and other
+            employment-based immigration options after completing their studies.</span>
           </p>
         </div>
 

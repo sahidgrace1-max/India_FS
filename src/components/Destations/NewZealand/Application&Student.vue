@@ -10,38 +10,38 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Major Intakes:</span>
+              <span class="font-semibold text-gray-900 text ">Major Intakes:</span>
               February, July (main intakes), and October (select universities).
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Requirements:</span>
+              <span class="font-semibold text-gray-900 text-lg">Requirements:</span>
               English proficiency (IELTS, TOEFL, PTE), academic transcripts,
               Statement of Purpose (SOP), Letters of Recommendation (LORs),
               portfolio (if applicable), and proof of funds.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900"
+              <span class="font-semibold text-gray-900 text-lg"
                 >Student Visa (New Zealand Student Visa):</span
               >
-              Requires an unconditional offer letter from a NZ institution,
+              <span class="text-lg">Requires an unconditional offer letter from a NZ institution,
               proof of sufficient funds, medical & travel insurance, and
-              evidence of English language proficiency.
+              evidence of English language proficiency.</span>
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900">Work Rights:</span>
-              Part-time work up to 20 hours/week during study and full-time
+              <span class="font-semibold text-gray-900 text-lg">Work Rights:</span>
+              <span class="text-lg">Part-time work up to 20 hours/week during study and full-time
               during holidays. Post-study work visas available for 1–3 years
-              depending on qualification.
+              depending on qualification.</span>
             </li>
           </ul>
 
-          <p class="text-gray-700 text-base leading-relaxed mb-6">
+          <p class="text-gray-700 text-base leading-relaxed mb-6 text-lg">
             Our experts guide Indian students through the complete New Zealand
             application and visa process, ensuring compliance, accuracy, and
             faster approvals.
           </p>
 
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-lg">
             Why Choose Grace International India for New Zealand?
           </h2>
 
