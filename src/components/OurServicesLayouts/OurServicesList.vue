@@ -1,23 +1,35 @@
 <template>
   <div>
-    <h2 class="text-4xl font-extrabold text-center text-blue-900 mb-4">
+    <!-- Page Title -->
+    <h2
+      ref="title"
+      class="text-4xl font-extrabold text-center text-blue-900 mb-4 fade-section"
+    >
       OUR SERVICES
     </h2>
     <div class="h-1 w-64 bg-green-600 mx-auto mb-12"></div>
+
+    <!-- Services List -->
     <div
       v-for="(service, idx) in services"
       :key="service.title"
-      class="flex flex-col md:flex-row items-stretch gap-8 mb-16"
-      :class="{ 'md:flex-row-reverse': idx % 2 === 1 }"
+      ref="sections"
+      class="flex flex-col md:flex-row items-stretch gap-8 mb-16 fade-section"
+      :class="[
+        idx % 2 === 1 ? 'md:flex-row-reverse slide-right' : 'slide-left',
+      ]"
     >
+      <!-- Image -->
       <div class="flex-1 flex justify-center items-center">
         <img
           :src="service.img"
           :alt="service.title"
-          class="rounded-lg shadow-lg w-full h-full object-cover"
+          class="rounded-lg shadow-lg w-full h-full object-cover zoom-img"
           style="min-height: 400px; max-height: 500px"
         />
       </div>
+
+      <!-- Content -->
       <div
         class="flex-1 bg-blue-50 px-8 pt-4 pb-8 rounded-lg flex flex-col justify-start h-full"
       >
@@ -92,5 +104,69 @@ export default {
       default: () => serviceData,
     },
   },
+  mounted() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    // Observe title
+    if (this.$refs.title) {
+      observer.observe(this.$refs.title);
+    }
+
+    // Observe sections
+    this.$refs.sections.forEach((section) => {
+      observer.observe(section);
+
+      const img = section.querySelector(".zoom-img");
+      if (img) observer.observe(img);
+    });
+  },
 };
 </script>
+
+<style scoped>
+/* Base hidden state */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* When visible */
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide directions */
+.slide-left {
+  transform: translateX(-60px);
+}
+
+.slide-right {
+  transform: translateX(60px);
+}
+
+.slide-left.show,
+.slide-right.show {
+  transform: translateX(0);
+}
+
+/* Image zoom */
+.zoom-img {
+  transform: scale(1.05);
+  transition: transform 1s ease;
+}
+
+.zoom-img.show {
+  transform: scale(1);
+}
+</style>

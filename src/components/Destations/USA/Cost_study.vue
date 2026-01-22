@@ -2,8 +2,12 @@
   <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <!-- Left Content -->
-        <div class="order-1 lg:order-1">
+        <!-- Left Content - Animated -->
+        <div
+          ref="leftContent"
+          class="animate-section order-1 lg:order-1"
+          data-animation="slide-left"
+        >
           <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Cost of Studying & Living in the USA
           </h2>
@@ -94,8 +98,12 @@
           </p>
         </div>
 
-        <!-- Right Image -->
-        <div class="order-2 lg:order-2 flex items-center justify-center">
+        <!-- Right Image - Animated -->
+        <div
+          ref="rightImage"
+          class="animate-section order-2 lg:order-2 flex items-center justify-center"
+          data-animation="slide-right"
+        >
           <img
             :src="bgImage"
             alt="Students studying in the USA"
@@ -108,7 +116,64 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import bgImage from "@/assets/usa2.png";
+
+// Refs for animated sections
+const leftContent = ref(null);
+const rightImage = ref(null);
+
+let observer = null;
+
+onMounted(() => {
+  const options = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, options);
+
+  const sections = [leftContent.value, rightImage.value];
+  sections.forEach((section) => {
+    if (section) observer.observe(section);
+  });
+});
+
+onUnmounted(() => {
+  if (observer) observer.disconnect();
+});
 </script>
 
-<style scoped></style>
+<style scoped>
+/* Base state */
+.animate-section {
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide Left */
+.animate-section[data-animation="slide-left"] {
+  transform: translateX(-40px);
+}
+.animate-section[data-animation="slide-left"].is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide Right */
+.animate-section[data-animation="slide-right"] {
+  transform: translateX(40px);
+}
+.animate-section[data-animation="slide-right"].is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+</style>

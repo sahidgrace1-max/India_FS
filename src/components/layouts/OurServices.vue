@@ -17,15 +17,11 @@
           <img
             src="@/assets/freecounselling.png"
             alt="Free Counseling"
-            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
+            class="card-image"
           />
-          <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
-            Free Counseling
-          </h3>
-          <div class="text-base mb-1 w-full">
-            Dreaming to Study Abroad? Start Here —
-          </div>
-          <div class="text-base mb-1 w-full">
+          <h3 class="card-title">Free Counseling</h3>
+          <div class="card-text">Dreaming to Study Abroad? Start Here —</div>
+          <div class="card-text">
             Get expert guidance for
             <span class="font-small"
               >Australia | UK | Canada | USA | New Zealand | Europe</span
@@ -41,16 +37,14 @@
           <img
             src="@/assets/profileassessment.png"
             alt="Free Profile Assessment"
-            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
+            class="card-image"
           />
-          <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
-            Free Profile Assessment
-          </h3>
-          <div class="text-base mb-1 w-full">
+          <h3 class="card-title">Free Profile Assessment</h3>
+          <div class="card-text">
             Your career deserves the
             <span class="font-small">right direction.</span>
           </div>
-          <div class="text-base mb-1 w-full">
+          <div class="card-text">
             Get a
             <span class="font-small">FREE Study Abroad Profile Assessment</span>
             from experts at
@@ -68,16 +62,14 @@
           <img
             src="@/assets/freevisaprocessing.png"
             alt="Free Visa Processing"
-            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
+            class="card-image"
           />
-          <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
-            Free Visa Processing
-          </h3>
-          <div class="text-base mb-1 w-full">
+          <h3 class="card-title">Free Visa Processing</h3>
+          <div class="card-text">
             Secure your student visa with expert guidance and zero processing
             charges.
           </div>
-          <div class="text-base mb-1 w-full">
+          <div class="card-text">
             Trusted by thousands of students globally.
           </div>
         </div>
@@ -90,13 +82,11 @@
           <img
             src="@/assets/noservicecharge.png"
             alt="No Services Charge"
-            class="w-full max-w-[300px] h-[170px] md:h-[200px] object-cover mb-3 md:mb-5 rounded"
+            class="card-image"
           />
-          <h3 class="text-lg md:text-xl font-bold mb-2 text-center">
-            No Services Charge
-          </h3>
+          <h3 class="card-title">No Services Charge</h3>
 
-          <div class="text-base leading-relaxed text-justify mb-3">
+          <div class="card-text">
             At Grace International, we proudly operate on a No Service Charge
             policy for our core services. We provide end-to-end support for your
             international education journey.
@@ -126,7 +116,7 @@ export default {
     });
 
     onMounted(() => {
-      const options = { threshold: 0.3 }; // 30% visible
+      const options = { threshold: 0.3 };
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -150,23 +140,73 @@ export default {
 </script>
 
 <style scoped>
-/* Base card */
+/* Base card - FIXED: Added padding and background */
 .service-card {
   opacity: 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s ease,
     box-shadow 0.4s ease,
     background 0.4s ease,
     opacity 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  width: 100%;
 }
 
-/* Hover effect */
+/* Image styling */
+.card-image {
+  width: 100%;
+  max-width: 300px;
+  height: 170px;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  border-radius: 0.375rem;
+}
+
+@media (min-width: 768px) {
+  .card-image {
+    height: 200px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Title styling */
+.card-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Text styling - FIXED: Added text-align and proper width */
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  width: 100%;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Hover effect - FIXED: Only transform Y axis */
 @media (min-width: 768px) {
   .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow:
-      0 8px 32px rgba(34, 97, 184, 0.15),
-      0 1.5px 8px rgba(34, 97, 184, 0.12);
+      0 12px 32px rgba(34, 97, 184, 0.2),
+      0 2px 8px rgba(34, 97, 184, 0.15);
     background: #eff6ff;
   }
 }
@@ -185,9 +225,16 @@ export default {
   transform: translateY(50px);
 }
 
-/* Active animation */
+/* Active animation - FIXED: Proper reset */
 .animate {
   transform: translateX(0) translateY(0) !important;
   opacity: 1;
+}
+
+/* FIXED: Ensure hover doesn't affect animated cards' initial position */
+@media (min-width: 768px) {
+  .animate:hover {
+    transform: translateY(-8px) !important;
+  }
 }
 </style>

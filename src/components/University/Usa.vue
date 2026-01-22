@@ -1,34 +1,42 @@
 <template>
-  <div class="py-8">
+  <div class="py-8 animate-sectionFadeIn">
+    <!-- Section Title -->
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">
       OUR EDUCATION PARTNERS
     </h2>
     <div class="flex justify-center mb-6">
       <div class="w-24 h-1 bg-green-600 rounded-full"></div>
     </div>
+
+    <!-- USA Banner -->
     <div class="flex justify-center mb-8">
-      <div class="w-80 h-28 rounded-md overflow-hidden relative">
+      <div class="w-80 h-28 rounded-md overflow-hidden relative group">
         <img
           src="@/assets/usa.jpeg"
           alt="USA"
           class="w-full h-full object-cover opacity-80"
         />
-        <div class="absolute inset-0 flex items-center justify-center">
+        <div
+          class="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:-translate-y-3"
+        >
           <h1 class="text-black text-3xl font-bold">USA</h1>
         </div>
       </div>
     </div>
+
+    <!-- University Cards -->
     <div class="flex flex-wrap justify-center gap-x-12 gap-y-10">
       <div
         v-for="(uni, idx) in universities"
         :key="idx"
-        class="flex flex-col items-center w-48"
+        class="flex flex-col items-center w-48 opacity-0 animate-cardFadeIn"
+        :style="{ animationDelay: `${idx * 0.1}s` }"
       >
         <a
           :href="uni.link"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-full border-4 border-blue-400 p-2 w-40 h-40 flex items-center justify-center overflow-hidden mb-2 shadow-md transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="rounded-full border-4 border-blue-400 p-2 w-40 h-40 flex items-center justify-center overflow-hidden mb-2 shadow-md transition-transform duration-500 ease-out hover:scale-110 hover:rotate-3 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <img
             :src="uni.img"
@@ -66,13 +74,9 @@ import coloradomesa from "@/assets/colorado-mesa-university.jpg";
 import albertus from "@/assets/Albertus Magnus College.jpg";
 
 const universities = [
+  { name: "Davis University", img: davis, link: "https://www.davis.edu/" },
   {
-    name: "Davis University",
-    img: davis,
-    link: "https://www.davis.edu/",
-  },
-  {
-    name: "Concordia University ",
+    name: "Concordia University",
     img: concordia,
     link: "https://www.concordia.edu/",
   },
@@ -86,13 +90,9 @@ const universities = [
     img: avila,
     link: "https://www.avila.edu/",
   },
+  { name: "Bethany College", img: bethany, link: "https://www.bethanykc.edu/" },
   {
-    name: "Bethany College",
-    img: bethany,
-    link: "https://www.bethanykc.edu/",
-  },
-  {
-    name: "Elmhurst University ",
+    name: "Elmhurst University",
     img: elmhurst,
     link: "https://www.elmhurst.edu/",
   },
@@ -112,12 +112,12 @@ const universities = [
     link: "https://www.ysu.edu/",
   },
   {
-    name: "Texas State University ",
+    name: "Texas State University",
     img: texasstate,
     link: "https://www.txstate.edu/",
   },
   {
-    name: "Arkansas state University ",
+    name: "Arkansas State University",
     img: arkansas,
     link: "https://www.astate.edu/",
   },
@@ -127,27 +127,27 @@ const universities = [
     link: "https://www.wright.edu/",
   },
   {
-    name: "Felican University ",
+    name: "Felician University",
     img: felician,
     link: "https://www.felician.edu/",
   },
   {
-    name: "Westclift University ",
+    name: "Westcliff University",
     img: westcliff,
-    link: "https://www.westclift.edu/",
+    link: "https://www.westcliff.edu/",
   },
   {
-    name: "William Patterson University ",
+    name: "William Patterson University",
     img: williampatterson,
     link: "https://www.wpunj.edu/",
   },
   {
-    name: "Bridgeport University ",
+    name: "Bridgeport University",
     img: bridgeport,
     link: "https://www.bridgeport.edu/",
   },
   {
-    name: "Middle Tennessee State University ",
+    name: "Middle Tennessee State University",
     img: middletennessee,
     link: "https://www.mtsu.edu/",
   },
@@ -168,3 +168,35 @@ const universities = [
   },
 ];
 </script>
+
+<style scoped>
+/* Section fade-in */
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-sectionFadeIn {
+  animation: sectionFadeIn 1s ease-out forwards;
+}
+
+/* Staggered card fade-in */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-cardFadeIn {
+  animation: cardFadeIn 0.6s ease-out forwards;
+}
+</style>
