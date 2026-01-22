@@ -51,7 +51,7 @@ import lib from "@/assets/Library.png";
 import guide from "@/assets/Guidance.png";
 import advise from "@/assets/advising.png";
 import uni from "@/assets/usa5.png";
-import test from "@/assets/testprep.png";
+import test from "@/assets/TestPrep.png";
 import pre from "@/assets/predep.jpg";
 import news from "@/assets/news.jpg";
 
