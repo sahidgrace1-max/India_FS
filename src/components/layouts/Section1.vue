@@ -5,7 +5,7 @@
     <!-- Left: Image -->
     <div class="flex-1 flex justify-center items-center">
       <img
-        src="@/assets/section1.png"
+        src="@/assets/Section1.png"
         alt="Grace International Process"
         class="max-w-[450px] w-full h-auto animate-slide-left"
       />
