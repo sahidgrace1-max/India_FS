@@ -1,20 +1,20 @@
 <template>
   <section
-    class="w-full h-[100svh] min-h-[420px] sm:min-h-[520px] md:min-h-[700px] lg:min-h-[820px] relative overflow-hidden flex items-center bg-gray-100"
+    class="w-full h-[100svh] min-h-[420px] sm:min-h-[520px] md:min-h-[700px] lg:min-h-[820px] relative overflow-hidden bg-gray-100"
   >
-    <!-- Background Image -->
+    <!-- Background Image (Static, No animation) -->
     <img
-      src="@/assets/hero.jpg"
+      src="@/assets/Hero.jpeg"
       alt="Hero Image"
-      class="hero-img absolute inset-0 w-full h-full object-cover"
+      class="hero-img absolute inset-0 w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] object-cover"
     />
 
-    <!-- Gradient Overlay -->
+    <!-- Gradient Overlay (Optional Animation) -->
     <div
       class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent animate-gradient-shift"
     ></div>
 
-    <!-- Floating Particles -->
+    <!-- Floating Particles (Optional) -->
     <div class="absolute inset-0 pointer-events-none">
       <span v-for="i in 6" :key="i" :class="`particle particle-${i}`"></span>
     </div>
@@ -24,27 +24,22 @@
       class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 via-green-500 to-green-600 animate-border-slide"
     ></div>
 
-    <!-- Content -->
+    <!-- Content: Heading & Branch -->
     <div
-      class="relative z-10 px-4 sm:px-6 md:px-10 lg:px-20 max-w-full lg:max-w-3xl text-white"
+      class="absolute z-10 top-1/2 left-0 transform -translate-y-1/2 px-4 sm:px-6 md:px-10 lg:px-20 max-w-full lg:max-w-3xl text-white"
     >
+      <!-- Main Heading: Full width, left aligned -->
       <h1
-        class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight break-words"
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight"
       >
         Welcome TO Grace International
       </h1>
 
+      <!-- Subheading: Branch below heading -->
       <p
-        class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 font-semibold animate-subtitle"
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-green-400"
       >
-        <span
-          class="relative text-green-400 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl inline-block animate-highlight break-words"
-        >
-          {{ selectedBranch }}
-          <span
-            class="absolute bottom-0 left-0 h-0.5 sm:h-1 bg-green-400 animate-underline"
-          ></span>
-        </span>
+        {{ selectedBranch }}
       </p>
     </div>
 
@@ -69,35 +64,6 @@ const { selectedBranch } = useBranchStore();
 </script>
 
 <style scoped>
-/* ---------------- KEN BURNS ---------------- */
-@keyframes kenBurns {
-  from {
-    transform: scale(1) translateX(0);
-  }
-  to {
-    transform: scale(1.08) translateX(-20px);
-  }
-}
-
-.animate-ken-burns {
-  animation: kenBurns 20s ease-out infinite alternate;
-}
-
-@media (max-width: 640px) {
-  .animate-ken-burns {
-    animation: kenBurnsMobile 16s ease-out infinite alternate;
-  }
-
-  @keyframes kenBurnsMobile {
-    from {
-      transform: scale(1) translateX(0);
-    }
-    to {
-      transform: scale(1.03) translateX(0);
-    }
-  }
-}
-
 /* ---------------- OVERLAY ---------------- */
 @keyframes gradientShift {
   0%,
@@ -108,7 +74,6 @@ const { selectedBranch } = useBranchStore();
     opacity: 0.9;
   }
 }
-
 .animate-gradient-shift {
   animation: gradientShift 8s ease-in-out infinite;
 }
@@ -176,7 +141,6 @@ const { selectedBranch } = useBranchStore();
   gap: 12px;
   align-items: center;
 }
-
 .icon {
   width: 48px;
   height: 48px;
@@ -186,18 +150,15 @@ const { selectedBranch } = useBranchStore();
   align-items: center;
   justify-content: center;
 }
-
 .icon-svg {
   width: 24px;
   height: 24px;
   color: #4ade80;
 }
-
 .stat-value {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .stat-label {
   font-size: 0.875rem;
   color: #d1d5db;
@@ -217,49 +178,18 @@ const { selectedBranch } = useBranchStore();
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Default position center for all screens */
-  object-position: center;
+  object-position: center; /* STATIC */
 }
 
-/* DESKTOP: Ken Burns effect and left-aligned image */
-@media (min-width: 1024px) {
-  .hero-img {
-    animation: kenBurns 20s ease-out infinite alternate;
-    object-position: center left;
-  }
-}
-
-/* TABLET: Smaller zoom effect */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero-img {
-    animation: kenBurns 15s ease-out infinite alternate;
-    object-position: center;
-  }
-}
-
-/* MOBILE: No animation to save battery/CPU, fixed focus */
+/* MOBILE: No animation, fixed scale */
 @media (max-width: 767px) {
   .hero-img {
     animation: none;
-    transform: scale(
-      1.1
-    ); /* Halka zoom rakhera side haru safe zone ma rakhne */
+    transform: none;
     object-position: center;
   }
-
-  /* Section height adjust for small mobiles */
   section {
-    min-height: 100svh; /* viewport height fix */
-  }
-}
-
-/* Animation keyframes update for smoother feel */
-@keyframes kenBurns {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  100% {
-    transform: scale(1.1) translate(-2%, -2%);
+    min-height: 100svh;
   }
 }
 </style>
