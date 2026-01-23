@@ -25,22 +25,24 @@
     ></div>
 
     <!-- Content -->
-    <div class="relative z-10 px-6 sm:px-10 md:px-20 max-w-3xl text-white">
+    <div
+      class="relative z-10 px-4 sm:px-6 md:px-10 lg:px-20 max-w-full lg:max-w-3xl text-white"
+    >
       <h1
-        class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight whitespace-nowrap"
+        class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight break-words"
       >
         Welcome TO Grace International
       </h1>
 
       <p
-        class="text-xl sm:text-2xl md:text-4xl mb-8 font-semibold animate-subtitle"
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 font-semibold animate-subtitle"
       >
         <span
-          class="relative text-green-400 font-bold text-7xl inline-block animate-highlight"
+          class="relative text-green-400 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl inline-block animate-highlight break-words"
         >
           {{ selectedBranch }}
           <span
-            class="absolute bottom-0 left-0 h-1 bg-green-400 animate-underline"
+            class="absolute bottom-0 left-0 h-0.5 sm:h-1 bg-green-400 animate-underline"
           ></span>
         </span>
       </p>

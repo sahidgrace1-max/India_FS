@@ -27,7 +27,9 @@
                 Australia has
                 <span class="font-semibold text-lg">Government Schools</span>
                 (operated by state/territory governments) and
-                <span class="font-semibold text-lg">Non-Government Schools</span>
+                <span class="font-semibold text-lg"
+                  >Non-Government Schools</span
+                >
                 (private institutions, often with religious or cultural
                 philosophies). International students pay tuition fees in both
                 types.
@@ -36,13 +38,13 @@
 
             <!-- FAQ 2 -->
             <div>
-              <h3 class="text-lg font-semibold text-gray-900  mb-3">
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q2. What is ELICOS and why is it important?
               </h3>
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 ELICOS courses are English language programs ranging from
-                <span class="font-semibold text-lg">4 to 48 weeks</span>. They are
-                designed for students needing English proficiency before
+                <span class="font-semibold text-lg">4 to 48 weeks</span>. They
+                are designed for students needing English proficiency before
                 starting formal studies. Courses include at least 20 hours/week
                 and flexible start dates.
               </p>
@@ -55,12 +57,14 @@
               </h3>
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Tuition fees range from
-                <span class="font-semibold text-lg">AUD 9,000 to 37,000/year</span>
+                <span class="font-semibold text-lg"
+                  >AUD 9,000 to 37,000/year</span
+                >
                 depending on the course. Living costs start from
                 <span class="font-semibold text-lg">AUD 29,710/year</span>.
                 Accommodation varies from
-                <span class="font-semibold text-lg">AUD 50–280/week</span> depending on
-                the type.
+                <span class="font-semibold text-lg">AUD 50–280/week</span>
+                depending on the type.
               </p>
             </div>
 
@@ -71,9 +75,11 @@
               </h3>
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes, up to
-                <span class="font-semibold text-lg">40 hours per fortnight</span> during
-                semesters and full-time during scheduled breaks. This helps
-                cover living costs.
+                <span class="font-semibold text-lg"
+                  >40 hours per fortnight</span
+                >
+                during semesters and full-time during scheduled breaks. This
+                helps cover living costs.
               </p>
             </div>
 
@@ -115,9 +121,9 @@
               </h3>
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes, tests like
-                <span class="font-semiboldtext-lg ">IELTS, PTE, or TOEFL</span> are
-                required for most courses and visa eligibility. Strong scores
-                improve chances for admission and scholarships.
+                <span class="font-semiboldtext-lg">IELTS, PTE, or TOEFL</span>
+                are required for most courses and visa eligibility. Strong
+                scores improve chances for admission and scholarships.
               </p>
             </div>
           </div>

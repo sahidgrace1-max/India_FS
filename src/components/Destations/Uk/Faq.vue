@@ -26,7 +26,7 @@
           <div class="space-y-5">
             <!-- FAQ 1 -->
             <div class="opacity-0 animate-fadeUp delay-400">
-              <h3 class=" font-semibold text-gray-900 mb-2 text-lg">
+              <h3 class="font-semibold text-gray-900 mb-2 text-lg">
                 Q1. What is the cost of living in the UK for Indian students?
               </h3>
               <p class="text-gray-700 text-lg leading-relaxed">
@@ -67,8 +67,8 @@
               </h3>
               <p class="text-gray-700 text-lg leading-relaxed">
                 Yes, students can work up to
-                <span class="font-semibold text-lg">20 hours per week</span> during term
-                time and full-time during vacations.
+                <span class="font-semibold text-lg">20 hours per week</span>
+                during term time and full-time during vacations.
               </p>
             </div>
 

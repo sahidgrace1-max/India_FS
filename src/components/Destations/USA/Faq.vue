@@ -26,14 +26,15 @@
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 The cost of studying and living in the USA varies by university,
                 but on average it is around
-                <span class="font-semibold text-lg">US$36,000–60,000 per year</span>,
-                including tuition and living expenses.
+                <span class="font-semibold text-lg"
+                  >US$36,000–60,000 per year</span
+                >, including tuition and living expenses.
               </p>
             </div>
 
             <!-- FAQ 2 -->
             <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3 ">
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q2. Can Indian students get PR in the USA?
               </h3>
               <p class="text-gray-700 text-base leading-relaxed text-lg">
@@ -54,8 +55,8 @@
               </h3>
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes, an English proficiency test like
-                <span class="font-semibold text-lg">TOEFL or IELTS</span> is required
-                for admission to US universities.
+                <span class="font-semibold text-lg">TOEFL or IELTS</span> is
+                required for admission to US universities.
               </p>
             </div>
 
@@ -64,11 +65,13 @@
               <h3 class="text-lg font-semibold text-gray-900 mb-3">
                 Q4. Can Indian students work while studying in the USA?
               </h3>
-              <p class="text-gray-700 text-base leading-relaxed font-poppins text-lg">
+              <p
+                class="text-gray-700 text-base leading-relaxed font-poppins text-lg"
+              >
                 Yes, students on an F-1 visa can work
-                <span class="font-semibold text-lg">on-campus</span> up to 20 hours per
-                week during semesters and full-time during breaks. Off-campus
-                work requires special authorization.
+                <span class="font-semibold text-lg">on-campus</span> up to 20
+                hours per week during semesters and full-time during breaks.
+                Off-campus work requires special authorization.
               </p>
             </div>
 

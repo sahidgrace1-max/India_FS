@@ -14,7 +14,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Content -->
         <div>
-          <h2 class="text-2xl font-bold text-gray-900 mb-6 font-poppins ">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 font-poppins">
             Australian Education System
           </h2>
 
@@ -23,10 +23,11 @@
               <span class="font-semibold text-gray-900 font-poppins"
                 >Government Schools</span
               >
-              <span > – Operated by State or Territory governments. International
-              students are required to pay tuition fees and benefit from diverse
-              social and cultural learning environments.</span>
-             
+              <span>
+                – Operated by State or Territory governments. International
+                students are required to pay tuition fees and benefit from
+                diverse social and cultural learning environments.</span
+              >
             </li>
 
             <li class="text-gray-700 text-lg">

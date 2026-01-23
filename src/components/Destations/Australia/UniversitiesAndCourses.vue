@@ -44,7 +44,8 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-base">
-              <span class="font-semibold text-lg">8 universities</span> ranked among the
+              <span class="font-semibold text-lg">8 universities</span> ranked
+              among the
               <span class="font-semibold text-lg">Top 100</span> globally.
             </li>
             <li class="text-gray-700 text-base">
@@ -68,19 +69,19 @@
           </h2>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-base text-lg">Storing knowledge</li>
-            <li class="text-gray-700 text-base  text-lg">
+            <li class="text-gray-700 text-base text-lg">
               Transferring knowledge to others
             </li>
-            <li class="text-gray-700 text-lg ">
+            <li class="text-gray-700 text-lg">
               Creating knowledge through research
             </li>
           </ul>
 
           <p class="text-gray-600 text-base italic">
             Australia has produced
-            <span class="font-semibold text-lg">15 Nobel Prize Laureates</span> across
-            various academic and research disciplines, supported by strong
-            government investment in higher education.
+            <span class="font-semibold text-lg">15 Nobel Prize Laureates</span>
+            across various academic and research disciplines, supported by
+            strong government investment in higher education.
           </p>
         </div>
       </div>

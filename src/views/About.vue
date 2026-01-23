@@ -8,12 +8,12 @@
     <BranchTeamSection />
     <fotter />
   </div>
-  <div
+  <!-- <div
     class="fixed right-0 top-1/3 z-40 bg-blue-700 text-white px-4 py-2 shadow-lg font-semibold text-sm flex items-center"
     style="writing-mode: vertical-rl; text-orientation: mixed"
   >
     Free Counselling
-  </div>
+  </div> -->
 </template>
 
 <script>

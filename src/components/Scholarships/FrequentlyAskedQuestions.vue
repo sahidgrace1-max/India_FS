@@ -52,11 +52,11 @@
     <div
       class="fixed top-12 right-0 bg-blue-700 text-white py-3 px-2 rounded-l-md font-medium text-base z-50 cursor-pointer shadow-md writing-vertical"
     >
-      <span
+      <!-- <span
         class="block"
         style="writing-mode: vertical-rl; text-orientation: mixed"
         >Free Counselling</span
-      >
+      > -->
     </div>
   </div>
 </template>

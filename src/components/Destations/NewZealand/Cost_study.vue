@@ -10,12 +10,16 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg">Tuition Fees:</span>
+              <span class="font-semibold text-gray-900 text-lg"
+                >Tuition Fees:</span
+              >
               NZ$20,000/year for Arts & Social Sciences, NZ$25,000/year for
               Science & Engineering, NZ$75,000/year for Dentistry & Medicine.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg">Living Costs:</span>
+              <span class="font-semibold text-gray-900 text-lg"
+                >Living Costs:</span
+              >
               On average NZ$120–$200 per week depending on accommodation type
               (shared flat, private flat, student residence).
             </li>
@@ -31,17 +35,21 @@
             <span class="text-orange-600 font-medium text-lg"
               >Grace International India</span
             >
-           <span class="text-lg"> assists Indian students with budgeting, financial planning, and
-            documentation for studying in New Zealand.</span>
+            <span class="text-lg">
+              assists Indian students with budgeting, financial planning, and
+              documentation for studying in New Zealand.</span
+            >
           </p>
 
-          <h2 class="text-2xl font-bold text-gray-900  text-lgmb-6">
+          <h2 class="text-2xl font-bold text-gray-900 text-lgmb-6">
             Work & Career Opportunities
           </h2>
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg">Part-Time Work:</span>
+              <span class="font-semibold text-gray-900 text-lg"
+                >Part-Time Work:</span
+              >
               Up to 20 hours per week during study and full-time during
               holidays.
             </li>
@@ -49,8 +57,11 @@
               <span class="font-semibold text-gray-900 text-lg"
                 >Post-Study Work Rights:</span
               >
-            <span class="text.lg">  Students can apply for a work visa to gain professional experience
-              after graduation, typically 1–3 years depending on qualification.</span>
+              <span class="text.lg">
+                Students can apply for a work visa to gain professional
+                experience after graduation, typically 1–3 years depending on
+                qualification.</span
+              >
             </li>
           </ul>
 
@@ -61,10 +72,14 @@
           </p>
 
           <p class="text-gray-700 text-base leading-relaxed">
-            <span class="font-semibold text-gray-900 text-lg">Career Pathways:</span>
-           <span class="text-lg"> International students can gain valuable skills, networking
-            opportunities, and professional exposure through part-time work and
-            post-study employment, helping build global careers.</span>
+            <span class="font-semibold text-gray-900 text-lg"
+              >Career Pathways:</span
+            >
+            <span class="text-lg">
+              International students can gain valuable skills, networking
+              opportunities, and professional exposure through part-time work
+              and post-study employment, helping build global careers.</span
+            >
           </p>
         </div>
 

@@ -37,7 +37,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        poopins: ["Poppins", "system-ui", "sans-serif"]
+        poopins: ["Poppins", "system-ui", "sans-serif"],
       },
     },
   },

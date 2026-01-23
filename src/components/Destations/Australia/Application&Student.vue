@@ -4,30 +4,41 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left Content -->
         <div class="order-2 lg:order-1">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6 font-poppins ">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 font-poppins">
             Application & Student Visa Process
           </h2>
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg">Major Intakes:</span>
+              <span class="font-semibold text-gray-900 text-lg"
+                >Major Intakes:</span
+              >
               February and July (some universities also offer October).
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900 font-poppins text-lg">Requirements:</span>
-              <span class="text-lg">English proficiency (IELTS, PTE, TOEFL), academic transcripts,
-              SOP, LORs, financial proof.</span>
+              <span class="font-semibold text-gray-900 font-poppins text-lg"
+                >Requirements:</span
+              >
+              <span class="text-lg"
+                >English proficiency (IELTS, PTE, TOEFL), academic transcripts,
+                SOP, LORs, financial proof.</span
+              >
             </li>
             <li class="text-gray-700 text-sm">
-              <span class="font-semibold text-gray-900  text-lg font-poppins"
+              <span class="font-semibold text-gray-900 text-lg font-poppins"
                 >Student Visa (Subclass 500):</span
               >
-             <span class="text-lg">Requires Confirmation of Enrolment (CoE), Overseas Student Health
-              Cover (OSHC), and proof of funds for tuition + living expenses.</span> 
+              <span class="text-lg"
+                >Requires Confirmation of Enrolment (CoE), Overseas Student
+                Health Cover (OSHC), and proof of funds for tuition + living
+                expenses.</span
+              >
             </li>
           </ul>
 
-          <p class="text-gray-700 text-base leading-relaxed mb-6 text-lg font-poppins">
+          <p
+            class="text-gray-700 text-base leading-relaxed mb-6 text-lg font-poppins"
+          >
             Our team guides students through every step of the Australia student
             visa process in Delhi, ensuring high success rates.
           </p>
@@ -40,14 +51,14 @@
             <li class="text-gray-700 text-lg font-poppins">
               Direct tie-ups with leading Australian universities.
             </li>
-            <li class="text-gray-700 text-base  text-lg font-poppins">
+            <li class="text-gray-700 text-base text-lg font-poppins">
               End-to-end support: counselling, test prep, applications, visas,
               scholarships.
             </li>
             <li class="text-gray-700 text-base text-lg font-poppins">
               Latest guidance on post-study work and PR pathways.
             </li>
-            <li class="text-gray-700 text-base  text-lg font-poppins">
+            <li class="text-gray-700 text-base text-lg font-poppins">
               Pre-departure sessions + on-ground support from Grace offices in
               Australia.
             </li>

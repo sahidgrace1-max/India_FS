@@ -39,9 +39,9 @@
               </h3>
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 Yes, students can work up to
-                <span class="font-semibold text-lg">20 hours per week</span> during term
-                time and full-time during holidays. Part-time work helps cover
-                living costs and gain practical experience.
+                <span class="font-semibold text-lg">20 hours per week</span>
+                during term time and full-time during holidays. Part-time work
+                helps cover living costs and gain practical experience.
               </p>
             </div>
 
@@ -65,8 +65,8 @@
               <p class="text-gray-700 text-base leading-relaxed text-lg">
                 The main intakes are
                 <span class="font-semibold text-lg">February</span> and
-                <span class="font-semibold text-lg">July</span>. Some universities also
-                offer an October intake for selected programs.
+                <span class="font-semibold text-lg">July</span>. Some
+                universities also offer an October intake for selected programs.
               </p>
             </div>
 

@@ -17,36 +17,41 @@
               <span class="font-semibold text-gray-900 text-lg"
                 >Tuition Fees (Public Universities):</span
               >
-              USD <span class="font-semibold text-lg">9,000–23,000/year</span> depending
-              on residency and program.
+              USD
+              <span class="font-semibold text-lg">9,000–23,000/year</span>
+              depending on residency and program.
             </li>
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900 text-lg"
                 >Tuition Fees (Private Universities):</span
               >
               USD
-              <span class="font-semibold text-lg">31,000–60,000/year</span> depending on
-              the institution.
+              <span class="font-semibold text-lg">31,000–60,000/year</span>
+              depending on the institution.
             </li>
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900 text-lg"
                 >Community/Two-Year Colleges:</span
               >
-              USD <span class="font-semibold text-lg">3,000–6,000/year</span> for
+              USD
+              <span class="font-semibold text-lg">3,000–6,000/year</span> for
               tuition.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg">Living Costs:</span> USD
-              <span class="font-semibold text-lg">10,000–15,000/year</span> depending on
-              city and lifestyle.
+              <span class="font-semibold text-gray-900 text-lg"
+                >Living Costs:</span
+              >
+              USD
+              <span class="font-semibold text-lg">10,000–15,000/year</span>
+              depending on city and lifestyle.
             </li>
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900 text-lg"
                 >Average Total (Study + Living):</span
               >
               USD
-              <span class="font-semibold text-lg">20,000–75,000/year</span> depending on
-              type of university and location.
+              <span class="font-semibold text-lg">20,000–75,000/year</span>
+              depending on type of university and location.
             </li>
           </ul>
 
@@ -54,8 +59,10 @@
             <span class="text-orange-600 font-medium text-lg"
               >Grace International India</span
             >
-            <span class="text-lg"> provides guidance on budgeting, financial aid, and managing expenses
-            for Indian students in the USA.</span>
+            <span class="text-lg">
+              provides guidance on budgeting, financial aid, and managing
+              expenses for Indian students in the USA.</span
+            >
           </p>
 
           <h2 class="text-3xl font-bold text-gray-900 mb-6 text-lg">
@@ -64,10 +71,12 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900  text-lg">On-Campus Work:</span>
+              <span class="font-semibold text-gray-900 text-lg"
+                >On-Campus Work:</span
+              >
               Indian students on F-1 visas can work part-time
-              <span class="font-semibold text-lg">up to 20 hours per week</span> during
-              semesters; full-time during breaks.
+              <span class="font-semibold text-lg">up to 20 hours per week</span>
+              during semesters; full-time during breaks.
             </li>
             <li class="text-gray-700 text-lg">
               <span class="font-semibold text-gray-900 text-lg"
@@ -93,8 +102,11 @@
             <span class="font-semibold text-gray-900 text-lg"
               >Career & Visa Pathways:</span
             >
-           <span class="text-lg"> Indian students can explore H-1B work visas and other
-            employment-based immigration options after completing their studies.</span>
+            <span class="text-lg">
+              Indian students can explore H-1B work visas and other
+              employment-based immigration options after completing their
+              studies.</span
+            >
           </p>
         </div>
 

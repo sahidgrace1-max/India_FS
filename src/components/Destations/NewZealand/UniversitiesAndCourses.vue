@@ -68,7 +68,7 @@
               – For outstanding students from Commonwealth countries.
             </li>
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold  text-lg text-gray-900"
+              <span class="font-semibold text-lg text-gray-900"
                 >University Merit Scholarships</span
               >
               – Offered by universities like Auckland, Waikato, and Canterbury.

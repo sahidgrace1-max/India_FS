@@ -129,8 +129,11 @@
           <p
             class="text-gray-600 text-base italic opacity-0 animate-fadeUp delay-2000"
           >
-           <span class="text-lg"> Tip: Strong IELTS or equivalent English scores significantly improve
-            admission and scholarship chances in UK universities.</span>
+            <span class="text-lg">
+              Tip: Strong IELTS or equivalent English scores significantly
+              improve admission and scholarship chances in UK
+              universities.</span
+            >
           </p>
         </div>
       </div>

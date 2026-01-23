@@ -68,7 +68,7 @@
               <span class="font-semibold text-gray-900 text-lg"
                 >University Residential Colleges:</span
               >
-              AUD <span class="font-semibold text-lg ">190–280/week</span>
+              AUD <span class="font-semibold text-lg">190–280/week</span>
             </li>
             <li class="text-gray-700 text-sm">
               <span class="font-semibold text-gray-900 text-lg"
@@ -90,8 +90,11 @@
 
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg">Part-Time Work:</span>
-              Up to <span class="font-semibold text-lg">40 hours per fortnight</span>
+              <span class="font-semibold text-gray-900 text-lg"
+                >Part-Time Work:</span
+              >
+              Up to
+              <span class="font-semibold text-lg">40 hours per fortnight</span>
               during semesters and full-time during scheduled breaks.
             </li>
             <li class="text-gray-700 text-sm">
