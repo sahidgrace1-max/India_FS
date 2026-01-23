@@ -1,18 +1,11 @@
 <template>
   <div
-    class="relative w-full h-[180px] flex items-center justify-center overflow-hidden bg-cover bg-center"
+    class="relative w-full h-[300px] flex items-center justify-center overflow-hidden bg-cover bg-center"
     :style="`background-image: url('${bgUrl}')`"
-  >
-    <div class="absolute inset-0 bg-black/45 z-10"></div>
-    <h1
-      class="relative z-20 text-white text-3xl md:text-4xl font-bold text-center"
-    >
-      IELTS Test Preparation
-    </h1>
-  </div>
+  ></div>
 </template>
 
 <script setup>
-import bgImg from "@/assets/image.png";
+import bgImg from "@/assets/Ielts_test.png";
 const bgUrl = bgImg;
 </script>
