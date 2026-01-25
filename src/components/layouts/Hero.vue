@@ -28,16 +28,24 @@
     <div
       class="absolute z-10 top-1/2 left-0 transform -translate-y-1/2 px-4 sm:px-6 md:px-10 lg:px-20 max-w-full lg:max-w-3xl text-white"
     >
-      <!-- Main Heading: Full width, left aligned -->
+      <!-- Main Heading: Full width with slide animation -->
       <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight"
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight animate-slide-in-right whitespace-nowrap"
+        style="
+          font-family: &quot;Poppins&quot;, &quot;Inter&quot;, sans-serif;
+          letter-spacing: 0.02em;
+        "
       >
-        Welcome TO Grace International
+        Welcome to Grace International
       </h1>
 
-      <!-- Subheading: Branch below heading -->
+      <!-- Subheading: Branch below heading with slide animation -->
       <p
-        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-green-400"
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-green-400 animate-slide-in-right-delayed"
+        style="
+          font-family: &quot;Poppins&quot;, &quot;Inter&quot;, sans-serif;
+          letter-spacing: 0.05em;
+        "
       >
         {{ selectedBranch }}
       </p>
@@ -76,6 +84,27 @@ const { selectedBranch } = useBranchStore();
 }
 .animate-gradient-shift {
   animation: gradientShift 8s ease-in-out infinite;
+}
+
+/* ---------------- TEXT ANIMATIONS (Right to Left) ---------------- */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-slide-in-right-delayed {
+  animation: slideInRight 1s ease-out 0.3s forwards;
+  opacity: 0;
 }
 
 /* ---------------- PARTICLES ---------------- */
