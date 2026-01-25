@@ -14,10 +14,13 @@
       class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent animate-gradient-shift"
     ></div>
 
-    <!-- Floating Particles (Optional) -->
-    <div class="absolute inset-0 pointer-events-none">
-      <span v-for="i in 6" :key="i" :class="`particle particle-${i}`"></span>
-    </div>
+    <!-- tsParticles -->
+    <vue-particles
+      id="tsparticles"
+      class="absolute inset-0 pointer-events-none"
+      @particles-loaded="particlesLoaded"
+      :options="particlesOptions"
+    />
 
     <!-- Bottom Border -->
     <div
@@ -69,6 +72,78 @@
 <script setup>
 import { useBranchStore } from "@/stores/branchStore";
 const { selectedBranch } = useBranchStore();
+
+const particlesLoaded = async (container) => {
+  console.log("Particles container loaded", container);
+};
+
+const particlesOptions = {
+  background: {
+    color: {
+      value: "transparent",
+    },
+  },
+  fpsLimit: 60,
+  interactivity: {
+    events: {
+      onClick: {
+        enable: true,
+        mode: "push",
+      },
+      onHover: {
+        enable: true,
+        mode: "repulse",
+      },
+    },
+    modes: {
+      push: {
+        quantity: 4,
+      },
+      repulse: {
+        distance: 100,
+        duration: 0.4,
+      },
+    },
+  },
+  particles: {
+    color: {
+      value: "#4ade80",
+    },
+    links: {
+      color: "#4ade80",
+      distance: 150,
+      enable: true,
+      opacity: 0.3,
+      width: 1,
+    },
+    move: {
+      direction: "none",
+      enable: true,
+      outModes: {
+        default: "bounce",
+      },
+      random: false,
+      speed: 2,
+      straight: false,
+    },
+    number: {
+      density: {
+        enable: true,
+      },
+      value: 50,
+    },
+    opacity: {
+      value: 0.5,
+    },
+    shape: {
+      type: "circle",
+    },
+    size: {
+      value: { min: 1, max: 3 },
+    },
+  },
+  detectRetina: true,
+};
 </script>
 
 <style scoped>
@@ -107,61 +182,9 @@ const { selectedBranch } = useBranchStore();
   opacity: 0;
 }
 
-/* ---------------- PARTICLES ---------------- */
-.particle {
-  position: absolute;
-  background: rgba(74, 222, 128, 0.4);
-  border-radius: 9999px;
-}
-
-.particle-1 {
-  width: 8px;
-  height: 8px;
-  top: 20%;
-  left: 10%;
-  animation: float 12s infinite;
-}
-.particle-2 {
-  width: 12px;
-  height: 12px;
-  top: 50%;
-  left: 80%;
-  animation: float 16s infinite;
-}
-.particle-3 {
-  width: 6px;
-  height: 6px;
-  top: 40%;
-  left: 30%;
-  animation: float 10s infinite;
-}
-.particle-4 {
-  width: 10px;
-  height: 10px;
-  top: 70%;
-  left: 60%;
-  animation: float 18s infinite;
-}
-.particle-5 {
-  width: 8px;
-  height: 8px;
-  top: 30%;
-  left: 70%;
-  animation: float 14s infinite;
-}
-.particle-6 {
-  width: 14px;
-  height: 14px;
-  top: 80%;
-  left: 20%;
-  animation: float 20s infinite;
-}
-
-@keyframes float {
-  50% {
-    transform: translate(40px, -60px);
-    opacity: 0.8;
-  }
+/* ---------------- PARTICLES (tsParticles) ---------------- */
+#tsparticles {
+  z-index: 1;
 }
 
 /* ---------------- STATS ---------------- */

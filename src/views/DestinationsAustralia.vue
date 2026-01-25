@@ -1,12 +1,57 @@
 <template>
-  <NavbarGrace />
-  <Hero />
-  <Intro />
-  <UniversitiesAndCourses />
-  <Cost_study />
-  <ApplicationStudent />
-  <faq />
-  <fotter />
+  <div class="min-h-screen bg-gray-50 relative overflow-x-hidden">
+    <NavbarGrace />
+
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 50 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+    >
+      <Hero />
+    </div>
+
+    <div
+      v-motion
+      :initial="{ opacity: 0, x: -60 }"
+      :visible-once="{ opacity: 1, x: 0, transition: { duration: 800 } }"
+    >
+      <Intro />
+    </div>
+
+    <div
+      v-motion
+      :initial="{ opacity: 0, scale: 0.9 }"
+      :visible-once="{ opacity: 1, scale: 1, transition: { duration: 800 } }"
+    >
+      <UniversitiesAndCourses />
+    </div>
+
+    <div
+      v-motion
+      :initial="{ opacity: 0, x: 60 }"
+      :visible-once="{ opacity: 1, x: 0, transition: { duration: 800 } }"
+    >
+      <Cost_study />
+    </div>
+
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 40 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+    >
+      <ApplicationStudent />
+    </div>
+
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 40 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+    >
+      <faq />
+    </div>
+
+    <fotter />
+  </div>
 </template>
 
 <script setup>
