@@ -1,19 +1,11 @@
 <template>
-  <section
-    class="relative w-full min-h-screen overflow-hidden bg-gray-100"
-  >
+  <section class="relative w-full min-h-screen overflow-hidden bg-gray-100">
     <!-- Background Image -->
     <picture class="absolute inset-0 w-full h-full">
       <!-- Mobile: Smaller, optimized image -->
-      <source 
-        media="(max-width: 640px)" 
-        srcset="@/assets/HeroM.jpeg"
-      />
+      <source media="(max-width: 640px)" srcset="@/assets/HeroM.jpeg" />
       <!-- Tablet: Medium size image -->
-      <source 
-        media="(max-width: 1024px)" 
-        srcset="@/assets/Hero-Mobile.jpeg"
-      />
+      <source media="(max-width: 1024px)" srcset="@/assets/Hero-Mobile.jpeg" />
       <!-- Desktop: Full size image -->
       <img
         src="@/assets/Hero.jpeg"
@@ -41,35 +33,26 @@
 
     <!-- Content -->
     <div
-      class="absolute z-10 
-             top-1/2 -translate-y-1/2
-             left-1/2 -translate-x-1/2 lg:left-8 xl:left-16 2xl:left-24 lg:translate-x-0
-             w-full
-             px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
-             text-center lg:text-left
-             max-w-full lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl"
+      class="absolute z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 lg:left-8 xl:left-16 2xl:left-24 lg:translate-x-0 w-full px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center lg:text-left max-w-full lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl"
     >
       <!-- Heading -->
       <h1
-        class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl
-               font-bold 
-               mb-3 sm:mb-4 md:mb-5 lg:mb-6
-               leading-tight
-               animate-slide-in-right
-               text-white
-               drop-shadow-lg"
-        style="font-family: 'Poppins', 'Inter', sans-serif; letter-spacing: 0.02em;"
+        class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 leading-tight animate-slide-in-right text-white drop-shadow-lg"
+        style="
+          font-family: &quot;Poppins&quot;, &quot;Inter&quot;, sans-serif;
+          letter-spacing: 0.02em;
+        "
       >
         Welcome to Grace International
       </h1>
 
       <!-- Subheading -->
       <p
-        class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl
-               font-bold text-green-400
-               animate-slide-in-right-delayed
-               drop-shadow-lg"
-        style="font-family: 'Poppins', 'Inter', sans-serif; letter-spacing: 0.05em;"
+        class="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-green-400 animate-slide-in-right-delayed drop-shadow-lg"
+        style="
+          font-family: &quot;Poppins&quot;, &quot;Inter&quot;, sans-serif;
+          letter-spacing: 0.05em;
+        "
       >
         {{ selectedBranch }}
       </p>
@@ -77,14 +60,10 @@
 
     <!-- Scroll Indicator -->
     <div
-      class="absolute bottom-6 sm:bottom-8 md:bottom-10 
-             left-1/2 -translate-x-1/2
-             hidden sm:block animate-bounce-slow z-20"
+      class="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 hidden sm:block animate-bounce-slow z-20"
     >
       <div
-        class="w-6 h-10 sm:w-8 sm:h-12 
-               border-2 border-white/60 rounded-full 
-               flex justify-center pt-2"
+        class="w-6 h-10 sm:w-8 sm:h-12 border-2 border-white/60 rounded-full flex justify-center pt-2"
       >
         <span
           class="w-1 h-2 sm:h-3 bg-white rounded-full animate-scroll-indicator"
@@ -157,8 +136,13 @@ section {
 
 /* ---------------- OVERLAY ---------------- */
 @keyframes gradientShift {
-  0%, 100% { opacity: 0.7; }
-  50% { opacity: 0.9; }
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.9;
+  }
 }
 .animate-gradient-shift {
   animation: gradientShift 8s ease-in-out infinite;
@@ -187,7 +171,8 @@ section {
 
 /* ---------------- SCROLL INDICATOR ---------------- */
 @keyframes bounceScroll {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
