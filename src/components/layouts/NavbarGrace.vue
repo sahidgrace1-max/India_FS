@@ -78,11 +78,6 @@
             />
           </svg>
         </a>
-        <button
-          class="bg-blue-900 font-bold px-4 py-1.5 rounded-none ml-0 md:ml-2 mt-2 md:mt-0 w-full md:w-auto"
-        >
-          Schedule an Appointment
-        </button>
       </div>
     </div>
   </div>
