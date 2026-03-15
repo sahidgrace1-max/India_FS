@@ -72,14 +72,14 @@
       </div>
 
       <!-- Offices 1 -->
-      <div class="space-y-4 fade-in-up" style="animation-delay: 0.2s">
-        <div class="office-card">
+      <div class="space-y-4 fade-in-up w-full" style="animation-delay: 0.2s">
+        <div class="office-card w-full">
           <h3 class="font-semibold text-green-400 mb-2">HEAD OFFICE</h3>
           <p class="text-sm text-gray-300 mb-1">
             <i class="fas fa-map-marker-alt text-green-400 mr-2"></i>
             New Baneshwor, Kathmandu, Nepal
           </p>
-          <p class="text-sm text-gray-300 mb-1">
+          <p class="text-sm text-gray-300 mb-1 break-all">
             <i class="fas fa-envelope text-green-400 mr-2"></i>
             enquiry@grace.edu.np
           </p>
@@ -91,10 +91,10 @@
       </div>
 
       <!-- Offices 2 -->
-      <div class="space-y-4 fade-in-up" style="animation-delay: 0.3s">
-        <div class="office-card">
+      <div class="space-y-4 fade-in-up w-full" style="animation-delay: 0.3s">
+        <div class="office-card w-full">
           <h3 class="font-semibold text-green-400 mb-2">INDIA OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1">
+          <p class="text-sm text-gray-300 mb-1 break-all">
             <i class="fas fa-envelope text-green-400 mr-2"></i>
             enquiry.in@graceintlgroup.com
           </p>
@@ -103,9 +103,9 @@
             +91-011-41070020
           </p>
         </div>
-        <div class="office-card">
+        <div class="office-card w-full">
           <h3 class="font-semibold text-green-400 mb-2">KENYA OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1">
+          <p class="text-sm text-gray-300 mb-1 break-all">
             <i class="fas fa-envelope text-green-400 mr-2"></i>
             admission.ke@graceintlgroup.com
           </p>
@@ -114,9 +114,9 @@
             +254 719-231 999
           </p>
         </div>
-        <div class="office-card">
+        <div class="office-card w-full" style="margin-bottom: 0;">
           <h3 class="font-semibold text-green-400 mb-2">BANGLADESH OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1">
+          <p class="text-sm text-gray-300 mb-1 break-all">
             <i class="fas fa-envelope text-green-400 mr-2"></i>
             director.bangladesh@graceintlgroup.com
           </p>
@@ -217,24 +217,12 @@ export default {
   opacity: 0;
 }
 
-.link-item:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.link-item:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.link-item:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.link-item:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.link-item:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.link-item:nth-child(6) {
-  animation-delay: 0.6s;
-}
+.link-item:nth-child(1) { animation-delay: 0.1s; }
+.link-item:nth-child(2) { animation-delay: 0.2s; }
+.link-item:nth-child(3) { animation-delay: 0.3s; }
+.link-item:nth-child(4) { animation-delay: 0.4s; }
+.link-item:nth-child(5) { animation-delay: 0.5s; }
+.link-item:nth-child(6) { animation-delay: 0.6s; }
 
 @keyframes fadeInLeft {
   from {
@@ -254,6 +242,10 @@ export default {
   border-radius: 8px;
   border: 1px solid rgba(16, 185, 129, 0.1);
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .office-card:hover {
@@ -261,6 +253,11 @@ export default {
   border-color: rgba(16, 185, 129, 0.3);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+.office-card:last-child {
+  margin-bottom: 0;
+  padding-bottom: 16px;
 }
 
 /* Social icons */
@@ -287,18 +284,9 @@ export default {
 
 /* Heartbeat animation */
 @keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  10%,
-  30% {
-    transform: scale(1.1);
-  }
-  20%,
-  40% {
-    transform: scale(1.15);
-  }
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(1.1); }
+  20%, 40% { transform: scale(1.15); }
 }
 
 .heartbeat {
@@ -332,11 +320,7 @@ export default {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(16, 185, 129, 0.1) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
   top: -100px;
   right: -100px;
   animation: float 20s ease-in-out infinite;
@@ -347,24 +331,15 @@ export default {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(52, 211, 153, 0.08) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
   bottom: -150px;
   left: -150px;
   animation: float 25s ease-in-out infinite reverse;
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(30px, -30px) scale(1.1);
-  }
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.1); }
 }
 
 /* Responsive adjustments */

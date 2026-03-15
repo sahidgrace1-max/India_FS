@@ -2,9 +2,6 @@
   <div class="w-full bg-white py-12">
     <div class="max-w-6xl mx-auto px-4 py-12">
       <div class="text-center mx-auto pb-10" style="max-width: 800px">
-        <h4 class="text-blue-600 font-semibold mb-2">
-          {{ selectedBranch }} Office Advantages
-        </h4>
         <h1 class="text-3xl md:text-5xl font-bold mb-2">
           Why Choose Grace International {{ selectedBranch }}
         </h1>
