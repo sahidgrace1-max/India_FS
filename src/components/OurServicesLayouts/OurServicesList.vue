@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import image from "@/assets/image.png";
+import abroad from "@/assets/abroad.png";
 import lib from "@/assets/Library.png";
 import guide from "@/assets/Guidance.png";
 import advise from "@/assets/advising.png";
@@ -58,7 +58,7 @@ import news from "@/assets/news.jpg";
 const serviceData = [
   {
     title: "Abroad Studies",
-    img: image,
+    img: abroad,
     desc: `Since our establishment in 2006, we have been serving as a reliable bridge connecting students of Nepal with reputable education providers across the globe. Our mission has always been to deliver quality educational services to aspiring graduates who wish to pursue their studies abroad. Built on strong values of conviction, reliability, and unwavering commitment, we continuously strive to support students at every step of their academic journey.
 
 Over the years, we have successfully guided countless students toward suitable and rewarding educational destinations that align with their academic goals, career aspirations, and personal interests. Our top-notch services, transparent and honest counseling, and warm, student-friendly environment have played a vital role in building long-term relationships with students and their families. As a result, we have earned significant respect, credibility, and trust within the education consultancy industry, and we remain dedicated to upholding these standards in everything we do.
