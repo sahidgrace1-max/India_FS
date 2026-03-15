@@ -107,14 +107,14 @@ const teamMembers = {
       position: "GS & Visa Officer",
       description:
         "Specializing in English Proficiency and course guidance for undergraduate and postgraduate programs.",
-      image: new URL("@/assets/Deepa.jpeg", import.meta.url).href,
+      image: new URL("@/assets/Deepa1.png", import.meta.url).href,
     },
     {
       name: "Vandana Gupta",
       position: "Sr. Counsellor",
       description:
         "Expert in Australian migration law and visa processing with focus on skilled migration pathways.",
-      image: new URL("@/assets/Vandana.jpeg", import.meta.url).href,
+      image: new URL("@/assets/Vandana1.png", import.meta.url).href,
       linkedin: "#",
       facebook: "#",
     },
@@ -132,7 +132,7 @@ const teamMembers = {
       position: "Counsellor",
       description:
         "Helping students achieve their English proficiency goals with personalized coaching and test strategies.",
-      image: new URL("@/assets/Himani.jpeg", import.meta.url).href,
+      image: new URL("@/assets/Himani1.png", import.meta.url).href,
       linkedin: "#",
       facebook: "#",
     },
