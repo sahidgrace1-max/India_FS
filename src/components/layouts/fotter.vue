@@ -16,7 +16,7 @@
         <img
           src="@/assets/logo.png"
           alt="Grace International Logo"
-          class="w-44 mb-2 hover-lift"
+          class="w-24 sm:w-28 md:w-32 lg:w-36 mb-2 hover-lift"
         />
         <p class="text-sm text-gray-400 leading-relaxed">
           Your gateway to global education excellence
@@ -88,21 +88,6 @@
             (01) 4796880 / (01)4796881
           </p>
         </div>
-        <div class="office-card">
-          <h3 class="font-semibold text-green-400 mb-2">CORPORATE OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1">
-            <i class="fas fa-map-marker-alt text-green-400 mr-2"></i>
-            16 Newport Avenue, Williams Landing, VIC 3027
-          </p>
-          <p class="text-sm text-gray-300 mb-1">
-            <i class="fas fa-envelope text-green-400 mr-2"></i>
-            business@graceintlgroup.com
-          </p>
-          <p class="text-sm text-gray-300">
-            <i class="fas fa-phone text-green-400 mr-2"></i>
-            +61 (03) 7001 9370
-          </p>
-        </div>
       </div>
 
       <!-- Offices 2 -->
@@ -115,7 +100,7 @@
           </p>
           <p class="text-sm text-gray-300">
             <i class="fas fa-phone text-green-400 mr-2"></i>
-            +91-(0)11-41070020
+            +91-011-41070020
           </p>
         </div>
         <div class="office-card">
@@ -150,16 +135,6 @@
       >
         <span class="text-sm mb-4 md:mb-0 text-gray-400">
           Copyright © 2023. Grace International. All Rights Reserved.
-          <span class="mx-1"
-            >Developed with
-            <span class="text-red-500 heartbeat">♥</span> by</span
-          >
-          <a
-            href="#"
-            class="text-green-400 hover:text-green-300 transition-colors underline-hover"
-          >
-            Technorio
-          </a>
         </span>
       </div>
     </div>

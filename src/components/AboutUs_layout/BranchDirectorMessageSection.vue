@@ -64,24 +64,17 @@ const { selectedBranch } = useBranchStore();
 
 const directorData = {
   Delhi: {
-    name: "Rajesh Kumar Sharma",
-    image: new URL("@/assets/image1.png", import.meta.url).href,
+    name: "Mayank Srivastava",
+    image: new URL("@/assets/Mayank.png", import.meta.url).href,
     message: `Welcome to Grace International Delhi! As the Director of our Delhi operations, I am proud to serve the vibrant student community of North India. Delhi, being the educational hub of India with prestigious institutions like Delhi University, JNU, and numerous other colleges, produces some of the brightest minds in the country.<br /><br />
 Our Delhi office understands the aspirations of students from Delhi, NCR, Punjab, Haryana, and surrounding regions. We recognize the unique challenges and opportunities that North Indian students face when planning their international education journey.<br /><br />
 With our prime location in Connaught Place and excellent metro connectivity, we ensure that students from all parts of NCR can easily access our services. Our team speaks Hindi, English, and Punjabi, making communication comfortable for all our clients.<br /><br />
 Let us help you transform your dreams into reality. Your success is our mission.`,
   },
-  Mumbai: {
-    name: "Vikram Patel",
-    image: new URL("@/assets/image1.png", import.meta.url).href,
-    message: `Welcome to Grace International Mumbai! As the Director of our Mumbai office, I am honored to guide students from the financial capital of India towards their international education dreams. Mumbai, with its cosmopolitan culture and world-class educational institutions, produces ambitious and globally-minded students.<br /><br />
-Our Mumbai office specializes in understanding the unique aspirations of students from Maharashtra and Western India. We pride ourselves on our strong network with universities worldwide and our ability to match students with programs that align with their career goals.<br /><br />
-Located in the heart of Mumbai's business district, our office is easily accessible and staffed with multilingual counselors who understand the local culture and education system. We provide personalized guidance every step of the way.<br /><br />
-Your journey to global excellence starts here. Let's make it happen together.`,
-  },
-  Bangalore: {
+
+Gurugram: {
     name: "Suresh Reddy",
-    image: new URL("@/assets/image1.png", import.meta.url).href,
+    image: new URL("@/assets/Mayank.png", import.meta.url).href,
     message: `Welcome to Grace International Bangalore! As the Director of our Bangalore operations, I am excited to serve students from India's technology capital. Bangalore, with its cutting-edge IT industry and premier educational institutions like IISc and IIMs, creates an environment of innovation and academic excellence.<br /><br />
 Our Bangalore office specializes in guiding tech-savvy students who aspire to pursue STEM programs abroad. We understand the unique requirements of engineering, computer science, and technology students and have strong partnerships with universities that excel in these fields.<br /><br />
 With deep connections to Bangalore's startup ecosystem and IT industry, we provide not just educational guidance but also career pathway insights. Our team of experienced counselors is dedicated to helping you achieve your international education goals.<br /><br />

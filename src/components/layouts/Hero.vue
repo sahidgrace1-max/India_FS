@@ -226,9 +226,11 @@ section {
 /* Mobile: Focus on center or portrait crop */
 @media (max-width: 640px) {
   .hero-img {
+    object-fit: contain !important;
     object-position: center center;
     max-height: 100vh;
     max-height: 100dvh; /* Dynamic viewport height */
+    background-color: #1f2937; /* Dark background for letterboxing */
     /* Alternative positions if your image has a specific subject:
        object-position: center top;
        object-position: 60% center; 

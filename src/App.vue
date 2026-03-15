@@ -1,8 +1,11 @@
 <template>
   <router-view />
+  <WhatsAppButton />
 </template>
 
-<script setup></script>
+<script setup>
+import WhatsAppButton from "@/components/layouts/WhatsAppButton.vue";
+</script>
 
 <style>
 #app {

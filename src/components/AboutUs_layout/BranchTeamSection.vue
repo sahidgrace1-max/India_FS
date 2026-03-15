@@ -20,39 +20,23 @@
         </p>
       </div>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 font-sans"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 font-sans"
       >
         <!-- Team Members -->
         <div
           v-for="member in teamMembers[selectedBranch]"
           :key="member.name"
-          class="bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col h-full border-t-8 border-blue-400 font-sans"
+          class="bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col border-t-8 border-blue-400 font-sans"
         >
-          <div class="relative overflow-hidden rounded-t-3xl font-sans">
+          <div class="relative overflow-hidden rounded-t-3xl font-sans h-64 flex items-center justify-center bg-gray-100">
             <img
               :src="member.image"
-              class="w-full h-60 object-cover grayscale-0 hover:grayscale transition duration-300"
+              class="w-full h-full object-cover grayscale-0 hover:grayscale transition duration-300"
               :alt="member.name"
             />
-            <div class="absolute bottom-3 right-3 flex gap-2">
-              <a
-                :href="member.linkedin || '#'"
-                target="_blank"
-                title="LinkedIn"
-                class="bg-white rounded-full p-2 shadow hover:bg-blue-100 hover:scale-110 transition"
-                ><i class="fab fa-linkedin-in text-blue-600"></i
-              ></a>
-              <a
-                :href="member.facebook || '#'"
-                target="_blank"
-                title="Facebook"
-                class="bg-white rounded-full p-2 shadow hover:bg-blue-100 hover:scale-110 transition"
-                ><i class="fab fa-facebook-f text-blue-600"></i
-              ></a>
-            </div>
           </div>
           <div
-            class="flex-1 flex flex-col items-center text-center p-8 font-sans"
+            class="flex-1 flex flex-col items-center text-center p-6 font-sans"
           >
             <h4 class="font-extrabold text-xl mb-1 text-blue-800 font-sans">
               {{ member.name }}
@@ -60,11 +44,6 @@
             <span class="text-blue-600 text-sm font-semibold mb-1 font-sans">{{
               member.position
             }}</span>
-            <div
-              class="bg-gradient-to-r from-blue-200 to-blue-400 text-blue-900 rounded-full px-4 py-1 text-xs font-bold mb-3 shadow font-sans"
-            >
-              {{ member.badge }}
-            </div>
             <p class="text-gray-700 text-base font-sans">
               {{ member.description }}
             </p>
@@ -85,42 +64,34 @@ const { selectedBranch } = useBranchStore();
 const teamMembers = {
   Delhi: [
     {
-      name: "Rajesh Kumar Sharma",
-      position: "Director - Delhi Office",
-      badge: "15+ Years Experience",
+      name: "Deepak Kumar",
+      position: "GS Cum Visa Office",
       description:
         "Leading the Delhi operations with expertise in Australian education and migration services for North Indian students.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
+      image: new URL("@/assets/Gs.jpg", import.meta.url).href,
     },
     {
-      name: "Priya Gupta",
-      position: "Senior Education Counselor",
-      badge: "QEAC Certified",
+      name: "Deepa Rani",
+      position: "GS & Visa Officer",
       description:
-        "Specializing in university selection and course guidance for undergraduate and postgraduate programs.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
+        "Specializing in English Proficiency and course guidance for undergraduate and postgraduate programs.",
+      image: new URL("@/assets/Deepa_Rani.jpg", import.meta.url).href,
     },
     {
-      name: "Amit Singh",
-      position: "Migration Consultant",
-      badge: "MARA Registered",
+      name: "Vandana Gupta",
+      position: "Sr. Counsellor",
       description:
         "Expert in Australian migration law and visa processing with focus on skilled migration pathways.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
+      image: new URL("@/assets/Vandana.jpg", import.meta.url).href,
       linkedin: "#",
       facebook: "#",
     },
     {
-      name: "Neha Sharma",
-      position: "IELTS/PTE Coordinator",
-      badge: "Certified Trainer",
+      name: "Nidhi Mathur",
+      position: "English Proficiency Exam Expert",
       description:
         "Helping students achieve their English proficiency goals with personalized coaching and test strategies.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
+      image: new URL("@/assets/English_Proficiency_Exam_Expert.jpg", import.meta.url).href,
       linkedin: "#",
       facebook: "#",
     },

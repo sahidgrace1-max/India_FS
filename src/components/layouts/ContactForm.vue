@@ -4,13 +4,13 @@
   >
     <!-- Left Side: Image and Text -->
     <div
-      class="w-full lg:w-1/2 relative overflow-hidden flex items-center justify-end pr-12 bg-gradient-to-br from-green-50 to-white"
+      class="w-full lg:w-1/2 relative overflow-hidden flex items-center justify-center lg:justify-end px-4 lg:pr-12 bg-gradient-to-br from-green-50 to-white"
     >
-      <div class="image-container animate-float">
+      <div class="image-container animate-float w-full max-w-md lg:max-w-none">
         <img
           src="@/assets/image1.png"
           alt="Contact Us"
-          class="max-h-[1400px] w-auto object-contain my-8 ml-0 mr-0"
+          class="w-full h-auto max-h-[400px] lg:max-h-[1400px] object-contain my-8"
         />
       </div>
     </div>

@@ -37,7 +37,7 @@ function getInitialBranch() {
     return urlCity.charAt(0).toUpperCase() + urlCity.slice(1).toLowerCase();
   }
   return (
-    localStorage.getItem("selectedBranch") || getCookie("user_city") || "Delhi"
+    localStorage.getItem("selectedBranch") || getCookie("user_city") || "India"
   );
 }
 
