@@ -256,12 +256,11 @@ export default {
         };
 
         await emailjs.send(
-          "service_vjgpkda", // Service ID
-          "template_empjinn", // Template ID
+          "service_ca8xo8b", // Service ID
+          "template_5231bmd", // Template ID
           templateParams,
-          "qgG1kPHho3fMoWiW9", // Public Key
+          "Yf9wk2j84VqQVZcGq", // Public Key
         );
-
         successMessage.value =
           "Form submitted successfully! Our team will contact you soon.";
 

@@ -242,10 +242,10 @@ const handleSubmit = async () => {
     console.log("Template Params:", templateParams);
 
     const response = await emailjs.send(
-      "service_vjgpkda", // your EmailJS service ID
-      "template_k6505oi", // your EmailJS template ID
+      "service_ca8xo8b", // your EmailJS service ID
+      "template_hw51c7n", // your EmailJS template ID
       templateParams,
-      "qgG1kPHho3fMoWiW9", // your EmailJS user/public key
+      "Yf9wk2j84VqQVZcGq", // your EmailJS user/public key
     );
 
     console.log("EmailJS response:", response);
