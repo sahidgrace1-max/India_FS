@@ -4,7 +4,7 @@
       <h1
         class="text-3xl md:text-4xl font-extrabold text-blue-800 text-center mb-12 tracking-widest drop-shadow-2xl uppercase"
       >
-        {{ selectedBranch.toUpperCase() }} OFFICE DIRECTOR'S MESSAGE
+         DIRECTOR'S MESSAGE
       </h1>
       <div
         class="flex flex-col md:flex-row items-stretch justify-center gap-10 animate-fade-in h-full"
