@@ -66,10 +66,14 @@ const directorData = {
   Delhi: {
     name: "Mayank Srivastava",
     image: new URL("@/assets/Dir.jpeg", import.meta.url).href,
-    message: `Welcome to Grace International Delhi! As the Director of our Delhi operations, I am proud to serve the vibrant student community of North India. Delhi, being the educational hub of India with prestigious institutions like Delhi University, JNU, and numerous other colleges, produces some of the brightest minds in the country.<br /><br />
-Our Delhi office understands the aspirations of students from Delhi, NCR, Punjab, Haryana, and surrounding regions. We recognize the unique challenges and opportunities that North Indian students face when planning their international education journey.<br /><br />
-With our prime location in Connaught Place and excellent metro connectivity, we ensure that students from all parts of NCR can easily access our services. Our team speaks Hindi, English, and Punjabi, making communication comfortable for all our clients.<br /><br />
-Let us help you transform your dreams into reality. Your success is our mission.`,
+    message: `As the Director of our India operations, it is both an honor and a privilege to support the ambitious and dynamic student community of India.
+
+At Grace International, we deeply understand the aspirations of students from Delhi, NCR, Punjab, Haryana, and neighboring regions. We are equally aware of the unique challenges they encounter while planning their global education journey. Our mission is to provide personalized guidance, reliable support, and expert advice at every step.
+
+Our approach is built on personalized mentorship, strategic planning, and a deep understanding of global education pathways. Located in the heart of Connaught Place, our office offers both accessibility and a professional environment designed to support every student’s journey.
+
+
+We are committed to turning your international education dreams into reality. Your success is not just our goal—it is our purpose.`,
   },
 
 Gurugram: {

@@ -106,14 +106,14 @@ const teamMembers = {
       name: "Deepa Rani",
       position: "GS & Visa Officer",
       description:
-        "Specializing in English Proficiency and course guidance for undergraduate and postgraduate programs.",
+        "GS & Visa (Australia, Canada, NZ, US, UK) Counselor at Grace International. I have been working in the same field from the last 9 years. I assist students with course selection, university applications, and the overall admission process.",
       image: new URL("@/assets/Deepa1.png", import.meta.url).href,
     },
     {
       name: "Vandana Gupta",
       position: "Sr. Counsellor",
       description:
-        "Expert in Australian migration law and visa processing with focus on skilled migration pathways.",
+        "Dedicated Senior Counsellor with 4 years of experience, passionate about guiding students from career counselling and university selection through to applications and admissions at top international universities.",
       image: new URL("@/assets/Vandana1.png", import.meta.url).href,
       linkedin: "#",
       facebook: "#",
@@ -131,8 +131,17 @@ const teamMembers = {
       name: "Himani Sharma",
       position: "Sr. Counsellor",
       description:
-        "Helping students achieve their English proficiency goals with personalized coaching and test strategies.",
+        "Dedicated Senior Counsellor with 6 years of experience, passionate about guiding students from career counselling and university selection through to applications and admissions at top international universities.",
       image: new URL("@/assets/Himani1.png", import.meta.url).href,
+      linkedin: "#",
+      facebook: "#",
+    },
+    {
+      name: "Karishma Singh",
+      position: "Sr. Counsellor",
+      description:
+        "Certified education counsellor with 7 years of experience specialising in Australia, guiding students from career counselling and university selection through to applications and visa assistance at top Australian universities.",
+      image: new URL("@/assets/Karishma.png", import.meta.url).href,
       linkedin: "#",
       facebook: "#",
     },
