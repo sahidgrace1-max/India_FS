@@ -129,7 +129,7 @@ const teamMembers = {
     },*/
     {
       name: "Himani Sharma",
-      position: "Counsellor",
+      position: "Sr. Counsellor",
       description:
         "Helping students achieve their English proficiency goals with personalized coaching and test strategies.",
       image: new URL("@/assets/Himani1.png", import.meta.url).href,

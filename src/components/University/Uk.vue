@@ -88,7 +88,9 @@ const universities = [
     img: birminghamcity,
     link: "https://www.bcu.ac.uk/",
   },
-  { name: "BPP University", img: bpp, link: "https://www.bpp.com/" },
+  { name: "BPP University",
+    img: bpp,
+    link: "https://www.bpp.com/" },
   {
     name: "University of Bradford",
     img: bradford,
