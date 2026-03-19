@@ -4,10 +4,10 @@
       <div class="flex flex-col lg:flex-row gap-10 items-center">
         <div class="w-full lg:w-2/5 flex justify-center">
           <div
-            class="bg-white rounded-t-lg overflow-hidden shadow-md w-full max-w-xs"
+            class="w-full max-w-xs"
           >
             <img
-              src="@/assets/logo.png"
+              src="@/assets/G.png"
               class="w-full object-contain"
               alt="Grace International"
             />
