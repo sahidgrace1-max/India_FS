@@ -66,15 +66,12 @@ const directorData = {
   Delhi: {
     name: "Mayank Srivastava",
     image: new URL("@/assets/Dir.jpeg", import.meta.url).href,
-    message: `As the Director of our India operations, it is both an honor and a privilege to support the ambitious and dynamic student community of India.
-
-At Grace International, we deeply understand the aspirations of students from Delhi, NCR, Punjab, Haryana, and neighboring regions. We are equally aware of the unique challenges they encounter while planning their global education journey. Our mission is to provide personalized guidance, reliable support, and expert advice at every step.
-
-Our approach is built on personalized mentorship, strategic planning, and a deep understanding of global education pathways. Located in the heart of Connaught Place, our office offers both accessibility and a professional environment designed to support every student’s journey.
-
-
-We are committed to turning your international education dreams into reality. Your success is not just our goal—it is our purpose.`,
-  },
+    message: `As the Director of our India operations, it is both an honor and a privilege to support the ambitious and dynamic student community of India. At Grace International, we deeply understand the aspirations of students from Delhi, NCR, Punjab, Haryana, and neighboring regions.
+    <br /><br />
+    We are equally aware of the unique challenges they encounter while planning their global education journey. Our mission is to provide personalized guidance, reliable support, and expert advice at every step. Our approach is built on personalized mentorship, strategic planning, and a deep understanding of global education pathways. 
+    <br /><br />
+    Located in the heart of Connaught Place, our office offers both accessibility and a professional environment designed to support every student's journey.\n\nWe are committed to turning your international education dreams into reality. Your success is not just our goal—it is our purpose.`,
+},
 
 Gurugram: {
     name: "Suresh Reddy",
