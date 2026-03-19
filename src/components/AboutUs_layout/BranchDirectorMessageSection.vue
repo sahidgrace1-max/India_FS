@@ -75,23 +75,18 @@ Our approach is built on personalized mentorship, strategic planning, and a deep
 
 We are committed to turning your international education dreams into reality. Your success is not just our goal—it is our purpose.`,
   },
-
-Gurugram: {
-    name: "Suresh Reddy",
-    image: new URL("@/assets/Mayank.png", import.meta.url).href,
-    message: `Welcome to Grace International Bangalore! As the Director of our Bangalore operations, I am excited to serve students from India's technology capital. Bangalore, with its cutting-edge IT industry and premier educational institutions like IISc and IIMs, creates an environment of innovation and academic excellence.<br /><br />
-Our Bangalore office specializes in guiding tech-savvy students who aspire to pursue STEM programs abroad. We understand the unique requirements of engineering, computer science, and technology students and have strong partnerships with universities that excel in these fields.<br /><br />
-With deep connections to Bangalore's startup ecosystem and IT industry, we provide not just educational guidance but also career pathway insights. Our team of experienced counselors is dedicated to helping you achieve your international education goals.<br /><br />
-Innovation meets opportunity at our Bangalore office. Let's build your future together.`,
-  },
   Ahmedabad: {
-    name: "Subrata Banerjee",
-    image: new URL("@/assets/image1.png", import.meta.url).href,
-    message: `Welcome to Grace International Ahmedabad! As the Director of our Ahmedabad office, I am honored to serve the vibrant student community of Gujarat and Western India. Ahmedabad, known for its entrepreneurial spirit and top institutions like IIM Ahmedabad and Gujarat University, is a hub of innovation and academic excellence.<br /><br />
-Our Ahmedabad office is dedicated to understanding the unique aspirations and backgrounds of students from Gujarat and neighboring states. We offer personalized counseling in Gujarati, Hindi, and English, ensuring every student feels at home.<br /><br />
-With a strong track record in international education consulting, we have guided countless students from Ahmedabad to prestigious universities abroad. Our team is committed to providing honest, practical, and effective solutions tailored to your goals.<br /><br />
-Let us be your trusted partner on your journey to global success. Your dreams are our mission.`,
-  },
+        name: "Mayank Srivastava",
+    image: new URL("@/assets/Dir.jpeg", import.meta.url).href,
+    message: `As the Director of our India operations, it is both an honor and a privilege to support the ambitious and dynamic student community of India.
+
+At Grace International, we deeply understand the aspirations of students from Delhi, NCR, Punjab, Haryana, and neighboring regions. We are equally aware of the unique challenges they encounter while planning their global education journey. Our mission is to provide personalized guidance, reliable support, and expert advice at every step.
+
+Our approach is built on personalized mentorship, strategic planning, and a deep understanding of global education pathways. Located in the heart of Connaught Place, our office offers both accessibility and a professional environment designed to support every student’s journey.
+
+
+We are committed to turning your international education dreams into reality. Your success is not just our goal—it is our purpose.`,
+},
 };
 </script>
 
