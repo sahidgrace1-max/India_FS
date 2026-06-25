@@ -31,36 +31,109 @@
             </h2>
             <p class="text-sm text-slate-500 mt-3 font-medium">Manage and track study abroad applications.</p>
           </div>
+
+          <!-- Export Button -->
+          <button
+            @click="exportToExcel"
+            :disabled="filteredInquiries.length === 0 || loading"
+            class="flex items-center gap-2 px-4 py-2.5 bg-green-600 hover:bg-green-700 disabled:opacity-40 disabled:cursor-not-allowed text-white text-xs font-bold uppercase tracking-widest rounded-xl shadow-sm transition-all hover:-translate-y-0.5 shrink-0"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Export XLS
+          </button>
         </div>
 
-        <div class="mb-8 flex flex-col sm:flex-row gap-4 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-          <div class="flex-1 relative">
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg class="h-5 w-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
+        <!-- Filters -->
+        <div class="mb-8 flex flex-col gap-4 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+          <!-- Row 1: Search + Status -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex-1 relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input
+                v-model="searchQuery"
+                type="text"
+                placeholder="Search by name or email..."
+                class="block w-full pl-10 pr-3 py-2.5 border border-blue-200 rounded-xl leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 sm:text-sm font-medium shadow-sm transition-all"
+              />
             </div>
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="Search by name or email..."
-              class="block w-full pl-10 pr-3 py-2.5 border border-blue-200 rounded-xl leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 sm:text-sm font-medium shadow-sm transition-all"
-            />
+            <div class="w-full sm:w-48 relative">
+              <select
+                v-model="statusFilter"
+                class="block w-full pl-4 pr-10 py-2.5 text-base border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 sm:text-sm rounded-xl bg-white font-medium shadow-sm transition-all appearance-none cursor-pointer"
+              >
+                <option value="ALL">All Statuses</option>
+                <option value="PENDING">Pending</option>
+                <option value="REVIEWED">Reviewed</option>
+                <option value="CONTACTED">Contacted</option>
+                <option value="CLOSED">Closed</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-blue-800">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </div>
+            </div>
           </div>
-          <div class="w-full sm:w-48 relative">
-            <select
-              v-model="statusFilter"
-              class="block w-full pl-4 pr-10 py-2.5 text-base border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 sm:text-sm rounded-xl bg-white font-medium shadow-sm transition-all appearance-none cursor-pointer"
-            >
-              <option value="ALL">All Statuses</option>
-              <option value="PENDING">Pending</option>
-              <option value="REVIEWED">Reviewed</option>
-              <option value="CONTACTED">Contacted</option>
-              <option value="CLOSED">Closed</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-blue-800">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+
+          <!-- Row 2: Date filters -->
+          <div class="flex flex-col sm:flex-row gap-4 items-end">
+            <div class="flex-1 relative">
+              <label class="block text-xs font-bold text-blue-800 uppercase tracking-widest mb-1.5 ml-1">From Date</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg class="h-4 w-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <input
+                  v-model="dateFrom"
+                  type="date"
+                  class="block w-full pl-9 pr-3 py-2.5 border border-blue-200 rounded-xl bg-white text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 shadow-sm transition-all cursor-pointer"
+                />
+              </div>
             </div>
+            <div class="flex-1 relative">
+              <label class="block text-xs font-bold text-blue-800 uppercase tracking-widest mb-1.5 ml-1">To Date</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg class="h-4 w-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <input
+                  v-model="dateTo"
+                  type="date"
+                  class="block w-full pl-9 pr-3 py-2.5 border border-blue-200 rounded-xl bg-white text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 shadow-sm transition-all cursor-pointer"
+                />
+              </div>
+            </div>
+            <button
+              v-if="dateFrom || dateTo"
+              @click="clearDateFilter"
+              class="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-slate-600 hover:text-red-600 bg-white hover:bg-red-50 border border-slate-200 hover:border-red-200 rounded-xl transition-all shadow-sm shrink-0"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              Clear Dates
+            </button>
+          </div>
+
+          <!-- Active filter summary -->
+          <div v-if="dateFrom || dateTo" class="flex items-center gap-2 text-xs text-blue-800 font-medium bg-blue-100/60 px-3 py-2 rounded-lg border border-blue-200">
+            <svg class="w-3.5 h-3.5 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Showing
+            <span class="font-bold">{{ filteredInquiries.length }}</span>
+            {{ filteredInquiries.length === 1 ? 'inquiry' : 'inquiries' }}
+            <template v-if="dateFrom && dateTo">from <span class="font-bold">{{ formatDisplayDate(dateFrom) }}</span> to <span class="font-bold">{{ formatDisplayDate(dateTo) }}</span></template>
+            <template v-else-if="dateFrom">from <span class="font-bold">{{ formatDisplayDate(dateFrom) }}</span> onwards</template>
+            <template v-else-if="dateTo">up to <span class="font-bold">{{ formatDisplayDate(dateTo) }}</span></template>
           </div>
         </div>
 
@@ -271,6 +344,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import * as XLSX from "xlsx";
 import api from "@/utils/api";
 
 const inquiries = ref([]);
@@ -279,6 +353,8 @@ const error = ref("");
 
 const searchQuery = ref("");
 const statusFilter = ref("ALL");
+const dateFrom = ref("");
+const dateTo = ref("");
 
 const isModalOpen = ref(false);
 const selectedInquiry = ref(null);
@@ -290,14 +366,43 @@ let observer = null;
 const filteredInquiries = computed(() => {
   return inquiries.value.filter((inquiry) => {
     const matchesStatus = statusFilter.value === "ALL" || inquiry.status === statusFilter.value;
+
     const query = searchQuery.value.toLowerCase();
-    const matchesSearch = 
-      inquiry.name.toLowerCase().includes(query) || 
+    const matchesSearch =
+      inquiry.name.toLowerCase().includes(query) ||
       inquiry.email.toLowerCase().includes(query);
 
-    return matchesStatus && matchesSearch;
+    const inquiryDate = new Date(inquiry.createdAt);
+    inquiryDate.setHours(0, 0, 0, 0);
+
+    let matchesDate = true;
+    if (dateFrom.value) {
+      const from = new Date(dateFrom.value);
+      from.setHours(0, 0, 0, 0);
+      matchesDate = matchesDate && inquiryDate >= from;
+    }
+    if (dateTo.value) {
+      const to = new Date(dateTo.value);
+      to.setHours(23, 59, 59, 999);
+      matchesDate = matchesDate && inquiryDate <= to;
+    }
+
+    return matchesStatus && matchesSearch && matchesDate;
   });
 });
+
+const formatDisplayDate = (dateStr) => {
+  return new Date(dateStr + "T00:00:00").toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+};
+
+const clearDateFilter = () => {
+  dateFrom.value = "";
+  dateTo.value = "";
+};
 
 const fetchInquiries = async () => {
   loading.value = true;
@@ -318,6 +423,47 @@ const updateStatus = async (id, status) => {
     alert("Failed to update status");
     fetchInquiries();
   }
+};
+
+const exportToExcel = () => {
+  const exportData = filteredInquiries.value.map((inquiry) => ({
+    Name: inquiry.name,
+    Email: inquiry.email,
+    Phone: inquiry.phone,
+    Destination: inquiry.destination || "N/A",
+    Course: inquiry.course || "N/A",
+    Intake: inquiry.intake || "N/A",
+    Status: inquiry.status,
+    Message: inquiry.message || "",
+    "Date Submitted": new Date(inquiry.createdAt).toLocaleString(),
+  }));
+
+  const worksheet = XLSX.utils.json_to_sheet(exportData);
+
+  worksheet["!cols"] = [
+    { wch: 22 }, // Name
+    { wch: 30 }, // Email
+    { wch: 16 }, // Phone
+    { wch: 18 }, // Destination
+    { wch: 24 }, // Course
+    { wch: 14 }, // Intake
+    { wch: 12 }, // Status
+    { wch: 44 }, // Message
+    { wch: 22 }, // Date Submitted
+  ];
+
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Inquiries");
+
+  const dateTag = dateFrom.value && dateTo.value
+    ? `_${dateFrom.value}_to_${dateTo.value}`
+    : dateFrom.value
+    ? `_from_${dateFrom.value}`
+    : dateTo.value
+    ? `_to_${dateTo.value}`
+    : `_${new Date().toISOString().slice(0, 10)}`;
+
+  XLSX.writeFile(workbook, `grace_inquiries${dateTag}.xlsx`);
 };
 
 const openModal = (inquiry) => {
