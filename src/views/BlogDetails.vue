@@ -119,5 +119,190 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Any additional specific scoped styles can go here if needed */
+/* ─── Blog Content Typography ───
+   v-html content doesn't receive Vue scoped attributes,
+   so we use :deep() to style the rendered HTML from TipTap. */
+
+:deep(.prose) h1 {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  color: #1e3a8a;
+}
+
+:deep(.prose) h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+  color: #1e3a8a;
+}
+
+:deep(.prose) h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.3em;
+  margin-bottom: 0.5em;
+  color: #1e3a8a;
+}
+
+:deep(.prose) h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  color: #1e3a8a;
+}
+
+:deep(.prose) p {
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+  color: #334155;
+}
+
+:deep(.prose) strong {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+:deep(.prose) em {
+  font-style: italic;
+}
+
+:deep(.prose) a {
+  color: #1e40af;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+:deep(.prose) a:hover {
+  color: #16a34a;
+}
+
+:deep(.prose) ul {
+  list-style-type: disc;
+  padding-left: 1.75em;
+  margin-bottom: 1.25em;
+}
+
+:deep(.prose) ol {
+  list-style-type: decimal;
+  padding-left: 1.75em;
+  margin-bottom: 1.25em;
+}
+
+:deep(.prose) li {
+  margin-bottom: 0.5em;
+  line-height: 1.75;
+}
+
+:deep(.prose) li > ul,
+:deep(.prose) li > ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+:deep(.prose) blockquote {
+  border-left: 4px solid #93c5fd;
+  padding-left: 1.25em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: #475569;
+}
+
+:deep(.prose) pre {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 1em 1.25em;
+  border-radius: 0.75em;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875em;
+  line-height: 1.7;
+}
+
+:deep(.prose) code {
+  background-color: #eff6ff;
+  color: #1e40af;
+  padding: 0.15em 0.35em;
+  border-radius: 0.25em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875em;
+}
+
+:deep(.prose) pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+:deep(.prose) img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1em;
+  margin: 1.5em 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+:deep(.prose) hr {
+  border: none;
+  border-top: 2px solid #e2e8f0;
+  margin: 2em 0;
+}
+
+:deep(.prose) table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+:deep(.prose) th,
+:deep(.prose) td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75em 1em;
+  text-align: left;
+}
+
+:deep(.prose) th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+/* Task lists from TipTap */
+:deep(.prose) ul[data-type="taskList"] {
+  list-style: none;
+  padding-left: 0;
+}
+
+:deep(.prose) ul[data-type="taskList"] li {
+  display: flex;
+  align-items: flex-start;
+}
+
+:deep(.prose) ul[data-type="taskList"] li > label {
+  flex: 0 0 auto;
+  margin-right: 0.5em;
+}
+
+:deep(.prose) ul[data-type="taskList"] li > div {
+  flex: 1 1 auto;
+}
+
+/* YouTube embeds */
+:deep(.prose) iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75em;
+  margin: 1.5em 0;
+}
 </style>

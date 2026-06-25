@@ -405,10 +405,28 @@ const setLink = () => {
 };
 
 const setImage = () => {
-  const url = window.prompt('Image URL');
-  if (url) {
-    editor.value.chain().focus().setImage({ src: url }).run();
-  }
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/jpeg,image/png,image/webp,image/jpg';
+  input.onchange = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    try {
+      const formPayload = new FormData();
+      formPayload.append('image', file);
+
+      const response = await api.post('/blog/upload-image', formPayload, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+
+      const imageUrl = response.data.data.url;
+      editor.value.chain().focus().setImage({ src: imageUrl }).run();
+    } catch (err) {
+      alert('Failed to upload image: ' + (err.response?.data?.message || err.message));
+    }
+  };
+  input.click();
 };
 
 const setYoutube = () => {

@@ -42,4 +42,19 @@ router.patch(
   controller.togglePublish,
 );
 
+// Upload inline image for blog content (TipTap editor)
+router.post(
+  "/upload-image",
+  authenticate,
+  authorize("ADMIN", "SUPERADMIN"),
+  upload.single("image"),
+  (req, res) => {
+    if (!req.file) {
+      return res.status(400).json({ success: false, message: "No image file provided." });
+    }
+    const imageUrl = "/api/uploads/" + req.file.filename;
+    return res.status(200).json({ success: true, data: { url: imageUrl } });
+  },
+);
+
 export default router;

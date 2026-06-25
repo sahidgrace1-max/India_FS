@@ -6,7 +6,7 @@
 
     <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-800/5 to-transparent -z-10 hidden md:block" />
 
-    <div class="max-w-screen-xl mx-auto px-6 md:px-12 py-16 md:py-24 lg:py-28">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-16 md:py-24 lg:py-28">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         <div
@@ -42,15 +42,17 @@
             :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
           >
             <button
+              @click="scrollToContact"
               class="px-7 py-3.5 bg-blue-800 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-800/30 hover:shadow-blue-700/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-sm md:text-base"
             >
               Book Free Counselling
             </button>
-            <button
-              class="px-7 py-3.5 border-2 border-blue-800 text-blue-800 font-semibold rounded-xl hover:bg-blue-800 hover:text-white transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-sm md:text-base"
+            <router-link
+              to="/university/australia"
+              class="px-7 py-3.5 border-2 border-blue-800 text-blue-800 font-semibold rounded-xl hover:bg-blue-800 hover:text-white transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-sm md:text-base text-center"
             >
               Explore Universities
-            </button>
+            </router-link>
           </div>
 
           <div
@@ -132,7 +134,7 @@
     </div>
   </section>
 
-  <section ref="whyRef" class="max-w-screen-xl mx-auto px-6 md:px-12 py-16 font-poppins">
+  <section ref="whyRef" class="max-w-[1400px] mx-auto px-6 md:px-12 py-16 font-poppins">
     <div
       class="text-center mb-12 transition-all duration-700"
       :class="whyVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
@@ -175,6 +177,16 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+function scrollToContact() {
+  const el = document.getElementById("contact-form");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
 // ── Intersection observers ────────────────────────────────────────────────────
 const sectionRef = ref(null);
