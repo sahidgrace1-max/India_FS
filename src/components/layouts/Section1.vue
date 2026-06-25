@@ -1,145 +1,171 @@
 <template>
-  <section
-    class="flex flex-col md:flex-row items-center justify-center py-16 px-4 md:px-0 max-w-screen-2xl mx-auto gap-12 font-poppins"
-  >
-    <!-- Left: Image -->
-    <div class="flex-1 flex justify-center items-center">
-      <img
-        src="@/assets/Section1.png"
-        alt="Grace International Process"
-        class="max-w-[450px] w-full h-auto animate-slide-left"
-      />
+  <section ref="sectionRef" class="hero-section relative overflow-hidden font-poppins">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 -z-10" />
+    <div class="blob-shape absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full bg-blue-100 opacity-50 blur-3xl -z-10" />
+    <div class="blob-shape-2 absolute bottom-0 left-0 w-[320px] h-[320px] rounded-full bg-green-100 opacity-40 blur-2xl -z-10" />
+
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-800/5 to-transparent -z-10 hidden md:block" />
+
+    <div class="max-w-screen-xl mx-auto px-6 md:px-12 py-16 md:py-24 lg:py-28">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <div
+          class="flex flex-col gap-6 transition-all duration-700"
+          :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+        >
+          <div class="inline-flex items-center gap-2 self-start">
+            <span class="w-8 h-[2px] bg-green-500 block" />
+            <span class="text-green-600 text-sm font-semibold tracking-widest uppercase">
+              Trusted Since 2006
+            </span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-900 leading-tight tracking-tight">
+            Your Global<br />
+            <span class="relative inline-block">
+              <span class="highlight-word text-blue-800">Education</span>
+              <span class="absolute -bottom-1 left-0 w-full h-[5px] bg-green-400 rounded-full block" />
+            </span>
+            <br />Starts Here
+          </h1>
+
+          <p
+            class="text-gray-600 text-base md:text-lg leading-relaxed max-w-md transition-all duration-700 delay-100"
+            :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+          >
+            Expert counselling for students in India &amp; Nepal dreaming of universities in
+            Australia, UK, USA, Canada, and New Zealand — from test prep to visa approval.
+          </p>
+
+          <div
+            class="flex flex-wrap gap-4 transition-all duration-700 delay-200"
+            :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+          >
+            <button
+              class="px-7 py-3.5 bg-blue-800 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-800/30 hover:shadow-blue-700/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-sm md:text-base"
+            >
+              Book Free Counselling
+            </button>
+            <button
+              class="px-7 py-3.5 border-2 border-blue-800 text-blue-800 font-semibold rounded-xl hover:bg-blue-800 hover:text-white transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-sm md:text-base"
+            >
+              Explore Universities
+            </button>
+          </div>
+
+          <div
+            class="flex items-center gap-3 mt-2 transition-all duration-700 delay-300"
+            :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+          >
+            <div class="flex -space-x-2">
+              <div v-for="(color, i) in avatarColors" :key="i"
+                class="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold"
+                :class="color"
+              >
+                {{ avatarLetters[i] }}
+              </div>
+            </div>
+            <p class="text-sm text-gray-500">
+              <span class="font-semibold text-gray-700">25,000+</span> students placed in top universities worldwide
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap gap-3 pt-4 border-t border-blue-100 transition-all duration-700 delay-[400ms]"
+            :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+          >
+            <div
+              v-for="stat in stats"
+              :key="stat.label"
+              class="flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-blue-100 rounded-full px-4 py-2 shadow-sm"
+            >
+              <span class="text-blue-800 font-bold text-sm">{{ stat.value }}</span>
+              <span class="text-gray-500 text-xs">{{ stat.label }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center relative transition-all duration-700 delay-200"
+          :class="visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'"
+        >
+          <div class="absolute w-72 h-72 md:w-96 md:h-96 rounded-full border-2 border-dashed border-blue-200 opacity-60 rotate-ring" />
+          <div class="absolute top-4 right-8 w-4 h-4 rounded-full bg-green-400 animate-ping-slow" />
+          <div class="absolute bottom-8 left-6 w-3 h-3 rounded-full bg-blue-400 animate-ping-slow delay-700" />
+
+          <div class="absolute w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-blue-200 to-indigo-200 blur-2xl opacity-40" />
+
+          <img
+            src="@/assets/Section1.png"
+            alt="Grace International — Global Education"
+            class="relative z-10 w-full max-w-[340px] md:max-w-[420px] lg:max-w-[480px] h-auto drop-shadow-2xl float-image"
+          />
+
+          <div
+            class="absolute -left-4 md:-left-8 bottom-12 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 z-20 float-badge"
+          >
+            <span class="text-2xl">🎓</span>
+            <div>
+              <p class="text-xs text-gray-400 font-medium">Accepted at</p>
+              <p class="text-sm text-blue-800 font-bold">Top 100 Universities</p>
+            </div>
+          </div>
+
+          <div
+            class="absolute -right-2 md:-right-6 top-12 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 z-20 float-badge-alt"
+          >
+            <span class="text-2xl">✈️</span>
+            <div>
+              <p class="text-xs text-gray-400 font-medium">Visa Success Rate</p>
+              <p class="text-sm text-green-600 font-bold">98%</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- Right: Text Content -->
-    <div class="flex-1 max-w-xl text-justify animate-slide-right">
-      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-2">
-        Study Abroad with
-      </h2>
-      <h3 class="text-3xl md:text-4xl font-bold text-blue-800 mb-2">
-        Grace International
-      </h3>
-      <p class="text-green-600 text-lg font-medium mb-4">
-        Your Pathway to Global Education
-      </p>
-      <p class="text-gray-700 mb-4">
-        Established with the aim of delivering quality educational services,
-        Grace International have more than a decade long history of serving
-        students for further studies in Australia, New Zealand, UK, USA and
-        Canada. We also provide preparation classes of IELTS, PTE, GMAT, TOEFL
-        and SAT.
-      </p>
-      <p class="text-gray-700 mb-4">
-        Helping Indian students achieve global education dreams with expert
-        counselling, top university tie-ups, and complete support—from test prep
-        to visas since 2006.
-      </p>
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none -z-10">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff" fill-opacity="0.6" />
+      </svg>
     </div>
   </section>
 
-  <!-- Why Choose Section -->
-  <section class="max-w-screen-2xl mx-auto px-4 md:px-0 py-12">
-    <h2 class="text-4xl md:text-5xl font-bold text-center text-blue-800 mb-10">
-      Why Choose Grace International India?
-    </h2>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-      <!-- Flip Card 1 -->
+  <section ref="whyRef" class="max-w-screen-xl mx-auto px-6 md:px-12 py-16 font-poppins">
+    <div
+      class="text-center mb-12 transition-all duration-700"
+      :class="whyVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+    >
+      <span class="text-green-600 text-sm font-semibold tracking-widest uppercase">What Sets Us Apart</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mt-2">
+        Why Choose Grace International?
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div
-        class="flip-card w-full md:w-64 h-40 flex items-center justify-center mb-6 md:mb-0"
-        :class="{ 'cursor-pointer': isMobile }"
-        @click="isMobile ? flipCard(0) : null"
+        v-for="(card, i) in cards"
+        :key="card.front"
+        class="flip-card h-48 transition-all duration-500"
+        :class="[
+          whyVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10',
+          { 'cursor-pointer': isMobile }
+        ]"
+        :style="{ transitionDelay: whyVisible ? `${i * 100}ms` : '0ms' }"
+        @click="isMobile ? flipCard(i) : null"
       >
         <div
           class="flip-card-inner w-full h-full"
-          :class="{ flipped: isMobile && flippedCards[0] }"
+          :class="{ flipped: isMobile && flippedCards[i] }"
         >
-          <div
-            class="flip-card-front flex flex-col items-center justify-center bg-blue-800 text-white rounded-xl shadow-lg w-full h-full cursor-pointer"
-          >
-            <span class="text-2xl mb-2">20+</span>
-            <span class="text-lg">Years of Global Expertise</span>
+          <div class="flip-card-face flip-card-front bg-blue-800 text-white rounded-2xl shadow-md px-6 flex flex-col items-center justify-center gap-2 text-center">
+            <span class="text-3xl">{{ card.icon }}</span>
+            <span class="text-xl font-bold">{{ card.front }}</span>
+            <span v-if="card.sub" class="text-blue-200 text-xs">{{ card.sub }}</span>
           </div>
-          <div
-            class="flip-card-back flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-lg w-full h-full cursor-pointer px-4"
-          >
-            <span class="text-base text-center"
-              >A trusted name with a presence in 10+ countries.</span
-            >
-          </div>
-        </div>
-      </div>
-      <!-- Flip Card 2 -->
-      <div
-        class="flip-card w-full md:w-64 h-40 flex items-center justify-center mb-6 md:mb-0"
-        :class="{ 'cursor-pointer': isMobile }"
-        @click="isMobile ? flipCard(1) : null"
-      >
-        <div
-          class="flip-card-inner w-full h-full"
-          :class="{ flipped: isMobile && flippedCards[1] }"
-        >
-          <div
-            class="flip-card-front flex flex-col items-center justify-center bg-blue-800 text-white rounded-xl shadow-lg w-full h-full cursor-pointer px-4 text-center"
-          >
-            <span class="text-lg mb-2 w-full">Strong University</span>
-            <span class="text-lg mb-2 w-full">Partnerships</span>
-          </div>
-          <div
-            class="flip-card-back flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-lg w-full h-full cursor-pointer px-4 text-justify"
-          >
-            <span class="text-base text-center w-full"
-              >Direct tie-ups with reputed institutions worldwide.</span
-            >
-          </div>
-        </div>
-      </div>
-      <!-- Flip Card 3 -->
-      <div
-        class="flip-card w-full md:w-64 h-40 flex items-center justify-center mb-6 md:mb-0"
-        :class="{ 'cursor-pointer': isMobile }"
-        @click="isMobile ? flipCard(2) : null"
-      >
-        <div
-          class="flip-card-inner w-full h-full"
-          :class="{ flipped: isMobile && flippedCards[2] }"
-        >
-          <div
-            class="flip-card-front flex flex-col items-center justify-center bg-blue-800 text-white rounded-xl shadow-lg w-full h-full cursor-pointer px-4"
-          >
-            <span class="text-lg mb-2">Comprehensive Support</span>
-          </div>
-          <div
-            class="flip-card-back flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-lg w-full h-full cursor-pointer px-4"
-          >
-            <span class="text-base text-center"
-              >From test prep to scholarships, visas, and post-arrival
-              guidance.</span
-            >
-          </div>
-        </div>
-      </div>
-      <!-- Flip Card 4 -->
-      <div
-        class="flip-card w-full md:w-64 h-40 flex items-center justify-center"
-        :class="{ 'cursor-pointer': isMobile }"
-        @click="isMobile ? flipCard(3) : null"
-      >
-        <div
-          class="flip-card-inner w-full h-full"
-          :class="{ flipped: isMobile && flippedCards[3] }"
-        >
-          <div
-            class="flip-card-front flex flex-col items-center justify-center bg-blue-800 text-white rounded-xl shadow-lg w-full h-full cursor-pointer px-4"
-          >
-            <span class="text-lg mb-2">Student Success Stories</span>
-          </div>
-          <div
-            class="flip-card-back flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-lg w-full h-full cursor-pointer px-4"
-          >
-            <span class="text-base text-center"
-              >25,000+ Success Stories – Indian students placed in top
-              universities worldwide.</span
-            >
+          <div class="flip-card-face flip-card-back bg-gradient-to-br from-green-600 to-green-500 text-white rounded-2xl shadow-md px-6 flex items-center justify-center text-center">
+            <span class="text-sm leading-relaxed">{{ card.back }}</span>
           </div>
         </div>
       </div>
@@ -149,273 +175,153 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-const flippedCards = ref([false, false, false, false]);
+
+// ── Intersection observers ────────────────────────────────────────────────────
+const sectionRef = ref(null);
+const whyRef = ref(null);
+const visible = ref(false);
+const whyVisible = ref(false);
+
+let heroObserver = null;
+let whyObserver = null;
+
+onMounted(() => {
+  heroObserver = new IntersectionObserver(
+    ([entry]) => { if (entry.isIntersecting) { visible.value = true; heroObserver.disconnect(); } },
+    { threshold: 0.15 }
+  );
+  if (sectionRef.value) heroObserver.observe(sectionRef.value);
+
+  whyObserver = new IntersectionObserver(
+    ([entry]) => { if (entry.isIntersecting) { whyVisible.value = true; whyObserver.disconnect(); } },
+    { threshold: 0.1 }
+  );
+  if (whyRef.value) whyObserver.observe(whyRef.value);
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
+});
+
+onUnmounted(() => {
+  heroObserver?.disconnect();
+  whyObserver?.disconnect();
+  window.removeEventListener("resize", handleResize);
+});
+
+// ── Mobile flip cards ─────────────────────────────────────────────────────────
 const isMobile = ref(false);
+const flippedCards = ref([false, false, false, false]);
 
 function flipCard(idx) {
   flippedCards.value[idx] = !flippedCards.value[idx];
 }
-
 function handleResize() {
   isMobile.value = window.innerWidth < 768;
 }
 
-onMounted(() => {
-  handleResize();
-  window.addEventListener("resize", handleResize);
-});
-onUnmounted(() => {
-  window.removeEventListener("resize", handleResize);
-});
+// ── Data ──────────────────────────────────────────────────────────────────────
+const stats = [
+  { value: "20+", label: "Years Experience" },
+  { value: "5", label: "Destinations" },
+  { value: "500+", label: "Partner Universities" },
+];
+
+const avatarColors = ["bg-blue-500", "bg-green-500", "bg-indigo-500", "bg-emerald-500"];
+const avatarLetters = ["A", "R", "S", "P"];
+
+const cards = [
+  {
+    icon: "🌍",
+    front: "20+ Years",
+    sub: "of Global Expertise",
+    back: "A trusted name with a presence across 10+ countries and a proven track record since 2006.",
+  },
+  {
+    icon: "🏛️",
+    front: "Strong University Partnerships",
+    sub: "",
+    back: "Direct tie-ups with 500+ reputed institutions in Australia, UK, USA, Canada, and New Zealand.",
+  },
+  {
+    icon: "🛡️",
+    front: "Comprehensive Support",
+    sub: "",
+    back: "From IELTS/PTE prep to scholarships, visa filing, and post-arrival guidance — we cover it all.",
+  },
+  {
+    icon: "⭐",
+    front: "25,000+ Success Stories",
+    sub: "",
+    back: "Students from India and Nepal placed at top universities worldwide — and counting.",
+  },
+];
 </script>
 
 <style scoped>
-/* Slide in from left for image */
-@keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Floating image */
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+.float-image {
+  animation: floatImage 5s ease-in-out infinite;
 }
 
-.animate-slide-left {
-  animation: slideLeft 1.5s ease-out forwards;
+/* Floating badge subtle bob */
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50%       { transform: translateY(-8px) rotate(-1deg); }
+}
+.float-badge {
+  animation: floatBadge 4s ease-in-out infinite;
+}
+@keyframes floatBadgeAlt {
+  0%, 100% { transform: translateY(0px) rotate(1deg); }
+  50%       { transform: translateY(-10px) rotate(1deg); }
+}
+.float-badge-alt {
+  animation: floatBadgeAlt 4.5s ease-in-out 0.5s infinite;
 }
 
-/* Add floating animation to image */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+/* Slow ping for decorative dots */
+@keyframes pingSlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.6); opacity: 0.4; }
+}
+.animate-ping-slow {
+  animation: pingSlow 3s ease-in-out infinite;
+}
+.delay-700 {
+  animation-delay: 700ms;
 }
 
-.animate-slide-left img {
-  animation:
-    slideLeft 1.5s ease-out forwards,
-    float 3s ease-in-out infinite 1.5s;
+/* Rotating dashed ring */
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.rotate-ring {
+  animation: rotateRing 30s linear infinite;
 }
 
-/* Slide in from right for text */
-@keyframes slideRight {
-  0% {
-    opacity: 0;
-    transform: translateX(80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slide-right {
-  animation: slideRight 1.5s ease-out forwards 0.3s;
-}
-
-/* Gradient text animation */
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-slide-right h2,
-.animate-slide-right h3 {
-  background: linear-gradient(90deg, #1e3a8a, #2563eb, #1e3a8a);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 4s ease infinite;
-}
-
-/* Fade in up animation for paragraphs */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-slide-right p:nth-of-type(1) {
-  animation: fadeInUp 1s ease-out 0.8s forwards;
-  opacity: 0;
-}
-
-.animate-slide-right p:nth-of-type(2) {
-  animation: fadeInUp 1s ease-out 1s forwards;
-  opacity: 0;
-}
-
-.animate-slide-right p:nth-of-type(3) {
-  animation: fadeInUp 1s ease-out 1.2s forwards;
-  opacity: 0;
-}
-
-/* Pulse animation for section title */
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-section h2 {
-  animation:
-    fadeInUp 1s ease-out,
-    pulse 2s ease-in-out infinite 1s;
-}
-
-/* Flip card styles */
-.flip-card {
-  perspective: 1000px;
-  width: 100%;
-  max-width: 320px;
-  transition: transform 0.3s ease;
-}
-
-.flip-card:hover {
-  transform: translateY(-10px);
-}
-
-@media (min-width: 768px) {
-  .flip-card {
-    width: 16rem;
-    max-width: 16rem;
-  }
-}
-
+/* Flip cards */
+.flip-card { perspective: 1000px; }
 .flip-card-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
+.flip-card:hover .flip-card-inner,
 .flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
-
-.flip-card-front,
-.flip-card-back {
+.flip-card-face {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   backface-visibility: hidden;
-  border-radius: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
+  -webkit-backface-visibility: hidden;
 }
-
-.flip-card:hover .flip-card-front,
-.flip-card:hover .flip-card-back {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
 .flip-card-back {
   transform: rotateY(180deg);
-}
-
-/* Shimmer effect on cards */
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-.flip-card-front::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite;
-  border-radius: 0.75rem;
-  pointer-events: none;
-}
-
-/* Stagger animation for cards */
-.flip-card:nth-child(1) {
-  animation: fadeInUp 0.6s ease-out 0.2s forwards;
-  opacity: 0;
-}
-
-.flip-card:nth-child(2) {
-  animation: fadeInUp 0.6s ease-out 0.4s forwards;
-  opacity: 0;
-}
-
-.flip-card:nth-child(3) {
-  animation: fadeInUp 0.6s ease-out 0.6s forwards;
-  opacity: 0;
-}
-
-.flip-card:nth-child(4) {
-  animation: fadeInUp 0.6s ease-out 0.8s forwards;
-  opacity: 0;
-}
-
-/* Glow effect on hover */
-@keyframes glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
-  }
-}
-
-.flip-card-front:hover {
-  animation: glow 1.5s ease-in-out infinite;
-}
-
-/* Rotate text slightly on hover */
-.flip-card-front span {
-  transition: transform 0.3s ease;
-}
-
-.flip-card:hover .flip-card-front span {
-  transform: scale(1.1);
 }
 </style>

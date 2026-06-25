@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "@/views/Dashboard.vue";
 
 import About from "@/views/About.vue";
+import { useAuthStore } from "@/stores/auth";
 
 const routes = [
   {
@@ -89,6 +90,68 @@ const routes = [
     name: "PTEPreparation",
     component: () => import("@/views/PTEPreparation.vue"),
   },
+  {
+    path: "/blog",
+    name: "BlogList",
+    component: () => import("@/views/BlogList.vue"),
+  },
+  {
+    path: "/blog/:slug",
+    name: "BlogDetails",
+    component: () => import("@/views/BlogDetails.vue"),
+  },
+  {
+    path: "/admin/login",
+    name: "AdminLogin",
+    component: () => import("@/views/admin/Login.vue"),
+  },
+  {
+    path: "/admin",
+    component: () => import("@/layouts/AdminLayout.vue"),
+    meta: { requiresAuth: true },
+    children: [
+      {
+        path: "",
+        name: "AdminDashboard",
+        component: () => import("@/views/admin/Dashboard.vue"),
+      },
+      {
+        path: "inquiries",
+        name: "AdminInquiries",
+        component: () => import("@/views/admin/InquiriesList.vue"),
+      },
+      {
+        path: "contacts",
+        name: "AdminContacts",
+        component: () => import("@/views/admin/ContactsList.vue"),
+      },
+      {
+        path: "blog",
+        name: "AdminBlogPosts",
+        component: () => import("@/views/admin/BlogPostsList.vue"),
+      },
+      {
+        path: "destinations",
+        name: "AdminDestinations",
+        component: () => import("@/views/admin/DestinationsList.vue"),
+      },
+      {
+        path: "universities",
+        name: "AdminUniversities",
+        component: () => import("@/views/admin/UniversitiesList.vue"),
+      },
+      {
+        path: "scholarships",
+        name: "AdminScholarships",
+        component: () => import("@/views/admin/ScholarshipsList.vue"),
+      },
+      {
+        path: "team",
+        name: "AdminTeam",
+        component: () => import("@/views/admin/TeamList.vue"),
+      },
+    ],
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),
@@ -99,6 +162,17 @@ const router = createRouter({
     }
     return { top: 0 };
   },
+});
+
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
+  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
+    next("/admin/login");
+  } else if (to.path === "/admin/login" && authStore.isAuthenticated) {
+    next("/admin");
+  } else {
+    next();
+  }
 });
 
 export default router;

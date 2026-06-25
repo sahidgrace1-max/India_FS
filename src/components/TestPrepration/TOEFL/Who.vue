@@ -1,109 +1,115 @@
 <template>
-  <!-- Modal -->
-  <div
-    v-if="showModal"
-    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
-    @click.self="closeModal"
-  >
-    <div
-      class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
-    >
-      <!-- Close Button -->
-      <button
-        @click="closeModal"
-        class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
+  <div class="relative w-full overflow-hidden">
+    <transition name="fade">
+      <div
+        v-if="showModal"
+        class="fixed inset-0 bg-blue-900/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+        @click.self="closeModal"
       >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
-        </svg>
-      </button>
-      <EnrollmentFormTOEFL @close="closeModal" />
-    </div>
-  </div>
-
-  <section class="py-16 px-4 md:px-8 lg:px-16">
-    <div class="container mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Left Side - Content -->
-        <div class="flex flex-col justify-center">
-          <h2 class="text-4xl font-bold text-gray-900 mb-6">Who is it for?</h2>
-
-          <p class="text-gray-700 leading-relaxed text-base mb-4">
-            The TOEFL iBT® test is designed for students planning to study at
-            higher education institutions in English-speaking countries. It is
-            also used for English-language program admissions, scholarships,
-            certifications, and by students/workers applying for visas. Over 30
-            million people worldwide have taken the TOEFL® test to demonstrate
-            their English-language proficiency.
-          </p>
-
-          <p class="text-gray-700 leading-relaxed text-base font-semibold mb-2">
-            What is the TOEFL test like?
-          </p>
-
-          <p class="text-gray-700 leading-relaxed text-base mb-4">
-            The test is administered online and evaluates your ability to use
-            and understand English in an academic setting. It combines four key
-            skills: Listening, Reading, Speaking, and Writing.
-          </p>
-
-          <p class="text-gray-700 leading-relaxed text-base font-semibold mb-2">
-            Level and scores:
-          </p>
-
-          <p class="text-gray-700 leading-relaxed text-base">
-            The TOEFL iBT® test scores range from 0 to 120. Each section
-            (Listening, Reading, Speaking, Writing) is scored from 0 to 30.
-            Universities often require minimum scores depending on the program.
-            TOEFL provides a fair evaluation of academic English skills for
-            study purposes.
-          </p>
-        </div>
-
-        <!-- Right Side - Image -->
-        <div class="flex justify-center">
-          <img
-            src="@/assets/toefl1.png"
-            alt="TOEFL Study Desk"
-            class="rounded-lg shadow-lg w-full h-full object-cover"
-            style="min-height: 400px; max-height: 500px"
-          />
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl border border-blue-50 p-6">
+          <button
+            @click="closeModal"
+            class="absolute top-6 right-6 text-slate-400 hover:text-blue-900 z-10 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          <EnrollmentFormTOEFL @close="closeModal" />
         </div>
       </div>
-    </div>
-  </section>
+    </transition>
 
-  <!-- CTA Section -->
-  <section class="py-16 px-4 md:px-8 lg:px-16">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold text-white mb-4">
-        TAKE YOUR FIRST STEP TOWARDS SUCCESS
-      </h2>
-      <p class="text-xl text-blue-100 mb-8">
-        Enroll in your TOEFL Preparation Class with Grace International
-      </p>
-      <button
-        @click="showModal = true"
-        class="px-8 py-3 bg-green-500 text-blue-600 font-bold rounded-lg hover:bg-green-600 transition-colors"
+    <section 
+      ref="sectionRef" 
+      class="relative py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins"
+    >
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-blue-800/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-600/5 rounded-full blur-3xl transform -translate-x-1/3"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div 
+            class="flex justify-center transition-all duration-1000 ease-out transform order-1 lg:order-2"
+            :class="[isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12']"
+          >
+            <div class="relative group w-full max-w-lg">
+              <div class="absolute -inset-4 bg-blue-800/10 rounded-[2rem] blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+              <img
+                src="@/assets/toefl1.png"
+                alt="TOEFL Study Desk"
+                class="relative rounded-3xl shadow-xl w-full object-cover border-4 border-white"
+                style="min-height: 400px; max-height: 500px"
+              />
+            </div>
+          </div>
+
+          <div 
+            class="flex flex-col justify-start transition-all duration-1000 ease-out delay-300 transform order-2 lg:order-1"
+            :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+          >
+            <div class="flex items-center text-green-600 font-bold uppercase tracking-widest text-xs mb-4">
+              <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+              Exam Overview
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-8">
+              Who is it 
+              <span class="relative inline-block text-green-500">
+                for?
+                <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+              </span>
+            </h2>
+
+            <div class="space-y-6 text-slate-700 leading-relaxed text-lg bg-white/70 backdrop-blur-sm border border-blue-100 p-8 rounded-2xl shadow-sm">
+              <p>
+                The TOEFL iBT® test is designed for students planning to study at higher education institutions in English-speaking countries. It measures your ability to use and understand English at the university level, combining listening, reading, speaking, and writing skills to perform academic tasks.
+              </p>
+              
+              <div>
+                <h4 class="font-bold text-blue-900 mb-2">What is the TOEFL test like?</h4>
+                <p>The test is administered online and evaluates your ability to use and understand English in an academic setting. It combines four key skills: Listening, Reading, Speaking, and Writing.</p>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-blue-900 mb-2">Level and Scores:</h4>
+                <p>The TOEFL iBT® test scores range from 0 to 120. Each section is scored from 0 to 30. Universities often require minimum scores depending on the program.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section ref="ctaRef" class="relative py-20 px-4 bg-blue-900 overflow-hidden">
+      <div class="absolute inset-0 z-0 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900"></div>
+      
+      <div 
+        class="relative z-10 container mx-auto text-center transition-all duration-1000 ease-out transform"
+        :class="[isCtaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
       >
-        APPLY NOW
-      </button>
-    </div>
-  </section>
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+          Take Your First Step Towards <span class="text-green-400">Success</span>
+        </h2>
+        <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+          Enroll in your Preparation Class with Grace International
+        </p>
+        <button
+          @click="showModal = true"
+          class="px-10 py-4 bg-blue-800 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 hover:-translate-y-0.5 transition-all duration-300"
+        >
+          APPLY NOW
+        </button>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import EnrollmentFormTOEFL from "./EnrollmentFormIELTS.vue";
 
 export default {
@@ -113,29 +119,54 @@ export default {
   },
   setup() {
     const showModal = ref(false);
+    const sectionRef = ref(null);
+    const ctaRef = ref(null);
+    const isVisible = ref(false);
+    const isCtaVisible = ref(false);
+    let observer = null;
 
     const closeModal = () => {
       showModal.value = false;
     };
 
+    onMounted(() => {
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target === sectionRef.value) isVisible.value = true;
+            if (entry.target === ctaRef.value) isCtaVisible.value = true;
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" });
+
+      if (sectionRef.value) observer.observe(sectionRef.value);
+      if (ctaRef.value) observer.observe(ctaRef.value);
+    });
+
+    onUnmounted(() => {
+      if (observer) {
+        observer.disconnect();
+      }
+    });
+
     return {
       showModal,
       closeModal,
+      sectionRef,
+      ctaRef,
+      isVisible,
+      isCtaVisible
     };
   },
 };
 </script>
 
 <style scoped>
-section {
-  background-color: #f9fafb;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
 }
-
-h2 {
-  color: #1f2937;
-}
-
-p {
-  color: #4b5563;
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>

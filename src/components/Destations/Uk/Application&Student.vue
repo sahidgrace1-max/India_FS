@@ -1,192 +1,137 @@
 <template>
-  <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <!-- Left Content -->
-        <div
-          class="order-2 lg:order-1 space-y-6 opacity-0 animate-fadeUp delay-100"
+  <section
+    ref="sectionRef"
+    class="relative py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins"
+  >
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-blue-800/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-600/5 rounded-full blur-3xl transform -translate-x-1/3"></div>
+      <div class="absolute top-1/4 right-1/4 w-64 h-64 border-[1px] border-dashed border-blue-800/20 rounded-full animate-rotate-dashed hidden lg:block"></div>
+    </div>
+
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        
+        <div 
+          class="order-1 lg:order-2 flex items-center justify-center transition-all duration-1000 ease-out transform"
+          :class="[isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12']"
         >
-          <h2
-            class="text-3xl font-bold text-gray-900 mb-6 opacity-0 animate-fadeUp delay-200"
-          >
-            Application & Student Visa Process for the UK
-          </h2>
-
-          <ul class="space-y-3 mb-6">
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-300"
-            >
-              <span class="font-semibold text-lg text-gray-900"
-                >Major Intakes:</span
-              >
-              <span class="text-lg"
-                >January, September (main intake), and May (select
-                universities).</span
-              >
-            </li>
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-400"
-            >
-              <span class="font-semibold text-lg text-gray-900"
-                >Requirements:</span
-              >
-              <span class="text-lg"
-                >English proficiency (IELTS, TOEFL, PTE), academic transcripts,
-                Statement of Purpose (SOP), Letters of Recommendation (LORs),
-                and financial proof.</span
-              >
-            </li>
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-500"
-            >
-              <span class="font-semibold text-gray-900"
-                >UK Student Visa (Student Route):</span
-              >
-              <span class="text-lg"
-                >Requires an unconditional offer letter, Confirmation of
-                Acceptance for Studies (CAS), proof of funds, and English
-                language evidence.</span
-              >
-            </li>
-          </ul>
-
-          <p
-            class="text-gray-700 text-base leading-relaxed mb-6 opacity-0 animate-fadeUp delay-600"
-          >
-            <span class="text-lg"
-              >Our experts guide Indian students through the complete UK
-              application and student visa process, ensuring accuracy,
-              compliance, and faster approvals.</span
-            >
-          </p>
-
-          <h2
-            class="text-3xl font-bold text-gray-900 mb-6 opacity-0 animate-fadeUp delay-700"
-          >
-            Why Choose Grace International India for the UK?
-          </h2>
-
-          <ul class="space-y-3 mb-6">
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-800"
-            >
-              Strong partnerships with top UK universities and colleges.
-            </li>
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-900"
-            >
-              Complete support: counselling, test preparation, applications,
-              visas, and scholarships.
-            </li>
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-1000"
-            >
-              Expert guidance on Graduate Route (post-study work visa).
-            </li>
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-1100"
-            >
-              Pre-departure briefings and ongoing student support in the UK.
-            </li>
-            <li
-              class="text-gray-700 text-lg opacity-0 animate-fadeUp delay-1200"
-            >
-              Trusted UK education consultants in India with decades of
-              experience and high visa success rates.
-            </li>
-          </ul>
+          <div class="relative group w-full max-w-lg lg:max-w-none">
+            <div class="absolute -inset-4 bg-blue-800/10 rounded-[2rem] blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+            <img
+              :src="bgImage"
+              alt="UK Student Visa Process"
+              class="relative rounded-3xl shadow-xl w-full h-auto object-cover border-4 border-white min-h-[500px] lg:min-h-[750px]"
+            />
+          </div>
         </div>
 
-        <!-- Right Image -->
-        <div
-          class="order-1 lg:order-2 flex items-center justify-center opacity-0 animate-zoomIn delay-1300"
+        <div 
+          class="order-2 lg:order-1 flex flex-col transition-all duration-1000 ease-out delay-300 transform"
+          :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
         >
-          <img
-            :src="bgImage"
-            alt="UK Student Visa Process"
-            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[750px]"
-          />
+          <div class="flex items-center text-green-600 font-bold uppercase tracking-widest text-xs mb-4">
+            <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+            Process & Support
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-8 leading-tight">
+            Application & Student 
+            <span class="relative inline-block text-green-500">
+              Visa Process
+              <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+            </span>
+          </h2>
+
+          <div class="bg-white/70 backdrop-blur-sm border border-blue-100 p-6 sm:p-8 rounded-2xl shadow-sm mb-10">
+            <ul class="space-y-4 text-slate-700 text-lg">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Major Intakes:</span> January, September (main intake), and May (select universities).</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Requirements:</span> English proficiency (IELTS, TOEFL, PTE), academic transcripts, SOP, LORs, and financial proof.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Visa (Student Route):</span> Requires unconditional offer, CAS, proof of funds, and English language evidence.</div>
+              </li>
+            </ul>
+            <p class="mt-6 text-slate-600 font-medium italic border-l-4 border-green-400 pl-4 py-1">
+              Our experts guide Indian students through the complete UK application and visa process, ensuring accuracy, compliance, and faster approvals.
+            </p>
+          </div>
+
+          <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">
+            Why Choose 
+            <span class="text-green-500 underline decoration-green-400 underline-offset-4">Grace International?</span>
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm flex items-start gap-3">
+              <span class="text-green-500 text-xl">🏛️</span>
+              <span class="text-slate-700 text-sm font-medium">Strong partnerships with top UK universities.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm flex items-start gap-3">
+              <span class="text-green-500 text-xl">🛡️</span>
+              <span class="text-slate-700 text-sm font-medium">End-to-end: applications, visas, scholarships.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm flex items-start gap-3">
+              <span class="text-green-500 text-xl">📈</span>
+              <span class="text-slate-700 text-sm font-medium">Guidance on Graduate Route visas.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm flex items-start gap-3">
+              <span class="text-green-500 text-xl">🤝</span>
+              <span class="text-slate-700 text-sm font-medium">Ongoing student support in the UK.</span>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import bgImage from "@/assets/freevisaprocessing.png";
+
+const sectionRef = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      if (observer) observer.disconnect();
+    }
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
 
 <style scoped>
-/* Fade-up animation */
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes rotateDashed {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-
-/* Zoom-in animation */
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Animation classes */
-.animate-fadeUp {
-  animation: fadeUp 1s ease-out forwards;
-}
-.animate-zoomIn {
-  animation: zoomIn 1s ease-out forwards;
-}
-
-/* Delay utilities */
-.delay-100 {
-  animation-delay: 0.1s;
-}
-.delay-200 {
-  animation-delay: 0.2s;
-}
-.delay-300 {
-  animation-delay: 0.3s;
-}
-.delay-400 {
-  animation-delay: 0.4s;
-}
-.delay-500 {
-  animation-delay: 0.5s;
-}
-.delay-600 {
-  animation-delay: 0.6s;
-}
-.delay-700 {
-  animation-delay: 0.7s;
-}
-.delay-800 {
-  animation-delay: 0.8s;
-}
-.delay-900 {
-  animation-delay: 0.9s;
-}
-.delay-1000 {
-  animation-delay: 1s;
-}
-.delay-1100 {
-  animation-delay: 1.1s;
-}
-.delay-1200 {
-  animation-delay: 1.2s;
-}
-.delay-1300 {
-  animation-delay: 1.3s;
+.animate-rotate-dashed {
+  animation: rotateDashed 30s linear infinite;
 }
 </style>

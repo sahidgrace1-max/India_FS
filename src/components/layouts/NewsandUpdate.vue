@@ -1,13 +1,13 @@
 <template>
-  <div class="flex bg-white min-h-screen relative font">
+  <div class="flex flex-col lg:flex-row bg-white min-h-screen relative font">
     <div class="flex-2 px-6 pt-8 pb-0 flex-grow">
       <h2 class="text-2xl font-semibold mb-2">News & Updates</h2>
       <a class="text-green-500 text-base mb-4 inline-block" href="#"
         >Read All News</a
       >
-      <div class="flex gap-8 mt-4">
+      <div class="flex flex-col md:flex-row gap-8 mt-4">
         <div
-          class="bg-white rounded-lg shadow p-0 pb-4 w-[350px] flex flex-col"
+          class="bg-white rounded-lg shadow p-0 pb-4 w-full md:w-[350px] flex flex-col"
         >
           <img
             src="https://via.placeholder.com/350x180?text=News+Image+1"
@@ -30,7 +30,7 @@
           <a class="text-green-500 font-medium ml-4" href="#">Read More ➞</a>
         </div>
         <div
-          class="bg-white rounded-lg shadow p-0 pb-4 w-[350px] flex flex-col"
+          class="bg-white rounded-lg shadow p-0 pb-4 w-full md:w-[350px] flex flex-col"
         >
           <img
             src="https://via.placeholder.com/350x180?text=News+Image+2"
@@ -66,7 +66,7 @@
       </div>
     </div>
     <aside
-      class="flex-1 bg-blue-800 text-white px-6 py-8 flex flex-col min-w-[350px] relative"
+      class="w-full lg:w-1/3 bg-blue-800 text-white px-6 py-8 flex flex-col relative mt-8 lg:mt-0"
     >
       <div class="text-xl font-medium mb-6">Quick Links</div>
       <ul class="list-none p-0 mb-8">

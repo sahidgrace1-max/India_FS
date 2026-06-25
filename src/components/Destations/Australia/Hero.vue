@@ -1,18 +1,79 @@
 <template>
-  <div
-    class="relative w-full h-[180px] flex items-center justify-center overflow-hidden bg-cover bg-center"
-    :style="`background-image: url('${bgUrl}')`"
+  <section 
+    ref="sectionRef"
+    class="relative w-full min-h-[350px] md:min-h-[400px] flex items-center justify-center overflow-hidden font-poppins"
   >
-    <div class="absolute inset-0 bg-black/45 z-10"></div>
-    <h1
-      class="relative z-20 text-white text-3xl md:text-4xl font-bold text-center"
+    <!-- Background Image with Zoom Animation -->
+    <div 
+      class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-[2s] scale-105" 
+      :style="{ backgroundImage: `url('${bgUrl}')` }"
     >
-      Study In Australia
-    </h1>
-  </div>
+      <!-- Brand Overlay -->
+      <div class="absolute inset-0 bg-blue-900/85"></div>
+      
+      <!-- Decorative Blobs -->
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-500/20 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
+    </div>
+
+    <!-- Content -->
+    <div 
+      class="relative z-10 max-w-4xl mx-auto px-4 text-center transition-all duration-1000 ease-out transform"
+      :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12']"
+    >
+      <!-- Eyebrow label -->
+      <div class="flex items-center justify-center text-green-400 font-bold uppercase tracking-widest text-xs mb-4">
+        <span class="w-8 h-1 bg-green-400 rounded-full mr-3"></span>
+        Destination
+      </div>
+
+      <!-- Heading -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
+        Study In 
+        <span class="relative inline-block text-green-400">
+          Australia
+          <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+        </span>
+      </h1>
+    </div>
+
+    <!-- Section Divider Diagonal Strip -->
+    <div class="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/40 to-green-600/40 transform skew-y-1 z-10"></div>
+  </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import bgImg from "@/assets/image.png";
+
 const bgUrl = bgImg;
+const sectionRef = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      if (observer) observer.disconnect();
+    }
+  }, {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
+
+<style scoped>
+/* Scoped styles are intentionally left minimal as Tailwind covers the design system requirements */
+</style>

@@ -1,191 +1,135 @@
 <template>
-  <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <!-- Left Content - Animated -->
-        <div
-          ref="leftContent"
-          class="animate-section order-1 lg:order-1"
-          data-animation="slide-left"
+  <section
+    ref="sectionRef"
+    class="relative py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins"
+  >
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-800/5 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-600/5 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
+      <div class="absolute top-1/4 right-1/4 w-64 h-64 border-[1px] border-dashed border-blue-800/20 rounded-full animate-rotate-dashed hidden lg:block"></div>
+    </div>
+
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        
+        <div 
+          class="order-1 lg:order-1 flex flex-col transition-all duration-1000 ease-out transform"
+          :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
         >
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            Cost of Studying & Living in the USA
+          <div class="flex items-center text-green-600 font-bold uppercase tracking-widest text-xs mb-4">
+            <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+            Financial Planning
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-8 leading-tight">
+            Cost of Studying & 
+            <span class="relative inline-block text-green-500">
+              Living in the USA
+              <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+            </span>
           </h2>
 
-          <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Tuition Fees (Public Universities):</span
-              >
-              USD
-              <span class="font-semibold text-lg">9,000–23,000/year</span>
-              depending on residency and program.
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Tuition Fees (Private Universities):</span
-              >
-              USD
-              <span class="font-semibold text-lg">31,000–60,000/year</span>
-              depending on the institution.
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Community/Two-Year Colleges:</span
-              >
-              USD
-              <span class="font-semibold text-lg">3,000–6,000/year</span> for
-              tuition.
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Living Costs:</span
-              >
-              USD
-              <span class="font-semibold text-lg">10,000–15,000/year</span>
-              depending on city and lifestyle.
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Average Total (Study + Living):</span
-              >
-              USD
-              <span class="font-semibold text-lg">20,000–75,000/year</span>
-              depending on type of university and location.
-            </li>
-          </ul>
+          <div class="bg-white/70 backdrop-blur-sm border border-blue-100 p-6 sm:p-8 rounded-2xl shadow-sm mb-10">
+            <ul class="space-y-4 text-slate-700 text-lg">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Public Universities:</span> USD 9,000–23,000/year (varies by program).</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Private Universities:</span> USD 31,000–60,000/year.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Living Costs:</span> USD 10,000–15,000/year.</div>
+              </li>
+            </ul>
+            <p class="mt-6 text-slate-600 font-medium italic border-l-4 border-green-400 pl-4 py-1">
+              Grace International India provides guidance on budgeting, financial aid, and managing expenses for Indian students in the USA.
+            </p>
+          </div>
 
-          <p class="text-gray-700 text-base leading-relaxed mb-6">
-            <span class="text-orange-600 font-medium text-lg"
-              >Grace International India</span
-            >
-            <span class="text-lg">
-              provides guidance on budgeting, financial aid, and managing
-              expenses for Indian students in the USA.</span
-            >
-          </p>
+          <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">
+            Work & 
+            <span class="relative inline-block">
+              Career Opportunities
+              <span class="absolute bottom-1 left-0 w-full h-1 bg-green-400 rounded-full opacity-60"></span>
+            </span>
+          </h3>
 
-          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-lg">
-            Work Opportunities & Post-Study Options
-          </h2>
-
-          <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >On-Campus Work:</span
-              >
-              Indian students on F-1 visas can work part-time
-              <span class="font-semibold text-lg">up to 20 hours per week</span>
-              during semesters; full-time during breaks.
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Optional Practical Training (OPT):</span
-              >
-              <ul class="ml-6 mt-2 space-y-1">
-                <li class="text-gray-600 text-base text-lg">
-                  Bachelor's or Master's – up to 12 months
-                </li>
-                <li class="text-gray-600 text-base text-lg">
-                  STEM Degrees – can extend for an additional 24 months
-                </li>
-              </ul>
-            </li>
-          </ul>
-
-          <p class="text-gray-700 text-base leading-relaxed mb-6 text-lg">
-            OPT allows Indian students to gain practical work experience in the
-            USA after graduation.
-          </p>
-
-          <p class="text-gray-700 text-sm leading-relaxed">
-            <span class="font-semibold text-gray-900 text-lg"
-              >Career & Visa Pathways:</span
-            >
-            <span class="text-lg">
-              Indian students can explore H-1B work visas and other
-              employment-based immigration options after completing their
-              studies.</span
-            >
-          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm flex items-start gap-3">
+              <span class="text-green-500 text-xl">🎓</span>
+              <span class="text-slate-700 text-sm font-medium">On-campus work: 20 hours/week.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm flex items-start gap-3">
+              <span class="text-green-500 text-xl">💼</span>
+              <span class="text-slate-700 text-sm font-medium">OPT: 12 months, +24 for STEM.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm flex items-start gap-3 sm:col-span-2">
+              <span class="text-green-500 text-xl">🚀</span>
+              <span class="text-slate-700 text-sm font-medium">Clear pathways to H-1B work visas and permanent residency.</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Right Image - Animated -->
-        <div
-          ref="rightImage"
-          class="animate-section order-2 lg:order-2 flex items-center justify-center"
-          data-animation="slide-right"
+        <div 
+          class="order-1 lg:order-2 flex justify-center transition-all duration-1000 ease-out delay-300 transform"
+          :class="[isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12']"
         >
-          <img
-            :src="bgImage"
-            alt="Students studying in the USA"
-            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[700px]"
-          />
+          <div class="relative group w-full max-w-lg lg:max-w-none">
+            <div class="absolute -inset-4 bg-blue-800/10 rounded-[2rem] blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+            <img
+              :src="bgImage"
+              alt="Students studying in the USA"
+              class="relative rounded-3xl shadow-xl w-full h-auto object-cover border-4 border-white min-h-[500px] lg:min-h-[800px]"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import bgImage from "@/assets/usa2.png";
 
-// Refs for animated sections
-const leftContent = ref(null);
-const rightImage = ref(null);
-
+const sectionRef = ref(null);
+const isVisible = ref(false);
 let observer = null;
 
 onMounted(() => {
-  const options = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-
-  observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-      }
-    });
-  }, options);
-
-  const sections = [leftContent.value, rightImage.value];
-  sections.forEach((section) => {
-    if (section) observer.observe(section);
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      if (observer) observer.disconnect();
+    }
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
   });
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
 });
 
 onUnmounted(() => {
-  if (observer) observer.disconnect();
+  if (observer) {
+    observer.disconnect();
+  }
 });
 </script>
 
 <style scoped>
-/* Base state */
-.animate-section {
-  opacity: 0;
-  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+@keyframes rotateDashed {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-
-/* Slide Left */
-.animate-section[data-animation="slide-left"] {
-  transform: translateX(-40px);
-}
-.animate-section[data-animation="slide-left"].is-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Slide Right */
-.animate-section[data-animation="slide-right"] {
-  transform: translateX(40px);
-}
-.animate-section[data-animation="slide-right"].is-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+.animate-rotate-dashed {
+  animation: rotateDashed 30s linear infinite;
 }
 </style>

@@ -1,356 +1,235 @@
 <template>
-  <footer
-    class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-12 pb-4 font-sans relative overflow-hidden"
-  >
-    <!-- Animated background elements -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="floating-circle"></div>
-      <div class="floating-circle-2"></div>
+  <footer class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-slate-300 pt-16 pb-6 font-poppins relative overflow-hidden border-t border-blue-900/50">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl animate-float-slow"></div>
+      <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-green-600/10 rounded-full blur-3xl transform translate-x-1/4 translate-y-1/4 animate-float-delayed"></div>
     </div>
 
-    <div
-      class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10"
-    >
-      <!-- Logo & App Download -->
-      <div class="flex flex-col space-y-6 fade-in-up">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 relative z-10">
+      
+      <div 
+        ref="col1"
+        data-index="0"
+        class="flex flex-col space-y-6 transition-all duration-1000 ease-out transform"
+        :class="[isVisible[0] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
         <img
           src="@/assets/logo.png"
           alt="Grace International Logo"
-          class="w-24 sm:w-28 md:w-32 lg:w-36 mb-2 hover-lift"
+          class="w-32 sm:w-36 md:w-40 hover:-translate-y-1 transition-transform duration-300 filter drop-shadow-lg bg-white/10 p-2 rounded-xl backdrop-blur-sm border border-white/5"
         />
-        <p class="text-sm text-gray-400 leading-relaxed">
-          Your gateway to global education excellence
+        <p class="text-sm text-slate-400 leading-relaxed max-w-xs font-medium">
+          Your trusted gateway to global education excellence. We provide comprehensive support for your international study journey.
         </p>
       </div>
 
-      <!-- Quick Links -->
-      <div class="fade-in-up" style="animation-delay: 0.1s">
-        <h3
-          class="text-lg font-semibold mb-4 text-green-400 relative inline-block"
-        >
-          QUICK LINKS
-          <span class="underline-animation"></span>
-        </h3>
-        <ul class="space-y-2">
-          <li class="link-item">
-            <router-link to="/" class="footer-link">
-              <i class="fas fa-chevron-right text-xs mr-2 text-green-400"></i>
+      <div 
+        ref="col2"
+        data-index="1"
+        class="transition-all duration-1000 ease-out transform"
+        :class="[isVisible[1] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="flex items-center text-green-500 font-bold uppercase tracking-widest text-xs mb-6">
+          <span class="w-6 h-1 bg-green-500 rounded-full mr-2"></span>
+          Quick Links
+        </div>
+        <ul class="space-y-3">
+          <li>
+            <router-link to="/" class="group flex items-center text-sm font-medium hover:text-green-400 transition-colors">
+              <svg class="w-4 h-4 mr-2 text-green-600/70 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
               Events
             </router-link>
           </li>
-          <li class="link-item">
-            <router-link to="/about" class="footer-link">
-              <i class="fas fa-chevron-right text-xs mr-2 text-green-400"></i>
+          <li>
+            <router-link to="/about" class="group flex items-center text-sm font-medium hover:text-green-400 transition-colors">
+              <svg class="w-4 h-4 mr-2 text-green-600/70 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
               Latest News
             </router-link>
           </li>
-          <li class="link-item">
-            <router-link to="/destinations/australia" class="footer-link">
-              <i class="fas fa-chevron-right text-xs mr-2 text-green-400"></i>
+          <li>
+            <router-link to="/destinations/australia" class="group flex items-center text-sm font-medium hover:text-green-400 transition-colors">
+              <svg class="w-4 h-4 mr-2 text-green-600/70 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
               Explore Countries
             </router-link>
           </li>
-          <li class="link-item">
-            <router-link to="/university/australia" class="footer-link">
-              <i class="fas fa-chevron-right text-xs mr-2 text-green-400"></i>
+          <li>
+            <router-link to="/university/australia" class="group flex items-center text-sm font-medium hover:text-green-400 transition-colors">
+              <svg class="w-4 h-4 mr-2 text-green-600/70 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
               Australian Universities
             </router-link>
           </li>
-          <li class="link-item">
-            <router-link to="/scholarships" class="footer-link">
-              <i class="fas fa-chevron-right text-xs mr-2 text-green-400"></i>
+          <li>
+            <router-link to="/scholarships" class="group flex items-center text-sm font-medium hover:text-green-400 transition-colors">
+              <svg class="w-4 h-4 mr-2 text-green-600/70 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
               Scholarships
             </router-link>
           </li>
-          <li class="link-item">
-            <router-link to="/our-services" class="footer-link">
-              <i class="fas fa-chevron-right text-xs mr-2 text-green-400"></i>
-              Vacancy
+          <li>
+            <router-link to="/our-services" class="group flex items-center text-sm font-medium hover:text-green-400 transition-colors">
+              <svg class="w-4 h-4 mr-2 text-green-600/70 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              Our Services
             </router-link>
           </li>
         </ul>
       </div>
 
-      <!-- Offices 1 -->
-      <div class="space-y-4 fade-in-up w-full" style="animation-delay: 0.2s">
-        <div class="office-card w-full">
-          <h3 class="font-semibold text-green-400 mb-2">HEAD OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1">
-            <i class="fas fa-map-marker-alt text-green-400 mr-2"></i>
+      <div 
+        ref="col3"
+        data-index="2"
+        class="space-y-4 transition-all duration-1000 ease-out transform"
+        :class="[isVisible[2] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-5 hover:border-green-500/50 transition-colors duration-300 group">
+          <div class="flex items-center text-green-500 font-bold uppercase tracking-widest text-xs mb-3">
+            <span class="w-4 h-1 bg-green-500 rounded-full mr-2 group-hover:w-6 transition-all"></span>
+            Head Office
+          </div>
+          <p class="text-sm text-slate-300 mb-2 flex items-start">
+            <svg class="w-4 h-4 text-green-500 mr-2.5 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
             New Baneshwor, Kathmandu, Nepal
           </p>
-          <p class="text-sm text-gray-300 mb-1 break-all">
-            <i class="fas fa-envelope text-green-400 mr-2"></i>
+          <a href="mailto:enquiry@grace.edu.np" class="text-sm text-slate-300 mb-2 flex items-center hover:text-green-400 transition-colors break-all">
+            <svg class="w-4 h-4 text-green-500 mr-2.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             enquiry@grace.edu.np
-          </p>
-          <p class="text-sm text-gray-300">
-            <i class="fas fa-phone text-green-400 mr-2"></i>
-            (01) 4796880 / (01)4796881
-          </p>
+          </a>
+          <a href="tel:014796880" class="text-sm text-slate-300 flex items-center hover:text-green-400 transition-colors">
+            <svg class="w-4 h-4 text-green-500 mr-2.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            (01) 4796880 / (01) 4796881
+          </a>
         </div>
       </div>
 
-      <!-- Offices 2 -->
-      <div class="space-y-4 fade-in-up w-full" style="animation-delay: 0.3s">
-        <div class="office-card w-full">
-          <h3 class="font-semibold text-green-400 mb-2">INDIA OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1 break-all">
-            <i class="fas fa-envelope text-green-400 mr-2"></i>
+      <div 
+        ref="col4"
+        data-index="3"
+        class="space-y-4 transition-all duration-1000 ease-out transform"
+        :class="[isVisible[3] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-4 hover:border-blue-500/50 transition-colors duration-300 group">
+          <div class="flex items-center text-blue-400 font-bold uppercase tracking-widest text-xs mb-2">
+            <span class="w-4 h-1 bg-blue-500 rounded-full mr-2 group-hover:w-6 transition-all"></span>
+            India Office
+          </div>
+          <a href="mailto:enquiry.in@graceintlgroup.com" class="text-xs text-slate-300 mb-1.5 flex items-center hover:text-blue-400 transition-colors break-all">
+            <svg class="w-3.5 h-3.5 text-blue-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             enquiry.in@graceintlgroup.com
-          </p>
-          <p class="text-sm text-gray-300">
-            <i class="fas fa-phone text-green-400 mr-2"></i>
+          </a>
+          <a href="tel:+9101141070020" class="text-xs text-slate-300 flex items-center hover:text-blue-400 transition-colors">
+            <svg class="w-3.5 h-3.5 text-blue-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             +91-011-41070020
-          </p>
+          </a>
         </div>
-        <div class="office-card w-full">
-          <h3 class="font-semibold text-green-400 mb-2">KENYA OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1 break-all">
-            <i class="fas fa-envelope text-green-400 mr-2"></i>
+        
+        <div class="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-4 hover:border-yellow-500/50 transition-colors duration-300 group">
+          <div class="flex items-center text-yellow-500 font-bold uppercase tracking-widest text-xs mb-2">
+            <span class="w-4 h-1 bg-yellow-500 rounded-full mr-2 group-hover:w-6 transition-all"></span>
+            Kenya Office
+          </div>
+          <a href="mailto:admission.ke@graceintlgroup.com" class="text-xs text-slate-300 mb-1.5 flex items-center hover:text-yellow-400 transition-colors break-all">
+            <svg class="w-3.5 h-3.5 text-yellow-500 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             admission.ke@graceintlgroup.com
-          </p>
-          <p class="text-sm text-gray-300">
-            <i class="fas fa-phone text-green-400 mr-2"></i>
+          </a>
+          <a href="tel:+254719231999" class="text-xs text-slate-300 flex items-center hover:text-yellow-400 transition-colors">
+            <svg class="w-3.5 h-3.5 text-yellow-500 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             +254 719-231 999
-          </p>
+          </a>
         </div>
-        <div class="office-card w-full" style="margin-bottom: 0;">
-          <h3 class="font-semibold text-green-400 mb-2">BANGLADESH OFFICE</h3>
-          <p class="text-sm text-gray-300 mb-1 break-all">
-            <i class="fas fa-envelope text-green-400 mr-2"></i>
+
+        <div class="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-4 hover:border-red-500/50 transition-colors duration-300 group">
+          <div class="flex items-center text-red-400 font-bold uppercase tracking-widest text-xs mb-2">
+            <span class="w-4 h-1 bg-red-500 rounded-full mr-2 group-hover:w-6 transition-all"></span>
+            Bangladesh Office
+          </div>
+          <a href="mailto:director.bangladesh@graceintlgroup.com" class="text-xs text-slate-300 mb-1.5 flex items-center hover:text-red-400 transition-colors break-all">
+            <svg class="w-3.5 h-3.5 text-red-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             director.bangladesh@graceintlgroup.com
-          </p>
-          <p class="text-sm text-gray-300">
-            <i class="fas fa-phone text-green-400 mr-2"></i>
+          </a>
+          <a href="tel:+923355441602" class="text-xs text-slate-300 flex items-center hover:text-red-400 transition-colors">
+            <svg class="w-3.5 h-3.5 text-red-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             +92 (335) 5441602
-          </p>
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Section -->
-    <div class="border-t border-gray-700 mt-10 pt-6 relative z-10">
-      <div
-        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between"
-      >
-        <span class="text-sm mb-4 md:mb-0 text-gray-400">
-          Copyright © 2023. Grace International. All Rights Reserved.
+    <div class="border-t border-slate-800 mt-12 pt-6 relative z-10 bg-slate-900/50 backdrop-blur-md">
+      <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm text-slate-500 font-medium">
+        <span class="mb-4 md:mb-0 text-center md:text-left">
+          Copyright © {{ new Date().getFullYear() }}. Grace International. All Rights Reserved.
         </span>
+        <div class="flex space-x-6">
+          <router-link to="/privacy-policy" class="hover:text-green-400 transition-colors">Privacy Policy</router-link>
+          <router-link to="/terms-of-service" class="hover:text-green-400 transition-colors">Terms of Service</router-link>
+        </div>
       </div>
     </div>
   </footer>
 </template>
 
-<script>
-export default {
-  name: "Footer",
-};
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const col1 = ref(null);
+const col2 = ref(null);
+const col3 = ref(null);
+const col4 = ref(null);
+
+const isVisible = ref([false, false, false, false]);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const index = entry.target.dataset.index;
+        if (index !== undefined) {
+          isVisible.value[index] = true;
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  const columns = [col1.value, col2.value, col3.value, col4.value];
+  columns.forEach((col) => {
+    if (col) {
+      observer.observe(col);
+    }
+  });
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
 
 <style scoped>
-/* Fade in up animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform: translate(30px, -30px) scale(1.05);
   }
 }
-
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
+.animate-float-slow {
+  animation: floatSlow 20s ease-in-out infinite;
 }
 
-/* Hover lift effect */
-.hover-lift {
-  transition: transform 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-5px);
-}
-
-/* Underline animation for headings */
-.underline-animation {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #10b981, #34d399);
-  transition: width 0.3s ease;
-}
-
-.fade-in-up:hover .underline-animation {
-  width: 100%;
-}
-
-/* Footer links */
-.footer-link {
-  display: inline-flex;
-  align-items: center;
-  color: #d1d5db;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.footer-link:hover {
-  color: #10b981;
-  transform: translateX(5px);
-}
-
-.footer-link i {
-  transition: transform 0.3s ease;
-}
-
-.footer-link:hover i {
-  transform: translateX(3px);
-}
-
-/* Link items staggered animation */
-.link-item {
-  animation: fadeInLeft 0.5s ease-out forwards;
-  opacity: 0;
-}
-
-.link-item:nth-child(1) { animation-delay: 0.1s; }
-.link-item:nth-child(2) { animation-delay: 0.2s; }
-.link-item:nth-child(3) { animation-delay: 0.3s; }
-.link-item:nth-child(4) { animation-delay: 0.4s; }
-.link-item:nth-child(5) { animation-delay: 0.5s; }
-.link-item:nth-child(6) { animation-delay: 0.6s; }
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
+@keyframes floatDelayed {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  50% {
+    transform: translate(-30px, 30px) scale(1.05);
   }
 }
-
-/* Office cards */
-.office-card {
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 8px;
-  border: 1px solid rgba(16, 185, 129, 0.1);
-  transition: all 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.office-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(16, 185, 129, 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
-}
-
-.office-card:last-child {
-  margin-bottom: 0;
-  padding-bottom: 16px;
-}
-
-/* Social icons */
-.social-icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  color: #d1d5db;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.social-icon:hover {
-  background: #10b981;
-  color: white;
-  transform: translateY(-3px) rotate(5deg);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-  border-color: #10b981;
-}
-
-/* Heartbeat animation */
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  10%, 30% { transform: scale(1.1); }
-  20%, 40% { transform: scale(1.15); }
-}
-
-.heartbeat {
-  display: inline-block;
-  animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-/* Underline hover effect */
-.underline-hover {
-  position: relative;
-}
-
-.underline-hover::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #10b981;
-  transition: width 0.3s ease;
-}
-
-.underline-hover:hover::after {
-  width: 100%;
-}
-
-/* Floating background circles */
-.floating-circle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
-  top: -100px;
-  right: -100px;
-  animation: float 20s ease-in-out infinite;
-}
-
-.floating-circle-2 {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
-  bottom: -150px;
-  left: -150px;
-  animation: float 25s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, -30px) scale(1.1); }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .office-card {
-    padding: 12px;
-  }
-
-  .social-icon {
-    width: 36px;
-    height: 36px;
-  }
+.animate-float-delayed {
+  animation: floatDelayed 25s ease-in-out infinite reverse;
 }
 </style>

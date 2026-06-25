@@ -3,13 +3,13 @@
     <Navbar />
 
     <!-- Hero Section -->
-    <div
+    <!-- <div
       v-motion
       :initial="{ opacity: 0, y: 50 }"
       :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 100 } }"
     >
       <Hero />
-    </div>
+    </div> -->
 
     <!-- Section1 -->
     <div
@@ -30,13 +30,7 @@
     </div>
 
     <!-- Top Study Destinations -->
-    <div
-      v-motion
-      :initial="{ opacity: 0, scale: 0.9 }"
-      :visible-once="{ opacity: 1, scale: 1, transition: { duration: 800 } }"
-    >
-      <TopStudyDestinations />
-    </div>
+    <AllStudyDestinations />
 
     <!-- Test Preparation -->
     <div
@@ -63,6 +57,15 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 800 } }"
     >
       <testimonials />
+    </div>
+
+     <!-- Latest Blogs -->
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 40 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 800 } }"
+    >
+      <LatestBlogs />
     </div>
 
     <!-- Associated Universities -->
@@ -95,7 +98,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "@/components/layouts/NavbarGrace.vue";
 import Hero from "@/components/layouts/Hero.vue";
 import Section1 from "@/components/layouts/Section1.vue";
-import TopStudyDestinations from "@/components/layouts/TopStudyDestinations.vue";
+import AllStudyDestinations from "@/components/layouts/AllStudyDestinations.vue";
 import OurServices from "@/components/layouts/OurServices.vue";
 import ContactForm from "@/components/layouts/ContactForm.vue";
 import TestPreparation from "../components/layouts/TestPreparation.vue";
@@ -103,6 +106,7 @@ import AssociatedUniversities from "@/components/layouts/AssociatedUniversities.
 import Accreditations from "@/components/layouts/Accreditations.vue";
 import Fotter from "@/components/layouts/fotter.vue";
 import testimonials from "../components/layouts/testimonials.vue";
+import LatestBlogs from "@/components/layouts/LatestBlogs.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 

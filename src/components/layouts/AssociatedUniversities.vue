@@ -1,3 +1,89 @@
+<template>
+  <section ref="sectionRef" class="relative w-full py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-blue-800/5 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 -left-40 w-[400px] h-[400px] bg-green-600/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-20 w-64 h-64 border-[1px] border-dashed border-blue-800/20 rounded-full animate-rotate-dashed"></div>
+    </div>
+
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div 
+        class="text-center mb-16 transition-all duration-1000 ease-out transform"
+        :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="flex items-center justify-center text-green-600 font-bold uppercase tracking-widest text-sm mb-4">
+          <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+          Global Network
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900">
+          Associated 
+          <span class="relative inline-block">
+            Universities
+            <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+          </span>
+        </h2>
+      </div>
+
+      <div 
+        class="flex flex-col items-center w-full transition-all duration-1000 ease-out delay-200 transform"
+        :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+      >
+        <div class="flex items-center justify-center w-full gap-2 sm:gap-4">
+          <button 
+            @click="prevSlide" 
+            class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/80 backdrop-blur-sm border border-blue-100 text-blue-800 flex items-center justify-center shadow-md hover:bg-blue-800 hover:text-white hover:shadow-lg transition-all duration-300 hover:scale-105 z-10"
+            aria-label="Previous University"
+          >
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div class="flex gap-4 sm:gap-6 justify-center overflow-hidden flex-1 py-4 px-2">
+            <div
+              v-for="university in visibleUniversities"
+              :key="university.name"
+              class="flex flex-col w-full max-w-[160px] sm:max-w-[180px] lg:max-w-[200px]"
+            >
+              <a :href="university.website" target="_blank" class="block group h-full">
+                <div class="h-full bg-white/70 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-sm overflow-hidden flex flex-col transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:border-blue-200">
+                  <div class="relative h-32 sm:h-36 md:h-40 w-full overflow-hidden bg-slate-100">
+                    <img
+                      :src="university.photo"
+                      :alt="university.name"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  <div class="p-4 flex-grow flex items-center justify-center text-center bg-white">
+                    <span class="font-bold text-sm sm:text-base text-blue-900 group-hover:text-green-600 transition-colors duration-300 line-clamp-2">
+                      {{ university.name }}
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <button 
+            @click="nextSlide" 
+            class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/80 backdrop-blur-sm border border-blue-100 text-blue-800 flex items-center justify-center shadow-md hover:bg-blue-800 hover:text-white hover:shadow-lg transition-all duration-300 hover:scale-105 z-10"
+            aria-label="Next University"
+          >
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import albertus from "@/assets/Albertus Magnus College.jpg";
@@ -43,11 +129,16 @@ const universities = [
 const currentIndex = ref(0);
 let intervalId = null;
 
+const sectionRef = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
 const visibleCount = computed(() => {
   if (typeof window === "undefined") return 6;
-  if (window.innerWidth < 640) return 1; // Mobile: 1 item
+  if (window.innerWidth < 640) return 2; // Mobile: 2 items
   if (window.innerWidth < 1024) return 3; // Tablet: 3 items
-  return 6; // Desktop: 6 items
+  if (window.innerWidth < 1280) return 4; // Small Desktop: 4 items
+  return 5; // Desktop: 5 items for better spacing with cards
 });
 
 const visibleUniversities = computed(() => {
@@ -68,112 +159,43 @@ function prevSlide() {
 }
 
 onMounted(() => {
-  intervalId = setInterval(nextSlide, 3000);
+  intervalId = setInterval(nextSlide, 3500); // Slightly slower for better readability
+
+  // Intersection Observer for animation
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      if (observer) observer.disconnect();
+    }
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
 });
 
 onUnmounted(() => {
   clearInterval(intervalId);
+  if (observer) {
+    observer.disconnect();
+  }
 });
 </script>
 
-<template>
-  <div
-    class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-slate-50 py-8 text-center my-10"
-  >
-    <h2 class="text-xl sm:text-2xl font-bold text-[#176ca6] mb-6 px-4">
-      Associated Universities
-    </h2>
-    <div class="flex flex-col items-center w-full relative px-2 sm:px-4">
-      <div
-        class="flex items-center justify-center w-full max-w-[1100px]"
-      >
-        <button class="arrow" @click="prevSlide" aria-label="Previous">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path
-              d="M15 18l-6-6 6-6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <div class="flex gap-4 sm:gap-6 lg:gap-8 justify-center overflow-hidden flex-1 px-2">
-          <div
-            v-for="university in visibleUniversities"
-            :key="university.name"
-            class="flex flex-col items-center"
-          >
-            <a :href="university.website" target="_blank">
-              <div
-                class="relative w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 border-4 border-[#176ca6] rounded-full overflow-hidden bg-white shadow flex items-center justify-center"
-              >
-                <img
-                  :src="university.photo"
-                  :alt="university.name"
-                  class="w-full h-full object-cover"
-                />
-                <div
-                  class="absolute bottom-0 w-full bg-[#176ca6]/70 text-white text-center py-1 sm:py-2"
-                >
-                  <span class="font-semibold text-xs sm:text-sm lg:text-base whitespace-nowrap px-1">
-                    {{ university.name }}
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <button class="arrow" @click="nextSlide" aria-label="Next">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path
-              d="M9 6l6 6-6 6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</template>
-
 <style scoped>
-.arrow {
-  background: #fff;
-  border: 2px solid #176ca6;
-  color: #176ca6;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  z-index: 10;
-  margin: 0 4px;
-  flex-shrink: 0;
-}
-
-.arrow:hover {
-  background: #176ca6;
-  color: #fff;
-}
-
-@media (min-width: 640px) {
-  .arrow {
-    width: 36px;
-    height: 36px;
-    margin: 0 8px;
+@keyframes rotateDashed {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-@media (min-width: 1024px) {
-  .arrow {
-    margin: 0 16px;
-  }
+.animate-rotate-dashed {
+  animation: rotateDashed 30s linear infinite;
 }
 </style>

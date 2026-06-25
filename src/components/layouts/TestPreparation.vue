@@ -1,167 +1,67 @@
 <template>
-  <div class="w-full flex flex-col items-center py-10 px-4">
-    <h2
-      class="text-2xl md:text-3xl font-bold text-center mb-10 animate-fade-in bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
-    >
-      Test Preparation
-    </h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-6xl">
-      <!-- Card 1 - IELTS -->
-      <div @click="goToIELTS" class="card-wrapper group">
-        <div
-          class="card-inner border-2 border-blue-500 rounded-xl flex items-center justify-center h-32 bg-gradient-to-br from-white via-red-50 to-blue-50 cursor-pointer relative overflow-hidden"
-        >
-          <!-- Animated background circles -->
-          <div
-            class="absolute top-0 right-0 w-20 h-20 bg-red-200 rounded-full blur-2xl opacity-0 group-hover:opacity-50 group-hover:scale-150 transition-all duration-700"
-          ></div>
-          <div
-            class="absolute bottom-0 left-0 w-16 h-16 bg-blue-200 rounded-full blur-xl opacity-0 group-hover:opacity-40 group-hover:scale-150 transition-all duration-500"
-          ></div>
+  <section ref="sectionRef" class="relative py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-20 -right-20 w-[400px] h-[400px] bg-blue-800/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-0 w-[500px] h-[500px] bg-green-600/5 rounded-full blur-3xl transform -translate-x-1/4"></div>
+      
+      <div class="absolute top-1/4 left-10 w-48 h-48 border-[1px] border-dashed border-blue-800/20 rounded-full animate-rotate-dashed"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-40"></div>
+    </div>
 
-          <!-- Shimmer effect -->
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 group-hover:translate-x-full transition-all duration-1000 -translate-x-full"
-          ></div>
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
 
-          <!-- Rotating border -->
-          <div
-            class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <div
-              class="absolute inset-0 rounded-xl animate-spin-slow bg-gradient-to-r from-red-500 via-blue-500 to-red-500 blur-sm"
-            ></div>
-          </div>
-
-          <div class="flex flex-col items-center relative z-10">
-            <span
-              class="text-4xl font-bold text-red-600 group-hover:scale-125 group-hover:rotate-3 transition-all duration-500 drop-shadow-lg"
-              >IELTS</span
-            >
-          </div>
-
-          <!-- Bottom glow bar -->
-          <div
-            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-pink-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 shadow-lg shadow-red-500/50"
-          ></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div
+        class="text-center mb-16 transition-all duration-1000 ease-out transform w-full"
+        :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="flex items-center justify-center text-green-600 font-bold uppercase tracking-widest text-sm mb-4">
+          <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+          Expert Coaching
         </div>
+        
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900">
+          Test 
+          <span class="relative inline-block">
+            Preparation
+            <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+          </span>
+        </h2>
       </div>
 
-      <!-- Card 2 - PTE -->
-      <div @click="goToPTE" class="card-wrapper group">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-5xl justify-items-center">
         <div
-          class="card-inner border-2 border-blue-500 rounded-xl flex items-center justify-center h-32 bg-gradient-to-br from-white via-indigo-50 to-purple-50 cursor-pointer relative overflow-hidden"
+          v-for="(test, index) in testPrograms"
+          :key="test.name"
+          @click="test.action"
+          class="w-full flex justify-center transition-all duration-700 ease-out transform"
+          :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+          :style="{ transitionDelay: `${index * 150}ms` }"
         >
-          <div
-            class="absolute top-0 right-0 w-20 h-20 bg-indigo-200 rounded-full blur-2xl opacity-0 group-hover:opacity-50 group-hover:scale-150 transition-all duration-700"
-          ></div>
-          <div
-            class="absolute bottom-0 left-0 w-16 h-16 bg-purple-200 rounded-full blur-xl opacity-0 group-hover:opacity-40 group-hover:scale-150 transition-all duration-500"
-          ></div>
+          <div class="group relative w-full h-40 flex flex-col items-center justify-center bg-white/70 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-sm cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-blue-200 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-green-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            
+            <span class="relative z-10 text-3xl sm:text-4xl font-extrabold text-blue-900 group-hover:text-blue-800 transition-colors duration-300 drop-shadow-sm">
+              {{ test.name }}
+            </span>
+            
+            <div class="relative z-10 mt-2 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center text-xs sm:text-sm font-bold text-green-600 uppercase tracking-wider">
+              Explore
+              <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
 
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 group-hover:translate-x-full transition-all duration-1000 -translate-x-full"
-          ></div>
-
-          <div
-            class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <div
-              class="absolute inset-0 rounded-xl animate-spin-slow bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 blur-sm"
-            ></div>
+            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
           </div>
-
-          <div class="flex flex-col items-center relative z-10">
-            <span
-              class="text-3xl font-bold text-indigo-900 group-hover:scale-125 group-hover:rotate-3 transition-all duration-500 drop-shadow-lg"
-              >PTE</span
-            >
-          </div>
-
-          <div
-            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-900 via-purple-600 to-indigo-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 shadow-lg shadow-indigo-500/50"
-          ></div>
-        </div>
-      </div>
-
-      <!-- Card 3 - TOEFL -->
-      <div @click="goToTOEFL" class="card-wrapper group">
-        <div
-          class="card-inner border-2 border-blue-500 rounded-xl flex items-center justify-center h-32 bg-gradient-to-br from-white via-gray-50 to-slate-100 cursor-pointer relative overflow-hidden"
-        >
-          <div
-            class="absolute top-0 right-0 w-20 h-20 bg-gray-300 rounded-full blur-2xl opacity-0 group-hover:opacity-50 group-hover:scale-150 transition-all duration-700"
-          ></div>
-          <div
-            class="absolute bottom-0 left-0 w-16 h-16 bg-slate-300 rounded-full blur-xl opacity-0 group-hover:opacity-40 group-hover:scale-150 transition-all duration-500"
-          ></div>
-
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 group-hover:translate-x-full transition-all duration-1000 -translate-x-full"
-          ></div>
-
-          <div
-            class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <div
-              class="absolute inset-0 rounded-xl animate-spin-slow bg-gradient-to-r from-gray-500 via-slate-500 to-gray-500 blur-sm"
-            ></div>
-          </div>
-
-          <div class="flex flex-col items-center relative z-10">
-            <span
-              class="text-3xl font-bold text-black group-hover:scale-125 group-hover:rotate-3 transition-all duration-500 drop-shadow-lg"
-              >TOEFL</span
-            >
-          </div>
-
-          <div
-            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-700 via-slate-600 to-gray-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 shadow-lg shadow-gray-500/50"
-          ></div>
-        </div>
-      </div>
-
-      <!-- Card 4 - GMAT -->
-      <div @click="goToGMAT" class="card-wrapper group">
-        <div
-          class="card-inner border-2 border-blue-500 rounded-xl flex items-center justify-center h-32 bg-gradient-to-br from-white via-purple-50 to-pink-50 cursor-pointer relative overflow-hidden"
-        >
-          <div
-            class="absolute top-0 right-0 w-20 h-20 bg-purple-200 rounded-full blur-2xl opacity-0 group-hover:opacity-50 group-hover:scale-150 transition-all duration-700"
-          ></div>
-          <div
-            class="absolute bottom-0 left-0 w-16 h-16 bg-pink-200 rounded-full blur-xl opacity-0 group-hover:opacity-40 group-hover:scale-150 transition-all duration-500"
-          ></div>
-
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 group-hover:translate-x-full transition-all duration-1000 -translate-x-full"
-          ></div>
-
-          <div
-            class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <div
-              class="absolute inset-0 rounded-xl animate-spin-slow bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 blur-sm"
-            ></div>
-          </div>
-
-          <div class="flex flex-col items-center relative z-10">
-            <span
-              class="text-3xl font-bold text-purple-700 group-hover:scale-125 group-hover:rotate-3 transition-all duration-500 drop-shadow-lg"
-              >GMAT</span
-            >
-          </div>
-
-          <div
-            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 shadow-lg shadow-purple-500/50"
-          ></div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -178,31 +78,43 @@ const goToTOEFL = () => {
 const goToGMAT = () => {
   router.push({ name: "GMATPreparation" });
 };
+
+const testPrograms = [
+  { name: "IELTS", action: goToIELTS },
+  { name: "PTE", action: goToPTE },
+  { name: "TOEFL", action: goToTOEFL },
+  { name: "GMAT", action: goToGMAT },
+];
+
+const sectionRef = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      if (observer) observer.disconnect();
+    }
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
 
 <style scoped>
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-30px) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes spinSlow {
+@keyframes rotateDashed {
   from {
     transform: rotate(0deg);
   }
@@ -211,103 +123,7 @@ const goToGMAT = () => {
   }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-.animate-spin-slow {
-  animation: spinSlow 8s linear infinite;
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s ease-out;
-  background-size: 200% auto;
-  animation: shimmer 3s linear infinite;
-}
-
-.card-wrapper {
-  animation: fadeIn 0.8s ease-out backwards;
-  perspective: 1000px;
-}
-
-.card-wrapper:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.card-wrapper:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.card-wrapper:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.card-wrapper:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.card-inner {
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transform-style: preserve-3d;
-}
-
-.card-wrapper:hover .card-inner {
-  transform: translateY(-12px) scale(1.05) rotateX(5deg);
-  box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.25),
-    0 12px 24px -8px rgba(0, 0, 0, 0.15);
-}
-
-.card-wrapper:active .card-inner {
-  transform: translateY(-6px) scale(1.02);
-  transition: all 0.1s ease;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.85;
-  }
-}
-
-.card-wrapper:hover {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Glow effect on hover */
-.card-wrapper:hover .card-inner::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: 0.75rem;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  opacity: 0;
-  animation: glow 2s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+.animate-rotate-dashed {
+  animation: rotateDashed 30s linear infinite;
 }
 </style>

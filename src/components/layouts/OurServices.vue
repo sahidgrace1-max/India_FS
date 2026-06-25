@@ -1,240 +1,206 @@
 <template>
-  <section class="bg-gray-100 py-10 md:py-16 font-poppins">
-    <div class="max-w-screen-2xl mx-auto px-2 md:px-4">
-      <h2
-        class="text-xl md:text-3xl font-semibold text-center text-blue-700 mb-8 md:mb-12"
+  <section ref="sectionRef" class="relative py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-20 -left-20 w-[500px] h-[500px] bg-blue-800/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-green-600/5 rounded-full blur-3xl transform translate-x-1/4 translate-y-1/4"></div>
+      <div class="absolute top-1/3 left-1/2 w-72 h-72 border-[1px] border-dashed border-blue-800/20 rounded-full animate-rotate-dashed transform -translate-x-1/2"></div>
+    </div>
+
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
+
+    <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div 
+        class="text-center mb-16 transition-all duration-1000 ease-out transform"
+        :class="[isHeaderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
       >
-        Our Services
-      </h2>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 justify-items-center"
-      >
-        <!-- Card 1: from left -->
+        <div class="flex items-center justify-center text-green-600 font-bold uppercase tracking-widest text-sm mb-4">
+          <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+          What We Offer
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900">
+          Our Core 
+          <span class="relative inline-block">
+            Services
+            <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+          </span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 justify-items-center relative z-10">
+        
         <div
           ref="card1"
-          :class="['service-card', 'from-left', { animate: inView.card1 }]"
+          data-index="0"
+          class="w-full max-w-sm flex flex-col bg-white/70 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-sm p-6 transition-all duration-700 ease-out transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200 group"
+          :class="[isVisible[0] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+          style="transition-delay: 0ms;"
         >
-          <img
-            src="@/assets/freecounselling.png"
-            alt="Free Counseling"
-            class="card-image"
-          />
-          <h3 class="card-title">Free Counseling</h3>
-          <div class="card-text">Dreaming to Study Abroad? Start Here —</div>
-          <div class="card-text">
-            Get expert guidance for
-            <span class="font-small"
-              >Australia | UK | Canada | USA | New Zealand | Europe</span
-            >
+          <div class="overflow-hidden rounded-xl mb-6 bg-slate-100 relative">
+            <img
+              src="@/assets/freecounselling.png"
+              alt="Free Counseling"
+              class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-3 text-center group-hover:text-blue-700 transition-colors">
+            Free Counseling
+          </h3>
+          <div class="text-slate-600 text-sm leading-relaxed text-center">
+            <p class="mb-2 font-medium">Dreaming to Study Abroad? Start Here —</p>
+            <p>
+              Get expert guidance for
+              <span class="font-semibold text-blue-800 block mt-1">Australia | UK | Canada | USA | New Zealand | Europe</span>
+            </p>
           </div>
         </div>
 
-        <!-- Card 2: from right -->
         <div
           ref="card2"
-          :class="['service-card', 'from-right', { animate: inView.card2 }]"
+          data-index="1"
+          class="w-full max-w-sm flex flex-col bg-white/70 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-sm p-6 transition-all duration-700 ease-out transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200 group"
+          :class="[isVisible[1] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+          style="transition-delay: 150ms;"
         >
-          <img
-            src="@/assets/profileassessment.png"
-            alt="Free Profile Assessment"
-            class="card-image"
-          />
-          <h3 class="card-title">Free Profile Assessment</h3>
-          <div class="card-text">
-            Your career deserves the
-            <span class="font-small">right direction.</span>
+          <div class="overflow-hidden rounded-xl mb-6 bg-slate-100 relative">
+            <img
+              src="@/assets/profileassessment.png"
+              alt="Free Profile Assessment"
+              class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
-          <div class="card-text">
-            Get a
-            <span class="font-small">FREE Study Abroad Profile Assessment</span>
-            from experts at
-            <span class="font-small">Grace International</span> and discover
-            your best options based on
-            <span class="font-small">your education, budget & goals.</span>
+          <h3 class="text-xl font-bold text-blue-900 mb-3 text-center group-hover:text-blue-700 transition-colors">
+            Profile Assessment
+          </h3>
+          <div class="text-slate-600 text-sm leading-relaxed text-center">
+            <p class="mb-2">
+              Your career deserves the <span class="font-semibold text-blue-800">right direction.</span>
+            </p>
+            <p>
+              Get a <span class="font-semibold text-green-600">FREE Study Abroad Profile Assessment</span> from experts at Grace International and discover your best options based on your education, budget & goals.
+            </p>
           </div>
         </div>
 
-        <!-- Card 3: from top -->
         <div
           ref="card3"
-          :class="['service-card', 'from-top', { animate: inView.card3 }]"
+          data-index="2"
+          class="w-full max-w-sm flex flex-col bg-white/70 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-sm p-6 transition-all duration-700 ease-out transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200 group"
+          :class="[isVisible[2] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+          style="transition-delay: 300ms;"
         >
-          <img
-            src="@/assets/freevisaprocessing.png"
-            alt="Free Visa Processing"
-            class="card-image"
-          />
-          <h3 class="card-title">Free Visa Processing</h3>
-          <div class="card-text">
-            Secure your student visa with expert guidance and zero processing
-            charges.
+          <div class="overflow-hidden rounded-xl mb-6 bg-slate-100 relative">
+            <img
+              src="@/assets/freevisaprocessing.png"
+              alt="Free Visa Processing"
+              class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
-          <div class="card-text">
-            Trusted by thousands of students globally.
+          <h3 class="text-xl font-bold text-blue-900 mb-3 text-center group-hover:text-blue-700 transition-colors">
+            Visa Processing
+          </h3>
+          <div class="text-slate-600 text-sm leading-relaxed text-center">
+            <p class="mb-2">
+              Secure your student visa with expert guidance and <span class="font-semibold text-green-600">zero processing charges</span>.
+            </p>
+            <p class="font-medium text-blue-800">
+              Trusted by thousands of students globally.
+            </p>
           </div>
         </div>
 
-        <!-- Card 4: from bottom -->
         <div
           ref="card4"
-          :class="['service-card', 'from-bottom', { animate: inView.card4 }]"
+          data-index="3"
+          class="w-full max-w-sm flex flex-col bg-white/70 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-sm p-6 transition-all duration-700 ease-out transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200 group"
+          :class="[isVisible[3] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+          style="transition-delay: 450ms;"
         >
-          <img
-            src="@/assets/noservicecharge.png"
-            alt="No Services Charge"
-            class="card-image"
-          />
-          <h3 class="card-title">No Services Charge</h3>
-
-          <div class="card-text">
-            At Grace International, we proudly operate on a No Service Charge
-            policy for our core services. We provide end-to-end support for your
-            international education journey.
+          <div class="overflow-hidden rounded-xl mb-6 bg-slate-100 relative">
+            <img
+              src="@/assets/noservicecharge.png"
+              alt="No Services Charge"
+              class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-3 text-center group-hover:text-blue-700 transition-colors">
+            No Service Charge
+          </h3>
+          <div class="text-slate-600 text-sm leading-relaxed text-center">
+            <p>
+              At Grace International, we proudly operate on a <span class="font-semibold text-green-600">No Service Charge</span> policy for our core services. We provide end-to-end support for your international education journey.
+            </p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 </template>
 
-<script>
-import { ref, reactive, onMounted } from "vue";
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 
-export default {
-  name: "OurServices",
-  setup() {
-    const card1 = ref(null);
-    const card2 = ref(null);
-    const card3 = ref(null);
-    const card4 = ref(null);
+const sectionRef = ref(null);
+const isHeaderVisible = ref(false);
 
-    const inView = reactive({
-      card1: false,
-      card2: false,
-      card3: false,
-      card4: false,
-    });
+const card1 = ref(null);
+const card2 = ref(null);
+const card3 = ref(null);
+const card4 = ref(null);
+const isVisible = ref([false, false, false, false]);
 
-    onMounted(() => {
-      const options = { threshold: 0.3 };
+let observer = null;
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target === card1.value) inView.card1 = true;
-            if (entry.target === card2.value) inView.card2 = true;
-            if (entry.target === card3.value) inView.card3 = true;
-            if (entry.target === card4.value) inView.card4 = true;
+onMounted(() => {
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target === sectionRef.value) {
+          isHeaderVisible.value = true;
+        } else {
+          const index = entry.target.dataset.index;
+          if (index !== undefined) {
+            isVisible.value[index] = true;
           }
-        });
-      }, options);
-
-      [card1.value, card2.value, card3.value, card4.value].forEach((el) => {
-        if (el) observer.observe(el);
-      });
+        }
+        observer.unobserve(entry.target);
+      }
     });
+  }, {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  });
 
-    return { card1, card2, card3, card4, inView };
-  },
-};
+  if (sectionRef.value) observer.observe(sectionRef.value);
+  if (card1.value) observer.observe(card1.value);
+  if (card2.value) observer.observe(card2.value);
+  if (card3.value) observer.observe(card3.value);
+  if (card4.value) observer.observe(card4.value);
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
 
 <style scoped>
-/* Base card - FIXED: Added padding and background */
-.service-card {
-  opacity: 0;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.4s ease,
-    background 0.4s ease,
-    opacity 0.6s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 320px;
-  width: 100%;
-}
-
-/* Image styling */
-.card-image {
-  width: 100%;
-  max-width: 300px;
-  height: 170px;
-  object-fit: cover;
-  margin-bottom: 1.25rem;
-  border-radius: 0.375rem;
-}
-
-@media (min-width: 768px) {
-  .card-image {
-    height: 200px;
-    margin-bottom: 1.5rem;
+@keyframes rotateDashed {
+  from {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, 0) rotate(360deg);
   }
 }
 
-/* Title styling */
-.card-title {
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .card-title {
-    font-size: 1.25rem;
-  }
-}
-
-/* Text styling - FIXED: Added text-align and proper width */
-.card-text {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-  width: 100%;
-  text-align: left;
-  line-height: 1.6;
-}
-
-/* Hover effect - FIXED: Only transform Y axis */
-@media (min-width: 768px) {
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow:
-      0 12px 32px rgba(34, 97, 184, 0.2),
-      0 2px 8px rgba(34, 97, 184, 0.15);
-    background: #eff6ff;
-  }
-}
-
-/* Directions */
-.from-left {
-  transform: translateX(-50px);
-}
-.from-right {
-  transform: translateX(50px);
-}
-.from-top {
-  transform: translateY(-50px);
-}
-.from-bottom {
-  transform: translateY(50px);
-}
-
-/* Active animation - FIXED: Proper reset */
-.animate {
-  transform: translateX(0) translateY(0) !important;
-  opacity: 1;
-}
-
-/* FIXED: Ensure hover doesn't affect animated cards' initial position */
-@media (min-width: 768px) {
-  .animate:hover {
-    transform: translateY(-8px) !important;
-  }
+.animate-rotate-dashed {
+  animation: rotateDashed 35s linear infinite;
 }
 </style>

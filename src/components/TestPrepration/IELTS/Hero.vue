@@ -1,11 +1,74 @@
 <template>
-  <div
-    class="relative w-full h-[300px] flex items-center justify-center overflow-hidden bg-cover bg-center"
-    :style="`background-image: url('${bgUrl}')`"
-  ></div>
+  <section 
+    ref="sectionRef"
+    class="relative w-full h-[400px] flex items-center justify-center overflow-hidden font-poppins"
+  >
+    <div 
+      class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-[2s] scale-105"
+      :style="{ backgroundImage: `url('${bgUrl}')` }"
+    >
+      <div class="absolute inset-0 bg-blue-900/70"></div>
+    </div>
+
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-500/10 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
+    </div>
+
+    <div 
+      class="relative z-10 text-center px-4 transition-all duration-1000 ease-out transform"
+      :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12']"
+    >
+      <div class="flex items-center justify-center text-green-400 font-bold uppercase tracking-widest text-xs mb-4">
+        <span class="w-8 h-1 bg-green-400 rounded-full mr-3"></span>
+        Exam Preparation
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+        IELTS 
+        <span class="relative inline-block text-green-400">
+          Preparation
+          <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+        </span>
+      </h1>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-900/50 to-green-600/50 transform skew-y-1 z-10"></div>
+  </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import bgImg from "@/assets/Ielts_test.png";
+
 const bgUrl = bgImg;
+const sectionRef = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      if (observer) observer.disconnect();
+    }
+  }, {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
+
+<style scoped>
+/* Scoped styles kept minimal as Tailwind covers design system */
+</style>

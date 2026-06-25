@@ -1,99 +1,145 @@
 <template>
-  <div class="bg-white py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <!-- Left Content -->
-        <div class="order-2 lg:order-1">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            Application & Student Visa Process in New Zealand
+  <section 
+    ref="sectionRef" 
+    class="relative py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins"
+  >
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-800/5 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-600/5 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
+      <div class="absolute top-1/4 right-1/4 w-64 h-64 border-[1px] border-dashed border-blue-800/20 rounded-full animate-rotate-dashed hidden lg:block"></div>
+    </div>
+
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        
+        <div 
+          class="order-2 lg:order-1 flex flex-col transition-all duration-1000 ease-out transform"
+          :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+        >
+          <div class="flex items-center text-green-600 font-bold uppercase tracking-widest text-xs mb-4">
+            <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+            Process & Support
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-8 leading-tight">
+            Visa Process in 
+            <span class="relative inline-block text-green-500">
+              New Zealand
+              <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+            </span>
           </h2>
 
-          <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text"
-                >Major Intakes:</span
-              >
-              February, July (main intakes), and October (select universities).
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Requirements:</span
-              >
-              English proficiency (IELTS, TOEFL, PTE), academic transcripts,
-              Statement of Purpose (SOP), Letters of Recommendation (LORs),
-              portfolio (if applicable), and proof of funds.
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Student Visa (New Zealand Student Visa):</span
-              >
-              <span class="text-lg"
-                >Requires an unconditional offer letter from a NZ institution,
-                proof of sufficient funds, medical & travel insurance, and
-                evidence of English language proficiency.</span
-              >
-            </li>
-            <li class="text-gray-700 text-lg">
-              <span class="font-semibold text-gray-900 text-lg"
-                >Work Rights:</span
-              >
-              <span class="text-lg"
-                >Part-time work up to 20 hours/week during study and full-time
-                during holidays. Post-study work visas available for 1–3 years
-                depending on qualification.</span
-              >
-            </li>
-          </ul>
+          <div class="bg-white/70 backdrop-blur-sm border border-blue-100 p-6 sm:p-8 rounded-2xl shadow-sm mb-10">
+            <ul class="space-y-4 text-slate-700 text-lg">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Major Intakes:</span> February, July (main intakes), and October (select universities).</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Requirements:</span> English proficiency (IELTS, TOEFL, PTE), transcripts, SOP, LORs, portfolio (if applicable), and proof of funds.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Student Visa:</span> Requires unconditional offer, proof of funds, medical/travel insurance, and English evidence.</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><span class="font-bold text-blue-900">Work Rights:</span> Part-time up to 20 hrs/week during study and full-time during holidays. Post-study work visas available for 1–3 years.</div>
+              </li>
+            </ul>
+            <p class="mt-6 text-slate-600 font-medium italic border-l-4 border-green-400 pl-4 py-1">
+              Our experts guide Indian students through the complete New Zealand visa process, ensuring compliance, accuracy, and faster approvals.
+            </p>
+          </div>
 
-          <p class="text-gray-700 text-base leading-relaxed mb-6 text-lg">
-            Our experts guide Indian students through the complete New Zealand
-            application and visa process, ensuring compliance, accuracy, and
-            faster approvals.
-          </p>
+          <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">
+            Why Choose 
+            <span class="text-green-500 underline decoration-green-400 underline-offset-4">Grace International?</span>
+          </h3>
 
-          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-lg">
-            Why Choose Grace International India for New Zealand?
-          </h2>
-
-          <ul class="space-y-3 mb-6">
-            <li class="text-gray-700 text-lg">
-              Strong partnerships with top New Zealand universities and
-              polytechnics.
-            </li>
-            <li class="text-gray-700 text-lg">
-              End-to-end support: counselling, test preparation, applications,
-              visas, scholarships, and accommodation guidance.
-            </li>
-            <li class="text-gray-700 text-lg">
-              Expert guidance on part-time work rights and post-study work
-              visas.
-            </li>
-            <li class="text-gray-700 text-lg">
-              Pre-departure briefings and ongoing student support in New
-              Zealand.
-            </li>
-            <li class="text-gray-700 text-lg">
-              Trusted New Zealand education consultants in India with years of
-              experience and high visa success rates.
-            </li>
-          </ul>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-3">
+              <span class="text-green-500 text-xl">🏛️</span>
+              <span class="text-slate-700 text-sm font-medium">Partnerships with top NZ universities & polytechnics.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-3">
+              <span class="text-green-500 text-xl">🛡️</span>
+              <span class="text-slate-700 text-sm font-medium">End-to-end: applications, visas, scholarships.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-3">
+              <span class="text-green-500 text-xl">📈</span>
+              <span class="text-slate-700 text-sm font-medium">Guidance on work rights & post-study visas.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-3">
+              <span class="text-green-500 text-xl">🤝</span>
+              <span class="text-slate-700 text-sm font-medium">Ongoing student support in New Zealand.</span>
+            </div>
+            <div class="bg-white/50 backdrop-blur-sm border border-blue-50 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-3 sm:col-span-2">
+              <span class="text-green-500 text-xl">🏆</span>
+              <span class="text-slate-700 text-sm font-medium">Trusted consultants with years of experience and high visa success rates.</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Right Image -->
-        <div class="order-1 lg:order-2 flex items-center justify-center">
-          <img
-            :src="bgImage"
-            alt="New Zealand Student Visa Process"
-            class="rounded-lg shadow-lg w-full h-auto object-cover min-h-[850px]"
-          />
+        <div 
+          class="order-1 lg:order-2 flex justify-center transition-all duration-1000 ease-out delay-300 transform"
+          :class="[isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12']"
+        >
+          <div class="relative group w-full max-w-lg lg:max-w-none">
+            <div class="absolute -inset-4 bg-blue-800/10 rounded-[2rem] blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+            <img
+              :src="bgImage"
+              alt="New Zealand Student Visa Process"
+              class="relative rounded-3xl shadow-xl w-full h-auto object-cover border-4 border-white min-h-[500px] lg:min-h-[850px]"
+            />
+          </div>
         </div>
+
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import bgImage from "@/assets/newzealand4.png";
+
+const sectionRef = ref(null);
+const isVisible = ref(false);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      isVisible.value = true;
+      if (observer) observer.disconnect();
+    }
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value);
+  }
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
 
-<style scoped></style>
+<style scoped>
+@keyframes rotateDashed {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-rotate-dashed {
+  animation: rotateDashed 30s linear infinite;
+}
+</style>

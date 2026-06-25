@@ -1,57 +1,83 @@
 <template>
-  <div class="py-8 animate-sectionFadeIn">
-    <!-- Section Title -->
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">
-      OUR EDUCATION PARTNERS
-    </h2>
-    <div class="flex justify-center mb-6">
-      <div class="w-24 h-1 bg-green-600 rounded-full"></div>
+  <section
+    ref="sectionRef"
+    class="relative py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins"
+  >
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-blue-800/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-600/5 rounded-full blur-3xl transform -translate-x-1/3"></div>
+      <div class="absolute top-1/4 right-1/4 w-64 h-64 border-[1px] border-dashed border-blue-800/20 rounded-full animate-rotate-dashed hidden lg:block"></div>
     </div>
 
-    <!-- Australia Banner -->
-    <div class="flex justify-center mb-8">
-      <div class="w-80 h-28 rounded-md overflow-hidden relative group">
-        <img
-          src="@/assets/aus.jpeg"
-          alt="Australia"
-          class="w-full h-full object-cover opacity-80"
-        />
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div 
+        class="text-center mb-16 transition-all duration-1000 ease-out transform"
+        :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="flex items-center justify-center text-green-600 font-bold uppercase tracking-widest text-sm mb-4">
+          <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+          Global Network
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900">
+          Our Education 
+          <span class="relative inline-block text-green-500">
+            Partners
+            <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+          </span>
+        </h2>
+      </div>
+
+      <div 
+        class="flex justify-center mb-16 transition-all duration-1000 ease-out delay-200 transform"
+        :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="relative w-full max-w-md h-40 rounded-3xl overflow-hidden group shadow-lg border border-blue-100">
+          <img
+            src="@/assets/aus.jpeg"
+            alt="Australia"
+            class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+          />
+          <div class="absolute inset-0 bg-blue-900/40 backdrop-blur-[2px] flex items-center justify-center">
+            <h1 class="text-white text-4xl font-bold tracking-wider">AUSTRALIA</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-10">
         <div
-          class="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-out group-hover:-translate-y-3"
+          v-for="(uni, idx) in universities"
+          :key="idx"
+          ref="cards"
+          :data-index="idx"
+          class="flex flex-col items-center p-6 sm:p-8 bg-white/70 backdrop-blur-sm border border-blue-100 rounded-[2rem] shadow-sm transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-xl hover:border-blue-200"
+          :class="[isVisibleStates[idx] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+          :style="{ transitionDelay: `${idx * 50}ms` }"
         >
-          <h1 class="text-black text-3xl font-bold">Australia</h1>
+          <a
+            :href="uni.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex items-center justify-center overflow-hidden mb-6 border-4 border-white bg-white rounded-full transition-transform duration-500 ease-out hover:rotate-6 shadow-md"
+          >
+            <img
+              :src="uni.img"
+              :alt="uni.name"
+              class="object-contain w-full h-full p-3 sm:p-4"
+            />
+          </a>
+          <p class="text-xs text-slate-500 font-medium uppercase tracking-wider mb-2">{{ uni.Serial }}</p>
+          <span class="text-center text-base sm:text-lg font-bold text-blue-900 leading-tight">{{ uni.name }}</span>
         </div>
       </div>
     </div>
-
-    <!-- University Cards -->
-    <div class="flex flex-wrap justify-center gap-x-12 gap-y-10">
-      <div
-        v-for="(uni, idx) in universities"
-        :key="idx"
-        class="flex flex-col items-center w-48 opacity-0 animate-cardFadeIn"
-        :style="{ animationDelay: `${idx * 0.1}s` }"
-      >
-        <a
-          :href="uni.link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="rounded-full border-4 border-blue-400 p-2 w-40 h-40 flex items-center justify-center overflow-hidden mb-2 shadow-md transition-transform duration-500 ease-out hover:scale-110 hover:rotate-3 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <img
-            :src="uni.img"
-            :alt="uni.name"
-            class="object-cover w-full h-full rounded-full"
-          />
-        </a>
-        <p>{{ uni.Serial }}</p>
-        <span class="text-center text-base mt-1">{{ uni.name }}</span>
-      </div>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import uniTasmania from "@/assets/Uni-Tamania.jpeg";
 import latrobe from "@/assets/La Trobe University.jpg";
 import murdoch from "@/assets/MurdochUniversity.jpg";
@@ -70,133 +96,62 @@ import canterbury from "@/assets/Canterbury Institute of Management.jpg";
 import excelsia from "@/assets/Excelsia University College.jpg";
 
 const universities = [
-  {
-    Serial: "(CRICOS 00586B)",
-    name: "University Of Tasmania",
-    img: uniTasmania,
-    link: "https://www.utas.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00115M)",
-    name: "La Trobe University",
-    img: latrobe,
-    link: "https://www.latrobe.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00125J)",
-    name: "Murdoch University",
-    img: murdoch,
-    link: "https://www.murdoch.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00102E)",
-    name: "University of Wollongong",
-    img: uow,
-    link: "https://www.uow.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00109J)",
-    name: "University of New Castle Australia",
-    img: newcastle,
-    link: "https://www.newcastle.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00117J)",
-    name: "James Cook University",
-    img: jamescook,
-    link: "https://www.jcu.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00124K)",
-    name: "Victoria University",
-    img: victoria,
-    link: "https://www.vu.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00279B)",
-    name: "Edith Cowan University (Main Campus)",
-    img: edith,
-    link: "https://www.ecu.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 03389E)",
-    name: "Torrens University",
-    img: torrens,
-    link: "https://www.torrens.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 01241G)",
-    name: "Southern Cross University (Main Campus)",
-    img: southernCross,
-    link: "https://www.scu.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00005F)",
-    name: "Charles Sturt University",
-    img: charlesTourt,
-    link: "https://www.csu.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 01595D)",
-    name: "University of the Sunshine Coast (Main Campus)",
-    img: sunshineCoast,
-    link: "https://www.usc.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00244B)",
-    name: "Central Queensland University (Main Campus)",
-    img: centralQld,
-    link: "https://www.cqu.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 00231G)",
-    name: "Navitas University",
-    img: navitas,
-    link: "https://www.navitas.com/",
-  },
-  {
-    Serial: "(CRICOS 03809A)",
-    name: "Canterbury Institute of Management",
-    img: canterbury,
-    link: "https://cihe.edu.au/",
-  },
-  {
-    Serial: "(CRICOS 02664K)",
-    name: "Excelsia University College",
-    img: excelsia,
-    link: "https://excelsia.edu.au/",
-  },
+  { Serial: "(CRICOS 00586B)", name: "University Of Tasmania", img: uniTasmania, link: "https://www.utas.edu.au/" },
+  { Serial: "(CRICOS 00115M)", name: "La Trobe University", img: latrobe, link: "https://www.latrobe.edu.au/" },
+  { Serial: "(CRICOS 00125J)", name: "Murdoch University", img: murdoch, link: "https://www.murdoch.edu.au/" },
+  { Serial: "(CRICOS 00102E)", name: "University of Wollongong", img: uow, link: "https://www.uow.edu.au/" },
+  { Serial: "(CRICOS 00109J)", name: "University of New Castle Australia", img: newcastle, link: "https://www.newcastle.edu.au/" },
+  { Serial: "(CRICOS 00117J)", name: "James Cook University", img: jamescook, link: "https://www.jcu.edu.au/" },
+  { Serial: "(CRICOS 00124K)", name: "Victoria University", img: victoria, link: "https://www.vu.edu.au/" },
+  { Serial: "(CRICOS 00279B)", name: "Edith Cowan University", img: edith, link: "https://www.ecu.edu.au/" },
+  { Serial: "(CRICOS 03389E)", name: "Torrens University", img: torrens, link: "https://www.torrens.edu.au/" },
+  { Serial: "(CRICOS 01241G)", name: "Southern Cross University", img: southernCross, link: "https://www.scu.edu.au/" },
+  { Serial: "(CRICOS 00005F)", name: "Charles Sturt University", img: charlesTourt, link: "https://www.csu.edu.au/" },
+  { Serial: "(CRICOS 01595D)", name: "University of the Sunshine Coast", img: sunshineCoast, link: "https://www.usc.edu.au/" },
+  { Serial: "(CRICOS 00244B)", name: "Central Queensland University", img: centralQld, link: "https://www.cqu.edu.au/" },
+  { Serial: "(CRICOS 00231G)", name: "Navitas University", img: navitas, link: "https://www.navitas.com/" },
+  { Serial: "(CRICOS 03809A)", name: "Canterbury Institute", img: canterbury, link: "https://cihe.edu.au/" },
+  { Serial: "(CRICOS 02664K)", name: "Excelsia University College", img: excelsia, link: "https://excelsia.edu.au/" },
 ];
+
+const sectionRef = ref(null);
+const isVisible = ref(false);
+const isVisibleStates = ref(Array(universities.length).fill(false));
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target === sectionRef.value) {
+          isVisible.value = true;
+        } else {
+          const index = entry.target.dataset.index;
+          if (index !== undefined) {
+            isVisibleStates.value[index] = true;
+          }
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  if (sectionRef.value) observer.observe(sectionRef.value);
+  const cards = document.querySelectorAll('[data-index]');
+  cards.forEach(card => observer.observe(card));
+});
+
+onUnmounted(() => {
+  if (observer) observer.disconnect();
+});
 </script>
 
 <style scoped>
-/* Section fade-in */
-@keyframes sectionFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes rotateDashed {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-.animate-sectionFadeIn {
-  animation: sectionFadeIn 1s ease-out forwards;
-}
-
-/* Staggered card fade-in */
-@keyframes cardFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-cardFadeIn {
-  animation: cardFadeIn 0.6s ease-out forwards;
+.animate-rotate-dashed {
+  animation: rotateDashed 30s linear infinite;
 }
 </style>

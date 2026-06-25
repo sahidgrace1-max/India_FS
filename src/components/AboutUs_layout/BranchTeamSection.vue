@@ -1,208 +1,138 @@
 <template>
-  <div class="w-full bg-gradient-to-br from-blue-100 via-white to-blue-200 py-16 font-sans">
-    <div class="max-w-7xl mx-auto px-4 py-12 font-sans">
+  <section
+    ref="sectionRef"
+    class="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden font-poppins"
+  >
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-800/5 rounded-full blur-3xl translate-x-1/4 -translate-y-1/4"></div>
+      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-600/5 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4"></div>
+    </div>
 
-      <!-- Header -->
-      <div class="text-center mx-auto pb-12 font-sans" style="max-width: 800px">
-        <h4 class="text-blue-700 font-bold mb-2 tracking-widest uppercase font-sans">
-          Our {{ selectedBranch }} Team
-        </h4>
-        <h1
-          class="w-full max-w-2xl mx-auto text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-blue-700 font-sans break-words leading-tight"
-          style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1)"
-        >
-          Meet Our {{ selectedBranch }} Office Experts
-        </h1>
-        <p class="text-gray-700 text-lg mb-0 font-sans">
+    <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-transparent via-blue-800/5 to-green-600/5 transform -skew-y-1"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div 
+        class="text-center max-w-3xl mx-auto mb-20 transition-all duration-1000 transform"
+        :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+      >
+        <div class="flex justify-center mb-4">
+          <div class="flex items-center text-green-600 font-bold uppercase tracking-widest text-xs">
+            <span class="w-8 h-1 bg-green-600 rounded-full mr-3"></span>
+            Our Experts
+          </div>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-6">
+          Meet Our 
+          <span class="relative inline-block text-green-500">
+            {{ selectedBranch }}
+            <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-green-500 rounded-full"></span>
+          </span>
+          Office Experts
+        </h2>
+        <p class="text-slate-600 text-lg">
           {{ getTeamDescription(selectedBranch) }}
         </p>
       </div>
 
-      <!-- Team Cards Grid -->
-      <div class="flex flex-wrap justify-center gap-8 font-sans">
+      <div v-if="loading" class="text-center py-20 text-blue-800 font-bold">Loading expert team...</div>
+      <div v-else-if="currentBranchMembers.length === 0" class="text-center py-20 text-slate-500">
+        No team members found for this branch.
+      </div>
+
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div
-          v-for="member in teamMembers[selectedBranch]"
-          :key="member.name"
-          class="bg-white rounded-3xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 border-t-8 border-blue-400 font-sans w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] flex flex-col"
+          v-for="(member, index) in currentBranchMembers"
+          :key="member.id"
+          class="group bg-white/70 backdrop-blur-sm border border-blue-100 rounded-[2rem] p-6 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col items-center text-center translate-y-12 opacity-0"
+          :class="[isVisible ? 'is-visible' : '']"
+          :style="{ transitionDelay: `${index * 150}ms` }"
         >
-
-          <!-- IMAGE DIV -->
-<div class="flex items-center justify-center bg-blue-50 py-8 px-4 rounded-t-3xl">
-  <div class="w-56 h-56 rounded-full overflow-hidden border-4 border-white shadow-lg ring-4 ring-blue-300">
-    <img
-      :src="member.image"
-      :alt="member.name"
-      class="w-full h-full object-cover hover:grayscale transition duration-300"
-    />
-  </div>
-</div>
-
-          <!-- TEXT DIV -->
-          <div class="flex flex-col items-center text-center px-6 py-6 font-sans flex-1">
-            <h4 class="font-extrabold text-xl mb-1 text-blue-800 font-sans">
-              {{ member.name }}
-            </h4>
-            <span class="text-blue-600 text-sm font-semibold mb-4 font-sans">
-              {{ member.position }}
-            </span>
-
-            <!-- DESCRIPTION DIV -->
-            <div class="w-full bg-blue-50 border border-blue-100 rounded-2xl px-4 py-3 mt-auto">
-              <p class="text-gray-600 text-sm leading-relaxed font-sans">
-                {{ member.description }}
-              </p>
+          <div class="relative w-40 h-40 mb-6">
+            <div class="absolute inset-0 bg-blue-100 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+            <img
+              v-if="member.image"
+              :src="member.image"
+              :alt="member.name"
+              class="relative w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
+            />
+            <div v-else class="relative w-full h-full rounded-full bg-blue-200 flex items-center justify-center text-blue-800 font-bold text-4xl">
+              {{ member.name.charAt(0) }}
             </div>
           </div>
 
+          <h4 class="font-bold text-blue-900 text-xl mb-1">{{ member.name }}</h4>
+          <span class="text-green-600 font-bold uppercase tracking-widest text-[10px] mb-6">
+            {{ member.position }}
+          </span>
+
+          <p class="text-slate-600 text-sm leading-relaxed bg-blue-50/50 p-4 rounded-2xl flex-1">
+            {{ member.description }}
+          </p>
         </div>
       </div>
-
     </div>
-  </div>
+  </section>
 </template>
 
-<script>
-export default {
-  name: 'TeamSection',
-  props: {
-    selectedBranch: {
-      type: String,
-      required: true
-    },
-    teamMembers: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    getTeamDescription(branch) {
-      const descriptions = {
-        Kathmandu: 'A passionate group of professionals dedicated to delivering excellence across every project in our Kathmandu office.',
-        Pokhara: 'Our Pokhara team brings creativity and regional expertise to every challenge they tackle.',
-        Chitwan: 'Meet the driven experts powering our Chitwan operations with skill and dedication.',
-      }
-      return descriptions[branch] || `Meet the talented professionals at our ${branch} office.`
-    }
-  }
-}
-</script>
 <script setup>
-import { computed } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useBranchStore } from "@/stores/branchStore";
+import api from "@/utils/api";
 
 const { selectedBranch } = useBranchStore();
+const allTeamMembers = ref([]);
+const loading = ref(true);
+const sectionRef = ref(null);
+const isVisible = ref(false);
+let observer = null;
 
-// Team data for each branch
-const teamMembers = {
-  Delhi: [
-    /*{
-      name: "Deepak Kumar",
-      position: "GS Cum Visa Office",
-      description:
-        "Leading the Delhi operations with expertise in Australian education and migration services for North Indian students.",
-      image: new URL("@/assets/Gs.jpg", import.meta.url).href,
-    },*/
-    {
-      name: "Deepa Rani",
-      position: "GS & Visa Officer",
-      description:
-        "GS & Visa (Australia, Canada, NZ, US, UK) Counselor at Grace International. I have been working in the same field from the last 9 years. I assist students with course selection, university applications, and the overall admission process.",
-      image: new URL("@/assets/Deepa1.png", import.meta.url).href,
-    },
-    {
-      name: "Vandana Gupta",
-      position: "Sr. Counsellor",
-      description:
-        "Dedicated Senior Counsellor with 4 years of experience, passionate about guiding students from career counselling and university selection through to applications and admissions at top international universities.",
-      image: new URL("@/assets/Vandana1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    /*{
-      name: "Nidhi Mathur",
-      position: "English Proficiency Exam Expert",
-      description:
-        "Helping students achieve their English proficiency goals with personalized coaching and test strategies.",
-      image: new URL("@/assets/English_Proficiency_Exam_Expert.jpg", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },*/
-    {
-      name: "Himani Sharma",
-      position: "Sr. Counsellor",
-      description:
-        "Dedicated Senior Counsellor with 6 years of experience, passionate about guiding students from career counselling and university selection through to applications and admissions at top international universities.",
-      image: new URL("@/assets/Himani1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Karishma Singh",
-      position: "Sr. Counsellor",
-      description:
-        "Certified education counsellor with 7 years of experience specialising in Australia, guiding students from career counselling and university selection through to applications and visa assistance at top Australian universities.",
-      image: new URL("@/assets/Karishma.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-  ],
-  Ahmedabad: [
-    {
-      name: "Subrata Banerjee",
-      position: "Director - Ahmedabad Office",
-      badge: "13+ Years Experience",
-      description:
-        "Leading the Ahmedabad office with deep understanding of Eastern Indian students' needs.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Rina Chatterjee",
-      position: "Senior Counselor",
-      badge: "QEAC Certified",
-      description:
-        "Experienced in guiding students through complex admission processes and scholarship applications.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Debashis Das",
-      position: "Visa Consultant",
-      badge: "Visa Specialist",
-      description:
-        "Ensuring smooth visa processing with attention to detail and thorough documentation support.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-    {
-      name: "Moumita Ghosh",
-      position: "Student Support Officer",
-      badge: "Student Care Expert",
-      description:
-        "Providing comprehensive pre-departure guidance and ongoing support for overseas students.",
-      image: new URL("@/assets/image1.png", import.meta.url).href,
-      linkedin: "#",
-      facebook: "#",
-    },
-  ],
+const fetchTeamMembers = async () => {
+  try {
+    const response = await api.get("/team");
+    allTeamMembers.value = response.data.data.items || response.data.data || [];
+  } catch (err) {
+    console.error("Failed to load team members:", err);
+  } finally {
+    loading.value = false;
+  }
 };
+
+const currentBranchMembers = computed(() => {
+  return allTeamMembers.value.filter((member) => member.branch === selectedBranch.value);
+});
 
 function getTeamDescription(branch) {
   const descriptions = {
-    Delhi:
-      "Our experienced team in Delhi understands the unique needs of North Indian students",
-    Mumbai:
-      "Our Mumbai team brings extensive experience serving students from Western India",
-    Bangalore:
-      "Our Bangalore experts specialize in guiding tech-savvy students from South India",
-    Ahmedabad:
-      "Our Ahmedabad team is dedicated to supporting students from Eastern India",
+    Delhi: "Our experienced team in Delhi understands the unique needs of North Indian students.",
+    Ahmedabad: "Our Ahmedabad team is dedicated to supporting students from Western India.",
+    Kathmandu: "A passionate group of professionals dedicated to delivering excellence across every project in our Kathmandu office.",
+    Pokhara: "Our Pokhara team brings creativity and regional expertise to every challenge they tackle.",
+    Chitwan: "Meet the driven experts powering our Chitwan operations with skill and dedication.",
   };
-  return descriptions[branch] || "";
+  return descriptions[branch] || `Meet the talented professionals at our ${branch} office.`;
 }
+
+onMounted(() => {
+  fetchTeamMembers();
+  
+  observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      isVisible.value = true;
+      observer.disconnect();
+    }
+  }, { threshold: 0.1 });
+
+  if (sectionRef.value) observer.observe(sectionRef.value);
+});
+
+onUnmounted(() => {
+  if (observer) observer.disconnect();
+});
 </script>
 
-<style scoped></style>
+<style scoped>
+.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+</style>
